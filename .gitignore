@@ -7,3 +7,4 @@ __pycache__/
 *.elf
 *.map
 sdkconfig.old
+TinyMCP/
