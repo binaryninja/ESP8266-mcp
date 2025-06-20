@@ -105,9 +105,61 @@ Once flashed and running, the ESP8266 will:
 2. Start an MCP server on port 8080
 3. Display the IP address in the serial monitor
 
-### Testing with a Simple Client
+### Testing with the Python Client
 
-You can test the MCP server using a simple TCP client:
+The project includes a comprehensive Python-based test client that validates all MCP features:
+
+#### Quick Start Testing
+
+```bash
+# Run comprehensive test suite
+python3 test_mcp_client.py 192.168.1.100
+
+# Interactive testing mode
+python3 test_mcp_client.py 192.168.1.100 --interactive
+
+# Quick connectivity test
+python3 test_mcp_client.py 192.168.1.100 --ping-only
+
+# Use the quick setup script
+./quick_test.sh
+```
+
+#### Test Features
+
+The Python client tests:
+- 🔗 **Connection establishment** - TCP socket connectivity
+- 🚀 **MCP initialization** - Protocol handshake and capabilities
+- 🏓 **Ping/connectivity** - Server responsiveness
+- 🔍 **Tool discovery** - Available tools enumeration
+- 🛠️ **Tool execution** - Echo and GPIO control tools
+- ❌ **Error handling** - Invalid requests and parameters
+- 📊 **Comprehensive reporting** - Pass/fail status with details
+
+#### Interactive Mode Commands
+
+```
+> ping                 # Test server connectivity
+> list                 # List available tools
+> echo Hello World!    # Test echo tool
+> gpio 2 high          # Set GPIO pin 2 high
+> gpio 2 low           # Set GPIO pin 2 low
+> test                 # Run full test suite
+> quit                 # Exit interactive mode
+```
+
+#### Expected Output
+
+```
+🤖 ESP8266 MCP Client Test Script
+============================================================
+Target: 192.168.1.100:8080
+============================================================
+
+🧪 Starting comprehensive MCP test suite...
+
+✅ PASS - Connection
+✅ PASS - Initializationent:
 
 ```bash
 # Connect via telnet
