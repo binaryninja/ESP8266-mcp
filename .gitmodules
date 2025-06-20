@@ -1,0 +1,3 @@
+[submodule "components/tinymcp"]
+	path = components/tinymcp
+	url = https://github.com/Qihoo360/TinyMCP
