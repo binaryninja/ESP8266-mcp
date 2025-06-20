@@ -6,5 +6,5 @@ idf_component_register(
 
 # C++ compilation with exceptions and RTTI enabled
 target_compile_options(${COMPONENT_LIB} PRIVATE
-    -std=c++14 -Os -frtti -fexceptions
+    -std=c++17 -Os -frtti -fexceptions
 )

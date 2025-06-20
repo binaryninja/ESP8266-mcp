@@ -1,0 +1,343 @@
+{
+  "test_configuration": {
+    "name": "ESP8266 Session Management System Test Suite",
+    "version": "1.0.0",
+    "description": "Comprehensive test configuration for FreeRTOS Session Management System",
+    "created": "2024-12-19"
+  },
+  "default_settings": {
+    "esp8266_ip": "192.168.1.100",
+    "mcp_port": 8080,
+    "serial_port": "/dev/ttyUSB0",
+    "serial_baudrate": 115200,
+    "test_timeout_seconds": 300,
+    "connection_timeout_seconds": 30,
+    "max_concurrent_sessions": 3,
+    "verbose_logging": false
+  },
+  "test_suites": {
+    "session_management": {
+      "enabled": true,
+      "tests": [
+        {
+          "name": "basic_connection",
+          "description": "Test basic TCP connection to MCP server",
+          "timeout": 10,
+          "retries": 3
+        },
+        {
+          "name": "session_initialization",
+          "description": "Test MCP session initialization protocol",
+          "timeout": 15,
+          "retries": 2
+        },
+        {
+          "name": "concurrent_sessions",
+          "description": "Test multiple concurrent sessions",
+          "timeout": 30,
+          "retries": 1,
+          "config": {
+            "session_count": 3,
+            "test_duration": 20
+          }
+        },
+        {
+          "name": "session_persistence",
+          "description": "Test session recovery after disconnection",
+          "timeout": 25,
+          "retries": 2
+        },
+        {
+          "name": "error_handling",
+          "description": "Test error handling scenarios",
+          "timeout": 20,
+          "retries": 1
+        },
+        {
+          "name": "performance_metrics",
+          "description": "Test performance characteristics",
+          "timeout": 30,
+          "retries": 1,
+          "config": {
+            "ping_samples": 10,
+            "tool_samples": 5
+          }
+        },
+        {
+          "name": "message_framing",
+          "description": "Test message framing protocol",
+          "timeout": 15,
+          "retries": 2,
+          "config": {
+            "test_sizes": [10, 100, 1000, 5000]
+          }
+        }
+      ]
+    },
+    "tool_testing": {
+      "enabled": true,
+      "tests": [
+        {
+          "name": "tool_discovery",
+          "description": "Test tool discovery and listing",
+          "timeout": 10,
+          "retries": 2
+        },
+        {
+          "name": "echo_tool",
+          "description": "Test echo tool functionality",
+          "timeout": 5,
+          "retries": 3,
+          "config": {
+            "test_messages": ["Hello World", "Test 123", "Special chars: !@#$%"]
+          }
+        },
+        {
+          "name": "system_info_tool",
+          "description": "Test system information tool",
+          "timeout": 10,
+          "retries": 2,
+          "config": {
+            "expected_fields": ["esp_chip", "free_heap", "uptime", "wifi_status"]
+          }
+        },
+        {
+          "name": "gpio_tool",
+          "description": "Test GPIO control tool",
+          "timeout": 10,
+          "retries": 2,
+          "config": {
+            "test_pins": [2, 16],
+            "test_values": [0, 1]
+          }
+        },
+        {
+          "name": "network_scanner_tool",
+          "description": "Test network scanner (async)",
+          "timeout": 30,
+          "retries": 1,
+          "config": {
+            "max_results": 10,
+            "scan_timeout": 15000,
+            "expect_progress": true
+          }
+        },
+        {
+          "name": "file_system_tool",
+          "description": "Test file system operations",
+          "timeout": 15,
+          "retries": 2,
+          "config": {
+            "test_paths": ["/", "/spiffs"],
+            "operations": ["list", "info"]
+          }
+        },
+        {
+          "name": "i2c_scanner_tool",
+          "description": "Test I2C scanner tool",
+          "timeout": 15,
+          "retries": 2,
+          "config": {
+            "test_configs": [
+              {"sda": 4, "scl": 5},
+              {"sda": 0, "scl": 2}
+            ]
+          }
+        },
+        {
+          "name": "long_running_task",
+          "description": "Test long running task with progress",
+          "timeout": 30,
+          "retries": 1,
+          "config": {
+            "duration": 5,
+            "steps": 5,
+            "expect_progress": true
+          }
+        }
+      ]
+    },
+    "stress_testing": {
+      "enabled": false,
+      "description": "Stress tests for production validation",
+      "tests": [
+        {
+          "name": "memory_stress",
+          "description": "Test memory usage under load",
+          "timeout": 120,
+          "retries": 1,
+          "config": {
+            "iterations": 10,
+            "concurrent_sessions": 3,
+            "tasks_per_session": 5
+          }
+        },
+        {
+          "name": "connection_stress",
+          "description": "Test rapid connect/disconnect cycles",
+          "timeout": 60,
+          "retries": 1,
+          "config": {
+            "cycles": 50,
+            "delay_between_cycles": 0.1
+          }
+        },
+        {
+          "name": "message_throughput",
+          "description": "Test message processing throughput",
+          "timeout": 60,
+          "retries": 1,
+          "config": {
+            "messages_per_session": 100,
+            "concurrent_sessions": 2
+          }
+        }
+      ]
+    },
+    "integration_testing": {
+      "enabled": true,
+      "description": "End-to-end integration tests",
+      "tests": [
+        {
+          "name": "wifi_reconnection",
+          "description": "Test behavior during WiFi reconnection",
+          "timeout": 60,
+          "retries": 1,
+          "manual": true,
+          "instructions": "Manually disconnect and reconnect WiFi during test"
+        },
+        {
+          "name": "power_cycle",
+          "description": "Test behavior after power cycle",
+          "timeout": 30,
+          "retries": 1,
+          "manual": true,
+          "instructions": "Manually power cycle ESP8266 during test"
+        },
+        {
+          "name": "flash_persistence",
+          "description": "Test configuration persistence across reboots",
+          "timeout": 45,
+          "retries": 1
+        }
+      ]
+    },
+    "compatibility_testing": {
+      "enabled": true,
+      "description": "Test compatibility with existing MCP clients",
+      "tests": [
+        {
+          "name": "legacy_client_compatibility",
+          "description": "Test with original MCP client",
+          "timeout": 30,
+          "retries": 2,
+          "config": {
+            "client_script": "test_mcp_client.py"
+          }
+        },
+        {
+          "name": "protocol_compliance",
+          "description": "Test JSON-RPC 2.0 compliance",
+          "timeout": 20,
+          "retries": 2
+        }
+      ]
+    }
+  },
+  "hardware_profiles": {
+    "esp8266_generic": {
+      "name": "Generic ESP8266",
+      "flash_size": "4MB",
+      "ram_size": "80KB",
+      "expected_free_heap": 30000,
+      "gpio_pins": [0, 2, 4, 5, 12, 13, 14, 15, 16],
+      "restricted_pins": [1, 3, 6, 7, 8, 9, 10, 11]
+    },
+    "esp8266_nodemcu": {
+      "name": "NodeMCU ESP8266",
+      "flash_size": "4MB",
+      "ram_size": "80KB",
+      "expected_free_heap": 35000,
+      "gpio_pins": [0, 2, 4, 5, 12, 13, 14, 15, 16],
+      "restricted_pins": [1, 3, 6, 7, 8, 9, 10, 11],
+      "pin_mapping": {
+        "D0": 16, "D1": 5, "D2": 4, "D3": 0, "D4": 2,
+        "D5": 14, "D6": 12, "D7": 13, "D8": 15
+      }
+    },
+    "esp8266_wemos_d1": {
+      "name": "Wemos D1 Mini",
+      "flash_size": "4MB",
+      "ram_size": "80KB",
+      "expected_free_heap": 32000,
+      "gpio_pins": [0, 2, 4, 5, 12, 13, 14, 15, 16],
+      "restricted_pins": [1, 3, 6, 7, 8, 9, 10, 11]
+    }
+  },
+  "reporting": {
+    "generate_html_report": true,
+    "generate_json_report": true,
+    "generate_junit_xml": false,
+    "include_serial_logs": true,
+    "include_memory_stats": true,
+    "include_timing_details": true,
+    "screenshot_on_failure": false
+  },
+  "environment": {
+    "required_python_packages": [
+      "pyserial>=3.4",
+      "requests>=2.25.0",
+      "asyncio"
+    ],
+    "required_system_tools": [
+      "ping",
+      "timeout",
+      "pkill"
+    ],
+    "esp_idf_version": ">=4.0.0"
+  },
+  "test_data": {
+    "sample_messages": [
+      "Hello World",
+      "Test message with special chars: !@#$%^&*()",
+      "Unicode test: 你好世界 🌍",
+      "Long message: " + "x".repeat(1000),
+      "JSON test: {\"key\": \"value\", \"number\": 42}"
+    ],
+    "sample_json_objects": [
+      {"simple": "object"},
+      {"nested": {"deep": {"value": 123}}},
+      {"array": [1, 2, 3, "string", true, null]},
+      {"mixed": {"string": "value", "number": 42, "boolean": true, "null": null}}
+    ],
+    "gpio_test_sequences": [
+      {"pin": 2, "states": [0, 1, 0, 1, 0]},
+      {"pin": 16, "states": [1, 0, 1, 0, 1]}
+    ]
+  },
+  "validation_rules": {
+    "memory_usage": {
+      "max_heap_usage_percent": 70,
+      "min_free_heap_bytes": 10000,
+      "max_memory_leak_bytes": 1024
+    },
+    "performance": {
+      "max_connection_time_ms": 5000,
+      "max_response_time_ms": 10000,
+      "min_throughput_msgs_per_sec": 10
+    },
+    "reliability": {
+      "max_connection_failures_percent": 5,
+      "max_timeout_percent": 10,
+      "min_uptime_percent": 95
+    }
+  },
+  "debug_options": {
+    "enable_esp_log_debug": false,
+    "enable_protocol_tracing": false,
+    "save_all_messages": false,
+    "enable_memory_profiling": false,
+    "enable_timing_profiling": true,
+    "capture_stack_traces": false
+  }
+}

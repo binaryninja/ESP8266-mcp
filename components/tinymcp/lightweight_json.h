@@ -138,7 +138,18 @@ public:
 
     void set(const std::string& key, const std::string& value) {
         if (isObject()) {
-            cJSON_AddStringToObject(m_json, key.c_str(), value.c_str());
+            printf("DEBUG: Setting key='%s' value='%s'\n", key.c_str(), value.c_str());
+            cJSON* str_item = cJSON_CreateString(value.c_str());
+            if (str_item) {
+                printf("DEBUG: Created cJSON string, type=%d, valuestring='%s'\n", 
+                       str_item->type, str_item->valuestring ? str_item->valuestring : "NULL");
+                cJSON_AddItemToObject(m_json, key.c_str(), str_item);
+                printf("DEBUG: Added item to object\n");
+            } else {
+                printf("DEBUG: ERROR - cJSON_CreateString returned NULL!\n");
+            }
+        } else {
+            printf("DEBUG: ERROR - not an object!\n");
         }
     }
 
@@ -205,12 +216,18 @@ public:
 
     std::string toStringCompact() const {
         if (m_json) {
+            printf("DEBUG: Serializing JSON object\n");
             char* str = cJSON_PrintUnformatted(m_json);
             if (str) {
+                printf("DEBUG: Serialized JSON: '%s'\n", str);
                 std::string result(str);
                 free(str);
                 return result;
+            } else {
+                printf("DEBUG: ERROR - cJSON_PrintUnformatted returned NULL!\n");
             }
+        } else {
+            printf("DEBUG: ERROR - m_json is NULL!\n");
         }
         return "";
     }
