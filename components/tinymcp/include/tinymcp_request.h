@@ -181,9 +181,8 @@ public:
         }
     }
     
-    // Copy constructor and assignment for argument management
+    // Copy constructor for argument management
     CallToolRequest(const CallToolRequest& other);
-    CallToolRequest& operator=(const CallToolRequest& other);
 };
 
 // Ping Request (for connection testing)

@@ -42,6 +42,9 @@ static constexpr const char* MSG_KEY_PROGRESS = "progress";
 static constexpr const char* MSG_KEY_TOTAL = "total";
 static constexpr const char* MSG_KEY_CURSOR = "cursor";
 static constexpr const char* MSG_KEY_NEXT_CURSOR = "nextCursor";
+static constexpr const char* MSG_KEY_LISTCHANGED = "listChanged";
+static constexpr const char* MSG_KEY_MIMETYPE = "mimeType";
+static constexpr const char* MSG_KEY_META = "_meta";
 
 // MCP Methods
 static constexpr const char* METHOD_INITIALIZE = "initialize";

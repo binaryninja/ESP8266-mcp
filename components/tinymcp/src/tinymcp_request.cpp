@@ -279,23 +279,7 @@ CallToolRequest::CallToolRequest(const CallToolRequest& other)
     }
 }
 
-CallToolRequest& CallToolRequest::operator=(const CallToolRequest& other) {
-    if (this != &other) {
-        Request::operator=(other);
-        toolName_ = other.toolName_;
-        arguments_ = other.arguments_;
-        
-        if (rawArguments_) {
-            cJSON_Delete(rawArguments_);
-            rawArguments_ = nullptr;
-        }
-        
-        if (other.rawArguments_) {
-            rawArguments_ = JsonHelper::safeDuplicate(other.rawArguments_);
-        }
-    }
-    return *this;
-}
+
 
 void CallToolRequest::addArgument(const std::string& name, const std::string& value) {
     arguments_.emplace_back(name, value);
@@ -402,9 +386,8 @@ int CallToolRequest::deserializeParams(const cJSON* json) {
             cJSON* child = args->child;
             while (child) {
                 if (child->string && cJSON_IsString(child)) {
-                    const char* value = cJSON_GetStringValue(child);
-                    if (value) {
-                        arguments_.emplace_back(child->string, value);
+                    if (child->valuestring) {
+                        arguments_.emplace_back(child->string, child->valuestring);
                     }
                 }
                 child = child->next;

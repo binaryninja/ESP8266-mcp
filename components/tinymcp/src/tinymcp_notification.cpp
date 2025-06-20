@@ -449,9 +449,8 @@ int ToolsListChangedNotification::deserializeParams(const cJSON* json) {
             for (int i = 0; i < size; i++) {
                 cJSON* item = JsonHelper::getArrayItem(array, i);
                 if (item && cJSON_IsString(item)) {
-                    const char* toolName = cJSON_GetStringValue(item);
-                    if (toolName) {
-                        tools.emplace_back(toolName);
+                    if (item->valuestring) {
+                        tools.emplace_back(item->valuestring);
                     }
                 }
             }
@@ -739,8 +738,7 @@ bool NotificationValidator::validateToolNameList(const cJSON* toolList) {
         cJSON* item = JsonHelper::getArrayItem(toolList, i);
         if (!item || !cJSON_IsString(item)) return false;
         
-        const char* toolName = cJSON_GetStringValue(item);
-        if (!toolName || strlen(toolName) == 0 || strlen(toolName) > MAX_TOOL_NAME_LENGTH) {
+        if (!item->valuestring || strlen(item->valuestring) == 0 || strlen(item->valuestring) > MAX_TOOL_NAME_LENGTH) {
             return false;
         }
     }
@@ -906,4 +904,66 @@ std::unique_ptr<Notification> NotificationBuilder::build() {
         default:
             // Handle special notifications
             if (method_ == "notifications/tools/list_changed") {
-                auto toolsNotif = std::make_unique
+                auto toolsNotif = std::make_unique<ToolsListChangedNotification>();
+                toolsNotif->setAddedTools(addedTools_);
+                toolsNotif->setRemovedTools(removedTools_);
+                toolsNotif->setModifiedTools(modifiedTools_);
+                notification = std::move(toolsNotif);
+            } else if (method_ == "notifications/log") {
+                auto logNotif = std::make_unique<LogNotification>(logLevel_, logMessage_);
+                if (!logContext_.empty()) {
+                    logNotif->setContext(logContext_);
+                }
+                if (logData_) {
+                    logNotif->setData(logData_);
+                    logData_ = nullptr; // Transfer ownership
+                }
+                notification = std::move(logNotif);
+            }
+            break;
+    }
+    
+    return notification;
+}
+
+void NotificationBuilder::reset() {
+    notificationType_ = MessageType::UNKNOWN;
+    method_.clear();
+    
+    // Initialize notification data
+    clientVersion_.clear();
+    sessionId_.clear();
+    if (clientCapabilities_) {
+        cJSON_Delete(clientCapabilities_);
+        clientCapabilities_ = nullptr;
+    }
+    
+    // Progress notification data
+    progressToken_ = ProgressToken();
+    progress_ = 0;
+    total_ = 100;
+    progressMessage_.clear();
+    progressDetails_.clear();
+    
+    // Cancelled notification data
+    requestId_.clear();
+    cancellationReason_.clear();
+    errorCode_ = 0;
+    errorMessage_.clear();
+    
+    // Tools list changed notification data
+    addedTools_.clear();
+    removedTools_.clear();
+    modifiedTools_.clear();
+    
+    // Log notification data
+    logLevel_ = LogNotification::INFO;
+    logMessage_.clear();
+    logContext_.clear();
+    if (logData_) {
+        cJSON_Delete(logData_);
+        logData_ = nullptr;
+    }
+}
+
+} // namespace tinymcp

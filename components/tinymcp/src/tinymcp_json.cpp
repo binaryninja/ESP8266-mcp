@@ -47,22 +47,21 @@ std::string JsonHelper::getString(const cJSON* json, const char* key, const std:
     if (!json) return defaultValue;
     cJSON* item = cJSON_GetObjectItem(json, key);
     if (!item || !cJSON_IsString(item)) return defaultValue;
-    const char* str = cJSON_GetStringValue(item);
-    return str ? std::string(str) : defaultValue;
+    return item->valuestring ? std::string(item->valuestring) : defaultValue;
 }
 
 int JsonHelper::getInt(const cJSON* json, const char* key, int defaultValue) {
     if (!json) return defaultValue;
     cJSON* item = cJSON_GetObjectItem(json, key);
     if (!item || !cJSON_IsNumber(item)) return defaultValue;
-    return static_cast<int>(cJSON_GetNumberValue(item));
+    return static_cast<int>(item->valuedouble);
 }
 
 double JsonHelper::getDouble(const cJSON* json, const char* key, double defaultValue) {
     if (!json) return defaultValue;
     cJSON* item = cJSON_GetObjectItem(json, key);
     if (!item || !cJSON_IsNumber(item)) return defaultValue;
-    return cJSON_GetNumberValue(item);
+    return item->valuedouble;
 }
 
 bool JsonHelper::getBool(const cJSON* json, const char* key, bool defaultValue) {
@@ -88,38 +87,44 @@ bool JsonHelper::setString(cJSON* json, const char* key, const std::string& valu
     if (!json) return false;
     cJSON* item = cJSON_CreateString(value.c_str());
     if (!item) return false;
-    return cJSON_AddItemToObject(json, key, item);
+    cJSON_AddItemToObject(json, key, item);
+    return true;
 }
 
 bool JsonHelper::setInt(cJSON* json, const char* key, int value) {
     if (!json) return false;
     cJSON* item = cJSON_CreateNumber(value);
     if (!item) return false;
-    return cJSON_AddItemToObject(json, key, item);
+    cJSON_AddItemToObject(json, key, item);
+    return true;
 }
 
 bool JsonHelper::setDouble(cJSON* json, const char* key, double value) {
     if (!json) return false;
     cJSON* item = cJSON_CreateNumber(value);
     if (!item) return false;
-    return cJSON_AddItemToObject(json, key, item);
+    cJSON_AddItemToObject(json, key, item);
+    return true;
 }
 
 bool JsonHelper::setBool(cJSON* json, const char* key, bool value) {
     if (!json) return false;
     cJSON* item = cJSON_CreateBool(value);
     if (!item) return false;
-    return cJSON_AddItemToObject(json, key, item);
+    cJSON_AddItemToObject(json, key, item);
+    return true;
 }
 
 bool JsonHelper::setObject(cJSON* json, const char* key, cJSON* object) {
     if (!json || !object) return false;
-    return cJSON_AddItemToObject(json, key, object);
+    cJSON_AddItemToObject(json, key, object);
+    return true;
 }
 
 bool JsonHelper::setArray(cJSON* json, const char* key, cJSON* array) {
     if (!json || !array) return false;
-    return cJSON_AddItemToObject(json, key, array);
+    cJSON_AddItemToObject(json, key, array);
+    return true;
 }
 
 int JsonHelper::getArraySize(const cJSON* array) {
@@ -134,7 +139,8 @@ cJSON* JsonHelper::getArrayItem(const cJSON* array, int index) {
 
 bool JsonHelper::addToArray(cJSON* array, cJSON* item) {
     if (!array || !item || !cJSON_IsArray(array)) return false;
-    return cJSON_AddItemToArray(array, item);
+    cJSON_AddItemToArray(array, item);
+    return true;
 }
 
 bool JsonHelper::validateJsonRpc(const cJSON* json) {
@@ -200,12 +206,11 @@ std::string JsonHelper::getIdAsString(const cJSON* json) {
     if (!id) return "";
     
     if (cJSON_IsString(id)) {
-        const char* str = cJSON_GetStringValue(id);
-        return str ? std::string(str) : "";
+        return id->valuestring ? std::string(id->valuestring) : "";
     }
     
     if (cJSON_IsNumber(id)) {
-        return std::to_string(static_cast<int>(cJSON_GetNumberValue(id)));
+        return std::to_string(static_cast<int>(id->valuedouble));
     }
     
     return "";
@@ -217,14 +222,13 @@ int JsonHelper::getIdAsInt(const cJSON* json) {
     if (!id) return 0;
     
     if (cJSON_IsNumber(id)) {
-        return static_cast<int>(cJSON_GetNumberValue(id));
+        return static_cast<int>(id->valuedouble);
     }
     
     if (cJSON_IsString(id)) {
-        const char* str = cJSON_GetStringValue(id);
-        if (str) {
+        if (id->valuestring) {
             try {
-                return std::stoi(str);
+                return std::stoi(id->valuestring);
             } catch (...) {
                 return 0;
             }
@@ -533,7 +537,7 @@ cJSON* JsonHelper::createServerCapabilities(bool toolsListChanged, bool progress
     
     cJSON* tools = cJSON_CreateObject();
     if (tools) {
-        setBool(tools, MSG_KEY_LISTCHANGED, toolsListChanged);
+        setBool(tools, "listChanged", toolsListChanged);
         setObject(capabilities, MSG_KEY_TOOLS, tools);
     }
     
@@ -581,8 +585,7 @@ size_t JsonHelper::calculateObjectSize(const cJSON* json) {
     size_t size = sizeof(cJSON);
     
     if (cJSON_IsString(json)) {
-        const char* str = cJSON_GetStringValue(json);
-        if (str) size += strlen(str);
+        if (json->valuestring) size += strlen(json->valuestring);
     } else if (cJSON_IsArray(json)) {
         size += calculateArraySize(json);
     } else if (cJSON_IsObject(json)) {
@@ -615,8 +618,7 @@ size_t JsonHelper::calculateArraySize(const cJSON* json) {
 size_t JsonHelper::calculateStringSize(const cJSON* json) {
     if (!json || !cJSON_IsString(json)) return 0;
     
-    const char* str = cJSON_GetStringValue(json);
-    return str ? strlen(str) : 0;
+    return json->valuestring ? strlen(json->valuestring) : 0;
 }
 
 } // namespace tinymcp

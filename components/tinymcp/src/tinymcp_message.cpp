@@ -17,16 +17,15 @@ bool MessageId::setFromJson(const cJSON* json) {
     if (!id) return false;
     
     if (cJSON_IsString(id)) {
-        const char* str = cJSON_GetStringValue(id);
-        if (str) {
+        if (id->valuestring) {
             type_ = DataType::STRING;
-            stringId_ = str;
+            stringId_ = id->valuestring;
             intId_ = 0;
             return true;
         }
     } else if (cJSON_IsNumber(id)) {
         type_ = DataType::INTEGER;
-        intId_ = static_cast<int>(cJSON_GetNumberValue(id));
+        intId_ = static_cast<int>(id->valuedouble);
         stringId_.clear();
         return true;
     }
