@@ -1,0 +1,9 @@
+build/
+.cache/
+__pycache__/
+*.pyc
+*.pyo
+*.bin
+*.elf
+*.map
+sdkconfig.old
