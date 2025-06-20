@@ -2,8 +2,14 @@ idf_component_register(
     SRCS
         "MCPServer.cpp"
         "EspSocketTransport.cpp"
+        "src/tinymcp_json.cpp"
+        "src/tinymcp_message.cpp"
+        "src/tinymcp_request.cpp"
+        "src/tinymcp_response.cpp"
+        "src/tinymcp_notification.cpp"
     INCLUDE_DIRS
         "."
+        "include"
     REQUIRES lwip freertos json pthread
 )
 

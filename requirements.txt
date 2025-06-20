@@ -1,0 +1,18 @@
+# Python requirements for ESP8266 MCP Client Test Script
+# Install with: pip install -r requirements.txt
+
+# No external dependencies required - uses only Python standard library
+# The test script uses built-in modules:
+# - json (JSON parsing)
+# - socket (TCP/IP communication)
+# - sys (system functions)
+# - time (delays and timing)
+# - argparse (command line parsing)
+# - typing (type hints)
+
+# Optional: For enhanced terminal output (colors, formatting)
+# colorama>=0.4.4
+# rich>=12.0.0
+
+# Optional: For advanced JSON handling
+# jsonschema>=4.0.0
