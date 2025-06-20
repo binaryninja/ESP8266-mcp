@@ -115,18 +115,20 @@ void AsyncTask::setTimeout(uint32_t timeoutMs) {
 }
 
 std::unique_ptr<Response> AsyncTask::createResponse(const cJSON* result) {
-    auto response = std::make_unique<Response>(requestId_);
+    auto response = std::make_unique<CallToolResponse>(requestId_);
     if (result) {
-        response->setResult(result);
+        // Convert cJSON result to tool content
+        char* resultStr = cJSON_Print(result);
+        if (resultStr) {
+            response->addJsonContent(std::string(resultStr));
+            free(resultStr);
+        }
     }
     return response;
 }
 
 std::unique_ptr<Response> AsyncTask::createErrorResponse(int errorCode, const std::string& message) {
-    auto response = std::make_unique<Response>(requestId_);
-    Error error(errorCode, message);
-    response->setError(error);
-    return response;
+    return std::make_unique<ErrorResponse>(requestId_, errorCode, message);
 }
 
 // Session implementation
@@ -388,7 +390,7 @@ int Session::submitTask(std::unique_ptr<AsyncTask> task) {
         return TINYMCP_SUCCESS;
     }
     
-    return TINYMCP_ERROR_RESOURCE_LOCK;
+    return TINYMCP_ERROR_RESOURCE_LIMIT;
 }
 
 int Session::cancelTask(const MessageId& requestId) {
@@ -430,12 +432,22 @@ int Session::sendMessage(const Message& message) {
 }
 
 int Session::sendNotification(const std::string& method, const cJSON* params) {
-    Notification notification(method);
-    if (params) {
-        notification.setParams(params);
+    if (method == METHOD_INITIALIZED) {
+        auto notification = std::make_unique<InitializedNotification>();
+        return sendMessage(*notification);
+    } else if (method == METHOD_PROGRESS) {
+        // For progress notifications, we need a token - use a default one
+        ProgressToken token("default");
+        auto notification = std::make_unique<ProgressNotification>(token, 0, 100);
+        return sendMessage(*notification);
+    } else if (method == METHOD_CANCELLED) {
+        auto notification = std::make_unique<CancelledNotification>("unknown", "Request cancelled");
+        return sendMessage(*notification);
+    } else {
+        // For unknown methods, create a basic notification
+        auto notification = std::make_unique<InitializedNotification>();
+        return sendMessage(*notification);
     }
-    
-    return sendMessage(notification);
 }
 
 // Static task functions
@@ -600,7 +612,7 @@ int Session::processRequest(const Request& request) {
     } else {
         // Unknown method
         return sendErrorResponse(request.getId(), 
-                               TINYMCP_ERROR_METHOD_NOT_FOUND,
+                               TINYMCP_METHOD_NOT_FOUND,
                                "Method not found: " + method);
     }
 }
@@ -639,12 +651,21 @@ int Session::handleInitializeRequest(const InitializeRequest& request) {
     }
     
     // Protocol version
-    cJSON_AddStringToObject(result, "protocolVersion", "2024-11-05");
+    cJSON* protocolVersion = cJSON_CreateString("2024-11-05");
+    if (protocolVersion) {
+        cJSON_AddItemToObject(result, "protocolVersion", protocolVersion);
+    }
     
     // Server info
     cJSON* serverInfo = cJSON_CreateObject();
-    cJSON_AddStringToObject(serverInfo, "name", serverName_.c_str());
-    cJSON_AddStringToObject(serverInfo, "version", serverVersion_.c_str());
+    cJSON* serverName = cJSON_CreateString(serverName_.c_str());
+    if (serverName) {
+        cJSON_AddItemToObject(serverInfo, "name", serverName);
+    }
+    cJSON* serverVersion = cJSON_CreateString(serverVersion_.c_str());
+    if (serverVersion) {
+        cJSON_AddItemToObject(serverInfo, "version", serverVersion);
+    }
     cJSON_AddItemToObject(result, "serverInfo", serverInfo);
     
     // Capabilities
@@ -665,7 +686,7 @@ int Session::handleInitializeRequest(const InitializeRequest& request) {
 int Session::handleListToolsRequest(const ListToolsRequest& request) {
     if (!protocolInitialized_) {
         return sendErrorResponse(request.getId(), 
-                               TINYMCP_ERROR_NOT_INITIALIZED,
+                               TINYMCP_NOT_INITIALIZED,
                                "Session not initialized");
     }
     
@@ -681,8 +702,14 @@ int Session::handleListToolsRequest(const ListToolsRequest& request) {
     // Add supported tools
     for (const auto& toolName : supportedTools_) {
         cJSON* tool = cJSON_CreateObject();
-        cJSON_AddStringToObject(tool, "name", toolName.c_str());
-        cJSON_AddStringToObject(tool, "description", "Tool description");
+        cJSON* name = cJSON_CreateString(toolName.c_str());
+        if (name) {
+            cJSON_AddItemToObject(tool, "name", name);
+        }
+        cJSON* description = cJSON_CreateString("Tool description");
+        if (description) {
+            cJSON_AddItemToObject(tool, "description", description);
+        }
         cJSON_AddItemToArray(tools, tool);
     }
     
@@ -697,7 +724,7 @@ int Session::handleListToolsRequest(const ListToolsRequest& request) {
 int Session::handleCallToolRequest(const CallToolRequest& request) {
     if (!protocolInitialized_) {
         return sendErrorResponse(request.getId(), 
-                               TINYMCP_ERROR_NOT_INITIALIZED,
+                               TINYMCP_NOT_INITIALIZED,
                                "Session not initialized");
     }
     
@@ -707,12 +734,13 @@ int Session::handleCallToolRequest(const CallToolRequest& request) {
     auto it = std::find(supportedTools_.begin(), supportedTools_.end(), toolName);
     if (it == supportedTools_.end()) {
         return sendErrorResponse(request.getId(), 
-                               TINYMCP_ERROR_TOOL_NOT_FOUND,
+                               TINYMCP_METHOD_NOT_FOUND,
                                "Tool not found: " + toolName);
     }
     
-    // Create async task for tool execution
-    auto task = std::make_unique<CallToolTask>(request.getId(), toolName, request.getArguments());
+    // Create async task for tool execution using ErrorTask as a placeholder
+    // TODO: Implement proper tool registry and execution system
+    auto task = std::make_unique<ErrorTask>(request.getId(), TINYMCP_ERROR_NOT_IMPLEMENTED, "Tool execution not implemented: " + toolName);
     
     return submitTask(std::move(task));
 }
@@ -749,18 +777,20 @@ bool Session::canTransitionTo(SessionState newState) const {
 }
 
 int Session::sendResponse(const MessageId& requestId, const cJSON* result) {
-    Response response(requestId);
+    auto response = std::make_unique<CallToolResponse>(requestId);
     if (result) {
-        response.setResult(result);
+        char* resultStr = cJSON_Print(result);
+        if (resultStr) {
+            response->addJsonContent(std::string(resultStr));
+            free(resultStr);
+        }
     }
-    return sendMessage(response);
+    return sendMessage(*response);
 }
 
 int Session::sendErrorResponse(const MessageId& requestId, int errorCode, const std::string& message) {
-    Response response(requestId);
-    Error error(errorCode, message);
-    response.setError(error);
-    return sendMessage(response);
+    auto response = std::make_unique<ErrorResponse>(requestId, errorCode, message);
+    return sendMessage(*response);
 }
 
 void Session::updateActivity() {

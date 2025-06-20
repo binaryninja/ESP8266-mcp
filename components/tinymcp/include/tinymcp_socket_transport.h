@@ -104,7 +104,7 @@ private:
     std::string hostAddress_;
     uint16_t port_;
     bool isServer_;
-    std::atomic<bool> connected_;
+    mutable std::atomic<bool> connected_;
     
     // Client information
     struct sockaddr_in clientAddr_;

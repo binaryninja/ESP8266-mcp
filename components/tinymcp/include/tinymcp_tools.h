@@ -7,6 +7,7 @@
 #include <memory>
 #include <string>
 #include <functional>
+#include <climits>
 
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"

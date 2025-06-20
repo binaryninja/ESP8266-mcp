@@ -1,0 +1,925 @@
+
+# ESP8266 MCP Integrated Test Log
+# Generated: 2025-06-20T18:28:36.569699
+# ESP8266 IP: 192.168.86.30
+# Serial Port: /dev/ttyUSB0
+# Baud Rate: 74880
+================================================================================
+2025-06-20T18:28:36.581869 [ESP8266]  INFO: t: EspSocketTransport created with socket 55[0m
+2025-06-20T18:28:36.581912 [ESP8266]  INFO: [MCPServer] MCPServer created
+2025-06-20T18:28:36.592014 [ESP8266]  INFO: [0m
+2025-06-20T18:28:36.592026 [ESP8266]  INFO: [ESP8266-MCP] Starting C++ MCP server for
+2025-06-20T18:28:36.602129 [ESP8266]  INFO: client[0m
+2025-06-20T18:28:36.602141 [ESP8266]  INFO: [MCPServer] MCP Server starting...[0m
+2025-06-20T18:28:36.602146 [ESP8266]  INFO: [0;32mI (647004) EspSocke
+2025-06-20T18:28:36.613981 [ESP8266]  INFO: tTransport: Socket closed by peer[0m
+2025-06-20T18:28:36.614009 [ESP8266]  INFO: [0;32mI (647011) MCPServ
+2025-06-20T18:28:36.624102 [ESP8266]  INFO: er: Transport read failed, stopping server[0m
+2025-06-20T18:28:36.624114 [ESP8266]  INFO: [MCPServer] MCP Server stopped
+2025-06-20T18:28:36.635639 [ESP8266]  INFO: [0m
+2025-06-20T18:28:36.635666 [ESP8266]  INFO: [ESP8266-MCP] Client disconnected[0m
+2025-06-20T18:28:36.635672 [ESP8266]  INFO: [0
+2025-06-20T18:28:36.645769 [ESP8266]  INFO: [EspSocketTransport] Socket closed manually[0m
+2025-06-20T18:28:36.645780 [ESP8266]  INFO: [MCPServer] MCPS
+2025-06-20T18:28:36.655867 [ESP8266]  INFO: erver destroyed[0m
+2025-06-20T18:28:36.655877 [ESP8266]  INFO: [ESP8266-MCP] [After clien
+2025-06-20T18:28:36.665965 [ESP8266]  INFO: t disconnect] Free heap: 71976 bytes, Min free: 50600 bytes[0m
+2025-06-20T18:28:39.570427 [ CLIENT]  TEST: 🚀 Starting test: test_mcp_client.py
+2025-06-20T18:28:39.627996 [ESP8266]  INFO: [ESP8266-MCP] Client connected from 192.168.86.
+2025-06-20T18:28:39.638472 [ESP8266]  INFO: 32:53400[0m
+2025-06-20T18:28:39.638508 [ESP8266]  INFO: [ESP8266-MCP] [Before MCP server creation] Free heap: 71272 bytes
+2025-06-20T18:28:39.648606 [ESP8266]  INFO: , Min free: 50600 bytes[0m
+2025-06-20T18:28:39.648617 [ESP8266]  INFO: [0;32mI (650045) EspSocketTranspor
+2025-06-20T18:28:39.658725 [ESP8266]  INFO: t: EspSocketTransport created with socket 55[0m
+2025-06-20T18:28:39.658741 [ESP8266]  INFO: [0;32mI (6500
+2025-06-20T18:28:39.668828 [ESP8266]  INFO: [MCPServer] MCPServer created[0m
+2025-06-20T18:28:39.668838 [ESP8266]  INFO: [ESP8266-MCP] Starting C++ MCP server for
+2025-06-20T18:28:39.678923 [ESP8266]  INFO: client[0m
+2025-06-20T18:28:39.678931 [ESP8266]  INFO: [MCPServer] MCP Server starting...
+2025-06-20T18:28:39.690144 [ESP8266]  INFO: [0m
+2025-06-20T18:28:39.690182 [ESP8266]  INFO: DEBUG: Serializing JSON object
+2025-06-20T18:28:39.690194 [ESP8266]  INFO: DEBUG: Serialized JSON: '{"protocolVersion":"2024-11-05","
+2025-06-20T18:28:39.700278 [ESP8266]  INFO: clientInfo":{"name":"ESP8266-MCP-Test-Client","version":"1.0.0"}
+2025-06-20T18:28:39.710364 [ESP8266]  INFO: ,"capabilities":{"roots":{"listChanged":false},"sampling":{}}}'
+2025-06-20T18:28:39.710370 [ESP8266]  INFO: DEBUG: Setting key='id' value='
+2025-06-20T18:28:39.721470 [ESP8266]  INFO: 1'
+2025-06-20T18:28:39.721504 [ESP8266]  INFO: DEBUG: Created cJSON string, type=16, valuestring='1'
+2025-06-20T18:28:39.721507 [ESP8266]  INFO: DEBUG
+2025-06-20T18:28:39.731600 [ESP8266]  INFO: : Added item to object
+2025-06-20T18:28:39.731613 [ESP8266]  INFO: [MCPServer] Server initialized[0m
+2025-06-20T18:28:39.731618 [ESP8266]  INFO: DEBUG: Serializing
+2025-06-20T18:28:39.745183 [ESP8266]  INFO: JSON object
+2025-06-20T18:28:39.745203 [ESP8266]  INFO: DEBUG: Serialized JSON: '{"jsonrpc":true,"id":"1","result":{"protocolVersion":true,
+2025-06-20T18:28:39.755289 [ESP8266]  INFO: "serverInfo":{"name":true,"version":true},"capabilities":{"tools
+2025-06-20T18:28:39.765380 [ESP8266]  INFO: ":{"listChanged":false}}}}'
+2025-06-20T18:28:39.817337 [ESP8266]  INFO: DEBUG: Setting key='id' value='2
+2025-06-20T18:28:39.827471 [ESP8266]  INFO: '
+2025-06-20T18:28:39.827486 [ESP8266]  INFO: DEBUG: Created cJSON string, type=16, valuestring='2'
+2025-06-20T18:28:39.827489 [ESP8266]  INFO: DEBUG:
+2025-06-20T18:28:39.838102 [ESP8266]  INFO: Added item to object
+2025-06-20T18:28:39.838192 [ESP8266]  INFO: DEBUG: Serializing JSON object
+2025-06-20T18:28:39.838196 [ESP8266]  INFO: DEBUG: Serialized JSON: '{"jsonrpc":true,
+2025-06-20T18:28:39.848565 [ESP8266]  INFO: "id":"2","result":{}}'
+2025-06-20T18:28:39.848605 [ESP8266]  INFO: DEBUG: Setting key='id' value='3'
+2025-06-20T18:28:39.848609 [ESP8266]  INFO: DEBUG
+2025-06-20T18:28:39.858696 [ESP8266]  INFO: : Created cJSON string, type=16, valuestring='3'
+2025-06-20T18:28:39.858704 [ESP8266]  INFO: DEBUG: Added i
+2025-06-20T18:28:39.870187 [ESP8266]  INFO: tem to object
+2025-06-20T18:28:39.870200 [ESP8266]  INFO: DEBUG: Serializing JSON object
+2025-06-20T18:28:39.870203 [ESP8266]  INFO: DEBUG: Serialized JSON: '{"jsonrpc":true,"id":"3"
+2025-06-20T18:28:39.880292 [ESP8266]  INFO: ,"result":{"tools":[{"name":true,"description":true,"inputSchema":{"type":true,"properties":{"te
+2025-06-20T18:28:39.890400 [ESP8266]  INFO: xt":{"type":true,"description":true}},"required":["text"]}},{"na
+2025-06-20T18:28:39.900533 [ESP8266]  INFO: me":true,"description":true,"inputSchema":{"type":true,"properti
+2025-06-20T18:28:39.910636 [ESP8266]  INFO: es":{"pin":{"type":true,"description":true},"state":{"type":true,"enum":["high","low"],"descript
+2025-06-20T18:28:39.920733 [ESP8266]  INFO: ion":true}},"required":["pin","state"]}}]}}'
+2025-06-20T18:28:39.920746 [ESP8266]  INFO: DEBUG: Serializing
+2025-06-20T18:28:39.930838 [ESP8266]  INFO: JSON object
+2025-06-20T18:28:39.930850 [ESP8266]  INFO: DEBUG: Serialized JSON: '{"name":"echo","arguments
+2025-06-20T18:28:39.940944 [ESP8266]  INFO: ":{"text":"Hello ESP8266!"}}'
+2025-06-20T18:28:39.940956 [ESP8266]  INFO: [MCPServer] handleToolsCall: Starting to process
+2025-06-20T18:28:39.954165 [ESP8266]  INFO: tool call[0m
+2025-06-20T18:28:39.954180 [ESP8266]  INFO: [MCPServer] handleToolsCall: Request ID: 4[0m
+2025-06-20T18:28:39.954185 [ESP8266]  INFO: [0;32mI (65035
+2025-06-20T18:28:39.964273 [ESP8266]  INFO: [MCPServer] handleToolsCall: Tool name: echo[0m
+2025-06-20T18:28:39.964288 [ESP8266]  INFO: DEBUG: Setti
+2025-06-20T18:28:39.974364 [ESP8266]  INFO: ng key='id' value='4'
+2025-06-20T18:28:39.974369 [ESP8266]  INFO: DEBUG: Created cJSON string, type=16, valuestring='4'
+2025-06-20T18:28:39.974371 [ESP8266]  INFO: DEBUG: Added item
+2025-06-20T18:28:39.984764 [ESP8266]  INFO: to object
+2025-06-20T18:28:39.984798 [ESP8266]  INFO: [MCPServer] handleToolsCall: Process
+2025-06-20T18:28:39.994898 [ESP8266]  INFO: ing echo tool[0m
+2025-06-20T18:28:39.994916 [ESP8266]  INFO: [MCPServer] handleToolsCall:
+2025-06-20T18:28:40.005003 [ESP8266]  INFO: Echo has text parameter[0m
+2025-06-20T18:28:40.005010 [ESP8266]  INFO: DEBUG: Setting key='text' value='Echo: Hello ESP8266!'
+2025-06-20T18:28:40.005012 [ESP8266]  INFO: DEBUG: Cre
+2025-06-20T18:28:40.015102 [ESP8266]  INFO: ated cJSON string, type=16, valuestring='Echo: Hello ESP8266!'
+2025-06-20T18:28:40.027249 [ESP8266]  INFO: DEBUG: Added item to object
+2025-06-20T18:28:40.027285 [ESP8266]  INFO: [MCPServer] Echo tool called with: Hello ESP8266!
+2025-06-20T18:28:40.037379 [ESP8266]  INFO: [0m
+2025-06-20T18:28:40.037388 [ESP8266]  INFO: [MCPServer] handleToolsCall: Setting resul
+2025-06-20T18:28:40.047468 [ESP8266]  INFO: t and returning success response[0m
+2025-06-20T18:28:40.047474 [ESP8266]  INFO: DEBUG: Serializing JSON object
+2025-06-20T18:28:40.047476 [ESP8266]  INFO: DEBUG: Serialized JSON: '{
+2025-06-20T18:28:40.058491 [ESP8266]  INFO: "jsonrpc":true,"id":"4","result"
+2025-06-20T18:28:40.068667 [ESP8266]  INFO: :{"content":[{"type":true,"text":"Echo: Hello ESP8266!"}]}}'
+2025-06-20T18:28:40.563896 [ESP8266]  INFO: DEBUG: Serializing JSON object
+2025-06-20T18:28:40.563923 [ESP8266]  INFO: DEBUG: Serialized JSON: '{"name"
+2025-06-20T18:28:40.574895 [ESP8266]  INFO: :"echo","arguments":{"text":"Testing MCP protocol 🚀"}}'
+2025-06-20T18:28:40.574921 [ESP8266]  INFO: [MCPServer] handleT
+2025-06-20T18:28:40.585014 [ESP8266]  INFO: oolsCall: Starting to process tool call[0m
+2025-06-20T18:28:40.585025 [ESP8266]  INFO: [0;32mI (650985) M
+2025-06-20T18:28:40.598185 [ESP8266]  INFO: CPServer: handleToolsCall: Request ID: 5[0m
+2025-06-20T18:28:40.598199 [ESP8266]  INFO: [MCPServer] handleToolsCall: Tool
+2025-06-20T18:28:40.608293 [ESP8266]  INFO: name: echo[0m
+2025-06-20T18:28:40.608305 [ESP8266]  INFO: DEBUG: Setting key='id' value='5'
+2025-06-20T18:28:40.608308 [ESP8266]  INFO: DEBUG: Creat
+2025-06-20T18:28:40.618397 [ESP8266]  INFO: ed cJSON string, type=16, valuestring='5'
+2025-06-20T18:28:40.618409 [ESP8266]  INFO: DEBUG: Added item to object
+2025-06-20T18:28:40.618411 [ESP8266]  INFO: [0;32mI (651017) MCPSer
+2025-06-20T18:28:40.628507 [ESP8266]  INFO: ver: handleToolsCall: Processing echo tool[0m
+2025-06-20T18:28:40.628524 [ESP8266]  INFO: [0;32mI (651027
+2025-06-20T18:28:40.638619 [ESP8266]  INFO: [MCPServer] handleToolsCall: Echo has text parameter[0m
+2025-06-20T18:28:40.638634 [ESP8266]  INFO: DEBUG: Setting key='text' value='Echo
+2025-06-20T18:28:40.649114 [ESP8266]  INFO: : Testing MCP protocol 🚀'
+2025-06-20T18:28:40.649218 [ESP8266]  INFO: DEBUG: Created cJSON string, type=
+2025-06-20T18:28:40.659315 [ESP8266]  INFO: 16, valuestring='Echo: Testing MCP protocol 🚀'
+2025-06-20T18:28:40.659326 [ESP8266]  INFO: DEBUG: Added
+2025-06-20T18:28:40.669411 [ESP8266]  INFO: item to object
+2025-06-20T18:28:40.669419 [ESP8266]  INFO: [MCPServer] Echo tool called with: Testing MCP protocol 🚀[0
+2025-06-20T18:28:40.682171 [ESP8266]  INFO: m
+2025-06-20T18:28:40.682185 [ESP8266]  INFO: [MCPServer] handleToolsCall: Setting result and returning success response[
+2025-06-20T18:28:40.692267 [ESP8266]  INFO: 0m
+2025-06-20T18:28:40.692274 [ESP8266]  INFO: DEBUG: Serializing JSON object
+2025-06-20T18:28:40.692276 [ESP8266]  INFO: DEBUG: Serialized JSON: '{"j
+2025-06-20T18:28:40.702352 [ESP8266]  INFO: sonrpc":true,"id":"5","result":{"content":[{"type":true,"text":"
+2025-06-20T18:28:40.712462 [ESP8266]  INFO: Echo: Testing MCP protocol 🚀"}]}}'
+2025-06-20T18:28:41.215572 [ESP8266]  INFO: DEBUG: Serializing JSON object
+2025-06-20T18:28:41.215583 [ESP8266]  INFO: DEBUG: Serialized JSON: '{"name"
+2025-06-20T18:28:41.226539 [ESP8266]  INFO: :"echo","arguments":{"text":"Special characters: !@#$%^&*()"}}'
+2025-06-20T18:28:41.226573 [ESP8266]  INFO: [MCPServer] ha
+2025-06-20T18:28:41.236750 [ESP8266]  INFO: ndleToolsCall: Starting to process tool call[0m
+2025-06-20T18:28:41.236780 [ESP8266]  INFO: [0;32mI (6516
+2025-06-20T18:28:41.246919 [ESP8266]  INFO: [MCPServer] handleToolsCall: Request ID: 6[0m
+2025-06-20T18:28:41.246949 [ESP8266]  INFO: [0;32mI (651
+2025-06-20T18:28:41.257119 [ESP8266]  INFO: [MCPServer] handleToolsCall: Tool name: echo[0m
+2025-06-20T18:28:41.257196 [ESP8266]  INFO: DEBUG: Setting key='id' value='6'
+2025-06-20T18:28:41.257200 [ESP8266]  INFO: DEBUG:
+2025-06-20T18:28:41.267341 [ESP8266]  INFO: Created cJSON string, type=16, valuestring='6'
+2025-06-20T18:28:41.267359 [ESP8266]  INFO: DEBUG: Added item to object
+2025-06-20T18:28:41.267363 [ESP8266]  INFO: [0;32mI (651668) M
+2025-06-20T18:28:41.277455 [ESP8266]  INFO: CPServer: handleToolsCall: Processing echo tool[0m
+2025-06-20T18:28:41.277465 [ESP8266]  INFO: [0;32mI (6
+2025-06-20T18:28:41.287643 [ESP8266]  INFO: [MCPServer] handleToolsCall: Echo has text parameter[0m
+2025-06-20T18:28:41.297785 [ESP8266]  INFO: DEBUG: Setting key='text' value='Echo: Special characters: !@#$%
+2025-06-20T18:28:41.307975 [ESP8266]  INFO: ^&*()'
+2025-06-20T18:28:41.308007 [ESP8266]  INFO: DEBUG: Created cJSON string, type=16, valuestring='Echo: Special characters: !@#$%^&*()'
+2025-06-20T18:28:41.318140 [ESP8266]  INFO: DEBUG: Added item to object
+2025-06-20T18:28:41.318157 [ESP8266]  INFO: [MCPServer] Echo
+2025-06-20T18:28:41.328257 [ESP8266]  INFO: tool called with: Special characters: !@#$%^&*()[0m
+2025-06-20T18:28:41.328269 [ESP8266]  INFO: [MCPServer] handleToolsC
+2025-06-20T18:28:41.339189 [ESP8266]  INFO: all: Setting result and returning success response[0m
+2025-06-20T18:28:41.339202 [ESP8266]  INFO: DEBUG: S
+2025-06-20T18:28:41.349359 [ESP8266]  INFO: erializing JSON object
+2025-06-20T18:28:41.349385 [ESP8266]  INFO: DEBUG: Serialized JSON: '{"jsonrpc":true,"id":"6","result":{"content":[{
+2025-06-20T18:28:41.359525 [ESP8266]  INFO: "type":true,"text":"Echo: Special characters: !@#$%^&*()"}]}}'
+2025-06-20T18:28:41.864255 [ESP8266]  INFO: DEBUG: Serializing JSON object
+2025-06-20T18:28:41.864281 [ESP8266]  INFO: DEBUG: Serialized JSON: '{"name"
+2025-06-20T18:28:41.874377 [ESP8266]  INFO: :"echo","arguments":{"text":"Multiple\nlines\ntest"}}'
+2025-06-20T18:28:41.874397 [ESP8266]  INFO: [0;32mI
+2025-06-20T18:28:41.884486 [ESP8266]  INFO: [MCPServer] handleToolsCall: Starting to process tool c
+2025-06-20T18:28:41.896186 [ESP8266]  INFO: all[0m
+2025-06-20T18:28:41.896197 [ESP8266]  INFO: [MCPServer] handleToolsCall: Request ID: 7[0m
+2025-06-20T18:28:41.896202 [ESP8266]  INFO: [0;32mI (652294) MCPS
+2025-06-20T18:28:41.906292 [ESP8266]  INFO: erver: handleToolsCall: Tool name: echo[0m
+2025-06-20T18:28:41.906303 [ESP8266]  INFO: DEBUG: Setting key='id' value='7'
+2025-06-20T18:28:41.906306 [ESP8266]  INFO: DEBUG: Created c
+2025-06-20T18:28:41.916399 [ESP8266]  INFO: JSON string, type=16, valuestring='7'
+2025-06-20T18:28:41.916411 [ESP8266]  INFO: DEBUG: Added item to obje
+2025-06-20T18:28:41.926504 [ESP8266]  INFO: ct
+2025-06-20T18:28:41.926517 [ESP8266]  INFO: [MCPServer] handleToolsCall: Processing ech
+2025-06-20T18:28:41.936610 [ESP8266]  INFO: o tool[0m
+2025-06-20T18:28:41.936620 [ESP8266]  INFO: [MCPServer] handleToolsCall: Echo has text parameter[0m
+2025-06-20T18:28:41.936624 [ESP8266]  INFO: DEBUG: Se
+2025-06-20T18:28:41.948807 [ESP8266]  INFO: tting key='text' value='Echo: Multiple
+2025-06-20T18:28:41.948843 [ESP8266]  INFO: lines
+2025-06-20T18:28:41.948846 [ESP8266]  INFO: test'
+2025-06-20T18:28:41.948848 [ESP8266]  INFO: DEBUG: Cre
+2025-06-20T18:28:41.958939 [ESP8266]  INFO: ated cJSON string, type=16, valuestring='Echo: Multiple
+2025-06-20T18:28:41.958951 [ESP8266]  INFO: lines
+2025-06-20T18:28:41.958953 [ESP8266]  INFO: test'
+2025-06-20T18:28:41.958955 [ESP8266]  INFO: DEBUG: Added item to obje
+2025-06-20T18:28:41.969033 [ESP8266]  INFO: ct
+2025-06-20T18:28:41.969039 [ESP8266]  INFO: [MCPServer] Echo tool called with: Multiple
+2025-06-20T18:28:41.979192 [ESP8266]  INFO: lines
+2025-06-20T18:28:41.979207 [ESP8266]  INFO: test[0m
+2025-06-20T18:28:41.979209 [ESP8266]  INFO: [MCPServer] handleToolsCall:
+2025-06-20T18:28:41.989302 [ESP8266]  INFO: Setting result and returning success response[0m
+2025-06-20T18:28:41.989313 [ESP8266]  INFO: DEBUG: Serializing JSON object
+2025-06-20T18:28:41.989316 [ESP8266]  INFO: DEBUG: Seria
+2025-06-20T18:28:41.999393 [ESP8266]  INFO: lized JSON: '{"jsonrpc":true,"id":"7","result":{"content":[{"typ
+2025-06-20T18:28:42.009671 [ESP8266]  INFO: e":true,"text":"Echo: Multiple\nlines\ntest"}]}}'
+2025-06-20T18:28:42.516388 [ESP8266]  INFO: DEBUG: Serializing JSON object
+2025-06-20T18:28:42.516410 [ESP8266]  INFO: DEBUG: ERROR - cJSON_PrintUnform
+2025-06-20T18:28:42.527300 [ESP8266]  INFO: atted returned NULL!
+2025-06-20T18:28:42.527326 [ESP8266]  INFO: [MCPServer] handleToolsCall: Starting to process tool cal
+2025-06-20T18:28:42.537425 [ESP8266]  INFO: l[0m
+2025-06-20T18:28:42.537436 [ESP8266]  INFO: [MCPServer] handleToolsCall: Request ID:
+2025-06-20T18:28:42.547520 [ESP8266]  INFO: 8[0m
+2025-06-20T18:28:42.547526 [ESP8266]  INFO: [MCPServer] handleToolsCall: Tool name: gpio_control[0m
+2025-06-20T18:28:42.547530 [ESP8266]  INFO: DEBUG: Settin
+2025-06-20T18:28:42.557671 [ESP8266]  INFO: g key='id' value='8'
+2025-06-20T18:28:42.557697 [ESP8266]  INFO: DEBUG: Created cJSON string, type=16, valu
+2025-06-20T18:28:42.567809 [ESP8266]  INFO: estring='8'
+2025-06-20T18:28:42.567825 [ESP8266]  INFO: DEBUG: Added item to object
+2025-06-20T18:28:42.567827 [ESP8266]  INFO: DEBUG: Setting key='text' value='GPIO pin 2 set to hig
+2025-06-20T18:28:42.577920 [ESP8266]  INFO: h'
+2025-06-20T18:28:42.577931 [ESP8266]  INFO: DEBUG: Created cJSON string, type=16, valuestring='GPIO pin
+2025-06-20T18:28:42.588053 [ESP8266]  INFO: 2 set to high'
+2025-06-20T18:28:42.588072 [ESP8266]  INFO: DEBUG: Added item to object
+2025-06-20T18:28:42.588075 [ESP8266]  INFO: [0;32mI (652985) M
+2025-06-20T18:28:42.598265 [ESP8266]  INFO: CPServer: GPIO tool called: pin 2, state high[0m
+2025-06-20T18:28:42.598287 [ESP8266]  INFO: [MCPServer] handleToolsCall:
+2025-06-20T18:28:42.608449 [ESP8266]  INFO: Setting result and returning success response[0m
+2025-06-20T18:28:42.608466 [ESP8266]  INFO: DEBUG: Seria
+2025-06-20T18:28:42.618553 [ESP8266]  INFO: lizing JSON object
+2025-06-20T18:28:42.618562 [ESP8266]  INFO: DEBUG: Serialized JSON: '{"jsonrpc":true,"id
+2025-06-20T18:28:42.628648 [ESP8266]  INFO: ":"8","result":{"content":[{"type":true,"text":"GPIO pin 2 set to high"}]}}'
+2025-06-20T18:28:43.657652 [ESP8266]  INFO: DEBUG: Serializing JSON object
+2025-06-20T18:28:43.657678 [ESP8266]  INFO: DEBUG: ERROR - cJSON_PrintUnformatted returned NULL!
+2025-06-20T18:28:43.657682 [ESP8266]  INFO: [0;32mI (
+2025-06-20T18:28:43.668228 [ESP8266]  INFO: [MCPServer] handleToolsCall: Starting to process tool cal
+2025-06-20T18:28:43.678413 [ESP8266]  INFO: l[0m
+2025-06-20T18:28:43.678447 [ESP8266]  INFO: [MCPServer] handleToolsCall: Request ID:
+2025-06-20T18:28:43.689985 [ESP8266]  INFO: 9[0m
+2025-06-20T18:28:43.690023 [ESP8266]  INFO: [MCPServer] handleToolsCall: Tool name: gpio_control[0m
+2025-06-20T18:28:43.690029 [ESP8266]  INFO: DEBUG: Settin
+2025-06-20T18:28:43.700119 [ESP8266]  INFO: g key='id' value='9'
+2025-06-20T18:28:43.700161 [ESP8266]  INFO: DEBUG: Created cJSON string, type=16, valuestring='9'
+2025-06-20T18:28:43.700163 [ESP8266]  INFO: DEBUG: Added item t
+2025-06-20T18:28:43.712193 [ESP8266]  INFO: o object
+2025-06-20T18:28:43.712206 [ESP8266]  INFO: DEBUG: Setting key='text' value='GPIO pin 2 set to low
+2025-06-20T18:28:43.722290 [ESP8266]  INFO: '
+2025-06-20T18:28:43.722297 [ESP8266]  INFO: DEBUG: Created cJSON string, type=16, valuestring='GPIO pin 2 set to low'
+2025-06-20T18:28:43.722299 [ESP8266]  INFO: DEBUG: Added item
+2025-06-20T18:28:43.732377 [ESP8266]  INFO: to object
+2025-06-20T18:28:43.732383 [ESP8266]  INFO: [MCPServer] GPIO tool called: pin 2,
+2025-06-20T18:28:43.743810 [ESP8266]  INFO: state low[0m
+2025-06-20T18:28:43.743834 [ESP8266]  INFO: [MCPServer] handleToolsCall: Se
+2025-06-20T18:28:43.753928 [ESP8266]  INFO: tting result and returning success response[0m
+2025-06-20T18:28:43.753939 [ESP8266]  INFO: DEBUG: Serializing JSON object
+2025-06-20T18:28:43.753942 [ESP8266]  INFO: DEBUG: Serializ
+2025-06-20T18:28:43.765234 [ESP8266]  INFO: ed JSON: '{"jsonrpc":true,"id":"9","result":{"content":[{"type":
+2025-06-20T18:28:43.775354 [ESP8266]  INFO: true,"text":"GPIO pin 2 set to low"}]}}'
+2025-06-20T18:28:43.776709 [ CLIENT]  INFO: 🤖 ESP8266 MCP Client Test Script
+2025-06-20T18:28:43.776737 [ CLIENT]  INFO: ============================================================
+2025-06-20T18:28:43.776741 [ CLIENT]  INFO: Target: 192.168.86.30:8080
+2025-06-20T18:28:43.776743 [ CLIENT]  INFO: ============================================================
+2025-06-20T18:28:43.776746 [ CLIENT]  INFO: 🧪 Starting comprehensive MCP test suite...
+2025-06-20T18:28:43.776748 [ CLIENT]  INFO: ============================================================
+2025-06-20T18:28:43.776751 [ CLIENT]  INFO: 📡 TEST 1: Connection
+2025-06-20T18:28:43.776753 [ CLIENT]  INFO: 🔗 Connecting to MCP server at 192.168.86.30:8080...
+2025-06-20T18:28:43.776755 [ CLIENT]  INFO: ✅ Connected successfully!
+2025-06-20T18:28:43.776758 [ CLIENT]  INFO: 🚀 TEST 2: Initialization
+2025-06-20T18:28:43.776760 [ CLIENT]  INFO: 🚀 Initializing MCP session...
+2025-06-20T18:28:43.776763 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "1", "method": "initialize", "params": {"protocolVersion": "2024-11-05", "clientInfo": {"name": "ESP8266-MCP-Test-Client", "version": "1.0.0"}, "capabilities": {"roots": {"listChanged": false}, "sampling": {}}}}
+2025-06-20T18:28:43.776765 [ CLIENT]  INFO: 📤 Sent 237 bytes successfully
+2025-06-20T18:28:43.776767 [ CLIENT]  INFO: 📥 Waiting for response...
+2025-06-20T18:28:43.776769 [ CLIENT]  INFO: 📥 Received chunk: '{"jsonrpc":true,"id":"1","result":{"protocolVersion":true,"serverInfo":{"name":true,"version":true},"capabilities":{"tools":{"listChanged":false}}}}\n'
+2025-06-20T18:28:43.776772 [ CLIENT]  INFO: 📥 Complete response received: {"jsonrpc":true,"id":"1","result":{"protocolVersion":true,"serverInfo":{"name":true,"version":true},"capabilities":{"tools":{"listChanged":false}}}}
+2025-06-20T18:28:43.776774 [ CLIENT]  INFO: 📥 Parsing response: {"jsonrpc":true,"id":"1","result":{"protocolVersion":true,"serverInfo":{"name":true,"version":true},"capabilities":{"tools":{"listChanged":false}}}}
+2025-06-20T18:28:43.776776 [ CLIENT]  INFO: ✅ Server initialized!
+2025-06-20T18:28:43.776777 [ CLIENT]  INFO: 📋 Server: True vTrue
+2025-06-20T18:28:43.776779 [ CLIENT]  INFO: 🔧 Protocol: True
+2025-06-20T18:28:43.776781 [ CLIENT]  INFO: 🛠️  Tools supported: False
+2025-06-20T18:28:43.776783 [ CLIENT]  INFO: 🏓 TEST 3: Ping
+2025-06-20T18:28:43.776785 [ CLIENT]  INFO: 🏓 Sending ping...
+2025-06-20T18:28:43.776787 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "2", "method": "ping"}
+2025-06-20T18:28:43.776789 [ CLIENT]  INFO: 📤 Sent 48 bytes successfully
+2025-06-20T18:28:43.776790 [ CLIENT]  INFO: 📥 Waiting for response...
+2025-06-20T18:28:43.776792 [ CLIENT]  INFO: 📥 Received chunk: '{"jsonrpc":true,"id":"2","result":{}}\n'
+2025-06-20T18:28:43.776794 [ CLIENT]  INFO: 📥 Complete response received: {"jsonrpc":true,"id":"2","result":{}}
+2025-06-20T18:28:43.776798 [ CLIENT]  INFO: 📥 Parsing response: {"jsonrpc":true,"id":"2","result":{}}
+2025-06-20T18:28:43.776800 [ CLIENT]  INFO: ✅ Ping successful!
+2025-06-20T18:28:43.776802 [ CLIENT]  INFO: 🔍 TEST 4: Tool Discovery
+2025-06-20T18:28:43.776804 [ CLIENT]  INFO: 🔍 Discovering available tools...
+2025-06-20T18:28:43.776806 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "3", "method": "tools/list"}
+2025-06-20T18:28:43.776808 [ CLIENT]  INFO: 📤 Sent 54 bytes successfully
+2025-06-20T18:28:43.776810 [ CLIENT]  INFO: 📥 Waiting for response...
+2025-06-20T18:28:43.776813 [ CLIENT]  INFO: 📥 Received chunk: '{"jsonrpc":true,"id":"3","result":{"tools":[{"name":true,"description":true,"inputSchema":{"type":true,"properties":{"text":{"type":true,"description":true}},"required":["text"]}},{"name":true,"description":true,"inputSchema":{"type":true,"properties":{"pin":{"type":true,"description":true},"state":{"type":true,"enum":["high","low"],"description":true}},"required":["pin","state"]}}]}}\n'
+2025-06-20T18:28:43.776815 [ CLIENT]  INFO: 📥 Complete response received: {"jsonrpc":true,"id":"3","result":{"tools":[{"name":true,"description":true,"inputSchema":{"type":true,"properties":{"text":{"type":true,"description":true}},"required":["text"]}},{"name":true,"description":true,"inputSchema":{"type":true,"properties":{"pin":{"type":true,"description":true},"state":{"type":true,"enum":["high","low"],"description":true}},"required":["pin","state"]}}]}}
+2025-06-20T18:28:43.776817 [ CLIENT]  INFO: 📥 Parsing response: {"jsonrpc":true,"id":"3","result":{"tools":[{"name":true,"description":true,"inputSchema":{"type":true,"properties":{"text":{"type":true,"description":true}},"required":["text"]}},{"name":true,"description":true,"inputSchema":{"type":true,"properties":{"pin":{"type":true,"description":true},"state":{"type":true,"enum":["high","low"],"description":true}},"required":["pin","state"]}}]}}
+2025-06-20T18:28:43.776819 [ CLIENT]  INFO: ✅ Found 2 tools:
+2025-06-20T18:28:43.776821 [ CLIENT]  INFO: 1. 🛠️  True: True
+2025-06-20T18:28:43.776823 [ CLIENT]  INFO: 📝 Parameters:
+2025-06-20T18:28:43.776825 [ CLIENT]  INFO: • text (True) (required): True
+2025-06-20T18:28:43.776827 [ CLIENT]  INFO: 2. 🛠️  True: True
+2025-06-20T18:28:43.776829 [ CLIENT]  INFO: 📝 Parameters:
+2025-06-20T18:28:43.776831 [ CLIENT]  INFO: • pin (True) (required): True
+2025-06-20T18:28:43.776833 [ CLIENT]  INFO: • state (True) (required): True
+2025-06-20T18:28:43.776835 [ CLIENT]  INFO: 🔊 TEST 5: Echo Tool
+2025-06-20T18:28:43.776836 [ CLIENT]  INFO: 🔊 Echo Test 1/4
+2025-06-20T18:28:43.776838 [ CLIENT]  INFO: 🔧 Calling tool 'echo' with arguments: {'text': 'Hello ESP8266!'}
+2025-06-20T18:28:43.776840 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "4", "method": "tools/call", "params": {"name": "echo", "arguments": {"text": "Hello ESP8266!"}}}
+2025-06-20T18:28:43.776842 [ CLIENT]  INFO: 📤 Sent 123 bytes successfully
+2025-06-20T18:28:43.776843 [ CLIENT]  INFO: 📥 Waiting for response...
+2025-06-20T18:28:43.776846 [ CLIENT]  INFO: 📥 Received chunk: '{"jsonrpc":true,"id":"4","result":{"content":[{"type":true,"text":"Echo: Hello ESP8266!"}]}}\n'
+2025-06-20T18:28:43.776848 [ CLIENT]  INFO: 📥 Complete response received: {"jsonrpc":true,"id":"4","result":{"content":[{"type":true,"text":"Echo: Hello ESP8266!"}]}}
+2025-06-20T18:28:43.776850 [ CLIENT]  INFO: 📥 Parsing response: {"jsonrpc":true,"id":"4","result":{"content":[{"type":true,"text":"Echo: Hello ESP8266!"}]}}
+2025-06-20T18:28:43.776852 [ CLIENT]  INFO: ✅ Tool 'echo' executed successfully!
+2025-06-20T18:28:43.776854 [ CLIENT]  INFO: 📄 Response content:
+2025-06-20T18:28:43.776855 [ CLIENT]  INFO: 🔍 True: {'type': True, 'text': 'Echo: Hello ESP8266!'}
+2025-06-20T18:28:43.776857 [ CLIENT]  INFO: 🔊 Echo Test 2/4
+2025-06-20T18:28:43.776859 [ CLIENT]  INFO: 🔧 Calling tool 'echo' with arguments: {'text': 'Testing MCP protocol 🚀'}
+2025-06-20T18:28:43.776861 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "5", "method": "tools/call", "params": {"name": "echo", "arguments": {"text": "Testing MCP protocol \ud83d\ude80"}}}
+2025-06-20T18:28:43.776863 [ CLIENT]  INFO: 📤 Sent 142 bytes successfully
+2025-06-20T18:28:43.776865 [ CLIENT]  INFO: 📥 Waiting for response...
+2025-06-20T18:28:43.776867 [ CLIENT]  INFO: 📥 Received chunk: '{"jsonrpc":true,"id":"5","result":{"content":[{"type":true,"text":"Echo: Testing MCP protocol 🚀"}]}}\n'
+2025-06-20T18:28:43.776971 [ CLIENT]  INFO: 📥 Complete response received: {"jsonrpc":true,"id":"5","result":{"content":[{"type":true,"text":"Echo: Testing MCP protocol 🚀"}]}}
+2025-06-20T18:28:43.776973 [ CLIENT]  INFO: 📥 Parsing response: {"jsonrpc":true,"id":"5","result":{"content":[{"type":true,"text":"Echo: Testing MCP protocol 🚀"}]}}
+2025-06-20T18:28:43.776975 [ CLIENT]  INFO: ✅ Tool 'echo' executed successfully!
+2025-06-20T18:28:43.776977 [ CLIENT]  INFO: 📄 Response content:
+2025-06-20T18:28:43.776979 [ CLIENT]  INFO: 🔍 True: {'type': True, 'text': 'Echo: Testing MCP protocol 🚀'}
+2025-06-20T18:28:43.776981 [ CLIENT]  INFO: 🔊 Echo Test 3/4
+2025-06-20T18:28:43.776986 [ CLIENT]  INFO: 🔧 Calling tool 'echo' with arguments: {'text': 'Special characters: !@#$%^&*()'}
+2025-06-20T18:28:43.776990 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "6", "method": "tools/call", "params": {"name": "echo", "arguments": {"text": "Special characters: !@#$%^&*()"}}}
+2025-06-20T18:28:43.776992 [ CLIENT]  INFO: 📤 Sent 139 bytes successfully
+2025-06-20T18:28:43.776993 [ CLIENT]  INFO: 📥 Waiting for response...
+2025-06-20T18:28:43.776995 [ CLIENT]  INFO: 📥 Received chunk: '{"jsonrpc":true,"id":"6","result":{"content":[{"type":true,"text":"Echo: Special characters: !@#$%^&*()"}]}}\n'
+2025-06-20T18:28:43.776997 [ CLIENT]  INFO: 📥 Complete response received: {"jsonrpc":true,"id":"6","result":{"content":[{"type":true,"text":"Echo: Special characters: !@#$%^&*()"}]}}
+2025-06-20T18:28:43.776998 [ CLIENT]  INFO: 📥 Parsing response: {"jsonrpc":true,"id":"6","result":{"content":[{"type":true,"text":"Echo: Special characters: !@#$%^&*()"}]}}
+2025-06-20T18:28:43.777000 [ CLIENT]  INFO: ✅ Tool 'echo' executed successfully!
+2025-06-20T18:28:43.777001 [ CLIENT]  INFO: 📄 Response content:
+2025-06-20T18:28:43.777003 [ CLIENT]  INFO: 🔍 True: {'type': True, 'text': 'Echo: Special characters: !@#$%^&*()'}
+2025-06-20T18:28:43.777005 [ CLIENT]  INFO: 🔊 Echo Test 4/4
+2025-06-20T18:28:43.777007 [ CLIENT]  INFO: 🔧 Calling tool 'echo' with arguments: {'text': 'Multiple\nlines\ntest'}
+2025-06-20T18:28:43.777009 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "7", "method": "tools/call", "params": {"name": "echo", "arguments": {"text": "Multiple\nlines\ntest"}}}
+2025-06-20T18:28:43.777010 [ CLIENT]  INFO: 📤 Sent 130 bytes successfully
+2025-06-20T18:28:43.777014 [ CLIENT]  INFO: 📥 Waiting for response...
+2025-06-20T18:28:43.777016 [ CLIENT]  INFO: 📥 Received chunk: '{"jsonrpc":true,"id":"7","result":{"content":[{"type":true,"text":"Echo: Multiple\\nlines\\ntest"}]}}\n'
+2025-06-20T18:28:43.777017 [ CLIENT]  INFO: 📥 Complete response received: {"jsonrpc":true,"id":"7","result":{"content":[{"type":true,"text":"Echo: Multiple\nlines\ntest"}]}}
+2025-06-20T18:28:43.777019 [ CLIENT]  INFO: 📥 Parsing response: {"jsonrpc":true,"id":"7","result":{"content":[{"type":true,"text":"Echo: Multiple\nlines\ntest"}]}}
+2025-06-20T18:28:43.777021 [ CLIENT]  INFO: ✅ Tool 'echo' executed successfully!
+2025-06-20T18:28:43.777023 [ CLIENT]  INFO: 📄 Response content:
+2025-06-20T18:28:43.777025 [ CLIENT]  INFO: 🔍 True: {'type': True, 'text': 'Echo: Multiple\nlines\ntest'}
+2025-06-20T18:28:43.777027 [ CLIENT]  INFO: 📊 Echo test results: 4/4 passed
+2025-06-20T18:28:43.777028 [ CLIENT]  INFO: 🔌 TEST 6: GPIO Tool
+2025-06-20T18:28:43.777030 [ CLIENT]  INFO: 🔌 GPIO Test 1/6
+2025-06-20T18:28:43.777032 [ CLIENT]  INFO: 🔧 Calling tool 'gpio_control' with arguments: {'pin': 2, 'state': 'high'}
+2025-06-20T18:28:43.777033 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "8", "method": "tools/call", "params": {"name": "gpio_control", "arguments": {"pin": 2, "state": "high"}}}
+2025-06-20T18:28:43.777035 [ CLIENT]  INFO: 📤 Sent 132 bytes successfully
+2025-06-20T18:28:43.777036 [ CLIENT]  INFO: 📥 Waiting for response...
+2025-06-20T18:28:43.777038 [ CLIENT]  INFO: 📥 Received chunk: '{"jsonrpc":true,"id":"8","result":{"content":[{"type":true,"text":"GPIO pin 2 set to high"}]}}\n'
+2025-06-20T18:28:43.777040 [ CLIENT]  INFO: 📥 Complete response received: {"jsonrpc":true,"id":"8","result":{"content":[{"type":true,"text":"GPIO pin 2 set to high"}]}}
+2025-06-20T18:28:43.777041 [ CLIENT]  INFO: 📥 Parsing response: {"jsonrpc":true,"id":"8","result":{"content":[{"type":true,"text":"GPIO pin 2 set to high"}]}}
+2025-06-20T18:28:43.777043 [ CLIENT]  INFO: ✅ Tool 'gpio_control' executed successfully!
+2025-06-20T18:28:43.777045 [ CLIENT]  INFO: 📄 Response content:
+2025-06-20T18:28:43.777046 [ CLIENT]  INFO: 🔍 True: {'type': True, 'text': 'GPIO pin 2 set to high'}
+2025-06-20T18:28:43.777048 [ CLIENT]  INFO: 🔌 GPIO Test 2/6
+2025-06-20T18:28:43.777053 [ CLIENT]  INFO: 🔧 Calling tool 'gpio_control' with arguments: {'pin': 2, 'state': 'low'}
+2025-06-20T18:28:43.777055 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "9", "method": "tools/call", "params": {"name": "gpio_control", "arguments": {"pin": 2, "state": "low"}}}
+2025-06-20T18:28:43.777056 [ CLIENT]  INFO: 📤 Sent 131 bytes successfully
+2025-06-20T18:28:43.777058 [ CLIENT]  INFO: 📥 Waiting for response...
+2025-06-20T18:28:43.777060 [ CLIENT]  INFO: 📥 Received chunk: '{"jsonrpc":true,"id":"9","result":{"content":[{"type":true,"text":"GPIO pin 2 set to low"}]}}\n'
+2025-06-20T18:28:44.791862 [ESP8266]  INFO: DEBUG: Serializing JSON object
+2025-06-20T18:28:44.802024 [ESP8266]  INFO: DEBUG: ERROR - cJSON_PrintUnformatted returned NULL!
+2025-06-20T18:28:44.802055 [ESP8266]  INFO: [0;32mI (
+2025-06-20T18:28:44.812180 [ESP8266]  INFO: [MCPServer] handleToolsCall: Starting to process tool call[0m
+2025-06-20T18:28:44.812196 [ESP8266]  INFO: [0;32mI (655211) MCPServ
+2025-06-20T18:28:44.823380 [ESP8266]  INFO: er: handleToolsCall: Request ID: 10[0m
+2025-06-20T18:28:44.823412 [ESP8266]  INFO: [0;32mI (655218) MCPSe
+2025-06-20T18:28:44.833506 [ESP8266]  INFO: rver: handleToolsCall: Tool name: gpio_control[0m
+2025-06-20T18:28:44.833518 [ESP8266]  INFO: DEBUG: Setting key='id' value='10'
+2025-06-20T18:28:44.833521 [ESP8266]  INFO: DEBUG: C
+2025-06-20T18:28:44.843604 [ESP8266]  INFO: reated cJSON string, type=16, valuestring='10'
+2025-06-20T18:28:44.843615 [ESP8266]  INFO: DEBUG: Added ite
+2025-06-20T18:28:44.853704 [ESP8266]  INFO: m to object
+2025-06-20T18:28:44.853714 [ESP8266]  INFO: DEBUG: Setting key='text' value='GPIO pin 16 set to
+2025-06-20T18:28:44.863811 [ESP8266]  INFO: high'
+2025-06-20T18:28:44.863823 [ESP8266]  INFO: DEBUG: Created cJSON string, type=16, valuestring='GPIO pin 16 set to high'
+2025-06-20T18:28:44.863826 [ESP8266]  INFO: DEBUG: Adde
+2025-06-20T18:28:44.877168 [ESP8266]  INFO: d item to object
+2025-06-20T18:28:44.877187 [ESP8266]  INFO: [MCPServer] GPIO tool called: pin 16, state high[0m
+2025-06-20T18:28:44.877193 [ESP8266]  INFO: [0;32m
+2025-06-20T18:28:44.887277 [ESP8266]  INFO: [MCPServer] handleToolsCall: Setting result and return
+2025-06-20T18:28:44.899281 [ESP8266]  INFO: ing success response[0m
+2025-06-20T18:28:44.899317 [ESP8266]  INFO: DEBUG: Serializing JSON object
+2025-06-20T18:28:44.899321 [ESP8266]  INFO: DEBUG: Serialized JSON: '{"jsonrpc":tr
+2025-06-20T18:28:44.909443 [ESP8266]  INFO: ue,"id":"10","result":{"content":[{"type":true,"text":"GPIO pin
+2025-06-20T18:28:44.919561 [ESP8266]  INFO: 16 set to high"}]}}'
+2025-06-20T18:28:45.958050 [ESP8266]  INFO: DEBUG: Serializing JSON object
+2025-06-20T18:28:45.958076 [ESP8266]  INFO: DEBUG: ERROR - cJSON_PrintUnformatted returned NULL!
+2025-06-20T18:28:45.958079 [ESP8266]  INFO: [0;32mI (
+2025-06-20T18:28:45.968167 [ESP8266]  INFO: [MCPServer] handleToolsCall: Starting to process tool cal
+2025-06-20T18:28:45.978269 [ESP8266]  INFO: l[0m
+2025-06-20T18:28:45.978283 [ESP8266]  INFO: [MCPServer] handleToolsCall: Request ID:
+2025-06-20T18:28:45.989947 [ESP8266]  INFO: 11[0m
+2025-06-20T18:28:45.989980 [ESP8266]  INFO: [MCPServer] handleToolsCall: Tool name: gpio_control[0m
+2025-06-20T18:28:45.989986 [ESP8266]  INFO: DEBUG: Setti
+2025-06-20T18:28:46.000071 [ESP8266]  INFO: ng key='id' value='11'
+2025-06-20T18:28:46.000080 [ESP8266]  INFO: DEBUG: Created cJSON string, type=16, va
+2025-06-20T18:28:46.013192 [ESP8266]  INFO: luestring='11'
+2025-06-20T18:28:46.013206 [ESP8266]  INFO: DEBUG: Added item to object
+2025-06-20T18:28:46.013209 [ESP8266]  INFO: DEBUG: Setting key='text' value='GPIO pin 16 set to
+2025-06-20T18:28:46.023296 [ESP8266]  INFO: low'
+2025-06-20T18:28:46.023308 [ESP8266]  INFO: DEBUG: Created cJSON string, type=16, valuestring='GPIO pin 16 set to low'
+2025-06-20T18:28:46.023311 [ESP8266]  INFO: DEBUG: Added
+2025-06-20T18:28:46.033390 [ESP8266]  INFO: item to object
+2025-06-20T18:28:46.033398 [ESP8266]  INFO: [MCPServer] GPIO tool called: p
+2025-06-20T18:28:46.043492 [ESP8266]  INFO: in 16, state low[0m
+2025-06-20T18:28:46.043510 [ESP8266]  INFO: [MCPServer] handleToolsCall: Setting result and returning
+2025-06-20T18:28:46.053616 [ESP8266]  INFO: success response[0m
+2025-06-20T18:28:46.053633 [ESP8266]  INFO: DEBUG: Serializing JSON object
+2025-06-20T18:28:46.053636 [ESP8266]  INFO: DEBUG: Se
+2025-06-20T18:28:46.064897 [ESP8266]  INFO: rialized JSON: '{"jsonrpc":true,"id":"11","result":{"content":[{
+2025-06-20T18:28:46.075014 [ESP8266]  INFO: "type":true,"text":"GPIO pin 16 set to low"}]}}'
+2025-06-20T18:28:47.071492 [ESP8266]  INFO: DEBUG: Serializing JSON object
+2025-06-20T18:28:47.082168 [ESP8266]  INFO: DEBUG: ERROR - cJSON_PrintUnformatted returned NULL!
+2025-06-20T18:28:47.082182 [ESP8266]  INFO: [0;32mI (
+2025-06-20T18:28:47.092334 [ESP8266]  INFO: [MCPServer] handleToolsCall: Starting to process tool call[0m
+2025-06-20T18:28:47.092360 [ESP8266]  INFO: [0;32mI (657491) MCPServ
+2025-06-20T18:28:47.104897 [ESP8266]  INFO: er: handleToolsCall: Request ID: 12[0m
+2025-06-20T18:28:47.104916 [ESP8266]  INFO: [0;32mI (657499) MCPSe
+2025-06-20T18:28:47.115081 [ESP8266]  INFO: rver: handleToolsCall: Tool name: gpio_control[0m
+2025-06-20T18:28:47.115107 [ESP8266]  INFO: DEBUG: Setting key='id' value='12'
+2025-06-20T18:28:47.115110 [ESP8266]  INFO: DEBUG: C
+2025-06-20T18:28:47.125205 [ESP8266]  INFO: reated cJSON string, type=16, valuestring='12'
+2025-06-20T18:28:47.125223 [ESP8266]  INFO: DEBUG: Added ite
+2025-06-20T18:28:47.135665 [ESP8266]  INFO: m to object
+2025-06-20T18:28:47.135705 [ESP8266]  INFO: DEBUG: Setting key='text' value='GPIO pin 0 set to high'
+2025-06-20T18:28:47.135709 [ESP8266]  INFO: DEBUG: Created cJSON stri
+2025-06-20T18:28:47.145802 [ESP8266]  INFO: ng, type=16, valuestring='GPIO pin 0 set to high'
+2025-06-20T18:28:47.145812 [ESP8266]  INFO: DEBUG: Added
+2025-06-20T18:28:47.159224 [ESP8266]  INFO: item to object
+2025-06-20T18:28:47.159236 [ESP8266]  INFO: [MCPServer] GPIO tool called: pin 0, state high[0m
+2025-06-20T18:28:47.159241 [ESP8266]  INFO: [0;32mI (
+2025-06-20T18:28:47.169329 [ESP8266]  INFO: [MCPServer] handleToolsCall: Setting result and returning success response[0m
+2025-06-20T18:28:47.169342 [ESP8266]  INFO: DEBUG: Se
+2025-06-20T18:28:47.179434 [ESP8266]  INFO: rializing JSON object
+2025-06-20T18:28:47.179448 [ESP8266]  INFO: DEBUG: Serialized JSON: '{"jsonrpc":true,
+2025-06-20T18:28:47.191052 [ESP8266]  INFO: "id":"12","result":{"content":[{"type":true,"text":"GPIO pin 0 s
+2025-06-20T18:28:47.201222 [ESP8266]  INFO: et to high"}]}}'
+2025-06-20T18:28:48.198624 [ESP8266]  INFO: DEBUG: Serializing JSON object
+2025-06-20T18:28:48.198653 [ESP8266]  INFO: DEBUG: ERROR - cJSON_PrintUnformatted returned NULL!
+2025-06-20T18:28:48.198656 [ESP8266]  INFO: [0;32mI (
+2025-06-20T18:28:48.208967 [ESP8266]  INFO: [MCPServer] handleToolsCall: Starting to process tool cal
+2025-06-20T18:28:48.219195 [ESP8266]  INFO: l[0m
+2025-06-20T18:28:48.219226 [ESP8266]  INFO: [MCPServer] handleToolsCall: Request ID:
+2025-06-20T18:28:48.229388 [ESP8266]  INFO: 13[0m
+2025-06-20T18:28:48.229412 [ESP8266]  INFO: [MCPServer] handleToolsCall: Tool name: gpio_control[0m
+2025-06-20T18:28:48.229417 [ESP8266]  INFO: DEBUG: Setti
+2025-06-20T18:28:48.239572 [ESP8266]  INFO: ng key='id' value='13'
+2025-06-20T18:28:48.239596 [ESP8266]  INFO: DEBUG: Created cJSON string, type=16, va
+2025-06-20T18:28:48.249752 [ESP8266]  INFO: luestring='13'
+2025-06-20T18:28:48.249775 [ESP8266]  INFO: DEBUG: Added item to object
+2025-06-20T18:28:48.249778 [ESP8266]  INFO: DEBUG: Setting key='text' value='GPIO pin 0 set to
+2025-06-20T18:28:48.261172 [ESP8266]  INFO: low'
+2025-06-20T18:28:48.261187 [ESP8266]  INFO: DEBUG: Created cJSON string, type=16, valuestring='GPIO pi
+2025-06-20T18:28:48.271339 [ESP8266]  INFO: n 0 set to low'
+2025-06-20T18:28:48.271363 [ESP8266]  INFO: DEBUG: Added item to object
+2025-06-20T18:28:48.271365 [ESP8266]  INFO: [MCPServer] GPIO tool called: pin
+2025-06-20T18:28:48.281499 [ESP8266]  INFO: 0, state low[0m
+2025-06-20T18:28:48.281520 [ESP8266]  INFO: [MCPServer] handleToolsCall:
+2025-06-20T18:28:48.291660 [ESP8266]  INFO: Setting result and returning success response[0m
+2025-06-20T18:28:48.291682 [ESP8266]  INFO: DEBUG: Seria
+2025-06-20T18:28:48.301856 [ESP8266]  INFO: lizing JSON object
+2025-06-20T18:28:48.301896 [ESP8266]  INFO: DEBUG: Serialized JSON: '{"jsonrpc":true,"id":"13","result":{"content":[{"ty
+2025-06-20T18:28:48.313554 [ESP8266]  INFO: pe":true,"text":"GPIO pin 0 set to low"}]}}'
+2025-06-20T18:28:49.311747 [ESP8266]  INFO: DEBUG: Serializing JSON object
+2025-06-20T18:28:49.321869 [ESP8266]  INFO: DEBUG: Serialized JSON: '{"name":"nonexistent_tool","arguments":
+2025-06-20T18:28:49.331974 [ESP8266]  INFO: {}}'
+2025-06-20T18:28:49.331982 [ESP8266]  INFO: [MCPServer] handleToolsCall: Starting to process tool call[0m
+2025-06-20T18:28:49.331986 [ESP8266]  INFO: [0;32mI
+2025-06-20T18:28:49.342934 [ESP8266]  INFO: [MCPServer] handleToolsCall: Request ID: 14[0m
+2025-06-20T18:28:49.342951 [ESP8266]  INFO: [0;32m
+2025-06-20T18:28:49.353038 [ESP8266]  INFO: [MCPServer] handleToolsCall: Tool name: nonexistent_tool[0m
+2025-06-20T18:28:49.353047 [ESP8266]  INFO: DEBUG: Setting key='id'
+2025-06-20T18:28:49.365071 [ESP8266]  INFO: value='14'
+2025-06-20T18:28:49.365104 [ESP8266]  INFO: DEBUG: Created cJSON string, type=16, valuestring='1
+2025-06-20T18:28:49.375163 [ESP8266]  INFO: 4'
+2025-06-20T18:28:49.375173 [ESP8266]  INFO: DEBUG: Added item to object
+2025-06-20T18:28:49.375175 [ESP8266]  INFO: [MCPServer] handleToolsCall: Unknown tool 'non
+2025-06-20T18:28:49.387183 [ESP8266]  INFO: existent_tool', returning error[0m
+2025-06-20T18:28:49.387194 [ESP8266]  INFO: [MCPServer] createErrorResponse: Creating
+2025-06-20T18:28:49.397281 [ESP8266]  INFO: error response - id: 14, code: -32601, message: Unknown tool: no
+2025-06-20T18:28:49.407372 [ESP8266]  INFO: nexistent_tool[0m
+2025-06-20T18:28:49.407381 [ESP8266]  INFO: [MCPServer] createErrorResp
+2025-06-20T18:28:49.417471 [ESP8266]  INFO: onse: Creating root object[0m
+2025-06-20T18:28:49.417480 [ESP8266]  INFO: [MCPServer] createErrorResponse: Setting jsonrp
+2025-06-20T18:28:49.427561 [ESP8266]  INFO: c field[0m
+2025-06-20T18:28:49.427568 [ESP8266]  INFO: [MCPServer] createErrorResponse: S
+2025-06-20T18:28:49.437653 [ESP8266]  INFO: etting id field[0m
+2025-06-20T18:28:49.437661 [ESP8266]  INFO: DEBUG: Setting key='id' value='14'
+2025-06-20T18:28:49.437663 [ESP8266]  INFO: DEBUG: Created cJSON string, type=16, v
+2025-06-20T18:28:49.449181 [ESP8266]  INFO: aluestring='14'
+2025-06-20T18:28:49.449195 [ESP8266]  INFO: DEBUG: Added item to object
+2025-06-20T18:28:49.449197 [ESP8266]  INFO: [0;32mI (659845)
+2025-06-20T18:28:49.459286 [ESP8266]  INFO: MCPServer: createErrorResponse: Creating error object[0m
+2025-06-20T18:28:49.459295 [ESP8266]  INFO: [MCPServer] createEr
+2025-06-20T18:28:49.469385 [ESP8266]  INFO: rorResponse: Setting error code: -32601[0m
+2025-06-20T18:28:49.469394 [ESP8266]  INFO: [0;32mI (659866) M
+2025-06-20T18:28:49.479478 [ESP8266]  INFO: CPServer: createErrorResponse: Setting error message: Unknown to
+2025-06-20T18:28:49.489566 [ESP8266]  INFO: ol: nonexistent_tool[0m
+2025-06-20T18:28:49.489573 [ESP8266]  INFO: DEBUG: Setting key='message' value='Unknown tool: nonexistent_tool'
+2025-06-20T18:28:49.489576 [ESP8266]  INFO: D
+2025-06-20T18:28:49.499779 [ESP8266]  INFO: EBUG: Created cJSON string, type=16, valuestring='Unknown tool:
+2025-06-20T18:28:49.509899 [ESP8266]  INFO: nonexistent_tool'
+2025-06-20T18:28:49.509909 [ESP8266]  INFO: DEBUG: Added item to object
+2025-06-20T18:28:49.509912 [ESP8266]  INFO: [0;32mI (659905
+2025-06-20T18:28:49.519999 [ESP8266]  INFO: [MCPServer] createErrorResponse: Setting error object on response[0m
+2025-06-20T18:28:49.520013 [ESP8266]  INFO: [0;32mI (659917) MCPSer
+2025-06-20T18:28:49.530101 [ESP8266]  INFO: ver: createErrorResponse: About to serialize response[0m
+2025-06-20T18:28:49.530113 [ESP8266]  INFO: DEBUG
+2025-06-20T18:28:49.540159 [ESP8266]  INFO: : Serializing JSON object
+2025-06-20T18:28:49.540170 [ESP8266]  INFO: DEBUG: ERROR - cJSON_PrintUnformatted returned NULL!
+2025-06-20T18:28:49.540172 [ESP8266]  INFO: [0;32mI (65993
+2025-06-20T18:28:49.550280 [ESP8266]  INFO: [MCPServer] createErrorResponse: Serialized response length: 0
+2025-06-20T18:28:49.560414 [ESP8266]  INFO: [0m
+2025-06-20T18:28:49.560438 [ESP8266]  INFO: [MCPServer] createErrorResponse: Serializ
+2025-06-20T18:28:49.570531 [ESP8266]  INFO: ed response: [0m
+2025-06-20T18:28:49.570543 [ESP8266] ERROR: [MCPServer] createErrorResponse: JSON serialization failed!
+2025-06-20T18:28:49.580622 [ESP8266]  INFO: Returning manual JSON[0m
+2025-06-20T18:28:49.580627 [ESP8266]  INFO: [MCPServer] createEr
+2025-06-20T18:28:49.590708 [ESP8266]  INFO: rorResponse: Manual JSON: {"jsonrpc":"2.0","id":"14","error":{"c
+2025-06-20T18:28:49.601112 [ESP8266]  INFO: ode":-32601,"message":"Unknown tool: nonexistent_tool"}}[0m
+2025-06-20T18:28:49.601132 [ESP8266]  INFO: DEBUG: Serializing JSON object
+2025-06-20T18:28:49.601135 [ESP8266]  INFO: DE
+2025-06-20T18:28:49.611219 [ESP8266]  INFO: BUG: Serialized JSON: '{"name":"echo","arguments":{"wrong_param"
+2025-06-20T18:28:49.621330 [ESP8266]  INFO: :"test"}}'
+2025-06-20T18:28:49.621341 [ESP8266]  INFO: [MCPServer] handleToolsCall: Starting to process tool call[0m
+2025-06-20T18:28:49.621345 [ESP8266]  INFO: [0
+2025-06-20T18:28:49.631429 [ESP8266]  INFO: [MCPServer] handleToolsCall: Request ID: 15[0m
+2025-06-20T18:28:49.631438 [ESP8266]  INFO: 
+2025-06-20T18:28:49.641520 [ESP8266]  INFO: [MCPServer] handleToolsCall: Tool name: echo[0m
+2025-06-20T18:28:49.651624 [ESP8266]  INFO: DEBUG: Setting key='id' value='15'
+2025-06-20T18:28:49.651636 [ESP8266]  INFO: DEBUG: Created cJSON string, type=16, valuestring='15'
+2025-06-20T18:28:49.651638 [ESP8266]  INFO: DE
+2025-06-20T18:28:49.661720 [ESP8266]  INFO: BUG: Added item to object
+2025-06-20T18:28:49.661726 [ESP8266]  INFO: [MCPServer] handleTo
+2025-06-20T18:28:49.671808 [ESP8266]  INFO: olsCall: Processing echo tool[0m
+2025-06-20T18:28:49.671815 [ESP8266]  INFO: [0;32mI (660066) MCPServer:
+2025-06-20T18:28:49.681925 [ESP8266]  INFO: handleToolsCall: Echo missing text parameter, returning error[0m
+2025-06-20T18:28:49.681942 [ESP8266]  INFO: [0;32mI (660079) MCPServer:
+2025-06-20T18:28:49.692042 [ESP8266]  INFO: createErrorResponse: Creating error response - id: 15, code: -32
+2025-06-20T18:28:49.702197 [ESP8266]  INFO: 602, message: Missing required parameter: text[0m
+2025-06-20T18:28:49.702210 [ESP8266]  INFO: [0;32mI (66
+2025-06-20T18:28:49.712289 [ESP8266]  INFO: [MCPServer] createErrorResponse: Creating root object[0m
+2025-06-20T18:28:49.712297 [ESP8266]  INFO: [MCPServer] cre
+2025-06-20T18:28:49.722379 [ESP8266]  INFO: ateErrorResponse: Setting jsonrpc field[0m
+2025-06-20T18:28:49.722387 [ESP8266]  INFO: [0;32mI (660118) M
+2025-06-20T18:28:49.732473 [ESP8266]  INFO: CPServer: createErrorResponse: Setting id field[0m
+2025-06-20T18:28:49.732481 [ESP8266]  INFO: DEBUG: Setting key='id' value='15'
+2025-06-20T18:28:49.732484 [ESP8266]  INFO: DEBUG:
+2025-06-20T18:28:49.742557 [ESP8266]  INFO: Created cJSON string, type=16, valuestring='15'
+2025-06-20T18:28:49.742562 [ESP8266]  INFO: DEBUG: Added it
+2025-06-20T18:28:49.752633 [ESP8266]  INFO: em to object
+2025-06-20T18:28:49.752638 [ESP8266]  INFO: [MCPServer] createErrorResponse:
+2025-06-20T18:28:49.764162 [ESP8266]  INFO: Creating error object[0m
+2025-06-20T18:28:49.764173 [ESP8266]  INFO: [MCPServer] createEr
+2025-06-20T18:28:49.774261 [ESP8266]  INFO: rorResponse: Setting error code: -32602[0m
+2025-06-20T18:28:49.774270 [ESP8266]  INFO: [MCPServer] createErrorResponse: S
+2025-06-20T18:28:49.784346 [ESP8266]  INFO: etting error message: Missing required parameter: text[0m
+2025-06-20T18:28:49.784351 [ESP8266]  INFO: DEBUG: Setting key='message' value='
+2025-06-20T18:28:49.794460 [ESP8266]  INFO: Missing required parameter: text'
+2025-06-20T18:28:49.794474 [ESP8266]  INFO: DEBUG: Created cJSON string,
+2025-06-20T18:28:49.804591 [ESP8266]  INFO: type=16, valuestring='Missing required parameter: text'
+2025-06-20T18:28:49.804607 [ESP8266]  INFO: DEBUG:
+2025-06-20T18:28:49.814715 [ESP8266]  INFO: Added item to object
+2025-06-20T18:28:49.814730 [ESP8266]  INFO: [MCPServer] createErrorResponse: Setting error object on
+2025-06-20T18:28:49.824862 [ESP8266]  INFO: response[0m
+2025-06-20T18:28:49.824879 [ESP8266]  INFO: [MCPServer] createErrorResponse:
+2025-06-20T18:28:49.838189 [ESP8266]  INFO: About to serialize response[0m
+2025-06-20T18:28:49.838208 [ESP8266]  INFO: DEBUG: Serializing JSON object
+2025-06-20T18:28:49.838210 [ESP8266]  INFO: DEBUG: ERROR - cJSON_PrintUnfor
+2025-06-20T18:28:49.848310 [ESP8266]  INFO: matted returned NULL!
+2025-06-20T18:28:49.848322 [ESP8266]  INFO: [MCPServer] createErrorResponse: Serialized response len
+2025-06-20T18:28:49.858402 [ESP8266]  INFO: gth: 0[0m
+2025-06-20T18:28:49.858408 [ESP8266]  INFO: [MCPServer] createErrorResponse: Se
+2025-06-20T18:28:49.870352 [ESP8266]  INFO: rialized response: [0m
+2025-06-20T18:28:49.870365 [ESP8266] ERROR: [MCPServer] createErrorResponse: JSON serialization fa
+2025-06-20T18:28:49.880452 [ESP8266]  INFO: iled! Returning manual JSON[0m
+2025-06-20T18:28:49.880459 [ESP8266]  INFO: [MCPServer] cr
+2025-06-20T18:28:49.885166 [ CLIENT]  INFO: 📥 Complete response received: {"jsonrpc":true,"id":"9","result":{"content":[{"type":true,"text":"GPIO pin 2 set to low"}]}}
+2025-06-20T18:28:49.885195 [ CLIENT]  INFO: 📥 Parsing response: {"jsonrpc":true,"id":"9","result":{"content":[{"type":true,"text":"GPIO pin 2 set to low"}]}}
+2025-06-20T18:28:49.885199 [ CLIENT]  INFO: ✅ Tool 'gpio_control' executed successfully!
+2025-06-20T18:28:49.885202 [ CLIENT]  INFO: 📄 Response content:
+2025-06-20T18:28:49.885206 [ CLIENT]  INFO: 🔍 True: {'type': True, 'text': 'GPIO pin 2 set to low'}
+2025-06-20T18:28:49.885209 [ CLIENT]  INFO: 🔌 GPIO Test 3/6
+2025-06-20T18:28:49.885212 [ CLIENT]  INFO: 🔧 Calling tool 'gpio_control' with arguments: {'pin': 16, 'state': 'high'}
+2025-06-20T18:28:49.885214 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "10", "method": "tools/call", "params": {"name": "gpio_control", "arguments": {"pin": 16, "state": "high"}}}
+2025-06-20T18:28:49.885217 [ CLIENT]  INFO: 📤 Sent 134 bytes successfully
+2025-06-20T18:28:49.885220 [ CLIENT]  INFO: 📥 Waiting for response...
+2025-06-20T18:28:49.885222 [ CLIENT]  INFO: 📥 Received chunk: '{"jsonrpc":true,"id":"10","result":{"content":[{"type":true,"text":"GPIO pin 16 set to high"}]}}\n'
+2025-06-20T18:28:49.885225 [ CLIENT]  INFO: 📥 Complete response received: {"jsonrpc":true,"id":"10","result":{"content":[{"type":true,"text":"GPIO pin 16 set to high"}]}}
+2025-06-20T18:28:49.885227 [ CLIENT]  INFO: 📥 Parsing response: {"jsonrpc":true,"id":"10","result":{"content":[{"type":true,"text":"GPIO pin 16 set to high"}]}}
+2025-06-20T18:28:49.885229 [ CLIENT]  INFO: ✅ Tool 'gpio_control' executed successfully!
+2025-06-20T18:28:49.885232 [ CLIENT]  INFO: 📄 Response content:
+2025-06-20T18:28:49.885234 [ CLIENT]  INFO: 🔍 True: {'type': True, 'text': 'GPIO pin 16 set to high'}
+2025-06-20T18:28:49.885236 [ CLIENT]  INFO: 🔌 GPIO Test 4/6
+2025-06-20T18:28:49.885238 [ CLIENT]  INFO: 🔧 Calling tool 'gpio_control' with arguments: {'pin': 16, 'state': 'low'}
+2025-06-20T18:28:49.885241 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "11", "method": "tools/call", "params": {"name": "gpio_control", "arguments": {"pin": 16, "state": "low"}}}
+2025-06-20T18:28:49.885243 [ CLIENT]  INFO: 📤 Sent 133 bytes successfully
+2025-06-20T18:28:49.885245 [ CLIENT]  INFO: 📥 Waiting for response...
+2025-06-20T18:28:49.885247 [ CLIENT]  INFO: 📥 Received chunk: '{"jsonrpc":true,"id":"11","result":{"content":[{"type":true,"text":"GPIO pin 16 set to low"}]}}\n'
+2025-06-20T18:28:49.885249 [ CLIENT]  INFO: 📥 Complete response received: {"jsonrpc":true,"id":"11","result":{"content":[{"type":true,"text":"GPIO pin 16 set to low"}]}}
+2025-06-20T18:28:49.885251 [ CLIENT]  INFO: 📥 Parsing response: {"jsonrpc":true,"id":"11","result":{"content":[{"type":true,"text":"GPIO pin 16 set to low"}]}}
+2025-06-20T18:28:49.885253 [ CLIENT]  INFO: ✅ Tool 'gpio_control' executed successfully!
+2025-06-20T18:28:49.885255 [ CLIENT]  INFO: 📄 Response content:
+2025-06-20T18:28:49.885257 [ CLIENT]  INFO: 🔍 True: {'type': True, 'text': 'GPIO pin 16 set to low'}
+2025-06-20T18:28:49.885259 [ CLIENT]  INFO: 🔌 GPIO Test 5/6
+2025-06-20T18:28:49.885262 [ CLIENT]  INFO: 🔧 Calling tool 'gpio_control' with arguments: {'pin': 0, 'state': 'high'}
+2025-06-20T18:28:49.885264 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "12", "method": "tools/call", "params": {"name": "gpio_control", "arguments": {"pin": 0, "state": "high"}}}
+2025-06-20T18:28:49.885266 [ CLIENT]  INFO: 📤 Sent 133 bytes successfully
+2025-06-20T18:28:49.885268 [ CLIENT]  INFO: 📥 Waiting for response...
+2025-06-20T18:28:49.885270 [ CLIENT]  INFO: 📥 Received chunk: '{"jsonrpc":true,"id":"12","result":{"content":[{"type":true,"text":"GPIO pin 0 set to high"}]}}\n'
+2025-06-20T18:28:49.885272 [ CLIENT]  INFO: 📥 Complete response received: {"jsonrpc":true,"id":"12","result":{"content":[{"type":true,"text":"GPIO pin 0 set to high"}]}}
+2025-06-20T18:28:49.885274 [ CLIENT]  INFO: 📥 Parsing response: {"jsonrpc":true,"id":"12","result":{"content":[{"type":true,"text":"GPIO pin 0 set to high"}]}}
+2025-06-20T18:28:49.885276 [ CLIENT]  INFO: ✅ Tool 'gpio_control' executed successfully!
+2025-06-20T18:28:49.885278 [ CLIENT]  INFO: 📄 Response content:
+2025-06-20T18:28:49.885281 [ CLIENT]  INFO: 🔍 True: {'type': True, 'text': 'GPIO pin 0 set to high'}
+2025-06-20T18:28:49.885283 [ CLIENT]  INFO: 🔌 GPIO Test 6/6
+2025-06-20T18:28:49.885285 [ CLIENT]  INFO: 🔧 Calling tool 'gpio_control' with arguments: {'pin': 0, 'state': 'low'}
+2025-06-20T18:28:49.885287 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "13", "method": "tools/call", "params": {"name": "gpio_control", "arguments": {"pin": 0, "state": "low"}}}
+2025-06-20T18:28:49.885289 [ CLIENT]  INFO: 📤 Sent 132 bytes successfully
+2025-06-20T18:28:49.885291 [ CLIENT]  INFO: 📥 Waiting for response...
+2025-06-20T18:28:49.885293 [ CLIENT]  INFO: 📥 Received chunk: '{"jsonrpc":true,"id":"13","result":{"content":[{"type":true,"text":"GPIO pin 0 set to low"}]}}\n'
+2025-06-20T18:28:49.885295 [ CLIENT]  INFO: 📥 Complete response received: {"jsonrpc":true,"id":"13","result":{"content":[{"type":true,"text":"GPIO pin 0 set to low"}]}}
+2025-06-20T18:28:49.885298 [ CLIENT]  INFO: 📥 Parsing response: {"jsonrpc":true,"id":"13","result":{"content":[{"type":true,"text":"GPIO pin 0 set to low"}]}}
+2025-06-20T18:28:49.885300 [ CLIENT]  INFO: ✅ Tool 'gpio_control' executed successfully!
+2025-06-20T18:28:49.885302 [ CLIENT]  INFO: 📄 Response content:
+2025-06-20T18:28:49.885315 [ CLIENT]  INFO: 🔍 True: {'type': True, 'text': 'GPIO pin 0 set to low'}
+2025-06-20T18:28:49.885317 [ CLIENT]  INFO: 📊 GPIO test results: 6/6 passed
+2025-06-20T18:28:49.885320 [ CLIENT]  INFO: ❌ TEST 7: Error Handling
+2025-06-20T18:28:49.885322 [ CLIENT]  INFO: Testing invalid tool call...
+2025-06-20T18:28:49.885325 [ CLIENT]  INFO: 🔧 Testing error case: tool 'nonexistent_tool' with arguments: {}
+2025-06-20T18:28:49.885327 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "14", "method": "tools/call", "params": {"name": "nonexistent_tool", "arguments": {}}}
+2025-06-20T18:28:49.885329 [ CLIENT]  INFO: 📤 Sent 112 bytes successfully
+2025-06-20T18:28:49.885331 [ CLIENT]  INFO: 📥 Waiting for response...
+2025-06-20T18:28:49.885333 [ CLIENT]  INFO: 📥 Received chunk: '{"jsonrpc":"2.0","id":"14","error":{"code":-32601,"message":"Unknown tool: nonexistent_tool"}}\n'
+2025-06-20T18:28:49.885335 [ CLIENT]  INFO: 📥 Complete response received: {"jsonrpc":"2.0","id":"14","error":{"code":-32601,"message":"Unknown tool: nonexistent_tool"}}
+2025-06-20T18:28:49.885337 [ CLIENT]  INFO: 📥 Parsing response: {"jsonrpc":"2.0","id":"14","error":{"code":-32601,"message":"Unknown tool: nonexistent_tool"}}
+2025-06-20T18:28:49.885339 [ CLIENT]  INFO: ✅ Received expected error -32601: Unknown tool: nonexistent_tool
+2025-06-20T18:28:49.885341 [ CLIENT]  INFO: ❌ TEST 8: Invalid Parameters
+2025-06-20T18:28:49.885344 [ CLIENT]  INFO: Testing invalid parameters...
+2025-06-20T18:28:49.885346 [ CLIENT]  INFO: 🔧 Testing error case: tool 'echo' with arguments: {'wrong_param': 'test'}
+2025-06-20T18:28:49.885348 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "15", "method": "tools/call", "params": {"name": "echo", "arguments": {"wrong_param": "test"}}}
+2025-06-20T18:28:49.885350 [ CLIENT]  INFO: 📤 Sent 121 bytes successfully
+2025-06-20T18:28:49.885352 [ CLIENT]  INFO: 📥 Waiting for response...
+2025-06-20T18:28:49.885354 [ CLIENT]  INFO: 📥 Received chunk: '{"jsonrpc":"2.0","id":"15","error":{"code":-32602,"message":"Missing required parameter: text"}}\n'
+2025-06-20T18:28:49.885356 [ CLIENT]  INFO: 📥 Complete response received: {"jsonrpc":"2.0","id":"15","error":{"code":-32602,"message":"Missing required parameter: text"}}
+2025-06-20T18:28:49.885359 [ CLIENT]  INFO: 📥 Parsing response: {"jsonrpc":"2.0","id":"15","error":{"code":-32602,"message":"Missing required parameter: text"}}
+2025-06-20T18:28:49.885361 [ CLIENT]  INFO: ✅ Received expected error -32602: Missing required parameter: text
+2025-06-20T18:28:49.885363 [ CLIENT]  INFO: ============================================================
+2025-06-20T18:28:49.885365 [ CLIENT]  INFO: 🏁 COMPREHENSIVE TEST RESULTS
+2025-06-20T18:28:49.885367 [ CLIENT]  INFO: ============================================================
+2025-06-20T18:28:49.885370 [ CLIENT]  INFO: ✅ PASS - Connection
+2025-06-20T18:28:49.885372 [ CLIENT]  INFO: ✅ PASS - Initialization
+2025-06-20T18:28:49.885374 [ CLIENT]  INFO: ✅ PASS - Ping
+2025-06-20T18:28:49.885376 [ CLIENT]  INFO: ✅ PASS - Tool Discovery
+2025-06-20T18:28:49.885378 [ CLIENT]  INFO: ✅ PASS - Echo Tool
+2025-06-20T18:28:49.885380 [ CLIENT]  INFO: ✅ PASS - GPIO Tool
+2025-06-20T18:28:49.885382 [ CLIENT]  INFO: ✅ PASS - Error Handling
+2025-06-20T18:28:49.885383 [ CLIENT]  INFO: ✅ PASS - Invalid Parameters
+2025-06-20T18:28:49.885386 [ CLIENT]  INFO: 📊 Overall Results: 8/8 tests passed
+2025-06-20T18:28:49.885388 [ CLIENT]  INFO: 🎯 Success Rate: 100.0%
+2025-06-20T18:28:49.885390 [ CLIENT]  INFO: 🎉 All tests passed! ESP8266 MCP server is working perfectly!
+2025-06-20T18:28:49.885392 [ CLIENT]  INFO: 🔌 Disconnected from server
+2025-06-20T18:28:49.889538 [ CLIENT]  TEST: ✅ Test completed successfully: test_mcp_client.py
+2025-06-20T18:28:49.893198 [ESP8266]  INFO: eateErrorResponse: Manual JSON: {"jsonrpc":"2.0","id":"15","error":{"code":-32602,"message":"Mis
+2025-06-20T18:28:49.903294 [ESP8266]  INFO: sing required parameter: text"}}[0m
+2025-06-20T18:28:49.903301 [ESP8266]  INFO: [EspSocketTransport] Socket closed by pee
+2025-06-20T18:28:49.913380 [ESP8266]  INFO: r[0m
+2025-06-20T18:28:49.913386 [ESP8266]  INFO: [MCPServer] Transport read failed, stopp
+2025-06-20T18:28:49.923475 [ESP8266]  INFO: ing server[0m
+2025-06-20T18:28:49.923488 [ESP8266]  INFO: [MCPServer] MCP Server stopped
+2025-06-20T18:28:49.933645 [ESP8266]  INFO: [0m
+2025-06-20T18:28:49.933674 [ESP8266]  INFO: [ESP8266-MCP] Client disconnected[0m
+2025-06-20T18:28:49.933679 [ESP8266]  INFO: [0;32mI (660332) EspSocketTranspor
+2025-06-20T18:28:49.943793 [ESP8266]  INFO: t: Socket closed manually[0m
+2025-06-20T18:28:49.943811 [ESP8266]  INFO: [MCPServer] MCPS
+2025-06-20T18:28:49.953897 [ESP8266]  INFO: erver destroyed[0m
+2025-06-20T18:28:49.953907 [ESP8266]  INFO: [ESP8266-MCP] [After clien
+2025-06-20T18:28:49.963986 [ESP8266]  INFO: t disconnect] Free heap: 71976 bytes, Min free: 50600 bytes[0m
+2025-06-20T18:28:51.889747 [ CLIENT]  TEST: 🔧 Testing echo tool with custom message
+2025-06-20T18:28:51.898323 [ CLIENT]  INFO: 📤 Sending echo request: Hello from integrated test demo!
+2025-06-20T18:28:51.919190 [ESP8266]  INFO: [ESP8266-MCP] Client connected from 192.168.86.32:33516[0m
+2025-06-20T18:28:51.919221 [ESP8266]  INFO: [0;32mI (662323)
+2025-06-20T18:28:51.929309 [ESP8266]  INFO: ESP8266-MCP: [Before MCP server creation] Free heap: 71368 bytes
+2025-06-20T18:28:51.941190 [ESP8266]  INFO: , Min free: 50600 bytes[0m
+2025-06-20T18:28:51.941205 [ESP8266]  INFO: [EspSocketTransport] EspSocketTransport created wi
+2025-06-20T18:28:51.951294 [ESP8266]  INFO: th socket 55[0m
+2025-06-20T18:28:51.951305 [ESP8266]  INFO: [MCPServer] MCPServer created
+2025-06-20T18:28:51.961390 [ESP8266]  INFO: [0m
+2025-06-20T18:28:51.961401 [ESP8266]  INFO: [ESP8266-MCP] Starting C++ MCP server for client[0m
+2025-06-20T18:28:51.961406 [ESP8266]  INFO: [0;32mI (662359) M
+2025-06-20T18:28:51.971494 [ESP8266]  INFO: CPServer: MCP Server starting...[0m
+2025-06-20T18:28:51.971506 [ESP8266]  INFO: DEBUG: Serializing JSON ob
+2025-06-20T18:28:51.981585 [ESP8266]  INFO: ject
+2025-06-20T18:28:51.981595 [ESP8266]  INFO: DEBUG: Serialized JSON: '{"name":"echo","arguments":{"mess
+2025-06-20T18:28:51.991705 [ESP8266]  INFO: age":"Hello from integrated test demo!"}}'
+2025-06-20T18:28:51.991717 [ESP8266]  INFO: [MCPServer] createErrorResponse: Cr
+2025-06-20T18:28:52.001869 [ESP8266]  INFO: eating error response - id: , code: -32002, message: Server not
+2025-06-20T18:28:52.011981 [ESP8266]  INFO: initialized[0m
+2025-06-20T18:28:52.011991 [ESP8266]  INFO: [MCPServer] createErrorResponse: Creating root object[0m
+2025-06-20T18:28:52.011995 [ESP8266]  INFO: [0
+2025-06-20T18:28:52.022550 [ESP8266]  INFO: [MCPServer] createErrorResponse: Setting jsonrpc f
+2025-06-20T18:28:52.032674 [ESP8266]  INFO: ield[0m
+2025-06-20T18:28:52.032684 [ESP8266]  INFO: [MCPServer] createErrorResponse: Sett
+2025-06-20T18:28:52.042772 [ESP8266]  INFO: ing id field[0m
+2025-06-20T18:28:52.042780 [ESP8266]  INFO: [MCPServer] createErrorResponse: Creating error object[0m
+2025-06-20T18:28:52.042785 [ESP8266]  INFO: 
+2025-06-20T18:28:52.052870 [ESP8266]  INFO: [MCPServer] createErrorResponse: Setting error c
+2025-06-20T18:28:52.062962 [ESP8266]  INFO: ode: -32002[0m
+2025-06-20T18:28:52.062971 [ESP8266]  INFO: [MCPServer] createErrorRespons
+2025-06-20T18:28:52.074189 [ESP8266]  INFO: e: Setting error message: Server not initialized[0m
+2025-06-20T18:28:52.074201 [ESP8266]  INFO: DEBUG: Setting key='message' value='Server
+2025-06-20T18:28:52.084294 [ESP8266]  INFO: not initialized'
+2025-06-20T18:28:52.084305 [ESP8266]  INFO: DEBUG: Created cJSON string, type=16, valuest
+2025-06-20T18:28:52.094399 [ESP8266]  INFO: ring='Server not initialized'
+2025-06-20T18:28:52.094414 [ESP8266]  INFO: DEBUG: Added item to object
+2025-06-20T18:28:52.094417 [ESP8266]  INFO: [MCPServer] createE
+2025-06-20T18:28:52.104510 [ESP8266]  INFO: rrorResponse: Setting error object on response[0m
+2025-06-20T18:28:52.104524 [ESP8266]  INFO: [0;32mI (66
+2025-06-20T18:28:52.114606 [ESP8266]  INFO: [MCPServer] createErrorResponse: About to serialize response[0m
+2025-06-20T18:28:52.114613 [ESP8266]  INFO: DEBUG: Serializing JSON o
+2025-06-20T18:28:52.125944 [ESP8266]  INFO: bject
+2025-06-20T18:28:52.125982 [ESP8266]  INFO: DEBUG: ERROR - cJSON_PrintUnformatted returned NULL!
+2025-06-20T18:28:52.125986 [ESP8266]  INFO: [0
+2025-06-20T18:28:52.136096 [ESP8266]  INFO: [MCPServer] createErrorResponse: Serialized response length: 0[0m
+2025-06-20T18:28:52.136113 [ESP8266]  INFO: [0;32mI (6625
+2025-06-20T18:28:52.146196 [ESP8266]  INFO: [MCPServer] createErrorResponse: Serialized response: [0m
+2025-06-20T18:28:52.146205 [ESP8266]  INFO: 
+2025-06-20T18:28:52.156289 [ESP8266] ERROR: [MCPServer] createErrorResponse: JSON serializat
+2025-06-20T18:28:52.165926 [ CLIENT]  INFO: 📥 Received response: 84 bytes
+2025-06-20T18:28:52.165977 [ CLIENT]  TEST: ✅ Echo test completed successfully
+2025-06-20T18:28:52.167656 [ESP8266]  INFO: ion failed! Returning manual JSON[0m
+2025-06-20T18:28:52.167673 [ESP8266]  INFO: [MCPServer] createErrorResponse: Manual
+2025-06-20T18:28:52.177762 [ESP8266]  INFO: JSON: {"jsonrpc":"2.0","id":"","error":{"code":-32002,"message":
+2025-06-20T18:28:52.187849 [ESP8266]  INFO: "Server not initialized"}}[0m
+2025-06-20T18:28:52.187857 [ESP8266]  INFO: [EspSocketTransport] Socket closed by peer[0m
+2025-06-20T18:28:52.199522 [ESP8266]  INFO: [MCPServer] Transport read failed, stopping se
+2025-06-20T18:28:52.209627 [ESP8266]  INFO: rver[0m
+2025-06-20T18:28:52.209638 [ESP8266]  INFO: [MCPServer] MCP Server stopped[0m
+2025-06-20T18:28:52.209642 [ESP8266]  INFO: [ESP8266-MCP] Cl
+2025-06-20T18:28:52.219719 [ESP8266]  INFO: ient disconnected[0m
+2025-06-20T18:28:52.219724 [ESP8266]  INFO: [EspSocketTransport] Soc
+2025-06-20T18:28:52.229812 [ESP8266]  INFO: ket closed manually[0m
+2025-06-20T18:28:52.229827 [ESP8266]  INFO: [MCPServer] MCPServer destroyed[0m
+2025-06-20T18:28:52.229830 [ESP8266]  INFO: [0;32mI (662628)
+2025-06-20T18:28:52.239919 [ESP8266]  INFO: ESP8266-MCP: [After client disconnect] Free heap: 71976 bytes,
+2025-06-20T18:28:52.250012 [ESP8266]  INFO: Min free: 50600 bytes[0m
+2025-06-20T18:28:54.166105 [ CLIENT]  TEST: 🔄 Sending ping request #1
+2025-06-20T18:28:54.186017 [ESP8266]  INFO: [ESP8266-MCP] C
+2025-06-20T18:28:54.196219 [ESP8266]  INFO: lient connected from 192.168.86.32:49212[0m
+2025-06-20T18:28:54.196244 [ESP8266]  INFO: [0;32mI (664596)
+2025-06-20T18:28:54.207141 [ESP8266]  INFO: ESP8266-MCP: [Before MCP server creation] Free heap: 71460 bytes, Min free: 50600 bytes[0m
+2025-06-20T18:28:54.207175 [ESP8266]  INFO: [0
+2025-06-20T18:28:54.219173 [ESP8266]  INFO: [EspSocketTransport] EspSocketTransport created with socket 55[0m
+2025-06-20T18:28:54.219191 [ESP8266]  INFO: [0;32mI (6646
+2025-06-20T18:28:54.229284 [ESP8266]  INFO: [MCPServer] MCPServer created[0m
+2025-06-20T18:28:54.229298 [ESP8266]  INFO: [0;32mI (664623) ESP8266-
+2025-06-20T18:28:54.239400 [ESP8266]  INFO: MCP: Starting C++ MCP server for client[0m
+2025-06-20T18:28:54.239418 [ESP8266]  INFO: [MCPServer] MCP Server starting...
+2025-06-20T18:28:54.249517 [ESP8266]  INFO: [0m
+2025-06-20T18:28:54.249534 [ESP8266]  INFO: DEBUG: Setting key='id' value=''
+2025-06-20T18:28:54.249537 [ESP8266]  INFO: DEBUG: Created cJSON str
+2025-06-20T18:28:54.253747 [ CLIENT]  INFO: ✅ Ping #1 successful
+2025-06-20T18:28:54.259626 [ESP8266]  INFO: ing, type=16, valuestring=''
+2025-06-20T18:28:54.259637 [ESP8266]  INFO: DEBUG: Added item to object
+2025-06-20T18:28:54.259640 [ESP8266]  INFO: DEBUG
+2025-06-20T18:28:54.269734 [ESP8266]  INFO: : Serializing JSON object
+2025-06-20T18:28:54.269747 [ESP8266]  INFO: DEBUG: Serialized JSON: '{"jsonrpc":true,"id":"","result":{}}'
+2025-06-20T18:28:54.269751 [ESP8266]  INFO: [0;3
+2025-06-20T18:28:54.279975 [ESP8266]  INFO: [EspSocketTransport] Socket closed by peer[0m
+2025-06-20T18:28:54.279992 [ESP8266]  INFO: [0;
+2025-06-20T18:28:54.290084 [ESP8266]  INFO: [MCPServer] Transport read failed, stopping server
+2025-06-20T18:28:54.300183 [ESP8266]  INFO: [0m
+2025-06-20T18:28:54.300192 [ESP8266]  INFO: [MCPServer] MCP Server stopped[0m
+2025-06-20T18:28:54.300197 [ESP8266]  INFO: [ESP8266-MCP] Client
+2025-06-20T18:28:54.313049 [ESP8266]  INFO: disconnected[0m
+2025-06-20T18:28:54.313064 [ESP8266]  INFO: [EspSocketTransport] Socket closed manually[0m
+2025-06-20T18:28:54.313069 [ESP8266]  INFO: [0;32mI (66
+2025-06-20T18:28:54.323183 [ESP8266]  INFO: [MCPServer] MCPServer destroyed[0m
+2025-06-20T18:28:54.323196 [ESP8266]  INFO: [0;32mI (664717) ESP8
+2025-06-20T18:28:54.334056 [ESP8266]  INFO: 266-MCP: [After client disconnect] Free heap: 71976 bytes, Min free: 50600 bytes[0m
+2025-06-20T18:28:55.253871 [ CLIENT]  TEST: 🔄 Sending ping request #2
+2025-06-20T18:28:55.270717 [ESP8266]  INFO: [ESP8266-MCP] C
+2025-06-20T18:28:55.283187 [ESP8266]  INFO: lient connected from 192.168.86.32:49216[0m
+2025-06-20T18:28:55.283201 [ESP8266]  INFO: [ESP8266-MCP] [Before MCP server
+2025-06-20T18:28:55.293285 [ESP8266]  INFO: creation] Free heap: 71460 bytes, Min free: 50600 bytes[0m
+2025-06-20T18:28:55.293294 [ESP8266]  INFO: [0
+2025-06-20T18:28:55.305912 [ESP8266]  INFO: [EspSocketTransport] EspSocketTransport created with socket 55[0m
+2025-06-20T18:28:55.305952 [ESP8266]  INFO: [0;32mI (6657
+2025-06-20T18:28:55.319181 [ESP8266]  INFO: [MCPServer] MCPServer created[0m
+2025-06-20T18:28:55.319195 [ESP8266]  INFO: [ESP8266-MCP] Starting C++ MCP server for
+2025-06-20T18:28:55.329282 [ESP8266]  INFO: client[0m
+2025-06-20T18:28:55.329291 [ESP8266]  INFO: [MCPServer] MCP Server starting...
+2025-06-20T18:28:55.339377 [ESP8266]  INFO: [0m
+2025-06-20T18:28:55.339384 [ESP8266]  INFO: DEBUG: Setting key='id' value=''
+2025-06-20T18:28:55.339387 [ESP8266]  INFO: DEBUG: Created cJSON string, type=16, valuestring=''
+2025-06-20T18:28:55.339389 [ESP8266]  INFO: DE
+2025-06-20T18:28:55.340637 [ CLIENT]  INFO: ✅ Ping #2 successful
+2025-06-20T18:28:55.349485 [ESP8266]  INFO: BUG: Added item to object
+2025-06-20T18:28:55.349500 [ESP8266]  INFO: DEBUG: Serializing JSON object
+2025-06-20T18:28:55.349503 [ESP8266]  INFO: DEBUG
+2025-06-20T18:28:55.359602 [ESP8266]  INFO: : Serialized JSON: '{"jsonrpc":true,"id":"","result":{}}'
+2025-06-20T18:28:55.359614 [ESP8266]  INFO: [0;3
+2025-06-20T18:28:55.369755 [ESP8266]  INFO: [EspSocketTransport] Socket closed by peer[0m
+2025-06-20T18:28:55.369777 [ESP8266]  INFO: [MCPServer] Transpo
+2025-06-20T18:28:55.383078 [ESP8266]  INFO: rt read failed, stopping server[0m
+2025-06-20T18:28:55.383108 [ESP8266]  INFO: [MCPServer] MCP Server stopped[0m
+2025-06-20T18:28:55.383113 [ESP8266]  INFO: [0;32
+2025-06-20T18:28:55.393160 [ESP8266]  INFO: [ESP8266-MCP] Client disconnected[0m
+2025-06-20T18:28:55.393170 [ESP8266]  INFO: [0;32mI (6657
+2025-06-20T18:28:55.403248 [ESP8266]  INFO: [EspSocketTransport] Socket closed manually[0m
+2025-06-20T18:28:55.403257 [ESP8266]  INFO: [MCPServer] MCPServer destr
+2025-06-20T18:28:55.413341 [ESP8266]  INFO: oyed[0m
+2025-06-20T18:28:55.413348 [ESP8266]  INFO: [ESP8266-MCP] [After client disconnec
+2025-06-20T18:28:55.423426 [ESP8266]  INFO: t] Free heap: 71976 bytes, Min free: 50600 bytes[0m
+2025-06-20T18:28:56.340757 [ CLIENT]  TEST: 🔄 Sending ping request #3
+2025-06-20T18:28:56.361261 [ESP8266]  INFO: [ESP8266-MCP] Client connected from 192.168.86.
+2025-06-20T18:28:56.371371 [ESP8266]  INFO: 32:49226[0m
+2025-06-20T18:28:56.371382 [ESP8266]  INFO: [ESP8266-MCP] [Before MCP server
+2025-06-20T18:28:56.381467 [ESP8266]  INFO: creation] Free heap: 71460 bytes, Min free: 50600 bytes[0m
+2025-06-20T18:28:56.381475 [ESP8266]  INFO: [0;32mI (666777) EspSocketTranspor
+2025-06-20T18:28:56.391794 [ESP8266]  INFO: t: EspSocketTransport created with socket 55[0m
+2025-06-20T18:28:56.391827 [ESP8266]  INFO: [0;32mI (6667
+2025-06-20T18:28:56.401918 [ESP8266]  INFO: [MCPServer] MCPServer created[0m
+2025-06-20T18:28:56.401932 [ESP8266]  INFO: [0;32mI (666795) ESP8266-
+2025-06-20T18:28:56.413254 [ESP8266]  INFO: MCP: Starting C++ MCP server for client[0m
+2025-06-20T18:28:56.413294 [ESP8266]  INFO: [MCPServer] MCP Server starting...
+2025-06-20T18:28:56.423385 [ESP8266]  INFO: [0m
+2025-06-20T18:28:56.423395 [ESP8266]  INFO: DEBUG: Setting key='id' value=''
+2025-06-20T18:28:56.423397 [ESP8266]  INFO: DEBUG: Created cJSON str
+2025-06-20T18:28:56.427210 [ CLIENT]  INFO: ✅ Ping #3 successful
+2025-06-20T18:28:56.433473 [ESP8266]  INFO: ing, type=16, valuestring=''
+2025-06-20T18:28:56.433479 [ESP8266]  INFO: DEBUG: Added item to object
+2025-06-20T18:28:56.433481 [ESP8266]  INFO: DEBUG: Serializing JSON object
+2025-06-20T18:28:56.433483 [ESP8266]  INFO: DEBUG
+2025-06-20T18:28:56.443620 [ESP8266]  INFO: : Serialized JSON: '{"jsonrpc":true,"id":"","result":{}}'
+2025-06-20T18:28:56.443639 [ESP8266]  INFO: [0;3
+2025-06-20T18:28:56.453729 [ESP8266]  INFO: [EspSocketTransport] Socket closed by peer[0m
+2025-06-20T18:28:56.453743 [ESP8266]  INFO: [0;
+2025-06-20T18:28:56.463825 [ESP8266]  INFO: [MCPServer] Transport read failed, stopping server[0m
+2025-06-20T18:28:56.463835 [ESP8266]  INFO: [0;32mI (666859) MCPServer
+2025-06-20T18:28:56.474728 [ESP8266]  INFO: : MCP Server stopped[0m
+2025-06-20T18:28:56.474745 [ESP8266]  INFO: [ESP8266-MCP] Client
+2025-06-20T18:28:56.484887 [ESP8266]  INFO: disconnected[0m
+2025-06-20T18:28:56.484907 [ESP8266]  INFO: [EspSocketTransport] Socket closed manually[0m
+2025-06-20T18:28:56.484913 [ESP8266]  INFO: [0;32mI (66
+2025-06-20T18:28:56.496186 [ESP8266]  INFO: [MCPServer] MCPServer destroyed[0m
+2025-06-20T18:28:56.496203 [ESP8266]  INFO: [0;32mI (666890) ESP8
+2025-06-20T18:28:56.506298 [ESP8266]  INFO: 266-MCP: [After client disconnect] Free heap: 71976 bytes, Min free: 50600 bytes[0m
+2025-06-20T18:28:57.433151 [ CLIENT]  TEST: 📤 Sending invalid tool request (should fail)
+2025-06-20T18:28:57.443399 [ESP8266]  INFO: [ESP8266-MCP] C
+2025-06-20T18:28:57.457190 [ESP8266]  INFO: lient connected from 192.168.86.32:49240[0m
+2025-06-20T18:28:57.457203 [ESP8266]  INFO: [ESP8266-MCP] [Before MCP server
+2025-06-20T18:28:57.467289 [ESP8266]  INFO: creation] Free heap: 71616 bytes, Min free: 50600 bytes[0m
+2025-06-20T18:28:57.467298 [ESP8266]  INFO: [0
+2025-06-20T18:28:57.480180 [ESP8266]  INFO: [EspSocketTransport] EspSocketTransport created with socket 55[0m
+2025-06-20T18:28:57.480193 [ESP8266]  INFO: [0;32mI (6678
+2025-06-20T18:28:57.490282 [ESP8266]  INFO: [MCPServer] MCPServer created[0m
+2025-06-20T18:28:57.490291 [ESP8266]  INFO: [ESP8266-MCP] Starting C++ MCP server for
+2025-06-20T18:28:57.501448 [ESP8266]  INFO: client[0m
+2025-06-20T18:28:57.501482 [ESP8266]  INFO: [MCPServer] MCP Server starting...
+2025-06-20T18:28:57.511579 [ESP8266]  INFO: [0m
+2025-06-20T18:28:57.511590 [ESP8266]  INFO: DEBUG: Serializing JSON object
+2025-06-20T18:28:57.511593 [ESP8266]  INFO: DEBUG: Serialized JSON: '{"name":"nonexistent_tool","argum
+2025-06-20T18:28:57.521682 [ESP8266]  INFO: ents":{}}'
+2025-06-20T18:28:57.521694 [ESP8266]  INFO: [MCPServer] createErrorResponse: Cr
+2025-06-20T18:28:57.531780 [ESP8266]  INFO: eating error response - id: , code: -32002, message: Server not
+2025-06-20T18:28:57.544266 [ESP8266]  INFO: initialized[0m
+2025-06-20T18:28:57.544279 [ESP8266]  INFO: [MCPServer] createErrorResponse: Creating root object[0m
+2025-06-20T18:28:57.544283 [ESP8266]  INFO: [0
+2025-06-20T18:28:57.554371 [ESP8266]  INFO: [MCPServer] createErrorResponse: Setting jsonrpc field[0m
+2025-06-20T18:28:57.554385 [ESP8266]  INFO: [0;32mI (667950) MCPS
+2025-06-20T18:28:57.564472 [ESP8266]  INFO: erver: createErrorResponse: Setting id field[0m
+2025-06-20T18:28:57.564484 [ESP8266]  INFO: [0;32mI (6679
+2025-06-20T18:28:57.574575 [ESP8266]  INFO: [MCPServer] createErrorResponse: Creating error object[0m
+2025-06-20T18:28:57.574588 [ESP8266]  INFO: [MCPServer] crea
+2025-06-20T18:28:57.584678 [ESP8266]  INFO: teErrorResponse: Setting error code: -32002[0m
+2025-06-20T18:28:57.584690 [ESP8266]  INFO: [0;32mI (66798
+2025-06-20T18:28:57.594777 [ESP8266]  INFO: [MCPServer] createErrorResponse: Setting error message: Server
+2025-06-20T18:28:57.604897 [ESP8266]  INFO: not initialized[0m
+2025-06-20T18:28:57.604912 [ESP8266]  INFO: DEBUG: Setting key='message' value='Server not initialized'
+2025-06-20T18:28:57.604915 [ESP8266]  INFO: DEBUG: Create
+2025-06-20T18:28:57.615004 [ESP8266]  INFO: d cJSON string, type=16, valuestring='Server not initialized'
+2025-06-20T18:28:57.615016 [ESP8266]  INFO: D
+2025-06-20T18:28:57.625104 [ESP8266]  INFO: EBUG: Added item to object
+2025-06-20T18:28:57.625116 [ESP8266]  INFO: [MCPServer] createE
+2025-06-20T18:28:57.635161 [ESP8266]  INFO: rrorResponse: Setting error object on response[0m
+2025-06-20T18:28:57.635172 [ESP8266]  INFO: [MCPServer] createErrorResp
+2025-06-20T18:28:57.645252 [ESP8266]  INFO: onse: About to serialize response[0m
+2025-06-20T18:28:57.645261 [ESP8266]  INFO: DEBUG: Serializing JSON o
+2025-06-20T18:28:57.655347 [ESP8266]  INFO: bject
+2025-06-20T18:28:57.655358 [ESP8266]  INFO: DEBUG: ERROR - cJSON_PrintUnformatted returned NULL!
+2025-06-20T18:28:57.655361 [ESP8266]  INFO: [0
+2025-06-20T18:28:57.665471 [ESP8266]  INFO: [MCPServer] createErrorResponse: Serialized response length: 0[0m
+2025-06-20T18:28:57.665487 [ESP8266]  INFO: [0;32mI (6680
+2025-06-20T18:28:57.675578 [ESP8266]  INFO: [MCPServer] createErrorResponse: Serialized response: [0m
+2025-06-20T18:28:57.675592 [ESP8266]  INFO: 
+2025-06-20T18:28:57.685674 [ESP8266] ERROR: [MCPServer] createErrorResponse: JSON serialization failed! Returning manual JSO
+2025-06-20T18:28:57.697458 [ESP8266]  INFO: N[0m
+2025-06-20T18:28:57.697473 [ESP8266]  INFO: [MCPServer] createErrorResponse: Manual
+2025-06-20T18:28:57.707566 [ESP8266]  INFO: JSON: {"jsonrpc":"2.0","id":"","error":{"code":-32002,"message":"Server not initialized"}}[0m
+2025-06-20T18:28:57.713919 [ CLIENT]  INFO: 📥 Error response received (expected): 84 bytes
+2025-06-20T18:28:57.740299 [ESP8266]  INFO: [EspSocketTransport] Socket closed by peer[0m
+2025-06-20T18:28:57.740348 [ESP8266]  INFO: [MCPServer] Tr
+2025-06-20T18:28:57.750436 [ESP8266]  INFO: ansport read failed, stopping server[0m
+2025-06-20T18:28:57.750447 [ESP8266]  INFO: [0;32mI (668144) MCPS
+2025-06-20T18:28:57.761101 [ESP8266]  INFO: erver: MCP Server stopped[0m
+2025-06-20T18:28:57.761116 [ESP8266]  INFO: [ESP8266-MCP] Cl
+2025-06-20T18:28:57.771263 [ESP8266]  INFO: ient disconnected[0m
+2025-06-20T18:28:57.771277 [ESP8266]  INFO: [EspSocketTransport] Socket closed manually[0m
+2025-06-20T18:28:57.771281 [ESP8266]  INFO: [0;32m
+2025-06-20T18:28:57.781362 [ESP8266]  INFO: [MCPServer] MCPServer destroyed[0m
+2025-06-20T18:28:57.781374 [ESP8266]  INFO: [0;32mI (668175)
+2025-06-20T18:28:57.793179 [ESP8266]  INFO: ESP8266-MCP: [After client disconnect] Free heap: 71976 bytes, Min free: 50600 bytes[0m
+2025-06-20T18:28:59.714104 [ CLIENT]  TEST: 🎉 Integrated Testing Demo Complete!
+2025-06-20T18:28:59.714170 [ CLIENT]  INFO: 
+2025-06-20T18:28:59.714173 [ CLIENT]  TEST: 📊 Demo Summary:
+2025-06-20T18:28:59.714175 [ CLIENT]  TEST: ✅ Basic connectivity test
+2025-06-20T18:28:59.714177 [ CLIENT]  TEST: ✅ Single tool test
+2025-06-20T18:28:59.714179 [ CLIENT]  TEST: ✅ Real-time correlation demo
+2025-06-20T18:28:59.714180 [ CLIENT]  TEST: ✅ Error handling demo
+2025-06-20T18:28:59.714182 [ CLIENT]  INFO: 
+2025-06-20T18:28:59.714199 [ CLIENT]  INFO: 📝 Full log saved to: demo_integrated_test_1750458516.log

@@ -19,6 +19,29 @@ This project implements a "from-zero-to-blinky" style MCP server for ESP8266 tha
 | OS / HAL | **ESP8266-RTOS-SDK** | FreeRTOS + lwIP networking stack |
 | Toolchain | **xtensa-lx106-elf-gcc** | C++17 capable cross-compiler |
 
+## 🚀 Quick Start
+
+**New to this project? Start here:**
+
+1. **[Quick Test Guide](QUICK_TEST_GUIDE.md)** - Get up and running in 5 minutes
+2. **[Complete Test Documentation](TEST_SESSION_MANAGEMENT.md)** - Comprehensive test suite guide
+
+### Basic Setup
+```bash
+# 1. Set up ESP-IDF environment
+export IDF_PATH=/home/$USER/esp/ESP8266_RTOS_SDK
+source $IDF_PATH/export.sh
+
+# 2. Build and flash
+idf.py build
+idf.py -p /dev/ttyUSB0 flash
+
+# 3. Find ESP8266 IP address and test
+python3 test_mcp_client.py 192.168.x.x
+```
+
+**Need help?** Check [QUICK_TEST_GUIDE.md](QUICK_TEST_GUIDE.md) for troubleshooting.
+
 ## Project Structure
 
 ```

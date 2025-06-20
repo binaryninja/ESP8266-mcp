@@ -106,7 +106,7 @@ bool EspSocketTransport::isConnected() const {
     int error = 0;
     socklen_t len = sizeof(error);
     if (getsockopt(socket_, SOL_SOCKET, SO_ERROR, &error, &len) != 0 || error != 0) {
-        connected_ = false;
+        connected_.store(false);
         return false;
     }
     

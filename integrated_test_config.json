@@ -1,0 +1,22 @@
+{
+  "basic_connectivity": {
+    "script": "test_mcp_client.py",
+    "args": [],
+    "description": "Test basic MCP connectivity and protocol"
+  },
+  "session_management": {
+    "script": "test_session_management.py",
+    "args": ["--verbose"],
+    "description": "Test session management features"
+  },
+  "tool_functionality": {
+    "script": "test_session_tools.py",
+    "args": ["--verbose"],
+    "description": "Test tool execution and parameters"
+  },
+  "message_framing": {
+    "script": "test_message_framing.py",
+    "args": [],
+    "description": "Test message framing protocol"
+  }
+}

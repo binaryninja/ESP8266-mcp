@@ -13,10 +13,10 @@ idf_component_register(
     INCLUDE_DIRS
         "."
         "include"
-    REQUIRES lwip freertos json pthread driver spiffs
+    REQUIRES lwip freertos json pthread spiffs
 )
 
 # C++ compilation with exceptions and RTTI enabled
 target_compile_options(${COMPONENT_LIB} PRIVATE
-    -std=c++14 -Os -ffunction-sections -fdata-sections -frtti -fexceptions
+    -std=c++17 -Os -ffunction-sections -fdata-sections -frtti -fexceptions
 )

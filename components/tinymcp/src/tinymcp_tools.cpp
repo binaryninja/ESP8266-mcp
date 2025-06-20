@@ -172,16 +172,16 @@ cJSON* SystemInfoTool::getSystemInfo() {
     cJSON_AddStringToObject(system, "chip_model", "ESP8266");
     cJSON_AddNumberToObject(system, "chip_revision", chip_info.revision);
     cJSON_AddNumberToObject(system, "cpu_cores", chip_info.cores);
-    cJSON_AddNumberToObject(system, "cpu_freq_mhz", esp_clk_cpu_freq() / 1000000);
+    cJSON_AddNumberToObject(system, "cpu_freq_mhz", 80); // ESP8266 default 80MHz
     
     // Flash information
-    cJSON_AddNumberToObject(system, "flash_size", spi_flash_get_chip_size());
+    cJSON_AddNumberToObject(system, "flash_size", 4 * 1024 * 1024); // 4MB default for ESP8266
     
     // SDK version
     cJSON_AddStringToObject(system, "idf_version", esp_get_idf_version());
     
     // Uptime
-    cJSON_AddNumberToObject(system, "uptime_ms", esp_timer_get_time() / 1000);
+    cJSON_AddNumberToObject(system, "uptime_ms", xTaskGetTickCount() * portTICK_PERIOD_MS);
     
     return system;
 }
@@ -192,10 +192,10 @@ cJSON* SystemInfoTool::getMemoryInfo() {
     // Heap information
     cJSON_AddNumberToObject(memory, "free_heap", esp_get_free_heap_size());
     cJSON_AddNumberToObject(memory, "minimum_free_heap", esp_get_minimum_free_heap_size());
-    cJSON_AddNumberToObject(memory, "largest_free_block", heap_caps_get_largest_free_block(MALLOC_CAP_DEFAULT));
+    cJSON_AddNumberToObject(memory, "largest_free_block", esp_get_free_heap_size());
     
-    // Internal memory
-    cJSON_AddNumberToObject(memory, "free_internal", heap_caps_get_free_size(MALLOC_CAP_INTERNAL));
+    // Internal memory (ESP8266 doesn't have heap_caps, use free heap)
+    cJSON_AddNumberToObject(memory, "free_internal", esp_get_free_heap_size());
     
     return memory;
 }
@@ -382,7 +382,7 @@ int EchoTool::execute(const cJSON* args, cJSON** result) {
     
     cJSON* response = cJSON_CreateObject();
     cJSON_AddStringToObject(response, "echo", message.c_str());
-    cJSON_AddNumberToObject(response, "timestamp", esp_timer_get_time() / 1000);
+    cJSON_AddNumberToObject(response, "timestamp", xTaskGetTickCount() * portTICK_PERIOD_MS);
     cJSON_AddStringToObject(response, "source", "ESP8266 TinyMCP Server");
     
     *result = response;
@@ -597,7 +597,7 @@ bool validateStringParam(const cJSON* params, const std::string& name, std::stri
         return false;
     }
     
-    value = cJSON_GetStringValue(param);
+    value = cJSON_GetStringValue(const_cast<cJSON*>(param));
     return true;
 }
 
@@ -611,7 +611,7 @@ bool validateIntParam(const cJSON* params, const std::string& name, int& value, 
         return false;
     }
     
-    value = cJSON_GetNumberValue(param);
+    value = param->valuedouble;
     return true;
 }
 

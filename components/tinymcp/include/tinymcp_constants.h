@@ -73,6 +73,28 @@ static constexpr int TINYMCP_TOOL_ERROR = -32003;
 static constexpr int TINYMCP_CANCELLED = -32004;
 static constexpr int TINYMCP_TIMEOUT = -32005;
 
+// Success and General Error Codes
+static constexpr int TINYMCP_SUCCESS = 0;
+static constexpr int TINYMCP_ERROR_CANCELLED = TINYMCP_CANCELLED;
+static constexpr int TINYMCP_ERROR_NO_PROGRESS_TOKEN = -32006;
+static constexpr int TINYMCP_ERROR_OUT_OF_MEMORY = -32007;
+static constexpr int TINYMCP_ERROR_INVALID_STATE = -32008;
+static constexpr int TINYMCP_ERROR_TRANSPORT_FAILED = -32009;
+static constexpr int TINYMCP_ERROR_TASK_CREATION_FAILED = -32010;
+static constexpr int TINYMCP_ERROR_TIMEOUT = TINYMCP_TIMEOUT;
+static constexpr int TINYMCP_ERROR_INVALID_PARAMS = TINYMCP_INVALID_PARAMS;
+static constexpr int TINYMCP_ERROR_RESOURCE_LIMIT = -32011;
+static constexpr int TINYMCP_ERROR_MESSAGE_TOO_LARGE = -32012;
+static constexpr int TINYMCP_ERROR_INVALID_OPERATION = -32013;
+static constexpr int TINYMCP_ERROR_NOT_IMPLEMENTED = -32014;
+static constexpr int TINYMCP_ERROR_INVALID_MESSAGE = -32015;
+static constexpr int TINYMCP_ERROR_RESOURCE_LOCK = -32016;
+static constexpr int TINYMCP_ERROR_NOT_FOUND = -32017;
+static constexpr int TINYMCP_ERROR_METHOD_NOT_FOUND = TINYMCP_METHOD_NOT_FOUND;
+static constexpr int TINYMCP_ERROR_NOT_INITIALIZED = TINYMCP_NOT_INITIALIZED;
+static constexpr int TINYMCP_ERROR_TOOL_NOT_FOUND = -32018;
+static constexpr int TINYMCP_ERROR_HARDWARE_FAILED = -32019;
+
 // Error Messages
 static constexpr const char* ERROR_MSG_PARSE_ERROR = "Parse error";
 static constexpr const char* ERROR_MSG_INVALID_REQUEST = "Invalid Request";
