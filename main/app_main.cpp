@@ -1,4 +1,5 @@
 #include <string.h>
+#include <memory>
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "freertos/event_groups.h"
@@ -11,10 +12,11 @@
 #include "lwip/sys.h"
 #include "lwip/sockets.h"
 #include "lwip/netdb.h"
+#include "tcpip_adapter.h"
 
-// TinyMCP includes
-#include "EspSocketTransport.h"
+// C++ MCP server includes
 #include "MCPServer.h"
+#include "EspSocketTransport.h"
 
 static const char *TAG = "ESP8266-MCP";
 
@@ -37,53 +39,54 @@ static EventGroupHandle_t s_wifi_event_group;
 
 static int s_retry_num = 0;
 
-
-
-static void event_handler(void* arg, esp_event_base_t event_base,
-                         int32_t event_id, void* event_data)
-{
-    if (event_base == WIFI_EVENT && event_id == WIFI_EVENT_STA_START) {
-        esp_wifi_connect();
-    } else if (event_base == WIFI_EVENT && event_id == WIFI_EVENT_STA_DISCONNECTED) {
-        if (s_retry_num < WIFI_MAXIMUM_RETRY) {
-            esp_wifi_connect();
-            s_retry_num++;
-            ESP_LOGI(TAG, "retry to connect to the AP");
-        } else {
-            xEventGroupSetBits(s_wifi_event_group, WIFI_FAIL_BIT);
-        }
-        ESP_LOGI(TAG, "connect to the AP fail");
-    } else if (event_base == IP_EVENT && event_id == IP_EVENT_STA_GOT_IP) {
-        ip_event_got_ip_t* event = (ip_event_got_ip_t*) event_data;
-        ESP_LOGI(TAG, "got ip:" IPSTR, IP2STR(&event->ip_info.ip));
-        s_retry_num = 0;
-        xEventGroupSetBits(s_wifi_event_group, WIFI_CONNECTED_BIT);
-    }
+void print_memory_info(const char* location) {
+    size_t free_heap = esp_get_free_heap_size();
+    size_t min_free_heap = esp_get_minimum_free_heap_size();
+    ESP_LOGI(TAG, "[%s] Free heap: %u bytes, Min free: %u bytes", 
+             location, (unsigned int)free_heap, (unsigned int)min_free_heap);
 }
+
+
+extern "C" {
+static esp_err_t event_handler(void* arg, system_event_t* event)
+{
+    switch(event->event_id) {
+        case SYSTEM_EVENT_STA_START:
+            esp_wifi_connect();
+            break;
+        case SYSTEM_EVENT_STA_DISCONNECTED:
+            if (s_retry_num < WIFI_MAXIMUM_RETRY) {
+                esp_wifi_connect();
+                s_retry_num++;
+                ESP_LOGI(TAG, "retry to connect to the AP");
+            } else {
+                xEventGroupSetBits(s_wifi_event_group, WIFI_FAIL_BIT);
+            }
+            ESP_LOGI(TAG, "connect to the AP fail");
+            break;
+        case SYSTEM_EVENT_STA_GOT_IP:
+            ESP_LOGI(TAG, "got ip:" IPSTR, IP2STR(&event->event_info.got_ip.ip_info.ip));
+            s_retry_num = 0;
+            xEventGroupSetBits(s_wifi_event_group, WIFI_CONNECTED_BIT);
+            break;
+        default:
+            break;
+    }
+    return ESP_OK;
+}
+} // extern "C"
 
 void init_wifi(void)
 {
     s_wifi_event_group = xEventGroupCreate();
 
-    ESP_ERROR_CHECK(esp_netif_init());
+    tcpip_adapter_init();
     ESP_ERROR_CHECK(esp_event_loop_create_default());
-    esp_netif_create_default_wifi_sta();
 
     wifi_init_config_t cfg = WIFI_INIT_CONFIG_DEFAULT();
     ESP_ERROR_CHECK(esp_wifi_init(&cfg));
 
-    esp_event_handler_instance_t instance_any_id;
-    esp_event_handler_instance_t instance_got_ip;
-    ESP_ERROR_CHECK(esp_event_handler_instance_register(WIFI_EVENT,
-                                                        ESP_EVENT_ANY_ID,
-                                                        &event_handler,
-                                                        NULL,
-                                                        &instance_any_id));
-    ESP_ERROR_CHECK(esp_event_handler_instance_register(IP_EVENT,
-                                                        IP_EVENT_STA_GOT_IP,
-                                                        &event_handler,
-                                                        NULL,
-                                                        &instance_got_ip));
+    ESP_ERROR_CHECK(esp_event_loop_init(event_handler, NULL));
 
     wifi_config_t wifi_config = {};
     strcpy((char*)wifi_config.sta.ssid, WIFI_SSID);
@@ -121,6 +124,8 @@ void init_wifi(void)
 
 void mcp_server_task(void *pvParameters)
 {
+    print_memory_info("MCP task start");
+    
     int listen_fd = socket(AF_INET, SOCK_STREAM, 0);
     if (listen_fd < 0) {
         ESP_LOGE(TAG, "Unable to create socket: errno %d", errno);
@@ -132,7 +137,8 @@ void mcp_server_task(void *pvParameters)
     int opt = 1;
     setsockopt(listen_fd, SOL_SOCKET, SO_REUSEADDR, &opt, sizeof(opt));
 
-    struct sockaddr_in addr = {};
+    struct sockaddr_in addr;
+    memset(&addr, 0, sizeof(addr));
     addr.sin_family = AF_INET;
     addr.sin_addr.s_addr = INADDR_ANY;
     addr.sin_port = htons(SERVER_PORT);
@@ -166,20 +172,24 @@ void mcp_server_task(void *pvParameters)
         ESP_LOGI(TAG, "Client connected from %s:%d", 
                  inet_ntoa(client_addr.sin_addr), ntohs(client_addr.sin_port));
 
+        print_memory_info("Before MCP server creation");
+        
         try {
-            tinymcp::EspSocketTransport transport(client_sock);
-            tinymcp::MCPServer server(&transport);
+            // Create C++ MCP server with socket transport
+            auto transport = std::make_unique<tinymcp::EspSocketTransport>(client_sock);
+            tinymcp::MCPServer server(transport.get());
             
-            ESP_LOGI(TAG, "Starting MCP server for client");
+            ESP_LOGI(TAG, "Starting C++ MCP server for client");
             server.run();  // This blocks until client disconnects
             ESP_LOGI(TAG, "Client disconnected");
         } catch (const std::exception& e) {
-            ESP_LOGE(TAG, "MCP server error: %s", e.what());
+            ESP_LOGE(TAG, "MCP server exception: %s", e.what());
         } catch (...) {
-            ESP_LOGE(TAG, "Unknown MCP server error");
+            ESP_LOGE(TAG, "Unknown MCP server exception");
         }
         
-        // Socket is closed in EspSocketTransport destructor
+        print_memory_info("After client disconnect");
+        // Socket is closed by transport destructor
     }
 
     close(listen_fd);
@@ -189,29 +199,32 @@ void mcp_server_task(void *pvParameters)
 extern "C" void app_main(void)
 {
     ESP_LOGI(TAG, "ESP8266-MCP starting up...");
+    print_memory_info("App start");
 
     // Initialize NVS
     esp_err_t ret = nvs_flash_init();
-    if (ret == ESP_ERR_NVS_NO_FREE_PAGES || ret == ESP_ERR_NVS_NEW_VERSION_FOUND) {
+    if (ret == ESP_ERR_NVS_NO_FREE_PAGES || ret == ESP_ERR_NVS_NOT_FOUND) {
         ESP_ERROR_CHECK(nvs_flash_erase());
         ret = nvs_flash_init();
     }
     ESP_ERROR_CHECK(ret);
+    print_memory_info("After NVS init");
 
     // Initialize WiFi
     ESP_LOGI(TAG, "Initializing WiFi...");
     init_wifi();
+    print_memory_info("After WiFi init");
 
     // Set WiFi power save to none for better performance
     ESP_ERROR_CHECK(esp_wifi_set_ps(WIFI_PS_NONE));
 
     ESP_LOGI(TAG, "WiFi connected, starting MCP server...");
 
-    // Create MCP server task with 4KB stack, pinned to PRO_CPU
+    // Create MCP server task with 4KB stack (ESP8266 memory limit)
     xTaskCreatePinnedToCore(
         mcp_server_task,
         "mcp_server",
-        4096,           // Stack size
+        4096,           // Stack size (4KB - ESP8266 limit)
         NULL,           // Parameters
         5,              // Priority
         NULL,           // Task handle

@@ -1,10 +1,10 @@
 idf_component_register(
     SRCS "app_main.cpp"
     INCLUDE_DIRS "."
-    REQUIRES tinymcp
+    REQUIRES tinymcp nvs_flash pthread
 )
 
-# Enable C++17 and optimize for size
+# C++ compilation with exceptions and RTTI enabled
 target_compile_options(${COMPONENT_LIB} PRIVATE
-    -std=gnu++17 -fno-exceptions -fno-rtti -Os
+    -std=c++14 -Os -frtti -fexceptions
 )
