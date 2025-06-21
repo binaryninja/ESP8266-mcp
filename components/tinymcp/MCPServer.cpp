@@ -206,14 +206,20 @@ void MCPServer::sendResponse(const std::string& response) {
     ESP_LOGI(TAG, "sendResponse: Starting response transmission");
     ESP_LOGI(TAG, "sendResponse: Response length: %d", response.length());
     ESP_LOGI(TAG, "sendResponse: Transport pointer: %p", transport_);
+    ESP_LOGI(TAG, "sendResponse: Is running: %s", running_ ? "true" : "false");
     
     if (!transport_) {
-        ESP_LOGE(TAG, "sendResponse: Transport is null");
+        ESP_LOGE(TAG, "sendResponse: Transport is null - CANNOT SEND");
         return;
     }
     
     if (response.empty()) {
-        ESP_LOGW(TAG, "sendResponse: Response is empty");
+        ESP_LOGW(TAG, "sendResponse: Response is empty - CANNOT SEND");
+        return;
+    }
+    
+    if (!running_) {
+        ESP_LOGW(TAG, "sendResponse: Server not running - CANNOT SEND");
         return;
     }
     
@@ -229,14 +235,17 @@ void MCPServer::sendResponse(const std::string& response) {
     std::string responseToSend = response + "\n";
     ESP_LOGI(TAG, "sendResponse: Response with newline length: %d", responseToSend.length());
     
+    ESP_LOGI(TAG, "sendResponse: Calling transport->write...");
     bool writeResult = transport_->write(responseToSend);
     ESP_LOGI(TAG, "sendResponse: Transport write returned: %s", writeResult ? "true" : "false");
     
     if (!writeResult) {
-        ESP_LOGE(TAG, "Failed to send response");
+        ESP_LOGE(TAG, "sendResponse: FAILED to send response - transport write failed");
     } else {
         ESP_LOGI(TAG, "sendResponse: Response sent successfully");
     }
+    
+    ESP_LOGI(TAG, "sendResponse: Function complete");
 }
 
 // JSON processing task with larger stack
@@ -360,16 +369,32 @@ static void json_processing_task(void* pvParameters) {
                     // Check if tool exists - create error response for unknown tools
                     if (toolName != "echo" && toolName != "gpio_control") {
                         ESP_LOGE(TAG, "JSON Task: Unknown tool: %s", toolName.c_str());
+                        ESP_LOGI(TAG, "JSON Task: Creating error response object...");
                         response = cJSON_CreateObject();
+                        if (response == NULL) {
+                            ESP_LOGE(TAG, "JSON Task: Failed to create response object!");
+                            task_data->success = false;
+                            task_data->error_msg = "Failed to create error response";
+                            response = NULL;
+                            break;
+                        }
                         cJSON_AddStringToObject(response, "jsonrpc", "2.0");
                         cJSON_AddStringToObject(response, "id", id.c_str());
                         
                         cJSON* error = cJSON_CreateObject();
+                        if (error == NULL) {
+                            ESP_LOGE(TAG, "JSON Task: Failed to create error object!");
+                            cJSON_Delete(response);
+                            task_data->success = false;
+                            task_data->error_msg = "Failed to create error object";
+                            response = NULL;
+                            break;
+                        }
                         cJSON_AddNumberToObject(error, "code", -32601);
                         std::string errorMsg = "Unknown tool: " + toolName;
                         cJSON_AddStringToObject(error, "message", errorMsg.c_str());
                         cJSON_AddItemToObject(response, "error", error);
-                        ESP_LOGI(TAG, "JSON Task: Error response created for unknown tool");
+                        ESP_LOGI(TAG, "JSON Task: Error response created for unknown tool - breaking");
                         break;
                     }
                     
@@ -397,20 +422,36 @@ static void json_processing_task(void* pvParameters) {
                             } else {
                                 // Missing or invalid text parameter
                                 ESP_LOGE(TAG, "JSON Task: Echo missing text parameter");
+                                ESP_LOGI(TAG, "JSON Task: Cleaning up and creating error response...");
                                 cJSON_Delete(args);
                                 cJSON_Delete(content);
                                 cJSON_Delete(result);
                                 cJSON_Delete(response);
                                 
                                 response = cJSON_CreateObject();
+                                if (response == NULL) {
+                                    ESP_LOGE(TAG, "JSON Task: Failed to create echo error response!");
+                                    task_data->success = false;
+                                    task_data->error_msg = "Failed to create echo error response";
+                                    response = NULL;
+                                    break;
+                                }
                                 cJSON_AddStringToObject(response, "jsonrpc", "2.0");
                                 cJSON_AddStringToObject(response, "id", id.c_str());
                                 
                                 cJSON* error = cJSON_CreateObject();
+                                if (error == NULL) {
+                                    ESP_LOGE(TAG, "JSON Task: Failed to create echo error object!");
+                                    cJSON_Delete(response);
+                                    task_data->success = false;
+                                    task_data->error_msg = "Failed to create echo error object";
+                                    response = NULL;
+                                    break;
+                                }
                                 cJSON_AddNumberToObject(error, "code", -32602);
                                 cJSON_AddStringToObject(error, "message", "Missing required parameter: text");
                                 cJSON_AddItemToObject(response, "error", error);
-                                ESP_LOGI(TAG, "JSON Task: Error response created for invalid echo params");
+                                ESP_LOGI(TAG, "JSON Task: Error response created for invalid echo params - breaking");
                                 break;
                             }
                             cJSON_Delete(args);
@@ -491,27 +532,35 @@ static void json_processing_task(void* pvParameters) {
                 default:
                     task_data->success = false;
                     task_data->error_msg = "Unsupported operation";
-                    xSemaphoreGive(task_data->completion_sem);
-                    continue;
+                    response = NULL;
+                    break;
             }
             
             // Convert to string using compact format
+            ESP_LOGI(TAG, "JSON Task: Converting response to string...");
             if (response != NULL) {
+                ESP_LOGI(TAG, "JSON Task: Response object exists, serializing...");
                 char* response_str = cJSON_PrintUnformatted(response);
                 if (response_str != NULL) {
+                    ESP_LOGI(TAG, "JSON Task: Serialization successful, length: %d", strlen(response_str));
                     task_data->output = response_str;
                     task_data->success = true;
                     free(response_str);
+                    ESP_LOGI(TAG, "JSON Task: Response assigned to task_data");
                 } else {
+                    ESP_LOGE(TAG, "JSON Task: Failed to serialize response!");
                     task_data->success = false;
                     task_data->error_msg = "Failed to serialize response";
                 }
                 cJSON_Delete(response);
+                ESP_LOGI(TAG, "JSON Task: Response object deleted");
             } else {
+                ESP_LOGE(TAG, "JSON Task: Response object is NULL!");
                 task_data->success = false;
                 task_data->error_msg = "Failed to create response";
             }
             
+            ESP_LOGI(TAG, "JSON Task: Giving semaphore, success=%s", task_data->success ? "true" : "false");
             xSemaphoreGive(task_data->completion_sem);
         }
     }
