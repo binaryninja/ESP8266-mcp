@@ -351,6 +351,28 @@ static void json_processing_task(void* pvParameters) {
                 }
                 
                 case JSON_OP_TOOLS_CALL: {
+                    // Extract tool name and arguments from param1 and param2
+                    std::string toolName = task_data->param1;
+                    std::string argumentsJson = task_data->param2;
+                    
+                    ESP_LOGI(TAG, "JSON Task: Processing tool call for '%s'", toolName.c_str());
+                    
+                    // Check if tool exists - create error response for unknown tools
+                    if (toolName != "echo" && toolName != "gpio_control") {
+                        ESP_LOGE(TAG, "JSON Task: Unknown tool: %s", toolName.c_str());
+                        response = cJSON_CreateObject();
+                        cJSON_AddStringToObject(response, "jsonrpc", "2.0");
+                        cJSON_AddStringToObject(response, "id", id.c_str());
+                        
+                        cJSON* error = cJSON_CreateObject();
+                        cJSON_AddNumberToObject(error, "code", -32601);
+                        std::string errorMsg = "Unknown tool: " + toolName;
+                        cJSON_AddStringToObject(error, "message", errorMsg.c_str());
+                        cJSON_AddItemToObject(response, "error", error);
+                        break;
+                    }
+                    
+                    // Create success response structure
                     response = cJSON_CreateObject();
                     cJSON_AddStringToObject(response, "jsonrpc", "2.0");
                     cJSON_AddStringToObject(response, "id", id.c_str());
@@ -358,12 +380,10 @@ static void json_processing_task(void* pvParameters) {
                     cJSON* result = cJSON_CreateObject();
                     cJSON* content = cJSON_CreateArray();
                     
-                    // Extract tool name and arguments from param1 and param2
-                    std::string toolName = task_data->param1;
-                    std::string argumentsJson = task_data->param2;
-                    
+                    // Tool-specific processing with validation
                     if (toolName == "echo") {
-                        // Parse arguments to get text parameter
+                        bool success = false;
+                        ESP_LOGI(TAG, "JSON Task: Processing echo tool");
                         cJSON* args = cJSON_Parse(argumentsJson.c_str());
                         if (args != NULL) {
                             cJSON* textItem = cJSON_GetObjectItem(args, "text");
@@ -373,11 +393,31 @@ static void json_processing_task(void* pvParameters) {
                                 std::string echoText = "Echo: " + std::string(cJSON_GetStringValue(textItem));
                                 cJSON_AddStringToObject(textContent, "text", echoText.c_str());
                                 cJSON_AddItemToArray(content, textContent);
+                                ESP_LOGI(TAG, "JSON Task: Echo successful with text: %s", cJSON_GetStringValue(textItem));
+                                success = true;
                             }
                             cJSON_Delete(args);
                         }
+                        
+                        if (!success) {
+                            // Clean up and create error response
+                            cJSON_Delete(content);
+                            cJSON_Delete(result);
+                            cJSON_Delete(response);
+                            
+                            response = cJSON_CreateObject();
+                            cJSON_AddStringToObject(response, "jsonrpc", "2.0");
+                            cJSON_AddStringToObject(response, "id", id.c_str());
+                            
+                            cJSON* error = cJSON_CreateObject();
+                            cJSON_AddNumberToObject(error, "code", -32602);
+                            cJSON_AddStringToObject(error, "message", "Missing required parameter: text");
+                            cJSON_AddItemToObject(response, "error", error);
+                            break;
+                        }
                     } else if (toolName == "gpio_control") {
-                        // Parse arguments to get pin and state parameters
+                        bool success = false;
+                        ESP_LOGI(TAG, "JSON Task: Processing GPIO control tool");
                         cJSON* args = cJSON_Parse(argumentsJson.c_str());
                         if (args != NULL) {
                             cJSON* pinItem = cJSON_GetObjectItem(args, "pin");
@@ -392,13 +432,35 @@ static void json_processing_task(void* pvParameters) {
                                 std::string gpioText = "GPIO pin " + std::to_string(pin) + " set to " + state;
                                 cJSON_AddStringToObject(textContent, "text", gpioText.c_str());
                                 cJSON_AddItemToArray(content, textContent);
+                                ESP_LOGI(TAG, "JSON Task: GPIO successful: pin %d, state %s", pin, state.c_str());
+                                success = true;
                             }
                             cJSON_Delete(args);
                         }
+                        
+                        if (!success) {
+                            // Clean up and create error response
+                            cJSON_Delete(content);
+                            cJSON_Delete(result);
+                            cJSON_Delete(response);
+                            
+                            response = cJSON_CreateObject();
+                            cJSON_AddStringToObject(response, "jsonrpc", "2.0");
+                            cJSON_AddStringToObject(response, "id", id.c_str());
+                            
+                            cJSON* error = cJSON_CreateObject();
+                            cJSON_AddNumberToObject(error, "code", -32602);
+                            cJSON_AddStringToObject(error, "message", "Missing required parameters: pin and state");
+                            cJSON_AddItemToObject(response, "error", error);
+                            break;
+                        }
                     }
                     
+                    // Add content to result (content array should always be present)
                     cJSON_AddItemToObject(result, "content", content);
                     cJSON_AddItemToObject(response, "result", result);
+                    
+                    ESP_LOGI(TAG, "JSON Task: Tool call processing completed");
                     break;
                 }
                 
@@ -577,36 +639,12 @@ std::string MCPServer::handleToolsCall(const std::string& request) {
         }
     }
 
-    // Validate tool exists and has required parameters
-    if (toolName == "echo") {
-        ESP_LOGI(TAG, "handleToolsCall: Processing echo tool");
-        cJSON* textItem = cJSON_GetObjectItem(argumentsItem, "text");
-        if (!textItem || !cJSON_IsString(textItem)) {
-            ESP_LOGE(TAG, "handleToolsCall: Echo missing text parameter");
-            cJSON_Delete(root);
-            return createErrorResponse(id, -32602, "Missing required parameter: text");
-        }
-        ESP_LOGI(TAG, "Echo tool called with: %s", cJSON_GetStringValue(textItem));
-    } else if (toolName == "gpio_control") {
-        ESP_LOGI(TAG, "handleToolsCall: Processing GPIO control tool");
-        cJSON* pinItem = cJSON_GetObjectItem(argumentsItem, "pin");
-        cJSON* stateItem = cJSON_GetObjectItem(argumentsItem, "state");
-        if (!pinItem || !cJSON_IsNumber(pinItem) || !stateItem || !cJSON_IsString(stateItem)) {
-            ESP_LOGE(TAG, "handleToolsCall: GPIO missing required parameters");
-            cJSON_Delete(root);
-            return createErrorResponse(id, -32602, "Missing required parameters: pin and state");
-        }
-        ESP_LOGI(TAG, "GPIO tool called: pin %d, state %s", 
-                (int)pinItem->valuedouble, cJSON_GetStringValue(stateItem));
-    } else {
-        ESP_LOGE(TAG, "handleToolsCall: Unknown tool: %s", toolName.c_str());
-        cJSON_Delete(root);
-        return createErrorResponse(id, -32601, "Unknown tool: " + toolName);
-    }
+    ESP_LOGI(TAG, "handleToolsCall: Tool name: %s", toolName.c_str());
+    ESP_LOGI(TAG, "handleToolsCall: Processing tool call (validation will be done in JSON task)");
 
     cJSON_Delete(root);
 
-    ESP_LOGI(TAG, "handleToolsCall: Tool call completed successfully");
+    ESP_LOGI(TAG, "handleToolsCall: Routing to JSON processing task");
     
     // Use the JSON processing task to generate the response
     return processJsonOperation(JSON_OP_TOOLS_CALL, request, toolName, argumentsJson, 0);
