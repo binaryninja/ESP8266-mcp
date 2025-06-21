@@ -1,10 +1,14 @@
 #pragma once
 
 #include "cJSON.h"
+#include "esp_log.h"
 #include <string>
 #include <memory>
+#include <cstring>
 
 namespace tinymcp {
+
+static const char* JSON_TAG = "JsonValue";
 
 class JsonValue {
 private:
@@ -45,6 +49,26 @@ public:
                 m_json = nullptr;
                 m_owner = false;
             }
+        }
+        return *this;
+    }
+
+    // Move constructor
+    JsonValue(JsonValue&& other) noexcept : m_json(other.m_json), m_owner(other.m_owner) {
+        other.m_json = nullptr;
+        other.m_owner = false;
+    }
+
+    // Move assignment operator
+    JsonValue& operator=(JsonValue&& other) noexcept {
+        if (this != &other) {
+            if (m_owner && m_json) {
+                cJSON_Delete(m_json);
+            }
+            m_json = other.m_json;
+            m_owner = other.m_owner;
+            other.m_json = nullptr;
+            other.m_owner = false;
         }
         return *this;
     }
@@ -132,41 +156,67 @@ public:
 
     void set(const std::string& key, const JsonValue& value) {
         if (isObject() && value.m_json) {
-            cJSON_AddItemToObject(m_json, key.c_str(), cJSON_Duplicate(value.m_json, 1));
+            // Validate inputs
+            if (key.empty()) {
+                return;
+            }
+            
+            // Remove existing item with same key to prevent duplicates
+            cJSON_DeleteItemFromObject(m_json, key.c_str());
+            
+            cJSON* duplicated = cJSON_Duplicate(value.m_json, 1);
+            if (duplicated) {
+                cJSON_AddItemToObject(m_json, key.c_str(), duplicated);
+            }
         }
     }
 
     void set(const std::string& key, const std::string& value) {
         if (isObject()) {
-            printf("DEBUG: Setting key='%s' value='%s'\n", key.c_str(), value.c_str());
+            // Validate inputs
+            if (key.empty()) {
+                ESP_LOGE(JSON_TAG, "Empty key provided to set()");
+                return;
+            }
+            
+            // Remove existing item with same key to prevent duplicates
+            cJSON_DeleteItemFromObject(m_json, key.c_str());
+            
             cJSON* str_item = cJSON_CreateString(value.c_str());
             if (str_item) {
-                printf("DEBUG: Created cJSON string, type=%d, valuestring='%s'\n", 
-                       str_item->type, str_item->valuestring ? str_item->valuestring : "NULL");
-                cJSON_AddItemToObject(m_json, key.c_str(), str_item);
-                printf("DEBUG: Added item to object\n");
+                // Validate the created string item
+                if (str_item->valuestring && strcmp(str_item->valuestring, value.c_str()) == 0) {
+                    cJSON_AddItemToObject(m_json, key.c_str(), str_item);
+                } else {
+                    ESP_LOGE(JSON_TAG, "String value mismatch after creation: key=%s", key.c_str());
+                    cJSON_Delete(str_item);
+                }
             } else {
-                printf("DEBUG: ERROR - cJSON_CreateString returned NULL!\n");
+                ESP_LOGE(JSON_TAG, "cJSON_CreateString returned NULL for key=%s value=%s", key.c_str(), value.c_str());
             }
-        } else {
-            printf("DEBUG: ERROR - not an object!\n");
         }
     }
 
     void set(const std::string& key, int value) {
-        if (isObject()) {
+        if (isObject() && !key.empty()) {
+            // Remove existing item with same key to prevent duplicates
+            cJSON_DeleteItemFromObject(m_json, key.c_str());
             cJSON_AddNumberToObject(m_json, key.c_str(), value);
         }
     }
 
     void set(const std::string& key, double value) {
-        if (isObject()) {
+        if (isObject() && !key.empty()) {
+            // Remove existing item with same key to prevent duplicates
+            cJSON_DeleteItemFromObject(m_json, key.c_str());
             cJSON_AddNumberToObject(m_json, key.c_str(), value);
         }
     }
 
     void set(const std::string& key, bool value) {
-        if (isObject()) {
+        if (isObject() && !key.empty()) {
+            // Remove existing item with same key to prevent duplicates
+            cJSON_DeleteItemFromObject(m_json, key.c_str());
             cJSON_AddBoolToObject(m_json, key.c_str(), value);
         }
     }
@@ -203,7 +253,7 @@ public:
 
     // Serialization
     std::string toString() const {
-        if (m_json) {
+        if (m_json && !cJSON_IsInvalid(m_json)) {
             char* str = cJSON_Print(m_json);
             if (str) {
                 std::string result(str);
@@ -215,21 +265,109 @@ public:
     }
 
     std::string toStringCompact() const {
-        if (m_json) {
-            printf("DEBUG: Serializing JSON object\n");
-            char* str = cJSON_PrintUnformatted(m_json);
+        if (!m_json) {
+            ESP_LOGE(JSON_TAG, "m_json is NULL in toStringCompact()");
+            return "";
+        }
+
+        // Use validation helper first
+        if (!isValidStructure()) {
+            ESP_LOGE(JSON_TAG, "JSON structure validation failed");
+            return "";
+        }
+
+        char* str = cJSON_PrintUnformatted(m_json);
+        if (str) {
+            std::string result(str);
+            free(str);
+            return result;
+        } else {
+            ESP_LOGE(JSON_TAG, "cJSON_PrintUnformatted returned NULL even after validation");
+            // Try formatted print as fallback
+            str = cJSON_Print(m_json);
             if (str) {
-                printf("DEBUG: Serialized JSON: '%s'\n", str);
+                ESP_LOGW(JSON_TAG, "Fallback to formatted print worked");
                 std::string result(str);
                 free(str);
                 return result;
             } else {
-                printf("DEBUG: ERROR - cJSON_PrintUnformatted returned NULL!\n");
+                ESP_LOGE(JSON_TAG, "Both formatted and unformatted print failed");
             }
-        } else {
-            printf("DEBUG: ERROR - m_json is NULL!\n");
         }
         return "";
+    }
+
+    // Validation helper
+    bool isValidStructure() const {
+        if (!m_json) return false;
+        if (cJSON_IsInvalid(m_json)) return false;
+        
+        // Additional validation for objects and arrays
+        if (cJSON_IsObject(m_json)) {
+            cJSON* item = m_json->child;
+            while (item) {
+                if (!item->string) {
+                    ESP_LOGE(JSON_TAG, "Found object item with NULL key");
+                    return false;
+                }
+                if (cJSON_IsString(item) && !item->valuestring) {
+                    ESP_LOGE(JSON_TAG, "Found string item with NULL valuestring for key: %s", item->string ? item->string : "unknown");
+                    return false;
+                }
+                item = item->next;
+            }
+        }
+        return true;
+    }
+
+    // Debug test method to validate cJSON operations
+    static bool testCJSONOperations() {
+        ESP_LOGI(JSON_TAG, "Testing cJSON operations...");
+        
+        // Test 1: Simple string creation
+        cJSON* test_str = cJSON_CreateString("test_value");
+        if (!test_str) {
+            ESP_LOGE(JSON_TAG, "cJSON_CreateString failed");
+            return false;
+        }
+        if (!test_str->valuestring || strcmp(test_str->valuestring, "test_value") != 0) {
+            ESP_LOGE(JSON_TAG, "String value corrupted after creation");
+            cJSON_Delete(test_str);
+            return false;
+        }
+        ESP_LOGI(JSON_TAG, "String creation test passed");
+        cJSON_Delete(test_str);
+        
+        // Test 2: Object with string
+        cJSON* test_obj = cJSON_CreateObject();
+        if (!test_obj) {
+            ESP_LOGE(JSON_TAG, "cJSON_CreateObject failed");
+            return false;
+        }
+        
+        cJSON* str_item = cJSON_CreateString("object_value");
+        if (!str_item) {
+            ESP_LOGE(JSON_TAG, "cJSON_CreateString failed for object");
+            cJSON_Delete(test_obj);
+            return false;
+        }
+        
+        cJSON_AddItemToObject(test_obj, "test_key", str_item);
+        
+        // Test serialization
+        char* json_str = cJSON_PrintUnformatted(test_obj);
+        if (!json_str) {
+            ESP_LOGE(JSON_TAG, "cJSON_PrintUnformatted failed on test object");
+            cJSON_Delete(test_obj);
+            return false;
+        }
+        
+        ESP_LOGI(JSON_TAG, "Test object serialized as: %s", json_str);
+        free(json_str);
+        cJSON_Delete(test_obj);
+        
+        ESP_LOGI(JSON_TAG, "All cJSON tests passed");
+        return true;
     }
 };
 

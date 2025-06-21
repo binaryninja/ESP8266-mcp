@@ -13,6 +13,13 @@ MCPServer::MCPServer(Transport* transport)
     : transport_(transport), running_(false), initialized_(false),
       error_count_(0), last_error_time_(0) {
     ESP_LOGI(TAG, "MCPServer created");
+    
+    // Test cJSON operations during initialization
+    if (!tinymcp::JsonValue::testCJSONOperations()) {
+        ESP_LOGE(TAG, "cJSON test failed during initialization!");
+    } else {
+        ESP_LOGI(TAG, "cJSON test passed during initialization");
+    }
 }
 
 MCPServer::~MCPServer() {
@@ -129,40 +136,72 @@ void MCPServer::sendResponse(const std::string& response) {
 }
 
 std::string MCPServer::handleInitialize(const std::string& request) {
+    ESP_LOGI(TAG, "handleInitialize: Starting initialization");
     tinymcp::JsonValue root;
     tinymcp::JsonReader reader;
 
     if (!reader.parse(request, root)) {
+        ESP_LOGE(TAG, "handleInitialize: Failed to parse request");
         return createErrorResponse("", -32700, "Parse error");
     }
 
     std::string id = root.get("id", tinymcp::JsonValue::createString("")).asString();
+    ESP_LOGI(TAG, "handleInitialize: Request ID: %s", id.c_str());
 
     // Create response with server capabilities
+    ESP_LOGI(TAG, "handleInitialize: Creating response object");
     tinymcp::JsonValue response = tinymcp::JsonValue::createObject();
+    ESP_LOGI(TAG, "handleInitialize: Setting jsonrpc field");
     response.set("jsonrpc", "2.0");
+    ESP_LOGI(TAG, "handleInitialize: Setting id field");
     response.set("id", id);
 
+    ESP_LOGI(TAG, "handleInitialize: Creating result object");
     tinymcp::JsonValue result = tinymcp::JsonValue::createObject();
+    ESP_LOGI(TAG, "handleInitialize: Setting protocolVersion");
     result.set("protocolVersion", "2024-11-05");
 
+    ESP_LOGI(TAG, "handleInitialize: Creating serverInfo object");
     tinymcp::JsonValue serverInfo = tinymcp::JsonValue::createObject();
+    ESP_LOGI(TAG, "handleInitialize: Setting server name");
     serverInfo.set("name", "ESP8266-MCP");
+    ESP_LOGI(TAG, "handleInitialize: Setting server version");
     serverInfo.set("version", "1.0.0");
+    ESP_LOGI(TAG, "handleInitialize: Adding serverInfo to result");
     result.set("serverInfo", serverInfo);
 
+    ESP_LOGI(TAG, "handleInitialize: Creating capabilities object");
     tinymcp::JsonValue capabilities = tinymcp::JsonValue::createObject();
+    ESP_LOGI(TAG, "handleInitialize: Creating tools capability object");
     tinymcp::JsonValue tools = tinymcp::JsonValue::createObject();
+    ESP_LOGI(TAG, "handleInitialize: Setting tools listChanged");
     tools.set("listChanged", false);
+    ESP_LOGI(TAG, "handleInitialize: Adding tools to capabilities");
     capabilities.set("tools", tools);
+    ESP_LOGI(TAG, "handleInitialize: Adding capabilities to result");
     result.set("capabilities", capabilities);
 
+    ESP_LOGI(TAG, "handleInitialize: Adding result to response");
     response.set("result", result);
 
-    initialized_ = true;
-    ESP_LOGI(TAG, "Server initialized");
+    ESP_LOGI(TAG, "handleInitialize: Validating response structure");
+    if (!response.isValidStructure()) {
+        ESP_LOGE(TAG, "handleInitialize: Response structure validation failed!");
+        return createErrorResponse(id, -32603, "Internal error - invalid response structure");
+    }
 
-    return response.toStringCompact();
+    initialized_ = true;
+    ESP_LOGI(TAG, "handleInitialize: Server initialized, serializing response");
+
+    std::string serialized = response.toStringCompact();
+    ESP_LOGI(TAG, "handleInitialize: Serialized response length: %d", serialized.length());
+    if (serialized.empty()) {
+        ESP_LOGE(TAG, "handleInitialize: Serialization failed!");
+        return createErrorResponse(id, -32603, "Internal error - serialization failed");
+    }
+    
+    ESP_LOGI(TAG, "handleInitialize: Response ready");
+    return serialized;
 }
 
 std::string MCPServer::handleToolsList(const std::string& request) {

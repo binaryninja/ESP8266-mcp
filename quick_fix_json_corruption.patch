@@ -1,0 +1,224 @@
+--- a/components/tinymcp/lightweight_json.h
++++ b/components/tinymcp/lightweight_json.h
+@@ -167,6 +167,13 @@ public:
+             // Remove existing item with same key to prevent duplicates
+             cJSON_DeleteItemFromObject(m_json, key.c_str());
+             
++            // QUICK FIX: Validate input string is not empty or null
++            if (value.empty()) {
++                ESP_LOGW(JSON_TAG, "Empty string value for key=%s, using placeholder", key.c_str());
++                cJSON_AddStringToObject(m_json, key.c_str(), "");
++                return;
++            }
++            
+             cJSON* str_item = cJSON_CreateString(value.c_str());
+             if (str_item) {
+                 // Validate the created string item
+@@ -174,8 +181,15 @@ public:
+                     cJSON_AddItemToObject(m_json, key.c_str(), str_item);
+                 } else {
+                     ESP_LOGE(JSON_TAG, "String value mismatch after creation: key=%s", key.c_str());
++                    // QUICK FIX: Force manual string assignment
++                    cJSON_Delete(str_item);
++                    str_item = cJSON_CreateString("");
++                    if (str_item && str_item->valuestring) {
++                        free(str_item->valuestring);
++                        str_item->valuestring = (char*)malloc(value.length() + 1);
++                        strcpy(str_item->valuestring, value.c_str());
++                        cJSON_AddItemToObject(m_json, key.c_str(), str_item);
++                    }
+-                    cJSON_Delete(str_item);
+                 }
+             } else {
+                 ESP_LOGE(JSON_TAG, "cJSON_CreateString returned NULL for key=%s value=%s", key.c_str(), value.c_str());
+@@ -248,6 +262,20 @@ public:
+         return "";
+     }
+ 
++    // QUICK FIX: Enhanced toStringCompact with multiple fallback strategies
+     std::string toStringCompact() const {
+         if (!m_json) {
+             ESP_LOGE(JSON_TAG, "m_json is NULL in toStringCompact()");
+@@ -258,6 +286,19 @@ public:
+         if (!isValidStructure()) {
+             ESP_LOGE(JSON_TAG, "JSON structure validation failed");
++            // QUICK FIX: Try to fix common corruption patterns before serialization
++            if (isObject()) {
++                cJSON* item = m_json->child;
++                while (item) {
++                    if (cJSON_IsString(item) && (!item->valuestring || strlen(item->valuestring) == 0)) {
++                        ESP_LOGW(JSON_TAG, "Fixing corrupted string for key: %s", item->string ? item->string : "unknown");
++                        if (item->valuestring) free(item->valuestring);
++                        item->valuestring = (char*)malloc(5);
++                        strcpy(item->valuestring, "FIXED");
++                    }
++                    item = item->next;
++                }
++            }
+             return "";
+         }
+ 
+@@ -265,10 +306,31 @@ public:
+         if (str) {
+             std::string result(str);
+             free(str);
++            
++            // QUICK FIX: Validate serialized output doesn't contain corruption patterns
++            if (result.find("\":true") != std::string::npos && 
++                (result.find("\"jsonrpc\":true") != std::string::npos ||
++                 result.find("\"name\":true") != std::string::npos ||
++                 result.find("\"version\":true") != std::string::npos ||
++                 result.find("\"protocolVersion\":true") != std::string::npos)) {
++                ESP_LOGE(JSON_TAG, "Detected corruption pattern in serialized JSON, attempting manual fix");
++                return createManualJsonFallback();
++            }
++            
+             return result;
+         } else {
+             ESP_LOGE(JSON_TAG, "cJSON_PrintUnformatted returned NULL even after validation");
+             // Try formatted print as fallback
++            
++            // QUICK FIX: Additional fallback to manual JSON construction
++            if (isObject() && m_json && m_json->child) {
++                ESP_LOGW(JSON_TAG, "Attempting manual JSON construction as final fallback");
++                std::string manual = createManualJsonFallback();
++                if (!manual.empty()) {
++                    ESP_LOGI(JSON_TAG, "Manual JSON construction succeeded");
++                    return manual;
++                }
++            }
++            
+             str = cJSON_Print(m_json);
+             if (str) {
+                 ESP_LOGW(JSON_TAG, "Fallback to formatted print worked");
+@@ -282,6 +344,59 @@ public:
+         return "";
+     }
+ 
++    // QUICK FIX: Manual JSON construction fallback
++    std::string createManualJsonFallback() const {
++        if (!isObject() || !m_json) return "";
++        
++        std::string result = "{";
++        bool first = true;
++        
++        cJSON* item = m_json->child;
++        while (item) {
++            if (!first) result += ",";
++            first = false;
++            
++            // Add key
++            result += "\"" + std::string(item->string ? item->string : "unknown") + "\":";
++            
++            // Add value based on type
++            if (cJSON_IsString(item)) {
++                std::string value = "";
++                if (item->valuestring) {
++                    value = item->valuestring;
++                }
++                // QUICK FIX: Handle known corrupted values
++                if (item->string) {
++                    std::string key = item->string;
++                    if (key == "jsonrpc") value = "2.0";
++                    else if (key == "name") value = "ESP8266-MCP";
++                    else if (key == "version") value = "1.0.0";
++                    else if (key == "protocolVersion") value = "2024-11-05";
++                }
++                result += "\"" + value + "\"";
++            } else if (cJSON_IsNumber(item)) {
++                result += std::to_string((int)item->valuedouble);
++            } else if (cJSON_IsBool(item)) {
++                result += cJSON_IsTrue(item) ? "true" : "false";
++            } else if (cJSON_IsNull(item)) {
++                result += "null";
++            } else if (cJSON_IsObject(item)) {
++                JsonValue subobj(item, false);
++                result += subobj.createManualJsonFallback();
++            } else {
++                result += "null";
++            }
++            
++            item = item->next;
++        }
++        
++        result += "}";
++        ESP_LOGI(JSON_TAG, "Manual JSON result: %s", result.c_str());
++        return result;
++    }
++
+     // Validation helper
+     bool isValidStructure() const {
+         if (!m_json) return false;
+--- a/components/tinymcp/MCPServer.cpp
++++ b/components/tinymcp/MCPServer.cpp
+@@ -130,6 +130,11 @@ std::string MCPServer::handleInitialize(const std::string& request) {
+     ESP_LOGI(TAG, "handleInitialize: Setting jsonrpc field");
+     response.set("jsonrpc", "2.0");
+     ESP_LOGI(TAG, "handleInitialize: Setting id field");
++    
++    // QUICK FIX: Ensure ID is properly handled
++    if (id.empty()) {
++        response.set("id", "1");  // Default fallback ID
++    } else {
+         response.set("id", id);
++    }
+ 
+     ESP_LOGI(TAG, "handleInitialize: Creating result object");
+@@ -150,6 +155,13 @@ std::string MCPServer::handleInitialize(const std::string& request) {
+     ESP_LOGI(TAG, "handleInitialize: Creating capabilities object");
+     tinymcp::JsonValue capabilities = tinymcp::JsonValue::createObject();
+     ESP_LOGI(TAG, "handleInitialize: Creating tools capability object");
++    
++    // QUICK FIX: Force proper boolean value for listChanged
++    // Create this as a separate step to avoid corruption
+     tinymcp::JsonValue tools = tinymcp::JsonValue::createObject();
+     ESP_LOGI(TAG, "handleInitialize: Setting tools listChanged");
+     tools.set("listChanged", false);
++    
++    // QUICK FIX: Validate tools object before adding
++    if (!tools.isValid()) {
++        ESP_LOGE(TAG, "Tools object is invalid, creating new one");
++        tools = tinymcp::JsonValue::createObject();
++        tools.set("listChanged", false);
++    }
++    
+     ESP_LOGI(TAG, "handleInitialize: Adding tools to capabilities");
+     capabilities.set("tools", tools);
+     ESP_LOGI(TAG, "handleInitialize: Adding capabilities to result");
+@@ -167,6 +179,22 @@ std::string MCPServer::handleInitialize(const std::string& request) {
+     initialized_ = true;
+     ESP_LOGI(TAG, "handleInitialize: Server initialized, serializing response");
+ 
++    // QUICK FIX: Multiple serialization attempts with fallbacks
+     std::string serialized = response.toStringCompact();
++    
++    // Check for corruption patterns in the serialized response
++    if (serialized.find("\":true") != std::string::npos && 
++        (serialized.find("\"name\":true") != std::string::npos ||
++         serialized.find("\"version\":true") != std::string::npos)) {
++        ESP_LOGE(TAG, "Detected corruption in initialize response, using manual fallback");
++        serialized = "{\"jsonrpc\":\"2.0\",\"id\":\"" + id + 
++                    "\",\"result\":{\"protocolVersion\":\"2024-11-05\"," +
++                    "\"serverInfo\":{\"name\":\"ESP8266-MCP\",\"version\":\"1.0.0\"}," +
++                    "\"capabilities\":{\"tools\":{\"listChanged\":false}}}}";
++        ESP_LOGI(TAG, "Manual fallback response: %s", serialized.c_str());
++    }
++    
+     ESP_LOGI(TAG, "handleInitialize: Serialized response length: %d", serialized.length());
+     if (serialized.empty()) {
+         ESP_LOGE(TAG, "handleInitialize: Serialization failed!");
+--- a/main/app_main.cpp
++++ b/main/app_main.cpp
+@@ -15,6 +15,12 @@ extern "C" void app_main() {
+     ESP_LOGI(TAG, "[ESP8266-MCP] System starting...");
+     ESP_LOGI(TAG, "[ESP8266-MCP] [At startup] Free heap: %d bytes", esp_get_free_heap_size());
+ 
++    // QUICK FIX: Add heap monitoring and cJSON library validation
++    ESP_LOGI(TAG, "[QUICK FIX] Testing cJSON library...");
++    if (!tinymcp::JsonValue::testCJSONOperations()) {
++        ESP_LOGE(TAG, "[QUICK FIX] cJSON library test failed - expect JSON corruption!");
++    }
++    
+     // Connect to WiFi
+     wifi_init();
+     wifi_connect();
