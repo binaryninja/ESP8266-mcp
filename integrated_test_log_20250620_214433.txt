@@ -1,0 +1,8 @@
+
+# ESP8266 MCP Integrated Test Log
+# Generated: 2025-06-20T21:44:33.740001
+# ESP8266 IP: 192.168.86.30
+# Serial Port: /dev/ttyUSB0
+# Baud Rate: 74880
+================================================================================
+2025-06-20T21:44:33.740430 [ESP8266] ERROR: Serial connection failed: [Errno 2] could not open port /dev/ttyUSB0: [Errno 2] No such file or directory: '/dev/ttyUSB0'

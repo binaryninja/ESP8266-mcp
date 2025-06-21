@@ -4,6 +4,16 @@
 #include <memory>
 #include "EspSocketTransport.h"
 
+// Forward declarations
+typedef enum {
+    JSON_OP_INITIALIZE,
+    JSON_OP_TOOLS_LIST,
+    JSON_OP_TOOLS_CALL,
+    JSON_OP_PING,
+    JSON_OP_ERROR_RESPONSE,
+    JSON_OP_SUCCESS_RESPONSE
+} json_operation_type_t;
+
 namespace tinymcp {
 
 class MCPServer {
@@ -51,6 +61,10 @@ private:
     
     // Parse JSON-RPC request
     bool parseRequest(const std::string& message, std::string& method, std::string& id, std::string& params);
+    
+    // Helper function for JSON processing with separate task
+    std::string processJsonOperation(json_operation_type_t operation, const std::string& input, 
+                                   const std::string& param1 = "", const std::string& param2 = "", int param_int = 0);
     
     Transport* transport_;
     bool running_;

@@ -1,0 +1,53 @@
+{
+  "tests": {
+    "initialization": {
+      "raw_response": "{\"jsonrpc\":\"2.0\",\"id\":\"diagnostic_init\",\"result\":{\"protocolVersion\":\"2024-11-05\",\"serverInfo\":{\"name\":\"ESP8266-MCP\",\"version\":\"1.0.0\"},\"capabilities\":{\"tools\":{\"listChanged\":false}}}}",
+      "is_valid_json": true,
+      "parsed_json": {
+        "jsonrpc": "2.0",
+        "id": "diagnostic_init",
+        "result": {
+          "protocolVersion": "2024-11-05",
+          "serverInfo": {
+            "name": "ESP8266-MCP",
+            "version": "1.0.0"
+          },
+          "capabilities": {
+            "tools": {
+              "listChanged": false
+            }
+          }
+        }
+      },
+      "corruption_found": false,
+      "corruption_details": [],
+      "expected_strings_found": [
+        "ESP8266-MCP",
+        "2024-11-05",
+        "1.0.0",
+        "jsonrpc",
+        "2.0"
+      ],
+      "unexpected_values": [],
+      "test_name": "initialization",
+      "request": {
+        "jsonrpc": "2.0",
+        "id": "diagnostic_init",
+        "method": "initialize",
+        "params": {
+          "protocolVersion": "2024-11-05",
+          "clientInfo": {
+            "name": "JSON-Corruption-Diagnostic",
+            "version": "1.0.0"
+          },
+          "capabilities": {
+            "roots": {
+              "listChanged": false
+            },
+            "sampling": {}
+          }
+        }
+      }
+    }
+  }
+}

@@ -6,7 +6,6 @@
 #include <string>
 #include <memory>
 #include <vector>
-#include <cJSON.h>
 #include "tinymcp_message.h"
 #include "tinymcp_constants.h"
 #include "tinymcp_json.h"

@@ -1,0 +1,2510 @@
+
+# ESP8266 MCP Integrated Test Log
+# Generated: 2025-06-21T08:22:00.333201
+# ESP8266 IP: 192.168.86.37
+# Serial Port: /dev/ttyUSB1
+# Baud Rate: 74880
+================================================================================
+2025-06-21T08:22:00.362216 [ESP8266]  INFO: tack remaining after transport creation: 7320 bytes[0m
+2025-06-21T08:22:00.362249 [ESP8266]  INFO: [MCPServer] MCPServer cr
+2025-06-21T08:22:00.372352 [ESP8266]  INFO: eated[0m
+2025-06-21T08:22:00.372365 [ESP8266]  INFO: [MCPServer] MCPServer: Testing basic J
+2025-06-21T08:22:00.383816 [ESP8266]  INFO: SON creation...[0m
+2025-06-21T08:22:00.383835 [ESP8266]  INFO: [MCPServer] MCPServer: Basic JSON null value created success
+2025-06-21T08:22:00.393921 [ESP8266]  INFO: fully[0m
+2025-06-21T08:22:00.393930 [ESP8266]  INFO: [MCPServer] MCPServer: JSON object cre
+2025-06-21T08:22:00.404017 [ESP8266]  INFO: ated successfully[0m
+2025-06-21T08:22:00.404025 [ESP8266]  INFO: [MCPServer] MCPServer: JSON test passed during initializat
+2025-06-21T08:22:00.414116 [ESP8266]  INFO: ion[0m
+2025-06-21T08:22:00.414135 [ESP8266]  INFO: [ESP8266-MCP] Stack remaining after serv
+2025-06-21T08:22:00.424217 [ESP8266]  INFO: er creation: 7320 bytes[0m
+2025-06-21T08:22:00.424223 [ESP8266]  INFO: [ESP8266-MCP] Starting C++ MCP server for client[0m
+2025-06-21T08:22:00.434300 [ESP8266]  INFO: [MCPServer] MCP Server starting...[0m
+2025-06-21T08:22:00.434306 [ESP8266]  INFO: [0;32m
+2025-06-21T08:22:00.447177 [ESP8266]  INFO: [MCPServer] Debug: About to create std::string buffer[0m
+2025-06-21T08:22:00.447190 [ESP8266]  INFO: [MCPServer] De
+2025-06-21T08:22:00.457277 [ESP8266]  INFO: bug: Buffer created successfully[0m
+2025-06-21T08:22:00.457285 [ESP8266]  INFO: [0;32mI (8255) MCPServer:
+2025-06-21T08:22:00.467366 [ESP8266]  INFO: Debug: About to enter main loop[0m
+2025-06-21T08:22:00.467372 [ESP8266]  INFO: [MCPServer] Debug: Loop iteration start[0m
+2025-06-21T08:22:00.479188 [ESP8266]  INFO: [MCPServer] Debug: About to call isConnected()
+2025-06-21T08:22:00.489308 [ESP8266]  INFO: [0m
+2025-06-21T08:22:00.489320 [ESP8266]  INFO: [MCPServer] Debug: isConnected() returned: true[0m
+2025-06-21T08:22:00.489324 [ESP8266]  INFO: [0;32mI (8290) MCPServ
+2025-06-21T08:22:00.499420 [ESP8266]  INFO: er: Debug: About to call transport->read()[0m
+2025-06-21T08:22:00.499430 [ESP8266]  INFO: [0;32mI (8300)
+2025-06-21T08:22:00.512222 [ESP8266]  INFO: EspSocketTransport: Socket closed by peer[0m
+2025-06-21T08:22:00.512247 [ESP8266]  INFO: [MCPServer] Debug: transport->read
+2025-06-21T08:22:00.522364 [ESP8266]  INFO: [returned] false[0m
+2025-06-21T08:22:00.522382 [ESP8266]  INFO: [MCPServer] Transport read failed, stopping server[0m
+2025-06-21T08:22:00.522386 [ESP8266]  INFO: 
+2025-06-21T08:22:00.532496 [ESP8266]  INFO: [MCPServer] MCP Server stopped[0m
+2025-06-21T08:22:00.532506 [ESP8266]  INFO: [0;32mI (8334
+2025-06-21T08:22:00.545216 [ESP8266]  INFO: [ESP8266-MCP] Client disconnected[0m
+2025-06-21T08:22:00.545235 [ESP8266]  INFO: [ESP8266-MCP] [After client disconnect] F
+2025-06-21T08:22:00.555354 [ESP8266]  INFO: ree heap: 62660 bytes, Min free: 53244 bytes, Stack remaining: 6
+2025-06-21T08:22:00.565471 [ESP8266]  INFO: 696 bytes[0m
+2025-06-21T08:22:00.565484 [ESP8266]  INFO: [EspSocketTransport] Socket closed manually[0m
+2025-06-21T08:22:00.565488 [ESP8266]  INFO: [0;32mI (8367) M
+2025-06-21T08:22:00.575574 [ESP8266]  INFO: CPServer: MCPServer destroyed[0m
+2025-06-21T08:22:03.333923 [ CLIENT]  TEST: 🚀 Starting test: test_mcp_client.py
+2025-06-21T08:22:03.383546 [ESP8266]  INFO: [ESP8266-MCP] Cl
+2025-06-21T08:22:03.393674 [ESP8266]  INFO: ient connected from 192.168.86.32:35902[0m
+2025-06-21T08:22:03.393690 [ESP8266]  INFO: [0;32mI (11202) ES
+2025-06-21T08:22:03.403775 [ESP8266]  INFO: P8266-MCP: [Before MCP server creation] Free heap: 62700 bytes,
+2025-06-21T08:22:03.413870 [ESP8266]  INFO: Min free: 53244 bytes, Stack remaining: 6696 bytes[0m
+2025-06-21T08:22:03.413879 [ESP8266]  INFO: [ESP8266-MCP] Stack rema
+2025-06-21T08:22:03.423964 [ESP8266]  INFO: ining before MCP server: 6696 bytes[0m
+2025-06-21T08:22:03.423972 [ESP8266]  INFO: [0;32mI (11223) EspSoc
+2025-06-21T08:22:03.434051 [ESP8266]  INFO: ketTransport: EspSocketTransport created with socket 55[0m
+2025-06-21T08:22:03.434057 [ESP8266]  INFO: [0
+2025-06-21T08:22:03.444302 [ESP8266]  INFO: [ESP8266-MCP] Stack remaining after transport creation: 6696 bytes[0m
+2025-06-21T08:22:03.444340 [ESP8266]  INFO: [0;32mI (1
+2025-06-21T08:22:03.454434 [ESP8266]  INFO: [MCPServer] MCPServer created[0m
+2025-06-21T08:22:03.454449 [ESP8266]  INFO: [0;32mI (11252) MCPServ
+2025-06-21T08:22:03.464532 [ESP8266]  INFO: er: MCPServer: Testing basic JSON creation...[0m
+2025-06-21T08:22:03.464542 [ESP8266]  INFO: [0;32mI (112
+2025-06-21T08:22:03.474600 [ESP8266]  INFO: [MCPServer] MCPServer: Basic JSON null value created successfully[0m
+2025-06-21T08:22:03.474616 [ESP8266]  INFO: [0;32mI (11274) MCPSe
+2025-06-21T08:22:03.485755 [ESP8266]  INFO: rver: MCPServer: JSON object created successfully[0m
+2025-06-21T08:22:03.485774 [ESP8266]  INFO: [0;32mI
+2025-06-21T08:22:03.495898 [ESP8266]  INFO: [MCPServer] MCPServer: JSON test passed during initialization[0m
+2025-06-21T08:22:03.495917 [ESP8266]  INFO: [0;32mI (11296) ESP82
+2025-06-21T08:22:03.510459 [ESP8266]  INFO: 66-MCP: Stack remaining after server creation: 6696 bytes[0m
+2025-06-21T08:22:03.510494 [ESP8266]  INFO: [ESP8266-MCP] Sta
+2025-06-21T08:22:03.520600 [ESP8266]  INFO: rting C++ MCP server for client[0m
+2025-06-21T08:22:03.520613 [ESP8266]  INFO: [MCPServer] MCP Server starting...[0m
+2025-06-21T08:22:03.520617 [ESP8266]  INFO: [0
+2025-06-21T08:22:03.531222 [ESP8266]  INFO: [MCPServer] Debug: About to create std::string buff
+2025-06-21T08:22:03.541345 [ESP8266]  INFO: er[0m
+2025-06-21T08:22:03.541358 [ESP8266]  INFO: [MCPServer] Debug: Buffer created succes
+2025-06-21T08:22:03.551452 [ESP8266]  INFO: sfully[0m
+2025-06-21T08:22:03.551464 [ESP8266]  INFO: [MCPServer] Debug: About to enter main loop[0m
+2025-06-21T08:22:03.551468 [ESP8266]  INFO: [0;32mI (11351) MC
+2025-06-21T08:22:03.563895 [ESP8266]  INFO: PServer: Debug: Loop iteration start[0m
+2025-06-21T08:22:03.563919 [ESP8266]  INFO: [MCPServer] Debug: About to call isCon
+2025-06-21T08:22:03.574016 [ESP8266]  INFO: nected()[0m
+2025-06-21T08:22:03.574028 [ESP8266]  INFO: [MCPServer] Debug: isConnected() r
+2025-06-21T08:22:03.584120 [ESP8266]  INFO: eturned: true[0m
+2025-06-21T08:22:03.584171 [ESP8266]  INFO: [MCPServer] Debug: About to c
+2025-06-21T08:22:03.594263 [ESP8266]  INFO: all transport->read()[0m
+2025-06-21T08:22:03.594275 [ESP8266]  INFO: [MCPServer] Debug: transport->read() returned: true[
+2025-06-21T08:22:03.604376 [ESP8266]  INFO: 0m
+2025-06-21T08:22:03.604390 [ESP8266]  INFO: [MCPServer] Debug: Read successful, buffer s
+2025-06-21T08:22:03.614478 [ESP8266]  INFO: ize: 236[0m
+2025-06-21T08:22:03.614487 [ESP8266]  INFO: [MCPServer] Debug: About to process message[0m
+2025-06-21T08:22:03.614491 [ESP8266]  INFO: [0;32mI (11416)
+2025-06-21T08:22:03.624585 [ESP8266]  INFO: entered[0m
+2025-06-21T08:22:03.624598 [ESP8266]  INFO: [0;32mI (11424)
+2025-06-21T08:22:03.634698 [ESP8266]  INFO: MCPServer: Debug: Message length: 236[0m
+2025-06-21T08:22:03.634713 [ESP8266]  INFO: [0;32mI (11434) MCP
+2025-06-21T08:22:03.644802 [ESP8266]  INFO: Server: Debug: About to create method/id/params strings[0m
+2025-06-21T08:22:03.644814 [ESP8266]  INFO: [MCPServer] Debug:
+2025-06-21T08:22:03.654905 [ESP8266]  INFO: Calling parseRequest[0m
+2025-06-21T08:22:03.654917 [ESP8266]  INFO: [MCPServer] Debug: par
+2025-06-21T08:22:03.665023 [ESP8266]  INFO: seRequest succeeded[0m
+2025-06-21T08:22:03.665036 [ESP8266]  INFO: [MCPServer] handleIniti
+2025-06-21T08:22:03.675141 [ESP8266]  INFO: alize: Starting initialization[0m
+2025-06-21T08:22:03.675153 [ESP8266]  INFO: [MCPServer] JSON task: Processing operation
+2025-06-21T08:22:03.685248 [ESP8266]  INFO: type 0[0m
+2025-06-21T08:22:03.685259 [ESP8266]  INFO: [MCPServer] handleInitialize: Server
+2025-06-21T08:22:03.695353 [ESP8266]  INFO: initialized[0m
+2025-06-21T08:22:03.695365 [ESP8266]  INFO: [MCPServer] handleInitialize: Response length: 169[0m
+2025-06-21T08:22:03.695369 [ESP8266]  INFO: [0;32
+2025-06-21T08:22:03.706844 [ESP8266]  INFO: [MCPServer] Debug: Message processed, clearing buffer
+2025-06-21T08:22:03.716954 [ESP8266]  INFO: [0m
+2025-06-21T08:22:03.716965 [ESP8266]  INFO: [MCPServer] Debug: Buffer cleared[0m
+2025-06-21T08:22:03.716970 [ESP8266]  INFO: [MCPServer] Debug: A
+2025-06-21T08:22:03.727062 [ESP8266]  INFO: bout to delay[0m
+2025-06-21T08:22:03.727073 [ESP8266]  INFO: [MCPServer] Debug: Delay comp
+2025-06-21T08:22:03.737180 [ESP8266]  INFO: leted[0m
+2025-06-21T08:22:03.737201 [ESP8266]  INFO: [MCPServer] Debug: Loop iteration sta
+2025-06-21T08:22:03.747292 [ESP8266]  INFO: rt[0m
+2025-06-21T08:22:03.747302 [ESP8266]  INFO: [MCPServer] Debug: About to call isConnected()[0m
+2025-06-21T08:22:03.747306 [ESP8266]  INFO: [0;32mI (11548) MCP
+2025-06-21T08:22:03.757392 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:03.757403 [ESP8266]  INFO: [0;32mI (11557
+2025-06-21T08:22:03.769142 [ESP8266]  INFO: [MCPServer] Debug: About to call transport->read()[0m
+2025-06-21T08:22:03.769163 [ESP8266]  INFO: [MCPServer] Debug: tran
+2025-06-21T08:22:03.779300 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:03.779323 [ESP8266]  INFO: [MCPServer] De
+2025-06-21T08:22:03.793498 [ESP8266]  INFO: bug: Read successful, buffer size: 47[0m
+2025-06-21T08:22:03.793558 [ESP8266]  INFO: [MCPServer] Debug: About to process m
+2025-06-21T08:22:03.803692 [ESP8266]  INFO: essage[0m
+2025-06-21T08:22:03.803701 [ESP8266]  INFO: [MCPServer] Debug: processMessage() entered[0m
+2025-06-21T08:22:03.803704 [ESP8266]  INFO: [0;32mI (11603) MC
+2025-06-21T08:22:03.813817 [ESP8266]  INFO: PServer: Debug: Message length: 47[0m
+2025-06-21T08:22:03.813828 [ESP8266]  INFO: [0;32mI (11611) MCPServ
+2025-06-21T08:22:03.823914 [ESP8266]  INFO: er: Debug: About to create method/id/params strings[0m
+2025-06-21T08:22:03.823921 [ESP8266]  INFO: [MCPServer] Debug: Call
+2025-06-21T08:22:03.833998 [ESP8266]  INFO: ing parseRequest[0m
+2025-06-21T08:22:03.834003 [ESP8266]  INFO: [MCPServer] Debug: parseRe
+2025-06-21T08:22:03.844108 [ESP8266]  INFO: quest succeeded[0m
+2025-06-21T08:22:03.844120 [ESP8266]  INFO: [MCPServer] JSON task: Proc
+2025-06-21T08:22:03.854254 [ESP8266]  INFO: essing operation type 3[0m
+2025-06-21T08:22:03.854262 [ESP8266]  INFO: [MCPServer] Debug: Message processed, clearing buff
+2025-06-21T08:22:03.864354 [ESP8266]  INFO: er[0m
+2025-06-21T08:22:03.864364 [ESP8266]  INFO: [MCPServer] Debug: Buffer cleared[0m
+2025-06-21T08:22:03.864370 [ESP8266]  INFO: 
+2025-06-21T08:22:03.874450 [ESP8266]  INFO: [MCPServer] Debug: About to delay[0m
+2025-06-21T08:22:03.874458 [ESP8266]  INFO: [0;32mI (
+2025-06-21T08:22:03.886169 [ESP8266]  INFO: [MCPServer] Debug: Delay completed[0m
+2025-06-21T08:22:03.886182 [ESP8266]  INFO: [MCPServer] Debug: Loop iteration
+2025-06-21T08:22:03.896270 [ESP8266]  INFO: start[0m
+2025-06-21T08:22:03.896280 [ESP8266]  INFO: [MCPServer] Debug: About to call isConnected()[0m
+2025-06-21T08:22:03.896284 [ESP8266]  INFO: [0;32mI (11698)
+2025-06-21T08:22:03.906366 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:03.906376 [ESP8266]  INFO: [0;32mI (11
+2025-06-21T08:22:03.916465 [ESP8266]  INFO: [MCPServer] Debug: About to call transport->read()[0m
+2025-06-21T08:22:03.916478 [ESP8266]  INFO: [0;
+2025-06-21T08:22:03.926567 [ESP8266]  INFO: [MCPServer] Debug: transport->read() returned: true[0m
+2025-06-21T08:22:03.926580 [ESP8266]  INFO: [0;32mI (11726) MCPServer:
+2025-06-21T08:22:03.936661 [ESP8266]  INFO: Debug: Read successful, buffer size: 53[0m
+2025-06-21T08:22:03.936669 [ESP8266]  INFO: [0;32mI (11736) M
+2025-06-21T08:22:03.946870 [ESP8266]  INFO: CPServer: Debug: About to process message[0m
+2025-06-21T08:22:03.946890 [ESP8266]  INFO: [0;32mI (11745)
+2025-06-21T08:22:03.957009 [ESP8266]  INFO: entered[0m
+2025-06-21T08:22:03.957025 [ESP8266]  INFO: [MCPServer] Debug: Message lengt
+2025-06-21T08:22:03.967109 [ESP8266]  INFO: h: 53[0m
+2025-06-21T08:22:03.967115 [ESP8266]  INFO: [MCPServer] Debug: About to create me
+2025-06-21T08:22:03.977181 [ESP8266]  INFO: thod/id/params strings[0m
+2025-06-21T08:22:03.977191 [ESP8266]  INFO: [MCPServer] Debug: C
+2025-06-21T08:22:03.987269 [ESP8266]  INFO: alling parseRequest[0m
+2025-06-21T08:22:03.987274 [ESP8266]  INFO: [MCPServer] Debug: parseRequest succeeded[0m
+2025-06-21T08:22:03.987277 [ESP8266]  INFO: abort()
+2025-06-21T08:22:03.997357 [ESP8266]  INFO: was called at PC 0x40284dc9 on core 0
+2025-06-21T08:22:03.997363 [ESP8266]  INFO: Guru Meditation Error: C
+2025-06-21T08:22:04.007450 [ESP8266]  INFO: ore  0 panic'ed (StoreProhibited). Exception was unhandled.
+2025-06-21T08:22:04.007458 [ESP8266]  INFO: Core 0 register dump:
+2025-06-21T08:22:04.007460 [ESP8266]  INFO: PC      : 0
+2025-06-21T08:22:04.018303 [ESP8266]  INFO: x40215a92  PS      : 0x00000030  A0      : 0x40215a90  A1      :
+2025-06-21T08:22:04.028422 [ESP8266]  INFO: 0x3fff69e0
+2025-06-21T08:22:04.028434 [ESP8266]  INFO: A2      : 0x00000000  A3      : 0xffffffdb  A4
+2025-06-21T08:22:04.038519 [ESP8266]  INFO: : 0x00000001  A5      : 0x00000001
+2025-06-21T08:22:04.038530 [ESP8266]  INFO: A6      : 0x00000000  A7      : 0x00000000  A8      :
+2025-06-21T08:22:04.048629 [ESP8266]  INFO: 0x0000006e  A9      : 0x000000e0
+2025-06-21T08:22:04.048648 [ESP8266]  INFO: A10     : 0x00000002  A11
+2025-06-21T08:22:04.058750 [ESP8266]  INFO: : 0x7461746e  A12     : 0x3fff6c04  A13     : 0x4028532d
+2025-06-21T08:22:04.058762 [ESP8266]  INFO: A14     : 0x402655f2  A15     :
+2025-06-21T08:22:04.068849 [ESP8266]  INFO: 0x3fff6ca0  SAR     : 0x0000001e  EXCCAUSE: 0x0000001d
+2025-06-21T08:22:04.068859 [ESP8266]  INFO: B
+2025-06-21T08:22:04.082239 [ESP8266]  INFO: acktrace: 0x40215a92:0x3fff69e0 0x40284dcc:0x3fff69f0 0x4028532d:0x3fff6ad0 Guru Meditation Erro
+2025-06-21T08:22:04.092368 [ESP8266]  INFO: r: Core  0 panic'ed (LoadStoreAlignment). Exception was unhandle
+2025-06-21T08:22:04.102463 [ESP8266]  INFO: d.
+2025-06-21T08:22:04.102473 [ESP8266]  INFO: Core 0 register dump:
+2025-06-21T08:22:04.102476 [ESP8266]  INFO: PC      : 0x4021eaf5  PS      : 0x00000033  A0      : 0x4021ea68  A1
+2025-06-21T08:22:04.112581 [ESP8266]  INFO: : 0x3ffe8d40
+2025-06-21T08:22:04.112598 [ESP8266]  INFO: A2      : 0x0007531d  A3      : 0x0000003
+2025-06-21T08:22:04.122709 [ESP8266]  INFO: 1  A4      : 0x3fff6ba1  A5      : 0x3fff6b9d
+2025-06-21T08:22:04.122728 [ESP8266]  INFO: A6      : 0x000007fe  A7      : 0x000000a1  A8
+2025-06-21T08:22:04.132821 [ESP8266]  INFO: : 0x000000c0  A9      : 0x000000e0
+2025-06-21T08:22:04.132834 [ESP8266]  INFO: A10     : 0x0000000
+2025-06-21T08:22:04.142923 [ESP8266]  INFO: 2  A11     : 0x7461746e  A12     : 0x4028532d  A13     : 0x3ffe8
+2025-06-21T08:22:04.154063 [ESP8266]  INFO: d84
+2025-06-21T08:22:04.154083 [ESP8266]  INFO: A14     : 0x40215a90  A15     : 0x40215a90  SAR     : 0x0000001f  EXCCAUSE: 0x00000009
+2025-06-21T08:22:04.164158 [ESP8266]  INFO: Backtrace: 0x4021eaf5:0x3ffe8d40 0x4021559b:0x3ffe8d70 0x4
+2025-06-21T08:22:04.174249 [ESP8266]  INFO: 0100eec:0x3ffe8dc0 0x4021ea68:0x3ffe8de0
+2025-06-21T08:22:04.184344 [ESP8266]  INFO: )܋KD	%w@sYh)x JV-r\	)DP])5
+2025-06-21T08:22:04.184352 [ESP8266]  INFO: 1)
+2025-06-21T08:22:04.194434 [ESP8266]  INFO: LPA
+2025-06-21T08:22:04.194443 [ESP8266]  INFO: i
+2025-06-21T08:22:04.194445 [ESP8266]  INFO: 1T/YP9g1@5% Y(
+2025-06-21T08:22:04.204531 [ESP8266]  INFO: )NZ 	غAv%YN 1g1Am% ~	LA
+2025-06-21T08:22:04.204542 [ESP8266]  INFO: I~T	PB	u%s#
+2025-06-21T08:22:04.214632 [ESP8266]  INFO: DM
+2025-06-21T08:22:04.214641 [ESP8266]  INFO: !t5Ѝ qrM+*
+2025-06-21T08:22:04.214644 [ESP8266]  INFO: PPEVu@aO9eVUNUG
+2025-06-21T08:22:04.214647 [ESP8266]  INFO: 3my	r
+2025-06-21T08:22:04.224739 [ESP8266]  INFO: YnTC
+2025-06-21T08:22:04.224748 [ESP8266]  INFO: A
+2025-06-21T08:22:04.224750 [ESP8266]  INFO: +)XG5) (!	j5ԅ !)aYE%yB+P
+2025-06-21T08:22:04.234839 [ESP8266]  INFO: +
+2025-06-21T08:22:04.234847 [ESP8266]  INFO: +xD5j	9%[
+2025-06-21T08:22:04.234850 [ESP8266]  INFO: -I@V%ʉ/G؛ xDVX1Qo.wE5 xn
+2025-06-21T08:22:04.247212 [ESP8266]  INFO: VXJЧ !3P1
+2025-06-21T08:22:04.247232 [ESP8266]  INFO: 7[IV )dV)XG5) bG@s{
+2025-06-21T08:22:04.247235 [ESP8266]  INFO: !RR11E/G؛ hFV
+2025-06-21T08:22:04.257326 [ESP8266]  INFO: u 1A5J !
+2025-06-21T08:22:04.257335 [ESP8266]  INFO: 
+2025-06-21T08:22:04.257337 [ESP8266]  INFO: 1%1
+2025-06-21T08:22:04.257339 [ESP8266]  INFO: (%JAB!~w %.a
+2025-06-21T08:22:04.267432 [ESP8266]  INFO: ~@XP!E,)XJ	1%[-L|1$}%EB	#I
+2025-06-21T08:22:04.277524 [ESP8266]  INFO: X5dֵLP\!gX]+ xD+)XJ	1#OYnn
+2025-06-21T08:22:04.287632 [ESP8266]  INFO: 1LP\$9ˉ	eL@L+xj	#yn!q1D
+2025-06-21T08:22:04.297735 [ESP8266]  INFO: T1R=N11\9	)ʁC5 h/)X7nT PXk
+2025-06-21T08:22:04.307885 [ESP8266]  INFO: X5N9E1^9)CJ+*
+2025-06-21T08:22:04.307910 [ESP8266]  INFO:  hF)X7nTRX15N\9
+2025-06-21T08:22:04.318010 [ESP8266]  INFO: E1m1	-)Ij)P%JAB!~wYNL@XPAl|#1RQ
+2025-06-21T08:22:04.348243 [ESP8266]  INFO: [ESP8266-MCP] ESP8
+2025-06-21T08:22:04.358350 [ESP8266]  INFO: 266-MCP starting up...[0m
+2025-06-21T08:22:04.358360 [ESP8266]  INFO: [ESP8266-MCP] [App sta
+2025-06-21T08:22:04.370188 [ESP8266]  INFO: rt] Free heap: 90692 bytes, Min free: 88148 bytes, Stack remaining: 7304 bytes[0m
+2025-06-21T08:22:04.370204 [ESP8266]  INFO: [0;32mI (23
+2025-06-21T08:22:04.380295 [ESP8266]  INFO: [ESP8266-MCP] [After NVS init] Free heap: 90692 bytes, Min fre
+2025-06-21T08:22:04.393211 [ESP8266]  INFO: e: 88148 bytes, Stack remaining: 7304 bytes[0m
+2025-06-21T08:22:04.393227 [ESP8266]  INFO: [ESP8266-MCP] Initializing WiFi..
+2025-06-21T08:22:04.403317 [ESP8266]  INFO: .[0m
+2025-06-21T08:22:04.403328 [ESP8266]  INFO: [system_api] Base MAC address is not set, read default base MAC address fro
+2025-06-21T08:22:04.413414 [ESP8266]  INFO: m EFUSE[0m
+2025-06-21T08:22:04.413425 [ESP8266]  INFO: [system_api] Base MAC address is not
+2025-06-21T08:22:04.423518 [ESP8266]  INFO: set, read default base MAC address from EFUSE[0m
+2025-06-21T08:22:04.474792 [ESP8266]  INFO: phy_version: 1163.0, 665d56c, Jun 24 2020, 10:00:08, RTOS new
+2025-06-21T08:22:04.474822 [ESP8266]  INFO: [phy_init] phy ver:
+2025-06-21T08:22:04.484945 [ESP8266]  INFO: 1163_0[0m
+2025-06-21T08:22:04.484963 [ESP8266]  INFO: [ESP8266-MCP] wifi
+2025-06-21T08:22:04.495081 [ESP8266]  INFO: _init_sta finished.[0m
+2025-06-21T08:22:04.606176 [ESP8266]  INFO: [wifi:state] 0 ->
+2025-06-21T08:22:04.616279 [ESP8266]  INFO: 2 (b0)
+2025-06-21T08:22:04.616291 [ESP8266]  INFO: [0m
+2025-06-21T08:22:04.626379 [ESP8266]  INFO: [wifi:state] 2 ->
+2025-06-21T08:22:04.637239 [ESP8266]  INFO: 3 (0)
+2025-06-21T08:22:04.637251 [ESP8266]  INFO: [0m
+2025-06-21T08:22:04.647340 [ESP8266]  INFO: [wifi:state] 3 -> 5 (10)
+2025-06-21T08:22:04.647353 [ESP8266]  INFO: [0m
+2025-06-21T08:22:04.697770 [ESP8266]  INFO: [0;32mI (572) wifi:connected wi
+2025-06-21T08:22:04.707928 [ESP8266]  INFO: th FBI Surveillance Van, aid = 1, channel 1, HT20, bssid = d8:6c
+2025-06-21T08:22:04.718098 [ESP8266]  INFO: :63:e6:14:02
+2025-06-21T08:22:04.718170 [ESP8266]  INFO: [0m
+2025-06-21T08:22:05.384614 [ESP8266]  INFO: [tcpip_adapter] s
+2025-06-21T08:22:05.396187 [ESP8266]  INFO: ta ip: 192.168.86.37, mask: 255.255.255.0, gw: 192.168.86.1[0m
+2025-06-21T08:22:05.406284 [ESP8266]  INFO: [ESP8266-MCP] got ip:192.168.86.37[0m
+2025-06-21T08:22:05.406293 [ESP8266]  INFO: [ESP8266-MCP] connected t
+2025-06-21T08:22:05.416385 [ESP8266]  INFO: o ap SSID:FBI Surveillance Van[
+2025-06-21T08:22:05.426484 [ESP8266]  INFO: 0m
+2025-06-21T08:22:05.426493 [ESP8266]  INFO: [ESP8266-MCP] [After WiFi init] Free heap: 63596 bytes, Min free: 61332 bytes
+2025-06-21T08:22:05.436573 [ESP8266]  INFO: , Stack remaining: 6744 bytes[0m
+2025-06-21T08:22:05.436579 [ESP8266]  INFO: [0;32mI (1291) wifi:pm stop
+2025-06-21T08:22:05.436581 [ESP8266]  INFO: [0m[0;32mI (1296) ESP8266-MCP
+2025-06-21T08:22:05.446665 [ESP8266]  INFO: : WiFi connected, starting MCP server...[0m
+2025-06-21T08:22:05.446674 [ESP8266]  INFO: [0;32mI (1306) ES
+2025-06-21T08:22:05.456764 [ESP8266]  INFO: P8266-MCP: [MCP task start] Free heap: 55276 bytes, Min free: 53
+2025-06-21T08:22:05.466857 [ESP8266]  INFO: 820 bytes, Stack remaining: 7948 bytes[0m
+2025-06-21T08:22:05.466867 [ESP8266]  INFO: [ESP8266-MCP] TinyMCP server listenin
+2025-06-21T08:22:05.476948 [ESP8266]  INFO: g on port 8080[0m
+2025-06-21T08:22:05.476954 [ESP8266]  INFO: [ESP8266-MCP] ESP8266-MCP ini
+2025-06-21T08:22:05.487031 [ESP8266]  INFO: tialization complete[0m
+2025-06-21T08:22:15.054179 [ CLIENT]  INFO: 🤖 ESP8266 MCP Client Test Script
+2025-06-21T08:22:15.054208 [ CLIENT]  INFO: ============================================================
+2025-06-21T08:22:15.054211 [ CLIENT]  INFO: Target: 192.168.86.37:8080
+2025-06-21T08:22:15.054214 [ CLIENT]  INFO: ============================================================
+2025-06-21T08:22:15.054217 [ CLIENT]  INFO: 🧪 Starting comprehensive MCP test suite...
+2025-06-21T08:22:15.054219 [ CLIENT]  INFO: ============================================================
+2025-06-21T08:22:15.054222 [ CLIENT]  INFO: 📡 TEST 1: Connection
+2025-06-21T08:22:15.054225 [ CLIENT]  INFO: 🔗 Connecting to MCP server at 192.168.86.37:8080...
+2025-06-21T08:22:15.054227 [ CLIENT]  INFO: ✅ Connected successfully!
+2025-06-21T08:22:15.054229 [ CLIENT]  INFO: 🚀 TEST 2: Initialization
+2025-06-21T08:22:15.054231 [ CLIENT]  INFO: 🚀 Initializing MCP session...
+2025-06-21T08:22:15.054235 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "1", "method": "initialize", "params": {"protocolVersion": "2024-11-05", "clientInfo": {"name": "ESP8266-MCP-Test-Client", "version": "1.0.0"}, "capabilities": {"roots": {"listChanged": false}, "sampling": {}}}}
+2025-06-21T08:22:15.054237 [ CLIENT]  INFO: 📤 Sent 237 bytes successfully
+2025-06-21T08:22:15.054239 [ CLIENT]  INFO: 📥 Waiting for response...
+2025-06-21T08:22:15.054242 [ CLIENT]  INFO: 📥 Received chunk: '{"jsonrpc":"2.0","id":"1","result":{"protocolVersion":"2024-11-05","serverInfo":{"name":"ESP8266-MCP","version":"1.0.0"},"capabilities":{"tools":{"listChanged":false}}}}\n'
+2025-06-21T08:22:15.054245 [ CLIENT]  INFO: 📥 Complete response received: {"jsonrpc":"2.0","id":"1","result":{"protocolVersion":"2024-11-05","serverInfo":{"name":"ESP8266-MCP","version":"1.0.0"},"capabilities":{"tools":{"listChanged":false}}}}
+2025-06-21T08:22:15.054247 [ CLIENT]  INFO: 📥 Parsing response: {"jsonrpc":"2.0","id":"1","result":{"protocolVersion":"2024-11-05","serverInfo":{"name":"ESP8266-MCP","version":"1.0.0"},"capabilities":{"tools":{"listChanged":false}}}}
+2025-06-21T08:22:15.054249 [ CLIENT]  INFO: ✅ Server initialized!
+2025-06-21T08:22:15.054251 [ CLIENT]  INFO: 📋 Server: ESP8266-MCP v1.0.0
+2025-06-21T08:22:15.054253 [ CLIENT]  INFO: 🔧 Protocol: 2024-11-05
+2025-06-21T08:22:15.054254 [ CLIENT]  INFO: 🛠️  Tools supported: False
+2025-06-21T08:22:15.054257 [ CLIENT]  INFO: 🏓 TEST 3: Ping
+2025-06-21T08:22:15.054258 [ CLIENT]  INFO: 🏓 Sending ping...
+2025-06-21T08:22:15.054261 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "2", "method": "ping"}
+2025-06-21T08:22:15.054263 [ CLIENT]  INFO: 📤 Sent 48 bytes successfully
+2025-06-21T08:22:15.054269 [ CLIENT]  INFO: 📥 Waiting for response...
+2025-06-21T08:22:15.054271 [ CLIENT]  INFO: 📥 Received chunk: '{"jsonrpc":"2.0","id":"2","result":{}}\n'
+2025-06-21T08:22:15.054273 [ CLIENT]  INFO: 📥 Complete response received: {"jsonrpc":"2.0","id":"2","result":{}}
+2025-06-21T08:22:15.054275 [ CLIENT]  INFO: 📥 Parsing response: {"jsonrpc":"2.0","id":"2","result":{}}
+2025-06-21T08:22:15.054277 [ CLIENT]  INFO: ✅ Ping successful!
+2025-06-21T08:22:15.054279 [ CLIENT]  INFO: 🔍 TEST 4: Tool Discovery
+2025-06-21T08:22:15.054281 [ CLIENT]  INFO: 🔍 Discovering available tools...
+2025-06-21T08:22:15.054285 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "3", "method": "tools/list"}
+2025-06-21T08:22:15.054287 [ CLIENT]  INFO: 📤 Sent 54 bytes successfully
+2025-06-21T08:22:15.054289 [ CLIENT]  INFO: 📥 Waiting for response...
+2025-06-21T08:22:15.054291 [ CLIENT]  INFO: ❌ Request failed: [Errno 104] Connection reset by peer
+2025-06-21T08:22:15.054293 [ CLIENT]  INFO: 🔊 TEST 5: Echo Tool
+2025-06-21T08:22:15.054294 [ CLIENT]  INFO: 🔊 Echo Test 1/4
+2025-06-21T08:22:15.054296 [ CLIENT]  INFO: 🔧 Calling tool 'echo' with arguments: {'text': 'Hello ESP8266!'}
+2025-06-21T08:22:15.054298 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "4", "method": "tools/call", "params": {"name": "echo", "arguments": {"text": "Hello ESP8266!"}}}
+2025-06-21T08:22:15.054300 [ CLIENT]  INFO: ❌ Request failed: [Errno 32] Broken pipe
+2025-06-21T08:22:15.054302 [ CLIENT]  INFO: 🔊 Echo Test 2/4
+2025-06-21T08:22:15.054305 [ CLIENT]  INFO: 🔧 Calling tool 'echo' with arguments: {'text': 'Testing MCP protocol 🚀'}
+2025-06-21T08:22:15.054307 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "5", "method": "tools/call", "params": {"name": "echo", "arguments": {"text": "Testing MCP protocol \ud83d\ude80"}}}
+2025-06-21T08:22:15.054309 [ CLIENT]  INFO: ❌ Request failed: [Errno 32] Broken pipe
+2025-06-21T08:22:15.054311 [ CLIENT]  INFO: 🔊 Echo Test 3/4
+2025-06-21T08:22:15.054313 [ CLIENT]  INFO: 🔧 Calling tool 'echo' with arguments: {'text': 'Special characters: !@#$%^&*()'}
+2025-06-21T08:22:15.054315 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "6", "method": "tools/call", "params": {"name": "echo", "arguments": {"text": "Special characters: !@#$%^&*()"}}}
+2025-06-21T08:22:15.054317 [ CLIENT]  INFO: ❌ Request failed: [Errno 32] Broken pipe
+2025-06-21T08:22:15.054319 [ CLIENT]  INFO: 🔊 Echo Test 4/4
+2025-06-21T08:22:15.054321 [ CLIENT]  INFO: 🔧 Calling tool 'echo' with arguments: {'text': 'Multiple\nlines\ntest'}
+2025-06-21T08:22:15.054323 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "7", "method": "tools/call", "params": {"name": "echo", "arguments": {"text": "Multiple\nlines\ntest"}}}
+2025-06-21T08:22:15.054325 [ CLIENT]  INFO: ❌ Request failed: [Errno 32] Broken pipe
+2025-06-21T08:22:15.054327 [ CLIENT]  INFO: 📊 Echo test results: 0/4 passed
+2025-06-21T08:22:15.054328 [ CLIENT]  INFO: 🔌 TEST 6: GPIO Tool
+2025-06-21T08:22:15.054330 [ CLIENT]  INFO: 🔌 GPIO Test 1/6
+2025-06-21T08:22:15.054332 [ CLIENT]  INFO: 🔧 Calling tool 'gpio_control' with arguments: {'pin': 2, 'state': 'high'}
+2025-06-21T08:22:15.054334 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "8", "method": "tools/call", "params": {"name": "gpio_control", "arguments": {"pin": 2, "state": "high"}}}
+2025-06-21T08:22:15.054336 [ CLIENT]  INFO: ❌ Request failed: [Errno 32] Broken pipe
+2025-06-21T08:22:15.054338 [ CLIENT]  INFO: 🔌 GPIO Test 2/6
+2025-06-21T08:22:15.054340 [ CLIENT]  INFO: 🔧 Calling tool 'gpio_control' with arguments: {'pin': 2, 'state': 'low'}
+2025-06-21T08:22:15.054342 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "9", "method": "tools/call", "params": {"name": "gpio_control", "arguments": {"pin": 2, "state": "low"}}}
+2025-06-21T08:22:15.054344 [ CLIENT]  INFO: ❌ Request failed: [Errno 32] Broken pipe
+2025-06-21T08:22:15.054346 [ CLIENT]  INFO: 🔌 GPIO Test 3/6
+2025-06-21T08:22:15.054347 [ CLIENT]  INFO: 🔧 Calling tool 'gpio_control' with arguments: {'pin': 16, 'state': 'high'}
+2025-06-21T08:22:15.054349 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "10", "method": "tools/call", "params": {"name": "gpio_control", "arguments": {"pin": 16, "state": "high"}}}
+2025-06-21T08:22:15.054351 [ CLIENT]  INFO: ❌ Request failed: [Errno 32] Broken pipe
+2025-06-21T08:22:15.054355 [ CLIENT]  INFO: 🔌 GPIO Test 4/6
+2025-06-21T08:22:15.054358 [ CLIENT]  INFO: 🔧 Calling tool 'gpio_control' with arguments: {'pin': 16, 'state': 'low'}
+2025-06-21T08:22:15.054360 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "11", "method": "tools/call", "params": {"name": "gpio_control", "arguments": {"pin": 16, "state": "low"}}}
+2025-06-21T08:22:15.054364 [ CLIENT]  INFO: ❌ Request failed: [Errno 32] Broken pipe
+2025-06-21T08:22:15.054365 [ CLIENT]  INFO: 🔌 GPIO Test 5/6
+2025-06-21T08:22:15.054367 [ CLIENT]  INFO: 🔧 Calling tool 'gpio_control' with arguments: {'pin': 0, 'state': 'high'}
+2025-06-21T08:22:15.054369 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "12", "method": "tools/call", "params": {"name": "gpio_control", "arguments": {"pin": 0, "state": "high"}}}
+2025-06-21T08:22:15.054371 [ CLIENT]  INFO: ❌ Request failed: [Errno 32] Broken pipe
+2025-06-21T08:22:15.054373 [ CLIENT]  INFO: 🔌 GPIO Test 6/6
+2025-06-21T08:22:15.054382 [ CLIENT]  INFO: 🔧 Calling tool 'gpio_control' with arguments: {'pin': 0, 'state': 'low'}
+2025-06-21T08:22:15.054385 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "13", "method": "tools/call", "params": {"name": "gpio_control", "arguments": {"pin": 0, "state": "low"}}}
+2025-06-21T08:22:15.054387 [ CLIENT]  INFO: ❌ Request failed: [Errno 32] Broken pipe
+2025-06-21T08:22:15.054390 [ CLIENT]  INFO: 📊 GPIO test results: 0/6 passed
+2025-06-21T08:22:15.054392 [ CLIENT]  INFO: ❌ TEST 7: Error Handling
+2025-06-21T08:22:15.054394 [ CLIENT]  INFO: Testing invalid tool call...
+2025-06-21T08:22:15.054397 [ CLIENT]  INFO: 🔧 Testing error case: tool 'nonexistent_tool' with arguments: {}
+2025-06-21T08:22:15.054400 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "14", "method": "tools/call", "params": {"name": "nonexistent_tool", "arguments": {}}}
+2025-06-21T08:22:15.054402 [ CLIENT]  INFO: ❌ Request failed: [Errno 32] Broken pipe
+2025-06-21T08:22:15.054404 [ CLIENT]  INFO: ❌ No response received (timeout)
+2025-06-21T08:22:15.054406 [ CLIENT]  INFO: ❌ TEST 8: Invalid Parameters
+2025-06-21T08:22:15.054408 [ CLIENT]  INFO: Testing invalid parameters...
+2025-06-21T08:22:15.054410 [ CLIENT]  INFO: 🔧 Testing error case: tool 'echo' with arguments: {'wrong_param': 'test'}
+2025-06-21T08:22:15.054412 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "15", "method": "tools/call", "params": {"name": "echo", "arguments": {"wrong_param": "test"}}}
+2025-06-21T08:22:15.054414 [ CLIENT]  INFO: ❌ Request failed: [Errno 32] Broken pipe
+2025-06-21T08:22:15.054416 [ CLIENT]  INFO: ❌ No response received (timeout)
+2025-06-21T08:22:15.054418 [ CLIENT]  INFO: ============================================================
+2025-06-21T08:22:15.054420 [ CLIENT]  INFO: 🏁 COMPREHENSIVE TEST RESULTS
+2025-06-21T08:22:15.054422 [ CLIENT]  INFO: ============================================================
+2025-06-21T08:22:15.054424 [ CLIENT]  INFO: ✅ PASS - Connection
+2025-06-21T08:22:15.054426 [ CLIENT]  INFO: ✅ PASS - Initialization
+2025-06-21T08:22:15.054428 [ CLIENT]  INFO: ✅ PASS - Ping
+2025-06-21T08:22:15.054429 [ CLIENT]  INFO: ❌ FAIL - Tool Discovery
+2025-06-21T08:22:15.054431 [ CLIENT]  INFO: ❌ FAIL - Echo Tool
+2025-06-21T08:22:15.054433 [ CLIENT]  INFO: ❌ FAIL - GPIO Tool
+2025-06-21T08:22:15.054435 [ CLIENT]  INFO: ❌ FAIL - Error Handling
+2025-06-21T08:22:15.054437 [ CLIENT]  INFO: ❌ FAIL - Invalid Parameters
+2025-06-21T08:22:15.054440 [ CLIENT]  INFO: 📊 Overall Results: 3/8 tests passed
+2025-06-21T08:22:15.054442 [ CLIENT]  INFO: 🎯 Success Rate: 37.5%
+2025-06-21T08:22:15.054444 [ CLIENT]  INFO: ⚠️  Some tests failed. Check the server implementation.
+2025-06-21T08:22:15.054446 [ CLIENT]  INFO: 🔌 Disconnected from server
+2025-06-21T08:22:15.059448 [ CLIENT] ERROR: ❌ Test failed: test_mcp_client.py (exit code: 1)
+2025-06-21T08:22:17.059676 [ CLIENT]  TEST: 🔧 Testing echo tool with custom message
+2025-06-21T08:22:17.068814 [ CLIENT]  INFO: 📤 Sending echo request: Hello from integrated test demo!
+2025-06-21T08:22:17.080783 [ESP8266]  INFO: [ESP8266-MCP] Cl
+2025-06-21T08:22:17.090937 [ESP8266]  INFO: ient connected from 192.168.86.32:58048[0m
+2025-06-21T08:22:17.090958 [ESP8266]  INFO: [ESP8266-MCP] [Before MCP server cr
+2025-06-21T08:22:17.101113 [ESP8266]  INFO: eation] Free heap: 62692 bytes, Min free: 53244 bytes, Stack rem
+2025-06-21T08:22:17.111293 [ESP8266]  INFO: aining: 7320 bytes[0m
+2025-06-21T08:22:17.111317 [ESP8266]  INFO: [ESP8266-MCP] Stack rema
+2025-06-21T08:22:17.121447 [ESP8266]  INFO: ining before MCP server: 7320 bytes[0m
+2025-06-21T08:22:17.121463 [ESP8266]  INFO: [EspSocketTransport] EspSocketTransport
+2025-06-21T08:22:17.131573 [ESP8266]  INFO: created with socket 55[0m
+2025-06-21T08:22:17.131583 [ESP8266]  INFO: [ESP8266-MCP] Stack
+2025-06-21T08:22:17.141685 [ESP8266]  INFO: remaining after transport creation: 7320 bytes[0m
+2025-06-21T08:22:17.141703 [ESP8266]  INFO: [MCPServer] MCPServer creat
+2025-06-21T08:22:17.151856 [ESP8266]  INFO: ed[0m
+2025-06-21T08:22:17.151881 [ESP8266]  INFO: [MCPServer] MCPServer: Testing basic JSO
+2025-06-21T08:22:17.164248 [ESP8266]  INFO: N creation...[0m
+2025-06-21T08:22:17.164276 [ESP8266]  INFO: [MCPServer] MCPServer: Basic JSON null value created successf
+2025-06-21T08:22:17.174429 [ESP8266]  INFO: ully[0m
+2025-06-21T08:22:17.174456 [ESP8266]  INFO: [MCPServer] MCPServer: JSON object cre
+2025-06-21T08:22:17.184567 [ESP8266]  INFO: ated successfully[0m
+2025-06-21T08:22:17.184581 [ESP8266]  INFO: [MCPServer] MCPServer: JSON test passed during initializa
+2025-06-21T08:22:17.195270 [ESP8266]  INFO: tion[0m
+2025-06-21T08:22:17.195307 [ESP8266]  INFO: [ESP8266-MCP] Stack remaining after se
+2025-06-21T08:22:17.205409 [ESP8266]  INFO: rver creation: 7320 bytes[0m
+2025-06-21T08:22:17.205422 [ESP8266]  INFO: [ESP8266-MCP] Sta
+2025-06-21T08:22:17.215517 [ESP8266]  INFO: rting C++ MCP server for client[0m
+2025-06-21T08:22:17.215527 [ESP8266]  INFO: [MCPServer] MCP Server starting...[0m
+2025-06-21T08:22:17.215532 [ESP8266]  INFO: [0
+2025-06-21T08:22:17.225634 [ESP8266]  INFO: [MCPServer] Debug: About to create std::string buff
+2025-06-21T08:22:17.235796 [ESP8266]  INFO: er[0m
+2025-06-21T08:22:17.235806 [ESP8266]  INFO: [MCPServer] Debug: Buffer created successfully[0m
+2025-06-21T08:22:17.235809 [ESP8266]  INFO: [0;32mI (13094) MCP
+2025-06-21T08:22:17.248194 [ESP8266]  INFO: Server: Debug: About to enter main loop[0m
+2025-06-21T08:22:17.248214 [ESP8266]  INFO: [0;32mI (13103) MC
+2025-06-21T08:22:17.258304 [ESP8266]  INFO: PServer: Debug: Loop iteration start[0m
+2025-06-21T08:22:17.258312 [ESP8266]  INFO: [MCPServer] Debug: About to call isCon
+2025-06-21T08:22:17.268398 [ESP8266]  INFO: nected()[0m
+2025-06-21T08:22:17.268406 [ESP8266]  INFO: [MCPServer] Debug: isConnected() r
+2025-06-21T08:22:17.278750 [ESP8266]  INFO: eturned: true[0m
+2025-06-21T08:22:17.278764 [ESP8266]  INFO: [MCPServer] Debug: About to c
+2025-06-21T08:22:17.288856 [ESP8266]  INFO: all transport->read()[0m
+2025-06-21T08:22:17.288865 [ESP8266]  INFO: [MCPServer] Debug: transport->read() returned: true[
+2025-06-21T08:22:17.298948 [ESP8266]  INFO: 0m
+2025-06-21T08:22:17.298953 [ESP8266]  INFO: [MCPServer] Debug: Read successful, buffer s
+2025-06-21T08:22:17.309178 [ESP8266]  INFO: ize: 141[0m
+2025-06-21T08:22:17.309195 [ESP8266]  INFO: [MCPServer] Debug: About to process message[0m
+2025-06-21T08:22:17.309199 [ESP8266]  INFO: [0;32mI (13167)
+2025-06-21T08:22:17.319292 [ESP8266]  INFO: entered[0m
+2025-06-21T08:22:17.319302 [ESP8266]  INFO: [0;32mI (13176)
+2025-06-21T08:22:17.329397 [ESP8266]  INFO: MCPServer: Debug: Message length: 141[0m
+2025-06-21T08:22:17.329407 [ESP8266]  INFO: [0;32mI (13184) MCP
+2025-06-21T08:22:17.339486 [ESP8266]  INFO: Server: Debug: About to create method/id/params strings[0m
+2025-06-21T08:22:17.339491 [ESP8266]  INFO: [MCPServer] Debug:
+2025-06-21T08:22:17.349589 [ESP8266]  INFO: Calling parseRequest[0m
+2025-06-21T08:22:17.349598 [ESP8266]  INFO: [MCPServer] Debug: par
+2025-06-21T08:22:17.359677 [ESP8266]  INFO: seRequest succeeded[0m
+2025-06-21T08:22:17.359682 [ESP8266]  INFO: [MCPServer] createErrorResponse: Creating error respons
+2025-06-21T08:22:17.369773 [ESP8266]  INFO: e - id: 1, code: -32002, message: Server not initialized[0m
+2025-06-21T08:22:17.369783 [ESP8266]  INFO: [
+2025-06-21T08:22:17.379894 [ESP8266]  INFO: [MCPServer] createErrorResponse: Response length:
+2025-06-21T08:22:17.390003 [ESP8266]  INFO: 0[0m
+2025-06-21T08:22:17.390014 [ESP8266]  INFO: [MCPServer] Debug: Message processed, clearing buffer[0m
+2025-06-21T08:22:17.390018 [ESP8266]  INFO: [0;32mI (1324
+2025-06-21T08:22:17.400094 [ESP8266]  INFO: [MCPServer] Debug: Buffer cleared[0m
+2025-06-21T08:22:17.400100 [ESP8266]  INFO: [0;32mI (13256) MCPSer
+2025-06-21T08:22:17.410158 [ESP8266]  INFO: ver: Debug: About to delay[0m
+2025-06-21T08:22:17.410166 [ESP8266]  INFO: [MCPServer] Debu
+2025-06-21T08:22:17.422192 [ESP8266]  INFO: g: Delay completed[0m
+2025-06-21T08:22:17.422207 [ESP8266]  INFO: [MCPServer] Debug: Loop iteration start[0m
+2025-06-21T08:22:17.422211 [ESP8266]  INFO: [0;32mI (1
+2025-06-21T08:22:17.432300 [ESP8266]  INFO: [MCPServer] Debug: About to call isConnected()[0m
+2025-06-21T08:22:17.432311 [ESP8266]  INFO: [MCPServer] Debug: isCo
+2025-06-21T08:22:17.442400 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:17.442409 [ESP8266]  INFO: [MCPServer] Debug:
+2025-06-21T08:22:17.452515 [ESP8266]  INFO: About to call transport->read()[0m
+2025-06-21T08:22:17.452529 [ESP8266]  INFO: [0;32mI (13307) MCPServer
+2025-06-21T08:22:17.462619 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:17.462631 [ESP8266]  INFO: [MCPServer] Debug: Read successfu
+2025-06-21T08:22:17.472710 [ESP8266]  INFO: l, buffer size: 0[0m
+2025-06-21T08:22:17.472715 [ESP8266]  INFO: [MCPServer] Debug: About
+2025-06-21T08:22:17.482820 [ESP8266]  INFO: to delay[0m
+2025-06-21T08:22:17.482833 [ESP8266]  INFO: [MCPServer] Debug: Delay completed
+2025-06-21T08:22:17.492921 [ESP8266]  INFO: [0m
+2025-06-21T08:22:17.492928 [ESP8266]  INFO: [MCPServer] Debug: Loop iteration start[0m
+2025-06-21T08:22:17.492931 [ESP8266]  INFO: [MCPServer] D
+2025-06-21T08:22:17.503013 [ESP8266]  INFO: ebug: About to call isConnected()[0m
+2025-06-21T08:22:17.503019 [ESP8266]  INFO: [0;32mI (13358) MCPServe
+2025-06-21T08:22:17.513117 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:17.513185 [ESP8266]  INFO: [0;32mI (13367) MCP
+2025-06-21T08:22:17.523280 [ESP8266]  INFO: Server: Debug: About to call transport->read()[0m
+2025-06-21T08:22:17.523290 [ESP8266]  INFO: [MCPServer] Debug: transport
+2025-06-21T08:22:17.533381 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:17.533391 [ESP8266]  INFO: [MCPServer] Debug:
+2025-06-21T08:22:17.544173 [ESP8266]  INFO: Read successful, buffer size: 0[0m
+2025-06-21T08:22:17.544188 [ESP8266]  INFO: [MCPServer] Debug: About to delay[0m
+2025-06-21T08:22:17.544192 [ESP8266]  INFO: [0;
+2025-06-21T08:22:17.554280 [ESP8266]  INFO: [MCPServer] Debug: Delay completed[0m
+2025-06-21T08:22:17.554289 [ESP8266]  INFO: [0;32mI (13
+2025-06-21T08:22:17.564375 [ESP8266]  INFO: [MCPServer] Debug: Loop iteration start[0m
+2025-06-21T08:22:17.564385 [ESP8266]  INFO: [MCPServer] Debug: About to cal
+2025-06-21T08:22:17.574468 [ESP8266]  INFO: l isConnected()[0m
+2025-06-21T08:22:17.574474 [ESP8266]  INFO: [MCPServer] Debug: isConnec
+2025-06-21T08:22:17.584588 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:17.584604 [ESP8266]  INFO: [MCPServer] Debug: Abo
+2025-06-21T08:22:17.594694 [ESP8266]  INFO: ut to call transport->read()[0m
+2025-06-21T08:22:17.594702 [ESP8266]  INFO: [MCPServer] Debug: transport->read() returned:
+2025-06-21T08:22:17.604791 [ESP8266]  INFO: true[0m
+2025-06-21T08:22:17.604800 [ESP8266]  INFO: [MCPServer] Debug: Read successful, b
+2025-06-21T08:22:17.614961 [ESP8266]  INFO: uffer size: 0[0m
+2025-06-21T08:22:17.614979 [ESP8266]  INFO: [MCPServer] Debug: About to d
+2025-06-21T08:22:17.625080 [ESP8266]  INFO: elay[0m
+2025-06-21T08:22:17.625092 [ESP8266]  INFO: [MCPServer] Debug: Delay completed[0m
+2025-06-21T08:22:17.625097 [ESP8266]  INFO: [MCPServer] De
+2025-06-21T08:22:17.635167 [ESP8266]  INFO: bug: Loop iteration start[0m
+2025-06-21T08:22:17.635176 [ESP8266]  INFO: [MCPServer] Debug
+2025-06-21T08:22:17.645278 [ESP8266]  INFO: : About to call isConnected()[0m
+2025-06-21T08:22:17.645296 [ESP8266]  INFO: [MCPServer] D
+2025-06-21T08:22:17.655388 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:17.655398 [ESP8266]  INFO: [MCPServer] Debug: About to call transpo
+2025-06-21T08:22:17.665487 [ESP8266]  INFO: rt->read()[0m
+2025-06-21T08:22:17.665496 [ESP8266]  INFO: [MCPServer] Debug: transport->re
+2025-06-21T08:22:17.675602 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:17.675616 [ESP8266]  INFO: [MCPServer] Debug: Read successful, buffer size: 0[0m
+2025-06-21T08:22:17.685707 [ESP8266]  INFO: [MCPServer] Debug: About to delay[0m
+2025-06-21T08:22:17.685719 [ESP8266]  INFO: [0;32mI
+2025-06-21T08:22:17.696883 [ESP8266]  INFO: [MCPServer] Debug: Delay completed[0m
+2025-06-21T08:22:17.696921 [ESP8266]  INFO: [MCPServer] Debug: Loop iteratio
+2025-06-21T08:22:17.707011 [ESP8266]  INFO: n start[0m
+2025-06-21T08:22:17.707020 [ESP8266]  INFO: [MCPServer] Debug: About to call is
+2025-06-21T08:22:17.717107 [ESP8266]  INFO: Connected()[0m
+2025-06-21T08:22:17.717115 [ESP8266]  INFO: [MCPServer] Debug: isConnected(
+2025-06-21T08:22:17.727191 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:17.727195 [ESP8266]  INFO: [MCPServer] Debug: About to call transport->read()[0m
+2025-06-21T08:22:17.727198 [ESP8266]  INFO: [
+2025-06-21T08:22:17.738154 [ESP8266]  INFO: [MCPServer] Debug: transport->read() returned: tru
+2025-06-21T08:22:17.748257 [ESP8266]  INFO: e[0m
+2025-06-21T08:22:17.748266 [ESP8266]  INFO: [MCPServer] Debug: Read successful, buffer size: 0[0m
+2025-06-21T08:22:17.748271 [ESP8266]  INFO: [0;32mI (13607)
+2025-06-21T08:22:17.758358 [ESP8266]  INFO: MCPServer: Debug: About to delay[0m
+2025-06-21T08:22:17.758367 [ESP8266]  INFO: [0;32mI (13617) MCPServer
+2025-06-21T08:22:17.768464 [ESP8266]  INFO: : Debug: Delay completed[0m
+2025-06-21T08:22:17.768476 [ESP8266]  INFO: [MCPServer] Debug:
+2025-06-21T08:22:17.778563 [ESP8266]  INFO: Loop iteration start[0m
+2025-06-21T08:22:17.778571 [ESP8266]  INFO: [MCPServer] Debug: About to call isConnected()[0m
+2025-06-21T08:22:17.778575 [ESP8266]  INFO: 
+2025-06-21T08:22:17.788722 [ESP8266]  INFO: [MCPServer] Debug: isConnected() returned: true[
+2025-06-21T08:22:17.798866 [ESP8266]  INFO: 0m
+2025-06-21T08:22:17.798883 [ESP8266]  INFO: [MCPServer] Debug: About to call transport->
+2025-06-21T08:22:17.808999 [ESP8266]  INFO: read()[0m
+2025-06-21T08:22:17.809014 [ESP8266]  INFO: [MCPServer] Debug: transport->read() returned: true[0m
+2025-06-21T08:22:17.809018 [ESP8266]  INFO: [0;32mI (1
+2025-06-21T08:22:17.819103 [ESP8266]  INFO: [MCPServer] Debug: Read successful, buffer size: 0[0m
+2025-06-21T08:22:17.819111 [ESP8266]  INFO: [0
+2025-06-21T08:22:17.829159 [ESP8266]  INFO: [MCPServer] Debug: About to delay[0m
+2025-06-21T08:22:17.829168 [ESP8266]  INFO: [0;32mI (13
+2025-06-21T08:22:17.839245 [ESP8266]  INFO: [MCPServer] Debug: Delay completed[0m
+2025-06-21T08:22:17.839252 [ESP8266]  INFO: [MCPServer] Debug: Loop iteration st
+2025-06-21T08:22:17.849327 [ESP8266]  INFO: art[0m
+2025-06-21T08:22:17.849332 [ESP8266]  INFO: [MCPServer] Debug: About to call isConn
+2025-06-21T08:22:17.860176 [ESP8266]  INFO: ected()[0m
+2025-06-21T08:22:17.860188 [ESP8266]  INFO: [MCPServer] Debug: isConnected() returned: true[0m
+2025-06-21T08:22:17.860192 [ESP8266]  INFO: [0;32mI (1371
+2025-06-21T08:22:17.870278 [ESP8266]  INFO: [MCPServer] Debug: About to call transport->read()[0m
+2025-06-21T08:22:17.870291 [ESP8266]  INFO: [0;32
+2025-06-21T08:22:17.880369 [ESP8266]  INFO: [MCPServer] Debug: transport->read() returned: true[0
+2025-06-21T08:22:17.892166 [ESP8266]  INFO: m
+2025-06-21T08:22:17.892181 [ESP8266]  INFO: [MCPServer] Debug: Read successful, buffer si
+2025-06-21T08:22:17.902274 [ESP8266]  INFO: ze: 0[0m
+2025-06-21T08:22:17.902285 [ESP8266]  INFO: [MCPServer] Debug: About to delay[0m
+2025-06-21T08:22:17.902290 [ESP8266]  INFO: [MCPServer] Debug: Delay completed[0m
+2025-06-21T08:22:17.902292 [ESP8266]  INFO: [0;32
+2025-06-21T08:22:17.912385 [ESP8266]  INFO: [MCPServer] Debug: Loop iteration start[0m
+2025-06-21T08:22:17.912399 [ESP8266]  INFO: [0;32mI
+2025-06-21T08:22:17.924729 [ESP8266]  INFO: [MCPServer] Debug: About to call isConnected()[0m
+2025-06-21T08:22:17.924750 [ESP8266]  INFO: [MCPServer] Debug: is
+2025-06-21T08:22:17.934832 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:17.934841 [ESP8266]  INFO: [MCPServer] Debu
+2025-06-21T08:22:17.944918 [ESP8266]  INFO: g: About to call transport->read()[0m
+2025-06-21T08:22:17.944923 [ESP8266]  INFO: [MCPServer] Debug: transport->read() ret
+2025-06-21T08:22:17.955006 [ESP8266]  INFO: urned: true[0m
+2025-06-21T08:22:17.955013 [ESP8266]  INFO: [MCPServer] Debug: Read success
+2025-06-21T08:22:17.965089 [ESP8266]  INFO: ful, buffer size: 0[0m
+2025-06-21T08:22:17.965095 [ESP8266]  INFO: [MCPServer] Debug: Abou
+2025-06-21T08:22:17.976168 [ESP8266]  INFO: t to delay[0m
+2025-06-21T08:22:17.976180 [ESP8266]  INFO: [MCPServer] Debug: Delay completed[0m
+2025-06-21T08:22:17.976183 [ESP8266]  INFO: [0;32mI (13832) MCPServ
+2025-06-21T08:22:17.986271 [ESP8266]  INFO: er: Debug: Loop iteration start[0m
+2025-06-21T08:22:17.986280 [ESP8266]  INFO: [0;32mI (13840) MCPServer:
+2025-06-21T08:22:17.996356 [ESP8266]  INFO: Debug: About to call isConnected()[0m
+2025-06-21T08:22:17.996361 [ESP8266]  INFO: [MCPServer] Debug: isConnected() return
+2025-06-21T08:22:18.010390 [ESP8266]  INFO: ed: true[0m
+2025-06-21T08:22:18.010400 [ESP8266]  INFO: [MCPServer] Debug: About to call transport->read()[0m
+2025-06-21T08:22:18.010403 [ESP8266]  INFO: [0;32mI (
+2025-06-21T08:22:18.020489 [ESP8266]  INFO: [MCPServer] Debug: transport->read() returned: true[0m
+2025-06-21T08:22:18.020500 [ESP8266]  INFO: 
+2025-06-21T08:22:18.030584 [ESP8266]  INFO: [MCPServer] Debug: Read successful, buffer size: 0[0m
+2025-06-21T08:22:18.030596 [ESP8266]  INFO: [0;32mI (13888) MCPServe
+2025-06-21T08:22:18.040682 [ESP8266]  INFO: r: Debug: About to delay[0m
+2025-06-21T08:22:18.040693 [ESP8266]  INFO: [MCPServer] Debug:
+2025-06-21T08:22:18.050786 [ESP8266]  INFO: Delay completed[0m
+2025-06-21T08:22:18.050799 [ESP8266]  INFO: [MCPServer] Debug: Loop it
+2025-06-21T08:22:18.060898 [ESP8266]  INFO: eration start[0m
+2025-06-21T08:22:18.060911 [ESP8266]  INFO: [MCPServer] Debug: About to call isConnected()[0m
+2025-06-21T08:22:18.060915 [ESP8266]  INFO: [0;32mI
+2025-06-21T08:22:18.071031 [ESP8266]  INFO: [MCPServer] Debug: isConnected() returned: true[0m
+2025-06-21T08:22:18.071052 [ESP8266]  INFO: [0;
+2025-06-21T08:22:18.081230 [ESP8266]  INFO: [MCPServer] Debug: About to call transport->read()[
+2025-06-21T08:22:18.091361 [ESP8266]  INFO: 0m
+2025-06-21T08:22:18.091373 [ESP8266]  INFO: [MCPServer] Debug: transport->read() returned: true[0m
+2025-06-21T08:22:18.091378 [ESP8266]  INFO: [0;32mI (13948) MC
+2025-06-21T08:22:18.101458 [ESP8266]  INFO: PServer: Debug: Read successful, buffer size: 0[0m
+2025-06-21T08:22:18.101466 [ESP8266]  INFO: [0;32mI (1
+2025-06-21T08:22:18.114233 [ESP8266]  INFO: [MCPServer] Debug: About to delay[0m
+2025-06-21T08:22:18.114257 [ESP8266]  INFO: [MCPServer] Debug: Delay completed[
+2025-06-21T08:22:18.124349 [ESP8266]  INFO: 0m
+2025-06-21T08:22:18.124358 [ESP8266]  INFO: [MCPServer] Debug: Loop iteration start[0m
+2025-06-21T08:22:18.124362 [ESP8266]  INFO: [MCPServer] Deb
+2025-06-21T08:22:18.134439 [ESP8266]  INFO: ug: About to call isConnected()[0m
+2025-06-21T08:22:18.134444 [ESP8266]  INFO: [0;32mI (13990) MCPServer:
+2025-06-21T08:22:18.146181 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:18.146193 [ESP8266]  INFO: [MCPServer] Debug: About to call trans
+2025-06-21T08:22:18.156302 [ESP8266]  INFO: port->read()[0m
+2025-06-21T08:22:18.156318 [ESP8266]  INFO: [MCPServer] Debug: transport->
+2025-06-21T08:22:18.166406 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:18.166413 [ESP8266]  INFO: [MCPServer] Debug: Re
+2025-06-21T08:22:18.176501 [ESP8266]  INFO: ad successful, buffer size: 0[0m
+2025-06-21T08:22:18.176510 [ESP8266]  INFO: [MCPServer] Debug: About to delay[0m
+2025-06-21T08:22:18.176513 [ESP8266]  INFO: [0;32
+2025-06-21T08:22:18.186597 [ESP8266]  INFO: [MCPServer] Debug: Delay completed[0m
+2025-06-21T08:22:18.186606 [ESP8266]  INFO: [0;32mI (1404
+2025-06-21T08:22:18.196679 [ESP8266]  INFO: [MCPServer] Debug: Loop iteration start[0m
+2025-06-21T08:22:18.196685 [ESP8266]  INFO: [MCPServer] Debug: About to call
+2025-06-21T08:22:18.209177 [ESP8266]  INFO: isConnected()[0m
+2025-06-21T08:22:18.209189 [ESP8266]  INFO: [MCPServer] Debug: isConnecte
+2025-06-21T08:22:18.219275 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:18.219284 [ESP8266]  INFO: [MCPServer] Debug: About to call transport->read()[0m
+2025-06-21T08:22:18.229377 [ESP8266]  INFO: [MCPServer] Debug: transport->read() returned: t
+2025-06-21T08:22:18.239468 [ESP8266]  INFO: rue[0m
+2025-06-21T08:22:18.239474 [ESP8266]  INFO: [MCPServer] Debug: Read successful, buffer size: 0[0m
+2025-06-21T08:22:18.239478 [ESP8266]  INFO: [0;32mI (14098
+2025-06-21T08:22:18.250596 [ESP8266]  INFO: [MCPServer] Debug: About to delay[0m
+2025-06-21T08:22:18.250633 [ESP8266]  INFO: [0;32mI (14107) MCPServ
+2025-06-21T08:22:18.260722 [ESP8266]  INFO: er: Debug: Delay completed[0m
+2025-06-21T08:22:18.260732 [ESP8266]  INFO: [MCPServer] Debug: Loop iteration start[0m
+2025-06-21T08:22:18.260736 [ESP8266]  INFO: [0
+2025-06-21T08:22:18.270838 [ESP8266]  INFO: [MCPServer] Debug: About to call isConnected()[0m
+2025-06-21T08:22:18.282239 [ESP8266]  INFO: [MCPServer] Debug: isConnected() returned: true[0m
+2025-06-21T08:22:18.282277 [ESP8266]  INFO: [0;32mI (14139) MCPServer
+2025-06-21T08:22:18.292368 [ESP8266]  INFO: : Debug: About to call transport->read()[0m
+2025-06-21T08:22:18.292380 [ESP8266]  INFO: [0;32mI (14149) M
+2025-06-21T08:22:18.302460 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:18.302469 [ESP8266]  INFO: [0;32mI
+2025-06-21T08:22:18.315228 [ESP8266]  INFO: [MCPServer] Debug: Read successful, buffer size: 0[0m
+2025-06-21T08:22:18.315264 [ESP8266]  INFO: [MCPServer] Debug
+2025-06-21T08:22:18.325415 [ESP8266]  INFO: : About to delay[0m
+2025-06-21T08:22:18.325441 [ESP8266]  INFO: [MCPServer] Debug: Delay completed[0m
+2025-06-21T08:22:18.325446 [ESP8266]  INFO: [0;32mI (14183) M
+2025-06-21T08:22:18.335575 [ESP8266]  INFO: CPServer: Debug: Loop iteration start[0m
+2025-06-21T08:22:18.335600 [ESP8266]  INFO: [0;32mI (14191) MCPS
+2025-06-21T08:22:18.345722 [ESP8266]  INFO: erver: Debug: About to call isConnected()[0m
+2025-06-21T08:22:18.345744 [ESP8266]  INFO: [0;32mI (14201)
+2025-06-21T08:22:18.357552 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:18.357588 [ESP8266]  INFO: [MCPServer] Debug: About to
+2025-06-21T08:22:18.367675 [ESP8266]  INFO: call transport->read()[0m
+2025-06-21T08:22:18.367685 [ESP8266]  INFO: [MCPServer] Debug: transport->read() returned: true
+2025-06-21T08:22:18.379349 [ESP8266]  INFO: [0m
+2025-06-21T08:22:18.379382 [ESP8266]  INFO: [MCPServer] Debug: Read successful, buffer
+2025-06-21T08:22:18.389491 [ESP8266]  INFO: size: 0[0m
+2025-06-21T08:22:18.389505 [ESP8266]  INFO: [MCPServer] Debug: About to delay[0m
+2025-06-21T08:22:18.389510 [ESP8266]  INFO: [0;32mI (14247) MCPServer:
+2025-06-21T08:22:18.399598 [ESP8266]  INFO: Debug: Delay completed[0m
+2025-06-21T08:22:18.399607 [ESP8266]  INFO: [MCPServer] Debug: L
+2025-06-21T08:22:18.411173 [ESP8266]  INFO: oop iteration start[0m
+2025-06-21T08:22:18.411196 [ESP8266]  INFO: [MCPServer] Debug: About to call isConnected()[0m
+2025-06-21T08:22:18.411201 [ESP8266]  INFO: [0
+2025-06-21T08:22:18.421399 [ESP8266]  INFO: [MCPServer] Debug: isConnected() returned: true[0m
+2025-06-21T08:22:18.431547 [ESP8266]  INFO: [MCPServer] Debug: About to call transport->re
+2025-06-21T08:22:18.441638 [ESP8266]  INFO: ad()[0m
+2025-06-21T08:22:18.441644 [ESP8266]  INFO: [MCPServer] Debug: transport->read() returned: true[0m
+2025-06-21T08:22:18.441648 [ESP8266]  INFO: [0;32mI (142
+2025-06-21T08:22:18.451747 [ESP8266]  INFO: [MCPServer] Debug: Read successful, buffer size: 0[0m
+2025-06-21T08:22:18.451766 [ESP8266]  INFO: [0;3
+2025-06-21T08:22:18.461858 [ESP8266]  INFO: [MCPServer] Debug: About to delay[0m
+2025-06-21T08:22:18.461871 [ESP8266]  INFO: [MCPServer] Debug: Delay compl
+2025-06-21T08:22:18.471955 [ESP8266]  INFO: eted[0m
+2025-06-21T08:22:18.471963 [ESP8266]  INFO: [MCPServer] Debug: Loop iteration star
+2025-06-21T08:22:18.482210 [ESP8266]  INFO: t[0m
+2025-06-21T08:22:18.482247 [ESP8266]  INFO: [MCPServer] Debug: About to call isConnec
+2025-06-21T08:22:18.492335 [ESP8266]  INFO: ted()[0m
+2025-06-21T08:22:18.492343 [ESP8266]  INFO: [MCPServer] Debug: isConnected() returned: true[0m
+2025-06-21T08:22:18.492347 [ESP8266]  INFO: [0;32mI (14350)
+2025-06-21T08:22:18.502423 [ESP8266]  INFO: MCPServer: Debug: About to call transport->read()[0m
+2025-06-21T08:22:18.502428 [ESP8266]  INFO: [0;32mI
+2025-06-21T08:22:18.512520 [ESP8266]  INFO: [MCPServer] Debug: transport->read() returned: true[0m
+2025-06-21T08:22:18.522623 [ESP8266]  INFO: [MCPServer] Debug: Read successful, buffer size: 0[0m
+2025-06-21T08:22:18.522635 [ESP8266]  INFO: [0;32mI (14379) MCPSer
+2025-06-21T08:22:18.532714 [ESP8266]  INFO: ver: Debug: About to delay[0m
+2025-06-21T08:22:18.532720 [ESP8266]  INFO: [MCPServer] Debu
+2025-06-21T08:22:18.542814 [ESP8266]  INFO: g: Delay completed[0m
+2025-06-21T08:22:18.542827 [ESP8266]  INFO: [MCPServer] Debug: Loop iteration start[0m
+2025-06-21T08:22:18.542831 [ESP8266]  INFO: [0;32mI (1
+2025-06-21T08:22:18.552917 [ESP8266]  INFO: [MCPServer] Debug: About to call isConnected()[0m
+2025-06-21T08:22:18.552926 [ESP8266]  INFO: [0;32m
+2025-06-21T08:22:18.566186 [ESP8266]  INFO: [MCPServer] Debug: isConnected() returned: true[0m
+2025-06-21T08:22:18.566199 [ESP8266]  INFO: [MCPServer] Debug:
+2025-06-21T08:22:18.576286 [ESP8266]  INFO: About to call transport->read()[0m
+2025-06-21T08:22:18.576294 [ESP8266]  INFO: [0;32mI (14430) MCPServer
+2025-06-21T08:22:18.586374 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:18.586381 [ESP8266]  INFO: [MCPServer] Debug: Read successfu
+2025-06-21T08:22:18.597186 [ESP8266]  INFO: l, buffer size: 0[0m
+2025-06-21T08:22:18.597199 [ESP8266]  INFO: [MCPServer] Debug: About
+2025-06-21T08:22:18.607286 [ESP8266]  INFO: to delay[0m
+2025-06-21T08:22:18.607294 [ESP8266]  INFO: [MCPServer] Debug: Delay completed[0m
+2025-06-21T08:22:18.607297 [ESP8266]  INFO: [0;32mI (14464) MCPServer
+2025-06-21T08:22:18.617379 [ESP8266]  INFO: : Debug: Loop iteration start[0m
+2025-06-21T08:22:18.617386 [ESP8266]  INFO: [MCPServer] D
+2025-06-21T08:22:18.627481 [ESP8266]  INFO: ebug: About to call isConnected()[0m
+2025-06-21T08:22:18.627496 [ESP8266]  INFO: [0;32mI (14482) MCPServe
+2025-06-21T08:22:18.637586 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:18.637597 [ESP8266]  INFO: [MCPServer] Debug: About to call tra
+2025-06-21T08:22:18.650210 [ESP8266]  INFO: nsport->read()[0m
+2025-06-21T08:22:18.650221 [ESP8266]  INFO: [MCPServer] Debug: transport->read() returned: true[0m
+2025-06-21T08:22:18.650225 [ESP8266]  INFO: [0
+2025-06-21T08:22:18.660307 [ESP8266]  INFO: [MCPServer] Debug: Read successful, buffer size: 0
+2025-06-21T08:22:18.670401 [ESP8266]  INFO: [0m
+2025-06-21T08:22:18.670410 [ESP8266]  INFO: [MCPServer] Debug: About to delay[0m
+2025-06-21T08:22:18.670413 [ESP8266]  INFO: [0;
+2025-06-21T08:22:18.680498 [ESP8266]  INFO: [MCPServer] Debug: Delay completed[0m
+2025-06-21T08:22:18.680508 [ESP8266]  INFO: [MCPServer] Debug: Loop iter
+2025-06-21T08:22:18.690587 [ESP8266]  INFO: ation start[0m
+2025-06-21T08:22:18.690592 [ESP8266]  INFO: [MCPServer] Debug: About to cal
+2025-06-21T08:22:18.700684 [ESP8266]  INFO: l isConnected()[0m
+2025-06-21T08:22:18.700692 [ESP8266]  INFO: [MCPServer] Debug: isConnec
+2025-06-21T08:22:18.710777 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:18.710786 [ESP8266]  INFO: [MCPServer] Debug: About to call transport->read()[0m
+2025-06-21T08:22:18.720864 [ESP8266]  INFO: [MCPServer] Debug: transport->read() returned:
+2025-06-21T08:22:18.730954 [ESP8266]  INFO: true[0m
+2025-06-21T08:22:18.730965 [ESP8266]  INFO: [MCPServer] Debug: Read successful, buffer size: 0[0m
+2025-06-21T08:22:18.730969 [ESP8266]  INFO: [0;32mI (145
+2025-06-21T08:22:18.741055 [ESP8266]  INFO: [MCPServer] Debug: About to delay[0m
+2025-06-21T08:22:18.741066 [ESP8266]  INFO: [0;32mI (14607) MCPSe
+2025-06-21T08:22:18.751147 [ESP8266]  INFO: rver: Debug: Delay completed[0m
+2025-06-21T08:22:18.751153 [ESP8266]  INFO: [MCPServer] De
+2025-06-21T08:22:18.764697 [ESP8266]  INFO: bug: Loop iteration start[0m
+2025-06-21T08:22:18.764731 [ESP8266]  INFO: [MCPServer] Debug: About to call isConnected()[0
+2025-06-21T08:22:18.774819 [ESP8266]  INFO: m
+2025-06-21T08:22:18.774828 [ESP8266]  INFO: [MCPServer] Debug: isConnected() returned: true[0m
+2025-06-21T08:22:18.774832 [ESP8266]  INFO: [0;32mI (14631) MCPServ
+2025-06-21T08:22:18.784910 [ESP8266]  INFO: er: Debug: About to call transport->read()[0m
+2025-06-21T08:22:18.784916 [ESP8266]  INFO: [0;32mI (14641)
+2025-06-21T08:22:18.795004 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:18.795090 [ESP8266]  INFO: [0;32m
+2025-06-21T08:22:18.805155 [ESP8266]  INFO: [MCPServer] Debug: Read successful, buffer size: 0[0m
+2025-06-21T08:22:18.805165 [ESP8266]  INFO: [MCPServer] Deb
+2025-06-21T08:22:18.815247 [ESP8266]  INFO: ug: About to delay[0m
+2025-06-21T08:22:18.815254 [ESP8266]  INFO: [MCPServer] Debug: Delay
+2025-06-21T08:22:18.825344 [ESP8266]  INFO: completed[0m
+2025-06-21T08:22:18.825353 [ESP8266]  INFO: [MCPServer] Debug: Loop iteration start[0m
+2025-06-21T08:22:18.825357 [ESP8266]  INFO: [0;32mI (14683) MC
+2025-06-21T08:22:18.835441 [ESP8266]  INFO: PServer: Debug: About to call isConnected()[0m
+2025-06-21T08:22:18.835449 [ESP8266]  INFO: [0;32mI (14692
+2025-06-21T08:22:18.845531 [ESP8266]  INFO: [MCPServer] Debug: isConnected() returned: true[0m
+2025-06-21T08:22:18.845541 [ESP8266]  INFO: [0;32mI (
+2025-06-21T08:22:18.857169 [ESP8266]  INFO: [MCPServer] Debug: About to call transport->read()[0m
+2025-06-21T08:22:18.857182 [ESP8266]  INFO: [MCPServer] Debug:
+2025-06-21T08:22:18.867271 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:18.867281 [ESP8266]  INFO: [0;32mI (14720) MCPServe
+2025-06-21T08:22:18.877356 [ESP8266]  INFO: r: Debug: Read successful, buffer size: 0[0m
+2025-06-21T08:22:18.877361 [ESP8266]  INFO: [MCPServer] Debug: About to delay
+2025-06-21T08:22:18.887544 [ESP8266]  INFO: [0m
+2025-06-21T08:22:18.887578 [ESP8266]  INFO: [MCPServer] Debug: Delay completed[0m
+2025-06-21T08:22:18.887583 [ESP8266]  INFO: [
+2025-06-21T08:22:18.897748 [ESP8266]  INFO: [MCPServer] Debug: Loop iteration start[0m
+2025-06-21T08:22:18.897778 [ESP8266]  INFO: [MCPServer] Debug: Ab
+2025-06-21T08:22:18.907928 [ESP8266]  INFO: out to call isConnected()[0m
+2025-06-21T08:22:18.907949 [ESP8266]  INFO: [MCPServer] Debug
+2025-06-21T08:22:18.920213 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:18.920236 [ESP8266]  INFO: [MCPServer] Debug: About to call transport->
+2025-06-21T08:22:18.930345 [ESP8266]  INFO: read()[0m
+2025-06-21T08:22:18.930358 [ESP8266]  INFO: [MCPServer] Debug: transport->read()
+2025-06-21T08:22:18.940489 [ESP8266]  INFO: returned: true[0m
+2025-06-21T08:22:18.940510 [ESP8266]  INFO: [MCPServer] Debug: Read successful, buffer size: 0[0m
+2025-06-21T08:22:18.940516 [ESP8266]  INFO: [0
+2025-06-21T08:22:18.950623 [ESP8266]  INFO: [MCPServer] Debug: About to delay[0m
+2025-06-21T08:22:18.950637 [ESP8266]  INFO: [0;32mI (14
+2025-06-21T08:22:18.960738 [ESP8266]  INFO: [MCPServer] Debug: Delay completed[0m
+2025-06-21T08:22:18.960748 [ESP8266]  INFO: [0;32mI (14818) MCP
+2025-06-21T08:22:18.970860 [ESP8266]  INFO: Server: Debug: Loop iteration start[0m
+2025-06-21T08:22:18.970874 [ESP8266]  INFO: [MCPServer] Debug: About to call isConn
+2025-06-21T08:22:18.980966 [ESP8266]  INFO: ected()[0m
+2025-06-21T08:22:18.980974 [ESP8266]  INFO: [MCPServer] Debug: isConnected() re
+2025-06-21T08:22:18.991064 [ESP8266]  INFO: turned: true[0m
+2025-06-21T08:22:18.991071 [ESP8266]  INFO: [MCPServer] Debug: About to ca
+2025-06-21T08:22:19.001192 [ESP8266]  INFO: ll transport->read()[0m
+2025-06-21T08:22:19.001209 [ESP8266]  INFO: [MCPServer] Debug: transport->read() returned: true[0
+2025-06-21T08:22:19.011336 [ESP8266]  INFO: m
+2025-06-21T08:22:19.011354 [ESP8266]  INFO: [MCPServer] Debug: Read successful, buffer si
+2025-06-21T08:22:19.021462 [ESP8266]  INFO: ze: 0[0m
+2025-06-21T08:22:19.021474 [ESP8266]  INFO: [MCPServer] Debug: About to delay[0m
+2025-06-21T08:22:19.021477 [ESP8266]  INFO: [MCPServer] De
+2025-06-21T08:22:19.031618 [ESP8266]  INFO: bug: Delay completed[0m
+2025-06-21T08:22:19.031637 [ESP8266]  INFO: [MCPServer] Debug: Loo
+2025-06-21T08:22:19.041734 [ESP8266]  INFO: p iteration start[0m
+2025-06-21T08:22:19.041744 [ESP8266]  INFO: [MCPServer] Debug: About
+2025-06-21T08:22:19.051839 [ESP8266]  INFO: to call isConnected()[0m
+2025-06-21T08:22:19.051849 [ESP8266]  INFO: [MCPServer] Debug: isConnected() returned: true[0m
+2025-06-21T08:22:19.063181 [ESP8266]  INFO: [MCPServer] Debug: About to call transport->read
+2025-06-21T08:22:19.073276 [ESP8266]  INFO: ()[0m
+2025-06-21T08:22:19.073283 [ESP8266]  INFO: [MCPServer] Debug: transport->read() returned: true[0m
+2025-06-21T08:22:19.073287 [ESP8266]  INFO: [0;32mI (14931
+2025-06-21T08:22:19.083364 [ESP8266]  INFO: [MCPServer] Debug: Read successful, buffer size: 0[0m
+2025-06-21T08:22:19.083370 [ESP8266]  INFO: [0;32m
+2025-06-21T08:22:19.096162 [ESP8266]  INFO: [MCPServer] Debug: About to delay[0m
+2025-06-21T08:22:19.096176 [ESP8266]  INFO: [0;32mI (14957)
+2025-06-21T08:22:19.106261 [ESP8266]  INFO: MCPServer: Debug: Delay completed[0m
+2025-06-21T08:22:19.106269 [ESP8266]  INFO: [MCPServer] Debug: Loop iteration start
+2025-06-21T08:22:19.116354 [ESP8266]  INFO: [0m
+2025-06-21T08:22:19.116362 [ESP8266]  INFO: [MCPServer] Debug: About to call isConnected()[0m
+2025-06-21T08:22:19.116366 [ESP8266]  INFO: [0;32mI (14973) MCPSer
+2025-06-21T08:22:19.127955 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:19.127970 [ESP8266]  INFO: [0;32mI (14982) M
+2025-06-21T08:22:19.138059 [ESP8266]  INFO: CPServer: Debug: About to call transport->read()[0m
+2025-06-21T08:22:19.138069 [ESP8266]  INFO: [MCPServer] Debug: transpo
+2025-06-21T08:22:19.148168 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:19.148177 [ESP8266]  INFO: [MCPServer] Debug
+2025-06-21T08:22:19.158265 [ESP8266]  INFO: : Read successful, buffer size: 0[0m
+2025-06-21T08:22:19.158273 [ESP8266]  INFO: [MCPServer] Debug: About to delay[0m
+2025-06-21T08:22:19.158278 [ESP8266]  INFO: [
+2025-06-21T08:22:19.168362 [ESP8266]  INFO: [MCPServer] Debug: Delay completed[0m
+2025-06-21T08:22:19.168371 [ESP8266]  INFO: [0;32mI (
+2025-06-21T08:22:19.178460 [ESP8266]  INFO: [MCPServer] Debug: Loop iteration start[0m
+2025-06-21T08:22:19.178470 [ESP8266]  INFO: [0;32mI (150
+2025-06-21T08:22:19.188551 [ESP8266]  INFO: [MCPServer] Debug: About to call isConnected()[0m
+2025-06-21T08:22:19.188559 [ESP8266]  INFO: [MCPServer] Debug: isConn
+2025-06-21T08:22:19.198741 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:19.198779 [ESP8266]  INFO: [MCPServer] Debug: A
+2025-06-21T08:22:19.208846 [ESP8266]  INFO: bout to call transport->read()[0m
+2025-06-21T08:22:19.208861 [ESP8266]  INFO: [0;32mI (15062) MCPServer:
+2025-06-21T08:22:19.218970 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:19.218986 [ESP8266]  INFO: [MCPServer] Debug: Read successful,
+2025-06-21T08:22:19.229090 [ESP8266]  INFO: buffer size: 0[0m
+2025-06-21T08:22:19.229104 [ESP8266]  INFO: [MCPServer] Debug: About to
+2025-06-21T08:22:19.239152 [ESP8266]  INFO: delay[0m
+2025-06-21T08:22:19.239159 [ESP8266]  INFO: [MCPServer] Debug: Delay completed[0m
+2025-06-21T08:22:19.239162 [ESP8266]  INFO: [0;32mI (15098) MCPServer:
+2025-06-21T08:22:19.250179 [ESP8266]  INFO: Debug: Loop iteration start[0m
+2025-06-21T08:22:19.250194 [ESP8266]  INFO: [MCPServer] Deb
+2025-06-21T08:22:19.260287 [ESP8266]  INFO: ug: About to call isConnected()[0m
+2025-06-21T08:22:19.260296 [ESP8266]  INFO: [0;32mI (15113) MCPServer:
+2025-06-21T08:22:19.270390 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:19.270403 [ESP8266]  INFO: [MCPServer] Debug: About to call trans
+2025-06-21T08:22:19.280509 [ESP8266]  INFO: port->read()[0m
+2025-06-21T08:22:19.280523 [ESP8266]  INFO: [MCPServer] Debug: transport->
+2025-06-21T08:22:19.290610 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:19.290618 [ESP8266]  INFO: [MCPServer] Debug: Read successful, buffer size: 0[0
+2025-06-21T08:22:19.300700 [ESP8266]  INFO: m
+2025-06-21T08:22:19.300707 [ESP8266]  INFO: [MCPServer] Debug: About to delay[0m
+2025-06-21T08:22:19.300710 [ESP8266]  INFO: [0;32
+2025-06-21T08:22:19.310796 [ESP8266]  INFO: [MCPServer] Debug: Delay completed[0m
+2025-06-21T08:22:19.310806 [ESP8266]  INFO: [0;32mI (1516
+2025-06-21T08:22:19.320910 [ESP8266]  INFO: [MCPServer] Debug: Loop iteration start[0m
+2025-06-21T08:22:19.320925 [ESP8266]  INFO: [MCPServer] Debug: About to call
+2025-06-21T08:22:19.331022 [ESP8266]  INFO: isConnected()[0m
+2025-06-21T08:22:19.331032 [ESP8266]  INFO: [MCPServer] Debug: isConnecte
+2025-06-21T08:22:19.341117 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:19.341155 [ESP8266]  INFO: [MCPServer] Debug: About
+2025-06-21T08:22:19.352118 [ESP8266]  INFO: to call transport->read()[0m
+2025-06-21T08:22:19.352142 [ESP8266]  INFO: [MCPServer] Debug: transport->read() returned: t
+2025-06-21T08:22:19.362250 [ESP8266]  INFO: rue[0m
+2025-06-21T08:22:19.362264 [ESP8266]  INFO: [MCPServer] Debug: Read successful, buf
+2025-06-21T08:22:19.372358 [ESP8266]  INFO: fer size: 0[0m
+2025-06-21T08:22:19.372369 [ESP8266]  INFO: [MCPServer] Debug: About to delay[0m
+2025-06-21T08:22:19.372373 [ESP8266]  INFO: [0;32mI (15237) MCPServ
+2025-06-21T08:22:19.384077 [ESP8266]  INFO: er: Debug: Delay completed[0m
+2025-06-21T08:22:19.384099 [ESP8266]  INFO: [MCPServer] Debu
+2025-06-21T08:22:19.394168 [ESP8266]  INFO: g: Loop iteration start[0m
+2025-06-21T08:22:19.394179 [ESP8266]  INFO: [MCPServer] Debug: About to call isConnected()[0m
+2025-06-21T08:22:19.404262 [ESP8266]  INFO: [MCPServer] Debug: isConnected() returned: true
+2025-06-21T08:22:19.414389 [ESP8266]  INFO: [0m
+2025-06-21T08:22:19.414408 [ESP8266]  INFO: [MCPServer] Debug: About to call transport->read()[0m
+2025-06-21T08:22:19.414414 [ESP8266]  INFO: [0;32mI (15272) M
+2025-06-21T08:22:19.424562 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:19.424588 [ESP8266]  INFO: [0;32mI
+2025-06-21T08:22:19.434685 [ESP8266]  INFO: [MCPServer] Debug: Read successful, buffer size: 0[0m
+2025-06-21T08:22:19.434697 [ESP8266]  INFO: 
+2025-06-21T08:22:19.445223 [ESP8266]  INFO: [MCPServer] Debug: About to delay[0m
+2025-06-21T08:22:19.445250 [ESP8266]  INFO: [MCPServer] Debug: Delay c
+2025-06-21T08:22:19.455389 [ESP8266]  INFO: ompleted[0m
+2025-06-21T08:22:19.455412 [ESP8266]  INFO: [MCPServer] Debug: Loop iteration
+2025-06-21T08:22:19.465519 [ESP8266]  INFO: start[0m
+2025-06-21T08:22:19.465532 [ESP8266]  INFO: [MCPServer] Debug: About to call isConnected()[0m
+2025-06-21T08:22:19.465537 [ESP8266]  INFO: [0;32mI (15324)
+2025-06-21T08:22:19.477662 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:19.477684 [ESP8266]  INFO: [0;32mI (15
+2025-06-21T08:22:19.487832 [ESP8266]  INFO: [MCPServer] Debug: About to call transport->read()[0m
+2025-06-21T08:22:19.487858 [ESP8266]  INFO: [MCPServer] Debug: t
+2025-06-21T08:22:19.497955 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:19.497968 [ESP8266]  INFO: [0;32mI (15352) MCPServer:
+2025-06-21T08:22:19.508054 [ESP8266]  INFO: Debug: Read successful, buffer size: 0[0m
+2025-06-21T08:22:19.508063 [ESP8266]  INFO: [0;32mI (15362) MC
+2025-06-21T08:22:19.518187 [ESP8266]  INFO: PServer: Debug: About to delay[0m
+2025-06-21T08:22:19.518383 [ESP8266]  INFO: [MCPServer] Debug: Delay completed[0m
+2025-06-21T08:22:19.518390 [ESP8266]  INFO: [0;
+2025-06-21T08:22:19.528485 [ESP8266]  INFO: [MCPServer] Debug: Loop iteration start[0m
+2025-06-21T08:22:19.528497 [ESP8266]  INFO: [0;32m
+2025-06-21T08:22:19.538579 [ESP8266]  INFO: [MCPServer] Debug: About to call isConnected()[0m
+2025-06-21T08:22:19.538587 [ESP8266]  INFO: [MCPServer] Debug:
+2025-06-21T08:22:19.549889 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:19.549926 [ESP8266]  INFO: [MCPServer] De
+2025-06-21T08:22:19.560021 [ESP8266]  INFO: bug: About to call transport->read()[0m
+2025-06-21T08:22:19.560033 [ESP8266]  INFO: [MCPServer] Debug: transport->read() r
+2025-06-21T08:22:19.570119 [ESP8266]  INFO: eturned: true[0m
+2025-06-21T08:22:19.570134 [ESP8266]  INFO: [MCPServer] Debug: Read succe
+2025-06-21T08:22:19.580225 [ESP8266]  INFO: ssful, buffer size: 0[0m
+2025-06-21T08:22:19.580238 [ESP8266]  INFO: [MCPServer] Debug: Ab
+2025-06-21T08:22:19.590327 [ESP8266]  INFO: out to delay[0m
+2025-06-21T08:22:19.590337 [ESP8266]  INFO: [MCPServer] Debug: Delay completed[0m
+2025-06-21T08:22:19.590342 [ESP8266]  INFO: [0;32mI (15448) MCPSe
+2025-06-21T08:22:19.602187 [ESP8266]  INFO: rver: Debug: Loop iteration start[0m
+2025-06-21T08:22:19.602204 [ESP8266]  INFO: [0;32mI (15455) MCPServe
+2025-06-21T08:22:19.612290 [ESP8266]  INFO: r: Debug: About to call isConnected()[0m
+2025-06-21T08:22:19.612299 [ESP8266]  INFO: [MCPServer] Debug: isConnected() retu
+2025-06-21T08:22:19.622383 [ESP8266]  INFO: rned: true[0m
+2025-06-21T08:22:19.622391 [ESP8266]  INFO: [MCPServer] Debug: About to call
+2025-06-21T08:22:19.632485 [ESP8266]  INFO: transport->read()[0m
+2025-06-21T08:22:19.632494 [ESP8266]  INFO: [MCPServer] Debug: transport->read() returned: true[0m
+2025-06-21T08:22:19.643076 [ESP8266]  INFO: [MCPServer] Debug: Read successful, buffer size
+2025-06-21T08:22:19.653179 [ESP8266]  INFO: : 0[0m
+2025-06-21T08:22:19.653195 [ESP8266]  INFO: [MCPServer] Debug: About to delay[0m
+2025-06-21T08:22:19.663288 [ESP8266]  INFO: [MCPServer] Debug: Delay completed[0m
+2025-06-21T08:22:19.663298 [ESP8266]  INFO: [MCPServer] Debug: Loop
+2025-06-21T08:22:19.673390 [ESP8266]  INFO: iteration start[0m
+2025-06-21T08:22:19.673398 [ESP8266]  INFO: [MCPServer] Debug: About to
+2025-06-21T08:22:19.683907 [ESP8266]  INFO: call isConnected()[0m
+2025-06-21T08:22:19.683934 [ESP8266]  INFO: [MCPServer] Debug: isConnected() returned: true[0m
+2025-06-21T08:22:19.683940 [ESP8266]  INFO: [
+2025-06-21T08:22:19.694047 [ESP8266]  INFO: [MCPServer] Debug: About to call transport->read()
+2025-06-21T08:22:19.704274 [ESP8266]  INFO: [0m
+2025-06-21T08:22:19.704303 [ESP8266]  INFO: [MCPServer] Debug: transport->read() retur
+2025-06-21T08:22:19.714407 [ESP8266]  INFO: ned: true[0m
+2025-06-21T08:22:19.714423 [ESP8266]  INFO: [MCPServer] Debug: Read successful, buffer size: 0[0m
+2025-06-21T08:22:19.714430 [ESP8266]  INFO: [0;32mI
+2025-06-21T08:22:19.724517 [ESP8266]  INFO: [MCPServer] Debug: About to delay[0m
+2025-06-21T08:22:19.724528 [ESP8266]  INFO: [0;32mI (15587) M
+2025-06-21T08:22:19.734611 [ESP8266]  INFO: CPServer: Debug: Delay completed[0m
+2025-06-21T08:22:19.734622 [ESP8266]  INFO: [MCPServer] Debug: Loop iteration start[0
+2025-06-21T08:22:19.745189 [ESP8266]  INFO: m
+2025-06-21T08:22:19.745206 [ESP8266]  INFO: [MCPServer] Debug: About to call isConnected(
+2025-06-21T08:22:19.755293 [ESP8266]  INFO: )[0m
+2025-06-21T08:22:19.755302 [ESP8266]  INFO: [MCPServer] Debug: isConnected() returned
+2025-06-21T08:22:19.765383 [ESP8266]  INFO: : true[0m
+2025-06-21T08:22:19.765389 [ESP8266]  INFO: [MCPServer] Debug: About to call transport->read()[0m
+2025-06-21T08:22:19.765393 [ESP8266]  INFO: [0;32mI (15
+2025-06-21T08:22:19.776522 [ESP8266]  INFO: [MCPServer] Debug: transport->read() returned: true[0m
+2025-06-21T08:22:19.776560 [ESP8266]  INFO: [0
+2025-06-21T08:22:19.786668 [ESP8266]  INFO: [MCPServer] Debug: Read successful, buffer size: 0[0m
+2025-06-21T08:22:19.786686 [ESP8266]  INFO: [0;32mI (15643) MCPServer:
+2025-06-21T08:22:19.796773 [ESP8266]  INFO: Debug: About to delay[0m
+2025-06-21T08:22:19.796782 [ESP8266]  INFO: [MCPServer] Debug: D
+2025-06-21T08:22:19.806861 [ESP8266]  INFO: elay completed[0m
+2025-06-21T08:22:19.806868 [ESP8266]  INFO: [MCPServer] Debug: Loop iter
+2025-06-21T08:22:19.817615 [ESP8266]  INFO: ation start[0m
+2025-06-21T08:22:19.817636 [ESP8266]  INFO: [MCPServer] Debug: About to call isConnected()[0m
+2025-06-21T08:22:19.817641 [ESP8266]  INFO: [0;32mI (1
+2025-06-21T08:22:19.827808 [ESP8266]  INFO: [MCPServer] Debug: isConnected() returned: true[0m
+2025-06-21T08:22:19.827841 [ESP8266]  INFO: [0;32
+2025-06-21T08:22:19.837961 [ESP8266]  INFO: [MCPServer] Debug: About to call transport->read()[0m
+2025-06-21T08:22:19.837973 [ESP8266]  INFO: [MCPServer] De
+2025-06-21T08:22:19.848105 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:19.848159 [ESP8266]  INFO: [0;32mI (15703) MCPS
+2025-06-21T08:22:19.858326 [ESP8266]  INFO: erver: Debug: Read successful, buffer size: 0[0m
+2025-06-21T08:22:19.858355 [ESP8266]  INFO: [0;32mI (157
+2025-06-21T08:22:19.870321 [ESP8266]  INFO: [MCPServer] Debug: About to delay[0m
+2025-06-21T08:22:19.870347 [ESP8266]  INFO: [MCPServer] Debug: Delay completed[0m
+2025-06-21T08:22:19.880503 [ESP8266]  INFO: [MCPServer] Debug: Loop iteration start[0m
+2025-06-21T08:22:19.880530 [ESP8266]  INFO: [MCPServer] Debug
+2025-06-21T08:22:19.890635 [ESP8266]  INFO: : About to call isConnected()[0m
+2025-06-21T08:22:19.890644 [ESP8266]  INFO: [MCPServer] D
+2025-06-21T08:22:19.900917 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:19.900959 [ESP8266]  INFO: [0;32mI (15754) MCPServ
+2025-06-21T08:22:19.911045 [ESP8266]  INFO: er: Debug: About to call transport->read()[0m
+2025-06-21T08:22:19.911053 [ESP8266]  INFO: [MCPServer] Debug: transport->re
+2025-06-21T08:22:19.921136 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:19.921142 [ESP8266]  INFO: [MCPServer] Debug: Read
+2025-06-21T08:22:19.931227 [ESP8266]  INFO: successful, buffer size: 0[0m
+2025-06-21T08:22:19.931239 [ESP8266]  INFO: [MCPServer] Debug: About to delay[0m
+2025-06-21T08:22:19.931243 [ESP8266]  INFO: [0;32mI
+2025-06-21T08:22:19.941330 [ESP8266]  INFO: [MCPServer] Debug: Delay completed[0m
+2025-06-21T08:22:19.941340 [ESP8266]  INFO: [0;32mI (15798)
+2025-06-21T08:22:19.951424 [ESP8266]  INFO: MCPServer: Debug: Loop iteration start[0m
+2025-06-21T08:22:19.951432 [ESP8266]  INFO: [0;32mI (15806) MC
+2025-06-21T08:22:19.962185 [ESP8266]  INFO: PServer: Debug: About to call isConnected()[0m
+2025-06-21T08:22:19.962199 [ESP8266]  INFO: [MCPServer] Debug: isConnected(
+2025-06-21T08:22:19.972282 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:19.972290 [ESP8266]  INFO: [MCPServer] Debug: About t
+2025-06-21T08:22:19.982368 [ESP8266]  INFO: o call transport->read()[0m
+2025-06-21T08:22:19.982375 [ESP8266]  INFO: [MCPServer] Debug: transport->read() returned: tru
+2025-06-21T08:22:19.992462 [ESP8266]  INFO: e[0m
+2025-06-21T08:22:19.992471 [ESP8266]  INFO: [MCPServer] Debug: Read successful, buffe
+2025-06-21T08:22:20.002548 [ESP8266]  INFO: r size: 0[0m
+2025-06-21T08:22:20.002554 [ESP8266]  INFO: [MCPServer] Debug: About to delay
+2025-06-21T08:22:20.012662 [ESP8266]  INFO: [0m
+2025-06-21T08:22:20.012674 [ESP8266]  INFO: [MCPServer] Debug: Delay completed[0m
+2025-06-21T08:22:20.012679 [ESP8266]  INFO: [MCPServer] Debug:
+2025-06-21T08:22:20.023214 [ESP8266]  INFO: Loop iteration start[0m
+2025-06-21T08:22:20.023235 [ESP8266]  INFO: [MCPServer] Debug: Ab
+2025-06-21T08:22:20.033323 [ESP8266]  INFO: out to call isConnected()[0m
+2025-06-21T08:22:20.033332 [ESP8266]  INFO: [MCPServer] Debug
+2025-06-21T08:22:20.043407 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:20.043413 [ESP8266]  INFO: [MCPServer] Debug: About to call transport->
+2025-06-21T08:22:20.053497 [ESP8266]  INFO: read()[0m
+2025-06-21T08:22:20.053504 [ESP8266]  INFO: [MCPServer] Debug: transport->read()
+2025-06-21T08:22:20.064685 [ESP8266]  INFO: returned: true[0m
+2025-06-21T08:22:20.064699 [ESP8266]  INFO: [MCPServer] Debug: Read successful, buffer size: 0[0m
+2025-06-21T08:22:20.064703 [ESP8266]  INFO: [0
+2025-06-21T08:22:20.074790 [ESP8266]  INFO: [MCPServer] Debug: About to delay[0m
+2025-06-21T08:22:20.074799 [ESP8266]  INFO: [0;32mI (15
+2025-06-21T08:22:20.084882 [ESP8266]  INFO: [MCPServer] Debug: Delay completed[0m
+2025-06-21T08:22:20.084889 [ESP8266]  INFO: [MCPServer] Debug: Loop iteration st
+2025-06-21T08:22:20.098186 [ESP8266]  INFO: art[0m
+2025-06-21T08:22:20.098197 [ESP8266]  INFO: [MCPServer] Debug: About to call isConnected()[0m
+2025-06-21T08:22:20.098201 [ESP8266]  INFO: [0;32mI (15956) MC
+2025-06-21T08:22:20.108286 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:20.108298 [ESP8266]  INFO: [0;32mI (1596
+2025-06-21T08:22:20.118379 [ESP8266]  INFO: [MCPServer] Debug: About to call transport->read()[0m
+2025-06-21T08:22:20.118389 [ESP8266]  INFO: [0;32
+2025-06-21T08:22:20.130254 [ESP8266]  INFO: [MCPServer] Debug: transport->read() returned: true[0m
+2025-06-21T08:22:20.130271 [ESP8266]  INFO: [MCPServer] D
+2025-06-21T08:22:20.140364 [ESP8266]  INFO: ebug: Read successful, buffer size: 0[0m
+2025-06-21T08:22:20.140376 [ESP8266]  INFO: [0;32mI (15994) MCPS
+2025-06-21T08:22:20.150466 [ESP8266]  INFO: erver: Debug: About to delay[0m
+2025-06-21T08:22:20.150478 [ESP8266]  INFO: [MCPServer] Debug: Delay completed[0m
+2025-06-21T08:22:20.150482 [ESP8266]  INFO: [0;32
+2025-06-21T08:22:20.160560 [ESP8266]  INFO: [MCPServer] Debug: Loop iteration start[0m
+2025-06-21T08:22:20.160569 [ESP8266]  INFO: [0;32mI
+2025-06-21T08:22:20.170656 [ESP8266]  INFO: [MCPServer] Debug: About to call isConnected()[0m
+2025-06-21T08:22:20.170668 [ESP8266]  INFO: [MCPServer] Debug: is
+2025-06-21T08:22:20.180749 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:20.180759 [ESP8266]  INFO: [MCPServer] Debu
+2025-06-21T08:22:20.190842 [ESP8266]  INFO: g: About to call transport->read()[0m
+2025-06-21T08:22:20.190851 [ESP8266]  INFO: [0;32mI (16045) MCPServ
+2025-06-21T08:22:20.201377 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:20.201415 [ESP8266]  INFO: [MCPServer] Debug: Read success
+2025-06-21T08:22:20.211508 [ESP8266]  INFO: ful, buffer size: 0[0m
+2025-06-21T08:22:20.211518 [ESP8266]  INFO: [MCPServer] Debug: Abou
+2025-06-21T08:22:20.221603 [ESP8266]  INFO: t to delay[0m
+2025-06-21T08:22:20.221611 [ESP8266]  INFO: [MCPServer] Debug: Delay completed[0m
+2025-06-21T08:22:20.221615 [ESP8266]  INFO: [0;32mI (16079) MCPServ
+2025-06-21T08:22:20.231709 [ESP8266]  INFO: er: Debug: Loop iteration start[0m
+2025-06-21T08:22:20.231720 [ESP8266]  INFO: [0;32mI (16087) MCPServer:
+2025-06-21T08:22:20.241804 [ESP8266]  INFO: Debug: About to call isConnected()[0m
+2025-06-21T08:22:20.241811 [ESP8266]  INFO: [0;32mI (16096) MCPSer
+2025-06-21T08:22:20.253013 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:20.253028 [ESP8266]  INFO: [MCPServer] Debug: About to call t
+2025-06-21T08:22:20.263157 [ESP8266]  INFO: ransport->read()[0m
+2025-06-21T08:22:20.263169 [ESP8266]  INFO: [MCPServer] Debug: transpo
+2025-06-21T08:22:20.274197 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:20.274211 [ESP8266]  INFO: [MCPServer] Debug: Read successful, buffer size:
+2025-06-21T08:22:20.284295 [ESP8266]  INFO: 0[0m
+2025-06-21T08:22:20.284302 [ESP8266]  INFO: [MCPServer] Debug: About to delay[0m
+2025-06-21T08:22:20.284306 [ESP8266]  INFO: [
+2025-06-21T08:22:20.296585 [ESP8266]  INFO: [MCPServer] Debug: Delay completed[0m
+2025-06-21T08:22:20.296628 [ESP8266]  INFO: [MCPServer] Debug: Loop it
+2025-06-21T08:22:20.306719 [ESP8266]  INFO: eration start[0m
+2025-06-21T08:22:20.306728 [ESP8266]  INFO: [MCPServer] Debug: About to c
+2025-06-21T08:22:20.316815 [ESP8266]  INFO: all isConnected()[0m
+2025-06-21T08:22:20.316824 [ESP8266]  INFO: [MCPServer] Debug: isConnected() returned: true[0m
+2025-06-21T08:22:20.316828 [ESP8266]  INFO: [0;
+2025-06-21T08:22:20.326915 [ESP8266]  INFO: [MCPServer] Debug: About to call transport->read()[
+2025-06-21T08:22:20.337032 [ESP8266]  INFO: 0m
+2025-06-21T08:22:20.337048 [ESP8266]  INFO: [MCPServer] Debug: transport->read() returned: true[0m
+2025-06-21T08:22:20.337053 [ESP8266]  INFO: [0;32mI (16195) MC
+2025-06-21T08:22:20.347149 [ESP8266]  INFO: PServer: Debug: Read successful, buffer size: 0[0m
+2025-06-21T08:22:20.347161 [ESP8266]  INFO: [0;32mI (1
+2025-06-21T08:22:20.359167 [ESP8266]  INFO: [MCPServer] Debug: About to delay[0m
+2025-06-21T08:22:20.359184 [ESP8266]  INFO: [MCPServer] Debug: Delay completed[
+2025-06-21T08:22:20.369277 [ESP8266]  INFO: 0m
+2025-06-21T08:22:20.369289 [ESP8266]  INFO: [MCPServer] Debug: Loop iteration start[0m
+2025-06-21T08:22:20.380663 [ESP8266]  INFO: [MCPServer] Debug: About to call isConnected()[0m
+2025-06-21T08:22:20.380695 [ESP8266]  INFO: [0;32mI (16237) MCPServer:
+2025-06-21T08:22:20.390823 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:20.390844 [ESP8266]  INFO: [0;32mI (16245) MCPSe
+2025-06-21T08:22:20.400942 [ESP8266]  INFO: rver: Debug: About to call transport->read()[0m
+2025-06-21T08:22:20.400954 [ESP8266]  INFO: [0;32mI (1625
+2025-06-21T08:22:20.411048 [ESP8266]  INFO: [MCPServer] Debug: transport->read() returned: true[0m
+2025-06-21T08:22:20.411058 [ESP8266]  INFO: [MCPServer] Debug: Re
+2025-06-21T08:22:20.421173 [ESP8266]  INFO: ad successful, buffer size: 0[0m
+2025-06-21T08:22:20.421187 [ESP8266]  INFO: [MCPServer] D
+2025-06-21T08:22:20.431275 [ESP8266]  INFO: ebug: About to delay[0m
+2025-06-21T08:22:20.431283 [ESP8266]  INFO: [MCPServer] Debug: Delay completed[0m
+2025-06-21T08:22:20.431286 [ESP8266]  INFO: [0;32mI (1628
+2025-06-21T08:22:20.441390 [ESP8266]  INFO: [MCPServer] Debug: Loop iteration start[0m
+2025-06-21T08:22:20.441405 [ESP8266]  INFO: [0;32mI (16297)
+2025-06-21T08:22:20.451522 [ESP8266]  INFO: MCPServer: Debug: About to call isConnected()[0m
+2025-06-21T08:22:20.451541 [ESP8266]  INFO: [0;32mI (163
+2025-06-21T08:22:20.461636 [ESP8266]  INFO: [MCPServer] Debug: isConnected() returned: true[0m
+2025-06-21T08:22:20.461648 [ESP8266]  INFO: [MCPServer] Debug: About
+2025-06-21T08:22:20.471737 [ESP8266]  INFO: to call transport->read()[0m
+2025-06-21T08:22:20.471745 [ESP8266]  INFO: [MCPServer] Debu
+2025-06-21T08:22:20.482389 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:20.482413 [ESP8266]  INFO: [MCPServer] Debug: Read successful, buf
+2025-06-21T08:22:20.492524 [ESP8266]  INFO: fer size: 0[0m
+2025-06-21T08:22:20.492538 [ESP8266]  INFO: [MCPServer] Debug: About to del
+2025-06-21T08:22:20.502698 [ESP8266]  INFO: ay[0m
+2025-06-21T08:22:20.502710 [ESP8266]  INFO: [MCPServer] Debug: Delay completed[0m
+2025-06-21T08:22:20.512832 [ESP8266]  INFO: [MCPServer] Debug: Loop iteration start[0m
+2025-06-21T08:22:20.512852 [ESP8266]  INFO: [MCPServer] Debug:
+2025-06-21T08:22:20.522947 [ESP8266]  INFO: About to call isConnected()[0m
+2025-06-21T08:22:20.522957 [ESP8266]  INFO: [MCPServer] Deb
+2025-06-21T08:22:20.533046 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:20.533055 [ESP8266]  INFO: [0;32mI (16386) MCPServer
+2025-06-21T08:22:20.543189 [ESP8266]  INFO: : Debug: About to call transport->read()[0m
+2025-06-21T08:22:20.543202 [ESP8266]  INFO: [MCPServer] Debug: transport->read
+2025-06-21T08:22:20.553287 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:20.553295 [ESP8266]  INFO: [MCPServer] Debug: Read s
+2025-06-21T08:22:20.564353 [ESP8266]  INFO: uccessful, buffer size: 0[0m
+2025-06-21T08:22:20.564370 [ESP8266]  INFO: [MCPServer] Debug: About to delay[0m
+2025-06-21T08:22:20.564374 [ESP8266]  INFO: [0;32mI (
+2025-06-21T08:22:20.574471 [ESP8266]  INFO: [MCPServer] Debug: Delay completed[0m
+2025-06-21T08:22:20.574483 [ESP8266]  INFO: [0;32mI (16430) M
+2025-06-21T08:22:20.584569 [ESP8266]  INFO: CPServer: Debug: Loop iteration start[0m
+2025-06-21T08:22:20.584576 [ESP8266]  INFO: [0;32mI (16438) MCPS
+2025-06-21T08:22:20.594669 [ESP8266]  INFO: erver: Debug: About to call isConnected()[0m
+2025-06-21T08:22:20.594677 [ESP8266]  INFO: [MCPServer] Debug: isConnected()
+2025-06-21T08:22:20.604773 [ESP8266]  INFO: returned: true[0m
+2025-06-21T08:22:20.604782 [ESP8266]  INFO: [MCPServer] Debug: About to
+2025-06-21T08:22:20.614861 [ESP8266]  INFO: call transport->read()[0m
+2025-06-21T08:22:20.614867 [ESP8266]  INFO: [MCPServer] Debug: transport->read() returned: true
+2025-06-21T08:22:20.624977 [ESP8266]  INFO: [0m
+2025-06-21T08:22:20.624993 [ESP8266]  INFO: [MCPServer] Debug: Read successful, buffer
+2025-06-21T08:22:20.635093 [ESP8266]  INFO: size: 0[0m
+2025-06-21T08:22:20.635104 [ESP8266]  INFO: [MCPServer] Debug: About to delay[
+2025-06-21T08:22:20.645607 [ESP8266]  INFO: 0m
+2025-06-21T08:22:20.645624 [ESP8266]  INFO: [MCPServer] Debug: Delay completed[0m
+2025-06-21T08:22:20.645629 [ESP8266]  INFO: [MCPServer] Debug: L
+2025-06-21T08:22:20.655738 [ESP8266]  INFO: oop iteration start[0m
+2025-06-21T08:22:20.655752 [ESP8266]  INFO: [MCPServer] Debug: Abou
+2025-06-21T08:22:20.665836 [ESP8266]  INFO: t to call isConnected()[0m
+2025-06-21T08:22:20.665845 [ESP8266]  INFO: [MCPServer] Debug:
+2025-06-21T08:22:20.675933 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:20.675943 [ESP8266]  INFO: [MCPServer] Debug: About to call transport->re
+2025-06-21T08:22:20.686042 [ESP8266]  INFO: ad()[0m
+2025-06-21T08:22:20.686055 [ESP8266]  INFO: [MCPServer] Debug: transport->read() r
+2025-06-21T08:22:20.696198 [ESP8266]  INFO: eturned: true[0m
+2025-06-21T08:22:20.696209 [ESP8266]  INFO: [MCPServer] Debug: Read successful, buffer size: 0[0m
+2025-06-21T08:22:20.696213 [ESP8266]  INFO: [0;3
+2025-06-21T08:22:20.706296 [ESP8266]  INFO: [MCPServer] Debug: About to delay[0m
+2025-06-21T08:22:20.706305 [ESP8266]  INFO: [0;32mI (1656
+2025-06-21T08:22:20.717250 [ESP8266]  INFO: [MCPServer] Debug: Delay completed[0m
+2025-06-21T08:22:20.717285 [ESP8266]  INFO: [MCPServer] Debug: Loop iteration star
+2025-06-21T08:22:20.727371 [ESP8266]  INFO: t[0m
+2025-06-21T08:22:20.727381 [ESP8266]  INFO: [MCPServer] Debug: About to call isConnec
+2025-06-21T08:22:20.737469 [ESP8266]  INFO: ted()[0m
+2025-06-21T08:22:20.737480 [ESP8266]  INFO: [MCPServer] Debug: isConnected() retu
+2025-06-21T08:22:20.747592 [ESP8266]  INFO: rned: true[0m
+2025-06-21T08:22:20.747606 [ESP8266]  INFO: [MCPServer] Debug: About to call transport->read()[0m
+2025-06-21T08:22:20.747611 [ESP8266]  INFO: [0;32mI
+2025-06-21T08:22:20.757727 [ESP8266]  INFO: [MCPServer] Debug: transport->read() returned: true[0m
+2025-06-21T08:22:20.767954 [ESP8266]  INFO: [MCPServer] Debug: Read successful, buffer size
+2025-06-21T08:22:20.780244 [ESP8266]  INFO: : 0[0m
+2025-06-21T08:22:20.780277 [ESP8266]  INFO: [MCPServer] Debug: About to delay[0m
+2025-06-21T08:22:20.780284 [ESP8266]  INFO: [MCPServer] Debu
+2025-06-21T08:22:20.790395 [ESP8266]  INFO: g: Delay completed[0m
+2025-06-21T08:22:20.790413 [ESP8266]  INFO: [MCPServer] Debug: Loop iteration start[0m
+2025-06-21T08:22:20.790418 [ESP8266]  INFO: [0;32mI (1
+2025-06-21T08:22:20.800515 [ESP8266]  INFO: [MCPServer] Debug: About to call isConnected()[0m
+2025-06-21T08:22:20.800529 [ESP8266]  INFO: [0;32m
+2025-06-21T08:22:20.810633 [ESP8266]  INFO: [MCPServer] Debug: isConnected() returned: true[0m
+2025-06-21T08:22:20.810652 [ESP8266]  INFO: [
+2025-06-21T08:22:20.820747 [ESP8266]  INFO: [MCPServer] Debug: About to call transport->read()[0m
+2025-06-21T08:22:20.820761 [ESP8266]  INFO: [0;32mI (16677) MCPServer
+2025-06-21T08:22:20.832477 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:20.832492 [ESP8266]  INFO: [MCPServer] Debug: Read successfu
+2025-06-21T08:22:20.842579 [ESP8266]  INFO: l, buffer size: 0[0m
+2025-06-21T08:22:20.842591 [ESP8266]  INFO: [MCPServer] Debug: About
+2025-06-21T08:22:20.852675 [ESP8266]  INFO: to delay[0m
+2025-06-21T08:22:20.852685 [ESP8266]  INFO: [MCPServer] Debug: Delay completed
+2025-06-21T08:22:20.862775 [ESP8266]  INFO: [0m
+2025-06-21T08:22:20.862788 [ESP8266]  INFO: [MCPServer] Debug: Loop iteration start[0m
+2025-06-21T08:22:20.862792 [ESP8266]  INFO: [MCPServer] D
+2025-06-21T08:22:20.872875 [ESP8266]  INFO: ebug: About to call isConnected()[0m
+2025-06-21T08:22:20.872886 [ESP8266]  INFO: [0;32mI (16728) MCPServe
+2025-06-21T08:22:20.883285 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:20.883302 [ESP8266]  INFO: [0;32mI (16737) MCP
+2025-06-21T08:22:20.893387 [ESP8266]  INFO: Server: Debug: About to call transport->read()[0m
+2025-06-21T08:22:20.893395 [ESP8266]  INFO: [MCPServer] Debug: transport
+2025-06-21T08:22:20.903475 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:20.903481 [ESP8266]  INFO: [MCPServer] Debug:
+2025-06-21T08:22:20.913703 [ESP8266]  INFO: Read successful, buffer size: 0[0m
+2025-06-21T08:22:20.913715 [ESP8266]  INFO: [MCPServer] Debug: About to delay[0m
+2025-06-21T08:22:20.913719 [ESP8266]  INFO: [0;
+2025-06-21T08:22:20.923804 [ESP8266]  INFO: [MCPServer] Debug: Delay completed[0m
+2025-06-21T08:22:20.923813 [ESP8266]  INFO: [0;32mI (16
+2025-06-21T08:22:20.933888 [ESP8266]  INFO: [MCPServer] Debug: Loop iteration start[0m
+2025-06-21T08:22:20.933895 [ESP8266]  INFO: [0;32mI (16789
+2025-06-21T08:22:20.944210 [ESP8266]  INFO: [MCPServer] Debug: About to call isConnected()[0m
+2025-06-21T08:22:20.944229 [ESP8266]  INFO: [MCPServer] Debug: isConnec
+2025-06-21T08:22:20.954312 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:20.954320 [ESP8266]  INFO: [MCPServer] Debug: Abo
+2025-06-21T08:22:20.964394 [ESP8266]  INFO: ut to call transport->read()[0m
+2025-06-21T08:22:20.964398 [ESP8266]  INFO: [MCPServer] De
+2025-06-21T08:22:20.974481 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:20.974490 [ESP8266]  INFO: [MCPServer] Debug: Read successful, b
+2025-06-21T08:22:20.985159 [ESP8266]  INFO: uffer size: 0[0m
+2025-06-21T08:22:20.985171 [ESP8266]  INFO: [MCPServer] Debug: About to d
+2025-06-21T08:22:20.995257 [ESP8266]  INFO: elay[0m
+2025-06-21T08:22:20.995264 [ESP8266]  INFO: [MCPServer] Debug: Delay completed[0m
+2025-06-21T08:22:20.995267 [ESP8266]  INFO: [MCPServer] De
+2025-06-21T08:22:21.005343 [ESP8266]  INFO: bug: Loop iteration start[0m
+2025-06-21T08:22:21.005348 [ESP8266]  INFO: [MCPServer] Debug
+2025-06-21T08:22:21.015451 [ESP8266]  INFO: : About to call isConnected()[0m
+2025-06-21T08:22:21.015466 [ESP8266]  INFO: [MCPServer] D
+2025-06-21T08:22:21.025585 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:21.025604 [ESP8266]  INFO: [MCPServer] Debug: About to call transpo
+2025-06-21T08:22:21.035738 [ESP8266]  INFO: rt->read()[0m
+2025-06-21T08:22:21.035757 [ESP8266]  INFO: [MCPServer] Debug: transport->re
+2025-06-21T08:22:21.045984 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:21.046027 [ESP8266]  INFO: [MCPServer] Debug: Read
+2025-06-21T08:22:21.056184 [ESP8266]  INFO: successful, buffer size: 0[0m
+2025-06-21T08:22:21.056218 [ESP8266]  INFO: [MCPServer] Debug: About to delay[0m
+2025-06-21T08:22:21.056224 [ESP8266]  INFO: [0;32mI
+2025-06-21T08:22:21.066388 [ESP8266]  INFO: [MCPServer] Debug: Delay completed[0m
+2025-06-21T08:22:21.066418 [ESP8266]  INFO: [0;32mI (16921)
+2025-06-21T08:22:21.076559 [ESP8266]  INFO: MCPServer: Debug: Loop iteration start[0m
+2025-06-21T08:22:21.076582 [ESP8266]  INFO: [MCPServer] Debug: About to call is
+2025-06-21T08:22:21.086695 [ESP8266]  INFO: Connected()[0m
+2025-06-21T08:22:21.086708 [ESP8266]  INFO: [MCPServer] Debug: isConnected(
+2025-06-21T08:22:21.099227 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:21.099260 [ESP8266]  INFO: [MCPServer] Debug: About to call transport->read()[0m
+2025-06-21T08:22:21.099264 [ESP8266]  INFO: [
+2025-06-21T08:22:21.109405 [ESP8266]  INFO: [MCPServer] Debug: transport->read() returned: tru
+2025-06-21T08:22:21.119522 [ESP8266]  INFO: e[0m
+2025-06-21T08:22:21.119532 [ESP8266]  INFO: [MCPServer] Debug: Read successful, buffer size: 0[0m
+2025-06-21T08:22:21.119536 [ESP8266]  INFO: [0;32mI (16976)
+2025-06-21T08:22:21.129726 [ESP8266]  INFO: MCPServer: Debug: About to delay[0m
+2025-06-21T08:22:21.129758 [ESP8266]  INFO: [0;32mI (16987) MCPServer
+2025-06-21T08:22:21.139862 [ESP8266]  INFO: : Debug: Delay completed[0m
+2025-06-21T08:22:21.139876 [ESP8266]  INFO: [MCPServer] Debug:
+2025-06-21T08:22:21.149965 [ESP8266]  INFO: Loop iteration start[0m
+2025-06-21T08:22:21.149972 [ESP8266]  INFO: [MCPServer] Debug: About to call isConnected()[0m
+2025-06-21T08:22:21.149975 [ESP8266]  INFO: 
+2025-06-21T08:22:21.160060 [ESP8266]  INFO: [MCPServer] Debug: isConnected() returned: true[
+2025-06-21T08:22:21.170167 [ESP8266]  INFO: 0m
+2025-06-21T08:22:21.170176 [ESP8266]  INFO: [MCPServer] Debug: About to call transport->read()[0m
+2025-06-21T08:22:21.170180 [ESP8266]  INFO: [0;32mI (17027) MCP
+2025-06-21T08:22:21.180262 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:21.180270 [ESP8266]  INFO: [0;32mI (1
+2025-06-21T08:22:21.190378 [ESP8266]  INFO: [MCPServer] Debug: Read successful, buffer size: 0[0m
+2025-06-21T08:22:21.190389 [ESP8266]  INFO: [0
+2025-06-21T08:22:21.200488 [ESP8266]  INFO: [MCPServer] Debug: About to delay[0m
+2025-06-21T08:22:21.200500 [ESP8266]  INFO: [MCPServer] Debug: Delay com
+2025-06-21T08:22:21.210594 [ESP8266]  INFO: pleted[0m
+2025-06-21T08:22:21.210602 [ESP8266]  INFO: [MCPServer] Debug: Loop iteration st
+2025-06-21T08:22:21.220761 [ESP8266]  INFO: art[0m
+2025-06-21T08:22:21.220792 [ESP8266]  INFO: [MCPServer] Debug: About to call isConn
+2025-06-21T08:22:21.230900 [ESP8266]  INFO: ected()[0m
+2025-06-21T08:22:21.230914 [ESP8266]  INFO: [MCPServer] Debug: isConnected() returned: true[0m
+2025-06-21T08:22:21.230919 [ESP8266]  INFO: [0;32mI (1708
+2025-06-21T08:22:21.241005 [ESP8266]  INFO: [MCPServer] Debug: About to call transport->read()[0m
+2025-06-21T08:22:21.241014 [ESP8266]  INFO: [0;32
+2025-06-21T08:22:21.251825 [ESP8266]  INFO: [MCPServer] Debug: transport->read() returned: true[0m
+2025-06-21T08:22:21.251841 [ESP8266]  INFO: [MCPServer] D
+2025-06-21T08:22:21.261953 [ESP8266]  INFO: ebug: Read successful, buffer size: 0[0m
+2025-06-21T08:22:21.261969 [ESP8266]  INFO: [0;32mI (17117) MCPS
+2025-06-21T08:22:21.272073 [ESP8266]  INFO: erver: Debug: About to delay[0m
+2025-06-21T08:22:21.272085 [ESP8266]  INFO: [MCPServer] De
+2025-06-21T08:22:21.282260 [ESP8266]  INFO: bug: Delay completed[0m
+2025-06-21T08:22:21.282290 [ESP8266]  INFO: [MCPServer] Debug: Loop iteration start[0m
+2025-06-21T08:22:21.282297 [ESP8266]  INFO: [0;32mI
+2025-06-21T08:22:21.292384 [ESP8266]  INFO: [MCPServer] Debug: About to call isConnected()[0m
+2025-06-21T08:22:21.292396 [ESP8266]  INFO: [0;3
+2025-06-21T08:22:21.302495 [ESP8266]  INFO: [MCPServer] Debug: isConnected() returned: true[0m
+2025-06-21T08:22:21.302513 [ESP8266]  INFO: [MCPServer] Debu
+2025-06-21T08:22:21.312604 [ESP8266]  INFO: g: About to call transport->read()[0m
+2025-06-21T08:22:21.312615 [ESP8266]  INFO: [0;32mI (17168) MCPServ
+2025-06-21T08:22:21.322704 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:21.322717 [ESP8266]  INFO: [0;32mI (17177
+2025-06-21T08:22:21.332805 [ESP8266]  INFO: [MCPServer] Debug: Read successful, buffer size: 0[0m
+2025-06-21T08:22:21.332817 [ESP8266]  INFO: [MCPServer] Debug: Abou
+2025-06-21T08:22:21.342901 [ESP8266]  INFO: t to delay[0m
+2025-06-21T08:22:21.342911 [ESP8266]  INFO: [MCPServer] Debug: Delay complet
+2025-06-21T08:22:21.353002 [ESP8266]  INFO: ed[0m
+2025-06-21T08:22:21.353014 [ESP8266]  INFO: [MCPServer] Debug: Loop iteration start
+2025-06-21T08:22:21.363112 [ESP8266]  INFO: [0m
+2025-06-21T08:22:21.363130 [ESP8266]  INFO: [MCPServer] Debug: About to call isConnected()[0m
+2025-06-21T08:22:21.363134 [ESP8266]  INFO: [0;32mI (17219) MCPSer
+2025-06-21T08:22:21.373217 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:21.373228 [ESP8266]  INFO: [0;32mI (17228) M
+2025-06-21T08:22:21.384342 [ESP8266]  INFO: CPServer: Debug: About to call transport->read()[0m
+2025-06-21T08:22:21.384357 [ESP8266]  INFO: [MCPServer] Debug: transpo
+2025-06-21T08:22:21.394445 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:21.394457 [ESP8266]  INFO: [MCPServer] Debug
+2025-06-21T08:22:21.404542 [ESP8266]  INFO: : Read successful, buffer size: 0[0m
+2025-06-21T08:22:21.404551 [ESP8266]  INFO: [0;32mI (17257) MCPServe
+2025-06-21T08:22:21.415413 [ESP8266]  INFO: r: Debug: About to delay[0m
+2025-06-21T08:22:21.415434 [ESP8266]  INFO: [MCPServer] Debug: Delay completed[0m
+2025-06-21T08:22:21.415440 [ESP8266]  INFO: [0;32mI (
+2025-06-21T08:22:21.425524 [ESP8266]  INFO: [MCPServer] Debug: Loop iteration start[0m
+2025-06-21T08:22:21.425533 [ESP8266]  INFO: [0;32mI (172
+2025-06-21T08:22:21.435621 [ESP8266]  INFO: [MCPServer] Debug: About to call isConnected()[0m
+2025-06-21T08:22:21.435634 [ESP8266]  INFO: [MCPServer] Debug: isConn
+2025-06-21T08:22:21.445723 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:21.445732 [ESP8266]  INFO: [MCPServer] Debug: A
+2025-06-21T08:22:21.455808 [ESP8266]  INFO: bout to call transport->read()[0m
+2025-06-21T08:22:21.455814 [ESP8266]  INFO: [0;32mI (17308) MCPServer:
+2025-06-21T08:22:21.469158 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:21.469171 [ESP8266]  INFO: [MCPServer] Debug: Read successful, buffer size: 0[0m
+2025-06-21T08:22:21.469174 [ESP8266]  INFO: [0;32mI (1
+2025-06-21T08:22:21.479263 [ESP8266]  INFO: [MCPServer] Debug: About to delay[0m
+2025-06-21T08:22:21.479275 [ESP8266]  INFO: [0;32mI (17337) MCP
+2025-06-21T08:22:21.489354 [ESP8266]  INFO: Server: Debug: Delay completed[0m
+2025-06-21T08:22:21.489362 [ESP8266]  INFO: [0;32mI (17342) MCPServer:
+2025-06-21T08:22:21.499882 [ESP8266]  INFO: Debug: Loop iteration start[0m
+2025-06-21T08:22:21.499917 [ESP8266]  INFO: [MCPServer] Debug: About to call isConnected()
+2025-06-21T08:22:21.510009 [ESP8266]  INFO: [0m
+2025-06-21T08:22:21.510021 [ESP8266]  INFO: [MCPServer] Debug: isConnected() returned:
+2025-06-21T08:22:21.520118 [ESP8266]  INFO: true[0m
+2025-06-21T08:22:21.520161 [ESP8266]  INFO: [MCPServer] Debug: About to call trans
+2025-06-21T08:22:21.530374 [ESP8266]  INFO: port->read()[0m
+2025-06-21T08:22:21.530412 [ESP8266]  INFO: [MCPServer] Debug: transport->read() returned: true[0m
+2025-06-21T08:22:21.530419 [ESP8266]  INFO: [0;3
+2025-06-21T08:22:21.540577 [ESP8266]  INFO: [MCPServer] Debug: Read successful, buffer size: 0[0
+2025-06-21T08:22:21.550733 [ESP8266]  INFO: m
+2025-06-21T08:22:21.550750 [ESP8266]  INFO: [MCPServer] Debug: About to delay[0m
+2025-06-21T08:22:21.550755 [ESP8266]  INFO: [MCPServer] Debug: Del
+2025-06-21T08:22:21.562196 [ESP8266]  INFO: ay completed[0m
+2025-06-21T08:22:21.562214 [ESP8266]  INFO: [MCPServer] Debug: Loop iterat
+2025-06-21T08:22:21.572365 [ESP8266]  INFO: ion start[0m
+2025-06-21T08:22:21.572390 [ESP8266]  INFO: [MCPServer] Debug: About to call isConnected()[0m
+2025-06-21T08:22:21.572396 [ESP8266]  INFO: [0;32mI (174
+2025-06-21T08:22:21.582494 [ESP8266]  INFO: [MCPServer] Debug: isConnected() returned: true[0m
+2025-06-21T08:22:21.582505 [ESP8266]  INFO: [0;32mI
+2025-06-21T08:22:21.592667 [ESP8266]  INFO: [MCPServer] Debug: About to call transport->read()[0m
+2025-06-21T08:22:21.604213 [ESP8266]  INFO: [MCPServer] Debug: transport->read() returned: true[0m
+2025-06-21T08:22:21.604233 [ESP8266]  INFO: [0;32mI (17458) MCPSer
+2025-06-21T08:22:21.614325 [ESP8266]  INFO: ver: Debug: Read successful, buffer size: 0[0m
+2025-06-21T08:22:21.614336 [ESP8266]  INFO: [MCPServer] Debug: About to del
+2025-06-21T08:22:21.625459 [ESP8266]  INFO: ay[0m
+2025-06-21T08:22:21.625471 [ESP8266]  INFO: [MCPServer] Debug: Delay completed[0m
+2025-06-21T08:22:21.635558 [ESP8266]  INFO: [MCPServer] Debug: Loop iteration start[0m
+2025-06-21T08:22:21.635567 [ESP8266]  INFO: [0
+2025-06-21T08:22:21.645644 [ESP8266]  INFO: [MCPServer] Debug: About to call isConnected()[0m
+2025-06-21T08:22:21.645650 [ESP8266]  INFO: [MCPServer] Deb
+2025-06-21T08:22:21.655734 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:21.655743 [ESP8266]  INFO: [0;32mI (17509) MCPServer
+2025-06-21T08:22:21.665827 [ESP8266]  INFO: : Debug: About to call transport->read()[0m
+2025-06-21T08:22:21.665834 [ESP8266]  INFO: [MCPServer] Debug: transport->read
+2025-06-21T08:22:21.676833 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:21.676870 [ESP8266]  INFO: [MCPServer] Debug: Read s
+2025-06-21T08:22:21.687041 [ESP8266]  INFO: uccessful, buffer size: 0[0m
+2025-06-21T08:22:21.687069 [ESP8266]  INFO: [MCPServer] Debug: About to delay[0m
+2025-06-21T08:22:21.687076 [ESP8266]  INFO: [0;32mI (
+2025-06-21T08:22:21.699260 [ESP8266]  INFO: [MCPServer] Debug: Delay completed[0m
+2025-06-21T08:22:21.699288 [ESP8266]  INFO: [0;32mI (17553) M
+2025-06-21T08:22:21.709445 [ESP8266]  INFO: CPServer: Debug: Loop iteration start[0m
+2025-06-21T08:22:21.709472 [ESP8266]  INFO: [MCPServer] Debug: About to call isCo
+2025-06-21T08:22:21.719615 [ESP8266]  INFO: nnected()[0m
+2025-06-21T08:22:21.719637 [ESP8266]  INFO: [MCPServer] Debug: isConnected()
+2025-06-21T08:22:21.729733 [ESP8266]  INFO: returned: true[0m
+2025-06-21T08:22:21.729748 [ESP8266]  INFO: [MCPServer] Debug: About to call transport->read()[0m
+2025-06-21T08:22:21.729753 [ESP8266]  INFO: [0;
+2025-06-21T08:22:21.739902 [ESP8266]  INFO: [MCPServer] Debug: transport->read() returned: true
+2025-06-21T08:22:21.750017 [ESP8266]  INFO: [0m
+2025-06-21T08:22:21.750028 [ESP8266]  INFO: [MCPServer] Debug: Read successful, buffer
+2025-06-21T08:22:21.760131 [ESP8266]  INFO: size: 0[0m
+2025-06-21T08:22:21.760145 [ESP8266]  INFO: [MCPServer] Debug: About to delay[0m
+2025-06-21T08:22:21.760149 [ESP8266]  INFO: [0;32mI (17617) MCPServer:
+2025-06-21T08:22:21.770311 [ESP8266]  INFO: Debug: Delay completed[0m
+2025-06-21T08:22:21.770340 [ESP8266]  INFO: [MCPServer] Debug: L
+2025-06-21T08:22:21.781168 [ESP8266]  INFO: oop iteration start[0m
+2025-06-21T08:22:21.781183 [ESP8266]  INFO: [MCPServer] Debug: About to call isConnected()[0m
+2025-06-21T08:22:21.781188 [ESP8266]  INFO: [0
+2025-06-21T08:22:21.791346 [ESP8266]  INFO: [MCPServer] Debug: isConnected() returned: true[0m
+2025-06-21T08:22:21.801537 [ESP8266]  INFO: [MCPServer] Debug: About to call transport->re
+2025-06-21T08:22:21.812227 [ESP8266]  INFO: ad()[0m
+2025-06-21T08:22:21.812254 [ESP8266]  INFO: [MCPServer] Debug: transport->read() returned: true[0m
+2025-06-21T08:22:21.812259 [ESP8266]  INFO: [0;32mI (176
+2025-06-21T08:22:21.822396 [ESP8266]  INFO: [MCPServer] Debug: Read successful, buffer size: 0[0m
+2025-06-21T08:22:21.822423 [ESP8266]  INFO: [0;3
+2025-06-21T08:22:21.832546 [ESP8266]  INFO: [MCPServer] Debug: About to delay[0m
+2025-06-21T08:22:21.832563 [ESP8266]  INFO: [MCPServer] Debug: Delay compl
+2025-06-21T08:22:21.842670 [ESP8266]  INFO: eted[0m
+2025-06-21T08:22:21.842682 [ESP8266]  INFO: [MCPServer] Debug: Loop iteration star
+2025-06-21T08:22:21.852822 [ESP8266]  INFO: t[0m
+2025-06-21T08:22:21.852845 [ESP8266]  INFO: [MCPServer] Debug: About to call isConnec
+2025-06-21T08:22:21.863319 [ESP8266]  INFO: ted()[0m
+2025-06-21T08:22:21.863339 [ESP8266]  INFO: [MCPServer] Debug: isConnected() returned: true[0m
+2025-06-21T08:22:21.863343 [ESP8266]  INFO: [0;32mI (17720)
+2025-06-21T08:22:21.873500 [ESP8266]  INFO: MCPServer: Debug: About to call transport->read()[0m
+2025-06-21T08:22:21.873528 [ESP8266]  INFO: [0;32mI
+2025-06-21T08:22:21.883618 [ESP8266]  INFO: [MCPServer] Debug: transport->read() returned: true[0m
+2025-06-21T08:22:21.883626 [ESP8266]  INFO: [MCPServer] Deb
+2025-06-21T08:22:21.893723 [ESP8266]  INFO: ug: Read successful, buffer size: 0[0m
+2025-06-21T08:22:21.893736 [ESP8266]  INFO: [0;32mI (17749) MCPSer
+2025-06-21T08:22:21.903905 [ESP8266]  INFO: ver: Debug: About to delay[0m
+2025-06-21T08:22:21.903939 [ESP8266]  INFO: [MCPServer] Debu
+2025-06-21T08:22:21.914059 [ESP8266]  INFO: g: Delay completed[0m
+2025-06-21T08:22:21.914075 [ESP8266]  INFO: [MCPServer] Debug: Loop iteration start[0m
+2025-06-21T08:22:21.914079 [ESP8266]  INFO: [0;32mI (1
+2025-06-21T08:22:21.924185 [ESP8266]  INFO: [MCPServer] Debug: About to call isConnected()[0m
+2025-06-21T08:22:21.924204 [ESP8266]  INFO: [0;32m
+2025-06-21T08:22:21.934361 [ESP8266]  INFO: [MCPServer] Debug: isConnected() returned: true[0m
+2025-06-21T08:22:21.934395 [ESP8266]  INFO: [
+2025-06-21T08:22:21.944488 [ESP8266]  INFO: [MCPServer] Debug: About to call transport->read()[0m
+2025-06-21T08:22:21.944503 [ESP8266]  INFO: [0;32mI (17800) MCPServer
+2025-06-21T08:22:21.954666 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:21.954699 [ESP8266]  INFO: [0;32mI (17810)
+2025-06-21T08:22:21.964887 [ESP8266]  INFO: MCPServer: Debug: Read successful, buffer size: 0[0m
+2025-06-21T08:22:21.964923 [ESP8266]  INFO: [MCPServer] Debug: About
+2025-06-21T08:22:21.975056 [ESP8266]  INFO: to delay[0m
+2025-06-21T08:22:21.975080 [ESP8266]  INFO: [MCPServer] Debug: Delay completed
+2025-06-21T08:22:21.985231 [ESP8266]  INFO: [0m
+2025-06-21T08:22:21.985262 [ESP8266]  INFO: [MCPServer] Debug: Loop iteration start[0
+2025-06-21T08:22:21.996734 [ESP8266]  INFO: m
+2025-06-21T08:22:21.996764 [ESP8266]  INFO: [MCPServer] Debug: About to call isConnected()[0m
+2025-06-21T08:22:21.996770 [ESP8266]  INFO: [0;32mI (17851) MCPServe
+2025-06-21T08:22:22.006943 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:22.006977 [ESP8266]  INFO: [0;32mI (17860) MCP
+2025-06-21T08:22:22.017201 [ESP8266]  INFO: Server: Debug: About to call transport->read()[0m
+2025-06-21T08:22:22.017231 [ESP8266]  INFO: [MCPServer] Debug: transport
+2025-06-21T08:22:22.027358 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:22.027379 [ESP8266]  INFO: [MCPServer] Debug:
+2025-06-21T08:22:22.037519 [ESP8266]  INFO: Read successful, buffer size: 0[0m
+2025-06-21T08:22:22.037539 [ESP8266]  INFO: [MCPServer] Debug: About to delay[0m
+2025-06-21T08:22:22.037544 [ESP8266]  INFO: [0;
+2025-06-21T08:22:22.047672 [ESP8266]  INFO: [MCPServer] Debug: Delay completed[0m
+2025-06-21T08:22:22.047692 [ESP8266]  INFO: [0;32mI (17
+2025-06-21T08:22:22.057795 [ESP8266]  INFO: [MCPServer] Debug: Loop iteration start[0m
+2025-06-21T08:22:22.057811 [ESP8266]  INFO: [0;32mI (17912
+2025-06-21T08:22:22.067916 [ESP8266]  INFO: [MCPServer] Debug: About to call isConnected()[0m
+2025-06-21T08:22:22.067929 [ESP8266]  INFO: [MCPServer] Debug: isConnec
+2025-06-21T08:22:22.073168 [ CLIENT] ERROR: ❌ Echo test failed: timed out
+2025-06-21T08:22:22.078035 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:22.078047 [ESP8266]  INFO: [MCPServer] Debug: Abo
+2025-06-21T08:22:22.088157 [ESP8266]  INFO: ut to call transport->read()[0m
+2025-06-21T08:22:22.088172 [ESP8266]  INFO: [MCPServer] De
+2025-06-21T08:22:22.098277 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:22.098289 [ESP8266]  INFO: [MCPServer] Debug: Read successful, b
+2025-06-21T08:22:22.108440 [ESP8266]  INFO: uffer size: 0[0m
+2025-06-21T08:22:22.108463 [ESP8266]  INFO: [MCPServer] Debug: About to d
+2025-06-21T08:22:22.118581 [ESP8266]  INFO: elay[0m
+2025-06-21T08:22:22.118599 [ESP8266]  INFO: [MCPServer] Debug: Delay completed[0m
+2025-06-21T08:22:22.118608 [ESP8266]  INFO: [MCPServer] De
+2025-06-21T08:22:22.128769 [ESP8266]  INFO: bug: Loop iteration start[0m
+2025-06-21T08:22:22.128794 [ESP8266]  INFO: [MCPServer] Debug
+2025-06-21T08:22:22.138916 [ESP8266]  INFO: : About to call isConnected()[0m
+2025-06-21T08:22:22.138934 [ESP8266]  INFO: [MCPServer] D
+2025-06-21T08:22:22.149033 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:22.149045 [ESP8266]  INFO: [MCPServer] Debug: About to call transpo
+2025-06-21T08:22:22.159224 [ESP8266]  INFO: rt->read()[0m
+2025-06-21T08:22:22.159236 [ESP8266]  INFO: [MCPServer] Debug: transport->re
+2025-06-21T08:22:22.173195 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:22.173210 [ESP8266]  INFO: [MCPServer] Debug: Read successful, buffer size: 0[0m
+2025-06-21T08:22:22.183353 [ESP8266]  INFO: [MCPServer] Debug: About to delay[0m
+2025-06-21T08:22:22.183379 [ESP8266]  INFO: [MCPServer] Debug: Delay
+2025-06-21T08:22:22.193480 [ESP8266]  INFO: completed[0m
+2025-06-21T08:22:22.193490 [ESP8266]  INFO: [MCPServer] Debug: Loop iteratio
+2025-06-21T08:22:22.203723 [ESP8266]  INFO: n start[0m
+2025-06-21T08:22:22.203756 [ESP8266]  INFO: [MCPServer] Debug: About to call is
+2025-06-21T08:22:22.213855 [ESP8266]  INFO: Connected()[0m
+2025-06-21T08:22:22.213870 [ESP8266]  INFO: [MCPServer] Debug: isConnected() returned: true[0m
+2025-06-21T08:22:22.213875 [ESP8266]  INFO: [0;32mI (
+2025-06-21T08:22:22.223963 [ESP8266]  INFO: [MCPServer] Debug: About to call transport->read()[0m
+2025-06-21T08:22:22.223974 [ESP8266]  INFO: [
+2025-06-21T08:22:22.234062 [ESP8266]  INFO: [MCPServer] Debug: transport->read() returned: true[0m
+2025-06-21T08:22:22.234073 [ESP8266]  INFO: [0;32mI (18090) MCPServe
+2025-06-21T08:22:22.244153 [ESP8266]  INFO: r: Debug: Read successful, buffer size: 0[0m
+2025-06-21T08:22:22.244161 [ESP8266]  INFO: [0;32mI (18100)
+2025-06-21T08:22:22.254256 [ESP8266]  INFO: MCPServer: Debug: About to delay[0m
+2025-06-21T08:22:22.254279 [ESP8266]  INFO: [0;32mI (18117) MCPServer
+2025-06-21T08:22:22.264363 [ESP8266]  INFO: : Debug: Delay completed[0m
+2025-06-21T08:22:22.264371 [ESP8266]  INFO: [MCPServer] Debug: Loop iteration start[0m
+2025-06-21T08:22:22.264376 [ESP8266]  INFO: [0;3
+2025-06-21T08:22:22.276174 [ESP8266]  INFO: [MCPServer] Debug: About to call isConnected()[0m
+2025-06-21T08:22:22.276188 [ESP8266]  INFO: 
+2025-06-21T08:22:22.286279 [ESP8266]  INFO: [MCPServer] Debug: isConnected() returned: true[0m
+2025-06-21T08:22:22.286295 [ESP8266]  INFO: [0;32mI (18141) MCPServer:
+2025-06-21T08:22:22.298174 [ESP8266]  INFO: Debug: About to call transport->read()[0m
+2025-06-21T08:22:22.298188 [ESP8266]  INFO: [MCPServer] Debug: transport->read()
+2025-06-21T08:22:22.308281 [ESP8266]  INFO: returned: true[0m
+2025-06-21T08:22:22.308293 [ESP8266]  INFO: [MCPServer] Debug: Read suc
+2025-06-21T08:22:22.318374 [ESP8266]  INFO: cessful, buffer size: 0[0m
+2025-06-21T08:22:22.318382 [ESP8266]  INFO: [MCPServer] Debug:
+2025-06-21T08:22:22.329161 [ESP8266]  INFO: About to delay[0m
+2025-06-21T08:22:22.329179 [ESP8266]  INFO: [MCPServer] Debug: Delay completed[0m
+2025-06-21T08:22:22.329183 [ESP8266]  INFO: [0;32mI (18188) MCP
+2025-06-21T08:22:22.339270 [ESP8266]  INFO: Server: Debug: Loop iteration start[0m
+2025-06-21T08:22:22.339280 [ESP8266]  INFO: [0;32mI (18193) MCPSer
+2025-06-21T08:22:22.349355 [ESP8266]  INFO: ver: Debug: About to call isConnected()[0m
+2025-06-21T08:22:22.349359 [ESP8266]  INFO: [MCPServer] Debug: isConnected() re
+2025-06-21T08:22:22.362175 [ESP8266]  INFO: turned: true[0m
+2025-06-21T08:22:22.362187 [ESP8266]  INFO: [MCPServer] Debug: About to call transport->read()[0m
+2025-06-21T08:22:22.362190 [ESP8266]  INFO: [0;32
+2025-06-21T08:22:22.372279 [ESP8266]  INFO: [MCPServer] Debug: transport->read() returned: true[0
+2025-06-21T08:22:22.384183 [ESP8266]  INFO: m
+2025-06-21T08:22:22.384198 [ESP8266]  INFO: [MCPServer] Debug: Read successful, buffer size: 0[0m
+2025-06-21T08:22:22.384202 [ESP8266]  INFO: [0;32mI (18240) MCPS
+2025-06-21T08:22:22.394293 [ESP8266]  INFO: erver: Debug: About to delay[0m
+2025-06-21T08:22:22.394305 [ESP8266]  INFO: [MCPServer] De
+2025-06-21T08:22:22.405657 [ESP8266]  INFO: bug: Delay completed[0m
+2025-06-21T08:22:22.405691 [ESP8266]  INFO: [MCPServer] Debug: Loop iteration start[0m
+2025-06-21T08:22:22.405698 [ESP8266]  INFO: [0;32mI
+2025-06-21T08:22:22.415808 [ESP8266]  INFO: [MCPServer] Debug: About to call isConnected()[0m
+2025-06-21T08:22:22.415827 [ESP8266]  INFO: [0;3
+2025-06-21T08:22:22.425969 [ESP8266]  INFO: [MCPServer] Debug: isConnected() returned: true[0m
+2025-06-21T08:22:22.425991 [ESP8266]  INFO: [MCPServer] Debu
+2025-06-21T08:22:22.436081 [ESP8266]  INFO: g: About to call transport->read()[0m
+2025-06-21T08:22:22.436089 [ESP8266]  INFO: [0;32mI (18291) MCPServ
+2025-06-21T08:22:22.446212 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:22.446233 [ESP8266]  INFO: [0;32mI (18301
+2025-06-21T08:22:22.456352 [ESP8266]  INFO: [MCPServer] Debug: Read successful, buffer size: 0[0m
+2025-06-21T08:22:22.456369 [ESP8266]  INFO: [MCPServer] Debug: Abou
+2025-06-21T08:22:22.466493 [ESP8266]  INFO: t to delay[0m
+2025-06-21T08:22:22.466512 [ESP8266]  INFO: [MCPServer] Debug: Delay complet
+2025-06-21T08:22:22.476942 [ESP8266]  INFO: ed[0m
+2025-06-21T08:22:22.476960 [ESP8266]  INFO: [MCPServer] Debug: Loop iteration start
+2025-06-21T08:22:22.487193 [ESP8266]  INFO: [0m
+2025-06-21T08:22:22.487224 [ESP8266]  INFO: [MCPServer] Debug: About to call isConnected()[0m
+2025-06-21T08:22:22.487231 [ESP8266]  INFO: [0;32mI (18343) MCPSer
+2025-06-21T08:22:22.497372 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:22.497393 [ESP8266]  INFO: [0;32mI (18351) M
+2025-06-21T08:22:22.507501 [ESP8266]  INFO: CPServer: Debug: About to call transport->read()[0m
+2025-06-21T08:22:22.507515 [ESP8266]  INFO: [MCPServer] Debug: transpo
+2025-06-21T08:22:22.517630 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:22.517643 [ESP8266]  INFO: [MCPServer] Debug
+2025-06-21T08:22:22.527737 [ESP8266]  INFO: : Read successful, buffer size: 0[0m
+2025-06-21T08:22:22.527749 [ESP8266]  INFO: [0;32mI (18380) MCPServe
+2025-06-21T08:22:22.537889 [ESP8266]  INFO: r: Debug: About to delay[0m
+2025-06-21T08:22:22.537911 [ESP8266]  INFO: [MCPServer] Debug: Delay completed[0m
+2025-06-21T08:22:22.537916 [ESP8266]  INFO: [0;32mI (
+2025-06-21T08:22:22.551218 [ESP8266]  INFO: [MCPServer] Debug: Loop iteration start[0m
+2025-06-21T08:22:22.551236 [ESP8266]  INFO: [MCPServer] Debug: About to c
+2025-06-21T08:22:22.561325 [ESP8266]  INFO: all isConnected()[0m
+2025-06-21T08:22:22.561334 [ESP8266]  INFO: [MCPServer] Debug: isConn
+2025-06-21T08:22:22.571413 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:22.571419 [ESP8266]  INFO: [MCPServer] Debug: About to call transport->read()[
+2025-06-21T08:22:22.583174 [ESP8266]  INFO: 0m
+2025-06-21T08:22:22.583185 [ESP8266]  INFO: [MCPServer] Debug: transport->read() returne
+2025-06-21T08:22:22.593273 [ESP8266]  INFO: d: true[0m
+2025-06-21T08:22:22.593284 [ESP8266]  INFO: [MCPServer] Debug: Read successful, buffer size: 0[0m
+2025-06-21T08:22:22.593287 [ESP8266]  INFO: [0;32mI (1
+2025-06-21T08:22:22.603369 [ESP8266]  INFO: [MCPServer] Debug: About to delay[0m
+2025-06-21T08:22:22.603380 [ESP8266]  INFO: [0;32mI (18467) MCP
+2025-06-21T08:22:22.614384 [ESP8266]  INFO: Server: Debug: Delay completed[0m
+2025-06-21T08:22:22.614403 [ESP8266]  INFO: [MCPServer] Debug: Loop iteration start[0m
+2025-06-21T08:22:22.624534 [ESP8266]  INFO: [MCPServer] Debug: About to call isConnected()
+2025-06-21T08:22:22.634667 [ESP8266]  INFO: [0m
+2025-06-21T08:22:22.634682 [ESP8266]  INFO: [MCPServer] Debug: isConnected() returned:
+2025-06-21T08:22:22.644810 [ESP8266]  INFO: true[0m
+2025-06-21T08:22:22.644916 [ESP8266]  INFO: [MCPServer] Debug: About to call transport->read()[0m
+2025-06-21T08:22:22.644923 [ESP8266]  INFO: [0;32mI (1850
+2025-06-21T08:22:22.655033 [ESP8266]  INFO: [MCPServer] Debug: transport->read() returned: true[0m
+2025-06-21T08:22:22.655049 [ESP8266]  INFO: [0;3
+2025-06-21T08:22:22.665154 [ESP8266]  INFO: [MCPServer] Debug: Read successful, buffer size: 0[0
+2025-06-21T08:22:22.675299 [ESP8266]  INFO: m
+2025-06-21T08:22:22.675319 [ESP8266]  INFO: [MCPServer] Debug: About to delay[0m
+2025-06-21T08:22:22.675325 [ESP8266]  INFO: [MCPServer] Debug: Del
+2025-06-21T08:22:22.685454 [ESP8266]  INFO: ay completed[0m
+2025-06-21T08:22:22.685477 [ESP8266]  INFO: [MCPServer] Debug: Loop iterat
+2025-06-21T08:22:22.695596 [ESP8266]  INFO: ion start[0m
+2025-06-21T08:22:22.695611 [ESP8266]  INFO: [MCPServer] Debug: About to call isConnected()[0m
+2025-06-21T08:22:22.695615 [ESP8266]  INFO: [0;32mI (185
+2025-06-21T08:22:22.705721 [ESP8266]  INFO: [MCPServer] Debug: isConnected() returned: true[0m
+2025-06-21T08:22:22.705736 [ESP8266]  INFO: [0;32mI
+2025-06-21T08:22:22.715835 [ESP8266]  INFO: [MCPServer] Debug: About to call transport->read()[0m
+2025-06-21T08:22:22.725929 [ESP8266]  INFO: [MCPServer] Debug: transport->read() returned: true[0m
+2025-06-21T08:22:22.725938 [ESP8266]  INFO: [0;32mI (18581) MCPSer
+2025-06-21T08:22:22.736016 [ESP8266]  INFO: ver: Debug: Read successful, buffer size: 0[0m
+2025-06-21T08:22:22.736021 [ESP8266]  INFO: [0;32mI (18591
+2025-06-21T08:22:22.746114 [ESP8266]  INFO: [MCPServer] Debug: About to delay[0m
+2025-06-21T08:22:22.746139 [ESP8266]  INFO: [0;32mI (18607) MCPServ
+2025-06-21T08:22:22.756233 [ESP8266]  INFO: er: Debug: Delay completed[0m
+2025-06-21T08:22:22.756243 [ESP8266]  INFO: [MCPServer] Debug: Loop iteration start[0m
+2025-06-21T08:22:22.756248 [ESP8266]  INFO: [0
+2025-06-21T08:22:22.766336 [ESP8266]  INFO: [MCPServer] Debug: About to call isConnected()[0m
+2025-06-21T08:22:22.776435 [ESP8266]  INFO: [MCPServer] Debug: isConnected() returned: true[0m
+2025-06-21T08:22:22.776446 [ESP8266]  INFO: [0;32mI (18632) MCPServer
+2025-06-21T08:22:22.786557 [ESP8266]  INFO: : Debug: About to call transport->read()[0m
+2025-06-21T08:22:22.786569 [ESP8266]  INFO: [0;32mI (18642) M
+2025-06-21T08:22:22.796654 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:22.796665 [ESP8266]  INFO: [0;32mI
+2025-06-21T08:22:22.806748 [ESP8266]  INFO: [MCPServer] Debug: Read successful, buffer size: 0[0m
+2025-06-21T08:22:22.806757 [ESP8266]  INFO: [MCPServer] Debug
+2025-06-21T08:22:22.816842 [ESP8266]  INFO: : About to delay[0m
+2025-06-21T08:22:22.816850 [ESP8266]  INFO: [MCPServer] Debug: Delay c
+2025-06-21T08:22:22.826929 [ESP8266]  INFO: ompleted[0m
+2025-06-21T08:22:22.826934 [ESP8266]  INFO: [MCPServer] Debug: Loop iteration
+2025-06-21T08:22:22.837044 [ESP8266]  INFO: start[0m
+2025-06-21T08:22:22.837057 [ESP8266]  INFO: [MCPServer] Debug: About to call isConnected()[0m
+2025-06-21T08:22:22.837061 [ESP8266]  INFO: [0;32mI (18694)
+2025-06-21T08:22:22.847203 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:22.847219 [ESP8266]  INFO: [0;32mI (18
+2025-06-21T08:22:22.859180 [ESP8266]  INFO: [MCPServer] Debug: About to call transport->read()[0m
+2025-06-21T08:22:22.859199 [ESP8266]  INFO: [MCPServer] Debug: t
+2025-06-21T08:22:22.869289 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:22.869301 [ESP8266]  INFO: [0;32mI (18723) MCPServer:
+2025-06-21T08:22:22.879381 [ESP8266]  INFO: Debug: Read successful, buffer size: 0[0m
+2025-06-21T08:22:22.879388 [ESP8266]  INFO: [MCPServer] Debug: About to delay[
+2025-06-21T08:22:22.889478 [ESP8266]  INFO: 0m
+2025-06-21T08:22:22.889487 [ESP8266]  INFO: [MCPServer] Debug: Delay completed[0m
+2025-06-21T08:22:22.889491 [ESP8266]  INFO: [0;
+2025-06-21T08:22:22.899583 [ESP8266]  INFO: [MCPServer] Debug: Loop iteration start[0m
+2025-06-21T08:22:22.899595 [ESP8266]  INFO: [0;32m
+2025-06-21T08:22:22.909676 [ESP8266]  INFO: [MCPServer] Debug: About to call isConnected()[0m
+2025-06-21T08:22:22.909683 [ESP8266]  INFO: [MCPServer] Debug:
+2025-06-21T08:22:22.919777 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:22.919789 [ESP8266]  INFO: [MCPServer] De
+2025-06-21T08:22:22.929870 [ESP8266]  INFO: bug: About to call transport->read()[0m
+2025-06-21T08:22:22.929876 [ESP8266]  INFO: [0;32mI (18782) MCPSe
+2025-06-21T08:22:22.939960 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:22.939970 [ESP8266]  INFO: [MCPServer] Debug: Read succe
+2025-06-21T08:22:22.950056 [ESP8266]  INFO: ssful, buffer size: 0[0m
+2025-06-21T08:22:22.950065 [ESP8266]  INFO: [MCPServer] Debug: Ab
+2025-06-21T08:22:22.960178 [ESP8266]  INFO: out to delay[0m
+2025-06-21T08:22:22.960184 [ESP8266]  INFO: [MCPServer] Debug: Delay completed[0m
+2025-06-21T08:22:22.960187 [ESP8266]  INFO: [0;32mI (18818) MCPSe
+2025-06-21T08:22:22.970287 [ESP8266]  INFO: rver: Debug: Loop iteration start[0m
+2025-06-21T08:22:22.970298 [ESP8266]  INFO: [0;32mI (18825) MCPServe
+2025-06-21T08:22:22.980402 [ESP8266]  INFO: r: Debug: About to call isConnected()[0m
+2025-06-21T08:22:22.980418 [ESP8266]  INFO: [0;32mI (18834) MCPS
+2025-06-21T08:22:22.990506 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:22.990516 [ESP8266]  INFO: [MCPServer] Debug: About to call
+2025-06-21T08:22:23.000606 [ESP8266]  INFO: transport->read()[0m
+2025-06-21T08:22:23.000615 [ESP8266]  INFO: [MCPServer] Debug: trans
+2025-06-21T08:22:23.010703 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:23.010713 [ESP8266]  INFO: [MCPServer] Deb
+2025-06-21T08:22:23.020802 [ESP8266]  INFO: ug: Read successful, buffer size: 0[0m
+2025-06-21T08:22:23.020812 [ESP8266]  INFO: [MCPServer] Debug: About to delay[0m
+2025-06-21T08:22:23.030894 [ESP8266]  INFO: [MCPServer] Debug: Delay completed[0m
+2025-06-21T08:22:23.030901 [ESP8266]  INFO: [0;32mI
+2025-06-21T08:22:23.040983 [ESP8266]  INFO: [MCPServer] Debug: Loop iteration start[0m
+2025-06-21T08:22:23.040991 [ESP8266]  INFO: [0;32mI (1
+2025-06-21T08:22:23.051078 [ESP8266]  INFO: [MCPServer] Debug: About to call isConnected()[0m
+2025-06-21T08:22:23.051093 [ESP8266]  INFO: [MCPServer] Debug: isCo
+2025-06-21T08:22:23.061171 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:23.061182 [ESP8266]  INFO: [MCPServer] Debug:
+2025-06-21T08:22:23.071260 [ESP8266]  INFO: About to call transport->read()[0m
+2025-06-21T08:22:23.071266 [ESP8266]  INFO: [MCPServer] Debug: transport->read() retur
+2025-06-21T08:22:23.082214 [ESP8266]  INFO: ned: true[0m
+2025-06-21T08:22:23.082239 [ESP8266]  INFO: [MCPServer] Debug: Read successfu
+2025-06-21T08:22:23.092347 [ESP8266]  INFO: l, buffer size: 0[0m
+2025-06-21T08:22:23.092361 [ESP8266]  INFO: [MCPServer] Debug: About
+2025-06-21T08:22:23.102457 [ESP8266]  INFO: to delay[0m
+2025-06-21T08:22:23.102467 [ESP8266]  INFO: [MCPServer] Debug: Delay completed[0m
+2025-06-21T08:22:23.102470 [ESP8266]  INFO: [0;32mI (18958) MCPServer
+2025-06-21T08:22:23.112577 [ESP8266]  INFO: : Debug: Loop iteration start[0m
+2025-06-21T08:22:23.112589 [ESP8266]  INFO: [MCPServer] D
+2025-06-21T08:22:23.122709 [ESP8266]  INFO: ebug: About to call isConnected()[0m
+2025-06-21T08:22:23.122726 [ESP8266]  INFO: [MCPServer] Debug: isConnected() returned
+2025-06-21T08:22:23.132846 [ESP8266]  INFO: : true[0m
+2025-06-21T08:22:23.132862 [ESP8266]  INFO: [MCPServer] Debug: About to call tra
+2025-06-21T08:22:23.143202 [ESP8266]  INFO: nsport->read()[0m
+2025-06-21T08:22:23.143224 [ESP8266]  INFO: [MCPServer] Debug: transport
+2025-06-21T08:22:23.153349 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:23.153369 [ESP8266]  INFO: [MCPServer] Debug: Read successful, buffer size: 0
+2025-06-21T08:22:23.163464 [ESP8266]  INFO: [0m
+2025-06-21T08:22:23.163474 [ESP8266]  INFO: [MCPServer] Debug: About to delay[0m
+2025-06-21T08:22:23.163478 [ESP8266]  INFO: [0;
+2025-06-21T08:22:23.173579 [ESP8266]  INFO: [MCPServer] Debug: Delay completed[0m
+2025-06-21T08:22:23.173591 [ESP8266]  INFO: [MCPServer] Debug: Loop iter
+2025-06-21T08:22:23.183686 [ESP8266]  INFO: ation start[0m
+2025-06-21T08:22:23.183697 [ESP8266]  INFO: [MCPServer] Debug: About to cal
+2025-06-21T08:22:23.193777 [ESP8266]  INFO: l isConnected()[0m
+2025-06-21T08:22:23.193785 [ESP8266]  INFO: [MCPServer] Debug: isConnec
+2025-06-21T08:22:23.203878 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:23.203891 [ESP8266]  INFO: [MCPServer] Debug: About to call transport->read()[0m
+2025-06-21T08:22:23.213985 [ESP8266]  INFO: [MCPServer] Debug: transport->read() returned:
+2025-06-21T08:22:23.224093 [ESP8266]  INFO: true[0m
+2025-06-21T08:22:23.224106 [ESP8266]  INFO: [MCPServer] Debug: Read successful, b
+2025-06-21T08:22:23.235195 [ESP8266]  INFO: uffer size: 0[0m
+2025-06-21T08:22:23.235216 [ESP8266]  INFO: [MCPServer] Debug: About to delay[0m
+2025-06-21T08:22:23.235221 [ESP8266]  INFO: [0;32mI (19097) MCPSe
+2025-06-21T08:22:23.245307 [ESP8266]  INFO: rver: Debug: Delay completed[0m
+2025-06-21T08:22:23.245315 [ESP8266]  INFO: [MCPServer] De
+2025-06-21T08:22:23.255407 [ESP8266]  INFO: bug: Loop iteration start[0m
+2025-06-21T08:22:23.255421 [ESP8266]  INFO: [MCPServer] Debug: About to call isConnected()[0
+2025-06-21T08:22:23.265513 [ESP8266]  INFO: m
+2025-06-21T08:22:23.265522 [ESP8266]  INFO: [MCPServer] Debug: isConnected() returned: tr
+2025-06-21T08:22:23.275604 [ESP8266]  INFO: ue[0m
+2025-06-21T08:22:23.275610 [ESP8266]  INFO: [MCPServer] Debug: About to call transpo
+2025-06-21T08:22:23.285697 [ESP8266]  INFO: rt->read()[0m
+2025-06-21T08:22:23.285709 [ESP8266]  INFO: [MCPServer] Debug: transport->read() returned: true[0m
+2025-06-21T08:22:23.285713 [ESP8266]  INFO: [0;32m
+2025-06-21T08:22:23.295795 [ESP8266]  INFO: [MCPServer] Debug: Read successful, buffer size: 0[0m
+2025-06-21T08:22:23.305888 [ESP8266]  INFO: [MCPServer] Debug: About to delay[0m
+2025-06-21T08:22:23.305898 [ESP8266]  INFO: [0;32mI
+2025-06-21T08:22:23.315987 [ESP8266]  INFO: [MCPServer] Debug: Delay completed[0m
+2025-06-21T08:22:23.315997 [ESP8266]  INFO: [MCPServer] Debug: Loop iteratio
+2025-06-21T08:22:23.326091 [ESP8266]  INFO: n start[0m
+2025-06-21T08:22:23.326102 [ESP8266]  INFO: [MCPServer] Debug: About to call is
+2025-06-21T08:22:23.336184 [ESP8266]  INFO: Connected()[0m
+2025-06-21T08:22:23.336190 [ESP8266]  INFO: [MCPServer] Debug: isConnected() returned: true[0m
+2025-06-21T08:22:23.336193 [ESP8266]  INFO: [0;32mI (
+2025-06-21T08:22:23.349156 [ESP8266]  INFO: [MCPServer] Debug: About to call transport->read()[0m
+2025-06-21T08:22:23.349170 [ESP8266]  INFO: [MCPServer] Debug:
+2025-06-21T08:22:23.359256 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:23.359265 [ESP8266]  INFO: [0;32mI (19213) MCPServe
+2025-06-21T08:22:23.369339 [ESP8266]  INFO: r: Debug: Read successful, buffer size: 0[0m
+2025-06-21T08:22:23.369344 [ESP8266]  INFO: [0;32mI (19223)
+2025-06-21T08:22:23.379430 [ESP8266]  INFO: MCPServer: Debug: About to delay[0m
+2025-06-21T08:22:23.379442 [ESP8266]  INFO: [0;32mI (19237) MCPServer
+2025-06-21T08:22:23.389527 [ESP8266]  INFO: : Debug: Delay completed[0m
+2025-06-21T08:22:23.389535 [ESP8266]  INFO: [MCPServer] Debug: Loop iteration start[0m
+2025-06-21T08:22:23.389538 [ESP8266]  INFO: [0;3
+2025-06-21T08:22:23.399633 [ESP8266]  INFO: [MCPServer] Debug: About to call isConnected()[0m
+2025-06-21T08:22:23.399647 [ESP8266]  INFO: 
+2025-06-21T08:22:23.409736 [ESP8266]  INFO: [MCPServer] Debug: isConnected() returned: true[0m
+2025-06-21T08:22:23.409746 [ESP8266]  INFO: [0;32mI (19264) MCPServer:
+2025-06-21T08:22:23.419831 [ESP8266]  INFO: Debug: About to call transport->read()[0m
+2025-06-21T08:22:23.419839 [ESP8266]  INFO: [0;32mI (19274) MCP
+2025-06-21T08:22:23.429944 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:23.429958 [ESP8266]  INFO: [MCPServer] Debug: Read suc
+2025-06-21T08:22:23.440044 [ESP8266]  INFO: cessful, buffer size: 0[0m
+2025-06-21T08:22:23.440052 [ESP8266]  INFO: [MCPServer] Debug:
+2025-06-21T08:22:23.450137 [ESP8266]  INFO: About to delay[0m
+2025-06-21T08:22:23.450142 [ESP8266]  INFO: [MCPServer] Debug: Delay com
+2025-06-21T08:22:23.460219 [ESP8266]  INFO: pleted[0m
+2025-06-21T08:22:23.460223 [ESP8266]  INFO: [MCPServer] Debug: Loop iteration start[0m
+2025-06-21T08:22:23.460226 [ESP8266]  INFO: [0;32mI (19316) MCPSer
+2025-06-21T08:22:23.470309 [ESP8266]  INFO: ver: Debug: About to call isConnected()[0m
+2025-06-21T08:22:23.470316 [ESP8266]  INFO: [0;32mI (19325) MC
+2025-06-21T08:22:23.480396 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:23.480404 [ESP8266]  INFO: [0;32mI (1933
+2025-06-21T08:22:23.490484 [ESP8266]  INFO: [MCPServer] Debug: About to call transport->read()[0m
+2025-06-21T08:22:23.490492 [ESP8266]  INFO: [MCPServer] Debug: tra
+2025-06-21T08:22:23.500578 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:23.500587 [ESP8266]  INFO: [MCPServer] D
+2025-06-21T08:22:23.510671 [ESP8266]  INFO: ebug: Read successful, buffer size: 0[0m
+2025-06-21T08:22:23.510679 [ESP8266]  INFO: [0;32mI (19363) MCPS
+2025-06-21T08:22:23.520778 [ESP8266]  INFO: erver: Debug: About to delay[0m
+2025-06-21T08:22:23.520789 [ESP8266]  INFO: [MCPServer] Debug: Delay completed[0m
+2025-06-21T08:22:23.520793 [ESP8266]  INFO: [0;32
+2025-06-21T08:22:23.531080 [ESP8266]  INFO: [MCPServer] Debug: Loop iteration start[0m
+2025-06-21T08:22:23.531096 [ESP8266]  INFO: [0;32mI
+2025-06-21T08:22:23.541180 [ESP8266]  INFO: [MCPServer] Debug: About to call isConnected()[0m
+2025-06-21T08:22:23.541197 [ESP8266]  INFO: [MCPServer] Debug: is
+2025-06-21T08:22:23.551287 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:23.551296 [ESP8266]  INFO: [MCPServer] Debu
+2025-06-21T08:22:23.561374 [ESP8266]  INFO: g: About to call transport->read()[0m
+2025-06-21T08:22:23.561380 [ESP8266]  INFO: [0;32mI (19414) MCPServ
+2025-06-21T08:22:23.572165 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:23.572181 [ESP8266]  INFO: [MCPServer] Debug: Read success
+2025-06-21T08:22:23.582272 [ESP8266]  INFO: ful, buffer size: 0[0m
+2025-06-21T08:22:23.582281 [ESP8266]  INFO: [MCPServer] Debug: Abou
+2025-06-21T08:22:23.592358 [ESP8266]  INFO: t to delay[0m
+2025-06-21T08:22:23.592364 [ESP8266]  INFO: [MCPServer] Debug: Delay completed[0m
+2025-06-21T08:22:23.592367 [ESP8266]  INFO: [0;32mI (19448) MCPServ
+2025-06-21T08:22:23.603064 [ESP8266]  INFO: er: Debug: Loop iteration start[0m
+2025-06-21T08:22:23.603096 [ESP8266]  INFO: [0;32mI (19456) MCPServer:
+2025-06-21T08:22:23.613188 [ESP8266]  INFO: Debug: About to call isConnected()[0m
+2025-06-21T08:22:23.613206 [ESP8266]  INFO: [0;32mI (19466) MCPSer
+2025-06-21T08:22:23.623286 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:23.623294 [ESP8266]  INFO: [MCPServer] Debug: About to call t
+2025-06-21T08:22:23.633415 [ESP8266]  INFO: ransport->read()[0m
+2025-06-21T08:22:23.633447 [ESP8266]  INFO: [MCPServer] Debug: transpo
+2025-06-21T08:22:23.643599 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:23.643626 [ESP8266]  INFO: [MCPServer] Debug: Read successful, buffer size:
+2025-06-21T08:22:23.653713 [ESP8266]  INFO: 0[0m
+2025-06-21T08:22:23.653721 [ESP8266]  INFO: [MCPServer] Debug: About to delay[0m
+2025-06-21T08:22:23.653725 [ESP8266]  INFO: [
+2025-06-21T08:22:23.663808 [ESP8266]  INFO: [MCPServer] Debug: Delay completed[0m
+2025-06-21T08:22:23.663816 [ESP8266]  INFO: [0;32mI (
+2025-06-21T08:22:23.673901 [ESP8266]  INFO: [MCPServer] Debug: Loop iteration start[0m
+2025-06-21T08:22:23.673911 [ESP8266]  INFO: [MCPServer] Debug: About to c
+2025-06-21T08:22:23.684356 [ESP8266]  INFO: all isConnected()[0m
+2025-06-21T08:22:23.684402 [ESP8266]  INFO: [MCPServer] Debug: isConn
+2025-06-21T08:22:23.694580 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:23.694618 [ESP8266]  INFO: [MCPServer] Debug: A
+2025-06-21T08:22:23.704711 [ESP8266]  INFO: bout to call transport->read()[0m
+2025-06-21T08:22:23.704721 [ESP8266]  INFO: [MCPServer] Debug: transport->read() returne
+2025-06-21T08:22:23.714808 [ESP8266]  INFO: d: true[0m
+2025-06-21T08:22:23.714817 [ESP8266]  INFO: [MCPServer] Debug: Read successful,
+2025-06-21T08:22:23.724925 [ESP8266]  INFO: buffer size: 0[0m
+2025-06-21T08:22:23.724938 [ESP8266]  INFO: [MCPServer] Debug: About to delay[0m
+2025-06-21T08:22:23.724942 [ESP8266]  INFO: [0;32mI (19588) MCP
+2025-06-21T08:22:23.735571 [ESP8266]  INFO: Server: Debug: Delay completed[0m
+2025-06-21T08:22:23.735616 [ESP8266]  INFO: [0;32mI (19590) MCPServer:
+2025-06-21T08:22:23.745719 [ESP8266]  INFO: Debug: Loop iteration start[0m
+2025-06-21T08:22:23.745738 [ESP8266]  INFO: [MCPServer] Deb
+2025-06-21T08:22:23.755829 [ESP8266]  INFO: ug: About to call isConnected()[0m
+2025-06-21T08:22:23.755838 [ESP8266]  INFO: [MCPServer] Debug: isConnected() returned:
+2025-06-21T08:22:23.765914 [ESP8266]  INFO: true[0m
+2025-06-21T08:22:23.765919 [ESP8266]  INFO: [MCPServer] Debug: About to call trans
+2025-06-21T08:22:23.776020 [ESP8266]  INFO: port->read()[0m
+2025-06-21T08:22:23.776031 [ESP8266]  INFO: [MCPServer] Debug: transport->read() returned: true[0m
+2025-06-21T08:22:23.776036 [ESP8266]  INFO: [0;3
+2025-06-21T08:22:23.787232 [ESP8266]  INFO: [MCPServer] Debug: Read successful, buffer size: 0[0
+2025-06-21T08:22:23.797423 [ESP8266]  INFO: m
+2025-06-21T08:22:23.797447 [ESP8266]  INFO: [MCPServer] Debug: About to delay[0m
+2025-06-21T08:22:23.797452 [ESP8266]  INFO: [MCPServer] Debug: Del
+2025-06-21T08:22:23.807539 [ESP8266]  INFO: ay completed[0m
+2025-06-21T08:22:23.807547 [ESP8266]  INFO: [MCPServer] Debug: Loop iterat
+2025-06-21T08:22:23.817684 [ESP8266]  INFO: ion start[0m
+2025-06-21T08:22:23.817708 [ESP8266]  INFO: [MCPServer] Debug: About to call
+2025-06-21T08:22:23.827803 [ESP8266]  INFO: isConnected()[0m
+2025-06-21T08:22:23.827812 [ESP8266]  INFO: [MCPServer] Debug: isConnected() returned: true[0m
+2025-06-21T08:22:23.827817 [ESP8266]  INFO: [0;32mI
+2025-06-21T08:22:23.837904 [ESP8266]  INFO: [MCPServer] Debug: About to call transport->read()[0m
+2025-06-21T08:22:23.847993 [ESP8266]  INFO: [MCPServer] Debug: transport->read() returned: t
+2025-06-21T08:22:23.858084 [ESP8266]  INFO: rue[0m
+2025-06-21T08:22:23.858093 [ESP8266]  INFO: [MCPServer] Debug: Read successful, buffer size: 0[0m
+2025-06-21T08:22:23.858097 [ESP8266]  INFO: [0;32mI (19715
+2025-06-21T08:22:23.868165 [ESP8266]  INFO: [MCPServer] Debug: About to delay[0m
+2025-06-21T08:22:23.868178 [ESP8266]  INFO: [0;32mI (19728) MCPServ
+2025-06-21T08:22:23.878347 [ESP8266]  INFO: er: Debug: Delay completed[0m
+2025-06-21T08:22:23.878384 [ESP8266]  INFO: [MCPServer] Debu
+2025-06-21T08:22:23.888476 [ESP8266]  INFO: g: Loop iteration start[0m
+2025-06-21T08:22:23.888484 [ESP8266]  INFO: [MCPServer] Debug: About to call isConnected()[0m
+2025-06-21T08:22:23.898562 [ESP8266]  INFO: [MCPServer] Debug: isConnected() returned: true
+2025-06-21T08:22:23.912173 [ESP8266]  INFO: [0m
+2025-06-21T08:22:23.912186 [ESP8266]  INFO: [MCPServer] Debug: About to call transport->read()[0m
+2025-06-21T08:22:23.912191 [ESP8266]  INFO: [0;32mI (19766) M
+2025-06-21T08:22:23.922277 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:23.922288 [ESP8266]  INFO: [MCPServer] Debug: Read s
+2025-06-21T08:22:23.937910 [ESP8266]  INFO: uccessful, buffer size: 0[0m
+2025-06-21T08:22:23.937929 [ESP8266]  INFO: [MCPServer] Debug: About to delay[0m
+2025-06-21T08:22:23.937933 [ESP8266]  INFO: [0;32mI (
+2025-06-21T08:22:23.948018 [ESP8266]  INFO: [MCPServer] Debug: Delay completed[0m
+2025-06-21T08:22:23.948028 [ESP8266]  INFO: [MCPServer] Debug: Loop iteration
+2025-06-21T08:22:23.958114 [ESP8266]  INFO: start[0m
+2025-06-21T08:22:23.958156 [ESP8266]  INFO: [MCPServer] Debug: About to call isCo
+2025-06-21T08:22:23.968237 [ESP8266]  INFO: nnected()[0m
+2025-06-21T08:22:23.968242 [ESP8266]  INFO: [MCPServer] Debug: isConnected() returned: true[0m
+2025-06-21T08:22:23.968245 [ESP8266]  INFO: [0;32mI (19
+2025-06-21T08:22:23.978326 [ESP8266]  INFO: [MCPServer] Debug: About to call transport->read()[0m
+2025-06-21T08:22:23.978333 [ESP8266]  INFO: [0;
+2025-06-21T08:22:23.988416 [ESP8266]  INFO: [MCPServer] Debug: transport->read() returned: true
+2025-06-21T08:22:23.998499 [ESP8266]  INFO: [0m
+2025-06-21T08:22:23.998504 [ESP8266]  INFO: [MCPServer] Debug: Read successful, buffer size: 0[0m
+2025-06-21T08:22:23.998508 [ESP8266]  INFO: [0;32mI (19856) MC
+2025-06-21T08:22:24.008689 [ESP8266]  INFO: PServer: Debug: About to delay[0m
+2025-06-21T08:22:24.008702 [ESP8266]  INFO: [0;32mI (19868) MCPServer:
+2025-06-21T08:22:24.018797 [ESP8266]  INFO: Debug: Delay completed[0m
+2025-06-21T08:22:24.018808 [ESP8266]  INFO: [MCPServer] Debug: L
+2025-06-21T08:22:24.028902 [ESP8266]  INFO: oop iteration start[0m
+2025-06-21T08:22:24.028914 [ESP8266]  INFO: [MCPServer] Debug: About to call isConnected()[0m
+2025-06-21T08:22:24.028918 [ESP8266]  INFO: [0
+2025-06-21T08:22:24.039002 [ESP8266]  INFO: [MCPServer] Debug: isConnected() returned: true[0m
+2025-06-21T08:22:24.049084 [ESP8266]  INFO: [MCPServer] Debug: About to call transport->re
+2025-06-21T08:22:24.059161 [ESP8266]  INFO: ad()[0m
+2025-06-21T08:22:24.059165 [ESP8266]  INFO: [MCPServer] Debug: transport->read() returned: true[0m
+2025-06-21T08:22:24.059168 [ESP8266]  INFO: [0;32mI (199
+2025-06-21T08:22:24.070169 [ESP8266]  INFO: [MCPServer] Debug: Read successful, buffer size: 0[0m
+2025-06-21T08:22:24.070183 [ESP8266]  INFO: [0;3
+2025-06-21T08:22:24.073332 [ CLIENT]  TEST: 🔄 Sending ping request #1
+2025-06-21T08:22:24.080272 [ESP8266]  INFO: [MCPServer] Debug: About to delay[0m
+2025-06-21T08:22:24.080284 [ESP8266]  INFO: [MCPServer] Debug: Delay compl
+2025-06-21T08:22:24.090361 [ESP8266]  INFO: eted[0m
+2025-06-21T08:22:24.090366 [ESP8266]  INFO: [MCPServer] Debug: Loop iteration star
+2025-06-21T08:22:24.101359 [ESP8266]  INFO: t[0m
+2025-06-21T08:22:24.101398 [ESP8266]  INFO: [MCPServer] Debug: About to call isConnected()[0m
+2025-06-21T08:22:24.101404 [ESP8266]  INFO: [0;32mI (19959) MCPS
+2025-06-21T08:22:24.111503 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:24.111517 [ESP8266]  INFO: [0;32mI (19967)
+2025-06-21T08:22:24.121613 [ESP8266]  INFO: MCPServer: Debug: About to call transport->read()[0m
+2025-06-21T08:22:24.121625 [ESP8266]  INFO: [0;32mI
+2025-06-21T08:22:24.131727 [ESP8266]  INFO: [EspSocketTransport] Socket closed by peer[0m
+2025-06-21T08:22:24.131741 [ESP8266]  INFO: [MCPServer] Debug: trans
+2025-06-21T08:22:24.141820 [ESP8266]  INFO: [returned] false[0m
+2025-06-21T08:22:24.141826 [ESP8266]  INFO: [MCPServer] Tr
+2025-06-21T08:22:24.151929 [ESP8266]  INFO: ansport read failed, stopping server[0m
+2025-06-21T08:22:24.151940 [ESP8266]  INFO: [MCPServer] MCP Server stopped[0m
+2025-06-21T08:22:24.151944 [ESP8266]  INFO: [
+2025-06-21T08:22:24.162033 [ESP8266]  INFO: [ESP8266-MCP] Client disconnected[0m
+2025-06-21T08:22:24.162045 [ESP8266]  INFO: [0;32mI (2
+2025-06-21T08:22:24.172154 [ESP8266]  INFO: [ESP8266-MCP] [After client disconnect] Free heap: 61988 by
+2025-06-21T08:22:24.185037 [ESP8266]  INFO: tes, Min free: 53244 bytes, Stack remaining: 6580 bytes[0m
+2025-06-21T08:22:24.185065 [ESP8266]  INFO: [0;32mI (20039) EspSocketTransport
+2025-06-21T08:22:24.195163 [ESP8266]  INFO: : Socket closed manually[0m
+2025-06-21T08:22:24.195175 [ESP8266]  INFO: [MCPServer] MCPServer destroyed[0m
+2025-06-21T08:22:24.195181 [ESP8266]  INFO: [0;32mI (200
+2025-06-21T08:22:24.206160 [ESP8266]  INFO: [ESP8266-MCP] Client connected from 192.168.86.32:48688[0m
+2025-06-21T08:22:24.216257 [ESP8266]  INFO: [ESP8266-MCP] [Before MCP server creation] Free heap: 62540 bytes, Min free: 532
+2025-06-21T08:22:24.226347 [ESP8266]  INFO: 44 bytes, Stack remaining: 6580 bytes[0m
+2025-06-21T08:22:24.226355 [ESP8266]  INFO: [0;32mI (20082) ESP8
+2025-06-21T08:22:24.236445 [ESP8266]  INFO: 266-MCP: Stack remaining before MCP server: 6580 bytes[0m
+2025-06-21T08:22:24.236454 [ESP8266]  INFO: [0;
+2025-06-21T08:22:24.246534 [ESP8266]  INFO: [EspSocketTransport] EspSocketTransport created with socket 55[0m
+2025-06-21T08:22:24.246541 [ESP8266]  INFO: [0;32mI (20104)
+2025-06-21T08:22:24.256635 [ESP8266]  INFO: ESP8266-MCP: Stack remaining after transport creation: 6580 byt
+2025-06-21T08:22:24.266728 [ESP8266]  INFO: es[0m
+2025-06-21T08:22:24.266736 [ESP8266]  INFO: [MCPServer] MCPServer created[0m
+2025-06-21T08:22:24.266740 [ESP8266]  INFO: [0;3
+2025-06-21T08:22:24.276816 [ESP8266]  INFO: [MCPServer] MCPServer: Testing basic JSON creation...[0m
+2025-06-21T08:22:24.276823 [ESP8266]  INFO: [0;32mI (20132) MCPServer
+2025-06-21T08:22:24.287419 [ESP8266]  INFO: : MCPServer: Basic JSON null value created successfully[0m
+2025-06-21T08:22:24.287456 [ESP8266]  INFO: [0
+2025-06-21T08:22:24.297635 [ESP8266]  INFO: [MCPServer] MCPServer: JSON object created successfully[0m
+2025-06-21T08:22:24.297666 [ESP8266]  INFO: [0;32mI (20154) MCPSe
+2025-06-21T08:22:24.311200 [ESP8266]  INFO: rver: MCPServer: JSON test passed during initialization[0m
+2025-06-21T08:22:24.311219 [ESP8266]  INFO: [ESP8266-MCP] Stack
+2025-06-21T08:22:24.321383 [ESP8266]  INFO: remaining after server creation: 6580 bytes[0m
+2025-06-21T08:22:24.321411 [ESP8266]  INFO: [0;32mI (2017
+2025-06-21T08:22:24.331586 [ESP8266]  INFO: [ESP8266-MCP] Starting C++ MCP server for client[0m
+2025-06-21T08:22:24.331623 [ESP8266]  INFO: [MCPServer] MCP Server s
+2025-06-21T08:22:24.341786 [ESP8266]  INFO: tarting...[0m
+2025-06-21T08:22:24.341809 [ESP8266]  INFO: [MCPServer] Debug: About to crea
+2025-06-21T08:22:24.351938 [ESP8266]  INFO: te std::string buffer[0m
+2025-06-21T08:22:24.351957 [ESP8266]  INFO: [MCPServer] Debug: Bu
+2025-06-21T08:22:24.362096 [ESP8266]  INFO: ffer created successfully[0m
+2025-06-21T08:22:24.362116 [ESP8266]  INFO: [MCPServer] Debug: About to enter main loop[0m
+2025-06-21T08:22:24.372273 [ESP8266]  INFO: [MCPServer] Debug: Loop iteration start[0m
+2025-06-21T08:22:24.372291 [ESP8266]  INFO: [0
+2025-06-21T08:22:24.382395 [ESP8266]  INFO: [MCPServer] Debug: About to call isConnected()[0m
+2025-06-21T08:22:24.392516 [ESP8266]  INFO: [MCPServer] Debug: isConnected() returned: true[0m
+2025-06-21T08:22:24.392532 [ESP8266]  INFO: [0;32mI (20248) MCPServer
+2025-06-21T08:22:24.402637 [ESP8266]  INFO: : Debug: About to call transport->read()[0m
+2025-06-21T08:22:24.402651 [ESP8266]  INFO: [0;32mI (20259) M
+2025-06-21T08:22:24.412809 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:24.412837 [ESP8266]  INFO: [MCPServer] Debug: Read s
+2025-06-21T08:22:24.424197 [ESP8266]  INFO: uccessful, buffer size: 46[0m
+2025-06-21T08:22:24.424213 [ESP8266]  INFO: [MCPServer] Debu
+2025-06-21T08:22:24.434329 [ESP8266]  INFO: g: About to process message[0m
+2025-06-21T08:22:24.434343 [ESP8266]  INFO: [MCPServer] Debug: processMessage() entered[0m
+2025-06-21T08:22:24.447228 [ESP8266]  INFO: [MCPServer] Debug: Message length: 46[0m
+2025-06-21T08:22:24.447251 [ESP8266]  INFO: [MCPServer] Debug:
+2025-06-21T08:22:24.457399 [ESP8266]  INFO: About to create method/id/params strings[0m
+2025-06-21T08:22:24.457423 [ESP8266]  INFO: [0;32mI (20313) M
+2025-06-21T08:22:24.466504 [ CLIENT]  INFO: ✅ Ping #1 successful
+2025-06-21T08:22:24.467528 [ESP8266]  INFO: CPServer: Debug: Calling parseRequest[0m
+2025-06-21T08:22:24.467539 [ESP8266]  INFO: [0;32mI (20322) MCPS
+2025-06-21T08:22:24.477648 [ESP8266]  INFO: erver: Debug: parseRequest succeeded[0m
+2025-06-21T08:22:24.477659 [ESP8266]  INFO: [MCPServer] JSON task: Processing oper
+2025-06-21T08:22:24.487781 [ESP8266]  INFO: ation type 3[0m
+2025-06-21T08:22:24.487804 [ESP8266]  INFO: [MCPServer] Debug: Message pro
+2025-06-21T08:22:24.497955 [ESP8266]  INFO: cessed, clearing buffer[0m
+2025-06-21T08:22:24.497981 [ESP8266]  INFO: [MCPServer] Debug: Buffer cleared[0m
+2025-06-21T08:22:24.497986 [ESP8266]  INFO: [0;32mI (20
+2025-06-21T08:22:24.508372 [ESP8266]  INFO: [MCPServer] Debug: About to delay[0m
+2025-06-21T08:22:24.508385 [ESP8266]  INFO: [0;32mI (20368) MCPS
+2025-06-21T08:22:24.518532 [ESP8266]  INFO: erver: Debug: Delay completed[0m
+2025-06-21T08:22:24.518560 [ESP8266]  INFO: [MCPServer] D
+2025-06-21T08:22:24.530216 [ESP8266]  INFO: ebug: Loop iteration start[0m
+2025-06-21T08:22:24.530233 [ESP8266]  INFO: [MCPServer] Debug: About to call isConnected()[
+2025-06-21T08:22:24.540329 [ESP8266]  INFO: 0m
+2025-06-21T08:22:24.540338 [ESP8266]  INFO: [MCPServer] Debug: isConnected() returned: t
+2025-06-21T08:22:24.550422 [ESP8266]  INFO: rue[0m
+2025-06-21T08:22:24.550428 [ESP8266]  INFO: [MCPServer] Debug: About to call transport->read()[0m
+2025-06-21T08:22:24.550432 [ESP8266]  INFO: [0;32mI (20408
+2025-06-21T08:22:24.560516 [ESP8266]  INFO: [EspSocketTransport] Socket closed by peer[0m
+2025-06-21T08:22:24.560526 [ESP8266]  INFO: [0;32mI (20416
+2025-06-21T08:22:24.570612 [ESP8266]  INFO: [MCPServer] Debug: transport->read() returned: false[0m
+2025-06-21T08:22:24.570622 [ESP8266]  INFO: [MCPServer] Transport
+2025-06-21T08:22:24.580701 [ESP8266]  INFO: read failed, stopping server[0m
+2025-06-21T08:22:24.580707 [ESP8266]  INFO: [MCPServer] M
+2025-06-21T08:22:24.590806 [ESP8266]  INFO: CP Server stopped[0m
+2025-06-21T08:22:24.590816 [ESP8266]  INFO: [ESP8266-MCP] Client disc
+2025-06-21T08:22:24.600910 [ESP8266]  INFO: onnected[0m
+2025-06-21T08:22:24.600920 [ESP8266]  INFO: [ESP8266-MCP] [After client disconnect] Free heap: 54196 bytes, Mi
+2025-06-21T08:22:24.611003 [ESP8266]  INFO: n free: 51192 bytes, Stack remaining: 6580 bytes[0m
+2025-06-21T08:22:24.611010 [ESP8266]  INFO: [0;32mI (
+2025-06-21T08:22:24.621087 [ESP8266]  INFO: [EspSocketTransport] Socket closed manually[0m
+2025-06-21T08:22:24.621094 [ESP8266]  INFO: [0;32mI
+2025-06-21T08:22:24.631159 [ESP8266]  INFO: [MCPServer] MCPServer destroyed[0m
+2025-06-21T08:22:25.466613 [ CLIENT]  TEST: 🔄 Sending ping request #2
+2025-06-21T08:22:25.489075 [ESP8266]  INFO: [ESP8266-MCP] Client connected from 192.168.86.3
+2025-06-21T08:22:25.501135 [ESP8266]  INFO: 2:48702[0m
+2025-06-21T08:22:25.501154 [ESP8266]  INFO: [ESP8266-MCP] [Before MCP server cr
+2025-06-21T08:22:25.511236 [ESP8266]  INFO: eation] Free heap: 54136 bytes, Min free: 51192 bytes, Stack remaining: 6580 bytes[0m
+2025-06-21T08:22:25.511243 [ESP8266]  INFO: [0;32mI
+2025-06-21T08:22:25.521340 [ESP8266]  INFO: [ESP8266-MCP] Stack remaining before MCP server: 6580 by
+2025-06-21T08:22:25.531433 [ESP8266]  INFO: tes[0m
+2025-06-21T08:22:25.531440 [ESP8266]  INFO: [EspSocketTransport] EspSocketTransport created with socket 55[0m
+2025-06-21T08:22:25.531444 [ESP8266]  INFO: [0
+2025-06-21T08:22:25.541521 [ESP8266]  INFO: [ESP8266-MCP] Stack remaining after transport creat
+2025-06-21T08:22:25.551611 [ESP8266]  INFO: ion: 6580 bytes[0m
+2025-06-21T08:22:25.551619 [ESP8266]  INFO: [MCPServer] MCPServer created[0m
+2025-06-21T08:22:25.551624 [ESP8266]  INFO: [0;32mI (21408) MCPServ
+2025-06-21T08:22:25.561703 [ESP8266]  INFO: er: MCPServer: Testing basic JSON creation...[0m
+2025-06-21T08:22:25.561710 [ESP8266]  INFO: [0;32mI (214
+2025-06-21T08:22:25.571788 [ESP8266]  INFO: [MCPServer] MCPServer: Basic JSON null value created successf
+2025-06-21T08:22:25.581878 [ESP8266]  INFO: ully[0m
+2025-06-21T08:22:25.581886 [ESP8266]  INFO: [MCPServer] MCPServer: JSON object created successfully[0m
+2025-06-21T08:22:25.581890 [ESP8266]  INFO: [0;32mI
+2025-06-21T08:22:25.591965 [ESP8266]  INFO: [MCPServer] MCPServer: JSON test passed during initializa
+2025-06-21T08:22:25.602068 [ESP8266]  INFO: tion[0m
+2025-06-21T08:22:25.602081 [ESP8266]  INFO: [ESP8266-MCP] Stack remaining after se
+2025-06-21T08:22:25.613991 [ESP8266]  INFO: rver creation: 6580 bytes[0m
+2025-06-21T08:22:25.614009 [ESP8266]  INFO: [ESP8266-MCP] Starting C++ MCP server for client
+2025-06-21T08:22:25.624092 [ESP8266]  INFO: [0m
+2025-06-21T08:22:25.624099 [ESP8266]  INFO: [MCPServer] MCP Server starting...[0m
+2025-06-21T08:22:25.624102 [ESP8266]  INFO: [0
+2025-06-21T08:22:25.634179 [ESP8266]  INFO: [MCPServer] Debug: About to create std::string buffer[0m
+2025-06-21T08:22:25.634185 [ESP8266]  INFO: [0;32mI (21489) MCPServ
+2025-06-21T08:22:25.645186 [ESP8266]  INFO: er: Debug: Buffer created successfully[0m
+2025-06-21T08:22:25.645198 [ESP8266]  INFO: [0;32mI (21498) MCP
+2025-06-21T08:22:25.655284 [ESP8266]  INFO: Server: Debug: About to enter main loop[0m
+2025-06-21T08:22:25.655292 [ESP8266]  INFO: [MCPServer] Debug: Loop iteration s
+2025-06-21T08:22:25.665376 [ESP8266]  INFO: tart[0m
+2025-06-21T08:22:25.665383 [ESP8266]  INFO: [MCPServer] Debug: About to call isCon
+2025-06-21T08:22:25.675472 [ESP8266]  INFO: nected()[0m
+2025-06-21T08:22:25.675481 [ESP8266]  INFO: [MCPServer] Debug: isConnected() returned: true[0m
+2025-06-21T08:22:25.675485 [ESP8266]  INFO: [0;32mI (215
+2025-06-21T08:22:25.685883 [ESP8266]  INFO: [MCPServer] Debug: About to call transport->read()[0m
+2025-06-21T08:22:25.685897 [ESP8266]  INFO: [0;3
+2025-06-21T08:22:25.695983 [ESP8266]  INFO: [MCPServer] Debug: transport->read() returned: true[
+2025-06-21T08:22:25.706069 [ESP8266]  INFO: 0m
+2025-06-21T08:22:25.706074 [ESP8266]  INFO: [MCPServer] Debug: Read successful, buffer size: 46[0m
+2025-06-21T08:22:25.706077 [ESP8266]  INFO: [0;32mI (21562) MC
+2025-06-21T08:22:25.718164 [ESP8266]  INFO: PServer: Debug: About to process message[0m
+2025-06-21T08:22:25.718177 [ESP8266]  INFO: [0;32mI (21571) M
+2025-06-21T08:22:25.728264 [ESP8266]  INFO: entered[0m
+2025-06-21T08:22:25.728272 [ESP8266]  INFO: [MCPServer] Debug: Message length
+2025-06-21T08:22:25.738444 [ESP8266]  INFO: : 46[0m
+2025-06-21T08:22:25.738469 [ESP8266]  INFO: [MCPServer] Debug: About to create met
+2025-06-21T08:22:25.748605 [ESP8266]  INFO: hod/id/params strings[0m
+2025-06-21T08:22:25.748628 [ESP8266]  INFO: [MCPServer] Debug: Calling parseRequest[0m
+2025-06-21T08:22:25.748634 [ESP8266]  INFO: [0;32mI
+2025-06-21T08:22:25.751902 [ CLIENT]  INFO: ✅ Ping #2 successful
+2025-06-21T08:22:25.758724 [ESP8266]  INFO: [MCPServer] Debug: parseRequest succeeded[0m
+2025-06-21T08:22:25.758738 [ESP8266]  INFO: [0;32mI
+2025-06-21T08:22:25.768829 [ESP8266]  INFO: [MCPServer] JSON task: Processing operation type 3[0m
+2025-06-21T08:22:25.768843 [ESP8266]  INFO: 
+2025-06-21T08:22:25.778944 [ESP8266]  INFO: [MCPServer] Debug: Message processed, clearing buffer[0m
+2025-06-21T08:22:25.778961 [ESP8266]  INFO: [0;32mI (21635) MCPSe
+2025-06-21T08:22:25.789050 [ESP8266]  INFO: rver: Debug: Buffer cleared[0m
+2025-06-21T08:22:25.789061 [ESP8266]  INFO: [MCPServer] Deb
+2025-06-21T08:22:25.799174 [ESP8266]  INFO: ug: About to delay[0m
+2025-06-21T08:22:25.799184 [ESP8266]  INFO: [MCPServer] Debug: Delay
+2025-06-21T08:22:25.809283 [ESP8266]  INFO: completed[0m
+2025-06-21T08:22:25.809293 [ESP8266]  INFO: [MCPServer] Debug: Loop iteration start[0m
+2025-06-21T08:22:25.809297 [ESP8266]  INFO: [0;32mI (21665) MC
+2025-06-21T08:22:25.819395 [ESP8266]  INFO: PServer: Debug: About to call isConnected()[0m
+2025-06-21T08:22:25.819414 [ESP8266]  INFO: [0;32mI (21674
+2025-06-21T08:22:25.829498 [ESP8266]  INFO: [MCPServer] Debug: isConnected() returned: true[0m
+2025-06-21T08:22:25.829510 [ESP8266]  INFO: [MCPServer] Debug: About t
+2025-06-21T08:22:25.843167 [ESP8266]  INFO: o call transport->read()[0m
+2025-06-21T08:22:25.843183 [ESP8266]  INFO: [EspSocketTransport] Socket closed by peer[0m
+2025-06-21T08:22:25.843187 [ESP8266]  INFO: [
+2025-06-21T08:22:25.853273 [ESP8266]  INFO: [MCPServer] Debug: transport->read() returned: fal
+2025-06-21T08:22:25.866174 [ESP8266]  INFO: se[0m
+2025-06-21T08:22:25.866187 [ESP8266]  INFO: [MCPServer] Transport read failed, stopping server[0m
+2025-06-21T08:22:25.866191 [ESP8266]  INFO: [0;32mI (21721)
+2025-06-21T08:22:25.876275 [ESP8266]  INFO: MCPServer: MCP Server stopped[0m
+2025-06-21T08:22:25.876283 [ESP8266]  INFO: [ESP8266-MCP] Client disconnected[0m
+2025-06-21T08:22:25.876287 [ESP8266]  INFO: [0;3
+2025-06-21T08:22:25.886342 [ESP8266]  INFO: [ESP8266-MCP] [After client disconnect] Free heap: 54
+2025-06-21T08:22:25.897280 [ESP8266]  INFO: 196 bytes, Min free: 51192 bytes, Stack remaining: 6580 bytes[0
+2025-06-21T08:22:25.907442 [ESP8266]  INFO: m
+2025-06-21T08:22:25.907463 [ESP8266]  INFO: [EspSocketTransport] Socket closed manually[0m
+2025-06-21T08:22:25.907469 [ESP8266]  INFO: [0;32mI (21762) MCPServer:
+2025-06-21T08:22:25.917585 [ESP8266]  INFO: MCPServer destroyed[0m
+2025-06-21T08:22:26.752044 [ CLIENT]  TEST: 🔄 Sending ping request #3
+2025-06-21T08:22:26.774425 [ESP8266]  INFO: [ESP8266-MCP] Client connected from 192.168.86.3
+2025-06-21T08:22:26.784553 [ESP8266]  INFO: 2:48704[0m
+2025-06-21T08:22:26.784569 [ESP8266]  INFO: [ESP8266-MCP] [Before MCP server cr
+2025-06-21T08:22:26.794653 [ESP8266]  INFO: eation] Free heap: 54136 bytes, Min free: 51192 bytes, Stack remaining: 6580 bytes[0m
+2025-06-21T08:22:26.794660 [ESP8266]  INFO: [0;32mI
+2025-06-21T08:22:26.804747 [ESP8266]  INFO: [ESP8266-MCP] Stack remaining before MCP server: 6580 by
+2025-06-21T08:22:26.814883 [ESP8266]  INFO: tes[0m
+2025-06-21T08:22:26.814892 [ESP8266]  INFO: [EspSocketTransport] EspSocketTransport
+2025-06-21T08:22:26.826227 [ESP8266]  INFO: created with socket 55[0m
+2025-06-21T08:22:26.826240 [ESP8266]  INFO: [ESP8266-MCP] Stack remaining after transport creat
+2025-06-21T08:22:26.836327 [ESP8266]  INFO: ion: 6580 bytes[0m
+2025-06-21T08:22:26.836336 [ESP8266]  INFO: [MCPServer] MCPServer created[0m
+2025-06-21T08:22:26.836340 [ESP8266]  INFO: [0;32mI (22692) MCPServ
+2025-06-21T08:22:26.848778 [ESP8266]  INFO: er: MCPServer: Testing basic JSON creation...[0m
+2025-06-21T08:22:26.848809 [ESP8266]  INFO: [0;32mI (227
+2025-06-21T08:22:26.858903 [ESP8266]  INFO: [MCPServer] MCPServer: Basic JSON null value created successfully[0m
+2025-06-21T08:22:26.858916 [ESP8266]  INFO: [0;32mI (22714) MCPSe
+2025-06-21T08:22:26.869033 [ESP8266]  INFO: rver: MCPServer: JSON object created successfully[0m
+2025-06-21T08:22:26.869051 [ESP8266]  INFO: [0;32mI
+2025-06-21T08:22:26.879301 [ESP8266]  INFO: [MCPServer] MCPServer: JSON test passed during initialization[0m
+2025-06-21T08:22:26.879330 [ESP8266]  INFO: [0;32mI (22736) ESP82
+2025-06-21T08:22:26.889434 [ESP8266]  INFO: 66-MCP: Stack remaining after server creation: 6580 bytes[0m
+2025-06-21T08:22:26.889450 [ESP8266]  INFO: 
+2025-06-21T08:22:26.899594 [ESP8266]  INFO: [ESP8266-MCP] Starting C++ MCP server for client
+2025-06-21T08:22:26.909763 [ESP8266]  INFO: [0m
+2025-06-21T08:22:26.909789 [ESP8266]  INFO: [MCPServer] MCP Server starting...[0m
+2025-06-21T08:22:26.909796 [ESP8266]  INFO: [MCPServer] Debug:
+2025-06-21T08:22:26.919895 [ESP8266]  INFO: About to create std::string buffer[0m
+2025-06-21T08:22:26.919910 [ESP8266]  INFO: [0;32mI (22773) MCPServ
+2025-06-21T08:22:26.930092 [ESP8266]  INFO: er: Debug: Buffer created successfully[0m
+2025-06-21T08:22:26.930131 [ESP8266]  INFO: [0;32mI (22783) MCP
+2025-06-21T08:22:26.940294 [ESP8266]  INFO: Server: Debug: About to enter main loop[0m
+2025-06-21T08:22:26.940322 [ESP8266]  INFO: [MCPServer] Debug: Loop iteration s
+2025-06-21T08:22:26.950438 [ESP8266]  INFO: tart[0m
+2025-06-21T08:22:26.950455 [ESP8266]  INFO: [MCPServer] Debug: About to call isCon
+2025-06-21T08:22:26.960633 [ESP8266]  INFO: nected()[0m
+2025-06-21T08:22:26.960665 [ESP8266]  INFO: [MCPServer] Debug: isConnected() returned: true[0m
+2025-06-21T08:22:26.960672 [ESP8266]  INFO: [0;32mI (228
+2025-06-21T08:22:26.970859 [ESP8266]  INFO: [MCPServer] Debug: About to call transport->read()[0m
+2025-06-21T08:22:26.970895 [ESP8266]  INFO: [0;3
+2025-06-21T08:22:26.981053 [ESP8266]  INFO: [MCPServer] Debug: transport->read() returned: true[
+2025-06-21T08:22:26.991254 [ESP8266]  INFO: 0m
+2025-06-21T08:22:26.991286 [ESP8266]  INFO: [MCPServer] Debug: Read successful, buffer size: 46[0m
+2025-06-21T08:22:26.991293 [ESP8266]  INFO: [0;32mI (22847) MC
+2025-06-21T08:22:27.001469 [ESP8266]  INFO: PServer: Debug: About to process message[0m
+2025-06-21T08:22:27.001501 [ESP8266]  INFO: [0;32mI (22855) M
+2025-06-21T08:22:27.013231 [ESP8266]  INFO: entered[0m
+2025-06-21T08:22:27.013264 [ESP8266]  INFO: [MCPServer] Debug: Message length
+2025-06-21T08:22:27.023436 [ESP8266]  INFO: : 46[0m
+2025-06-21T08:22:27.023467 [ESP8266]  INFO: [MCPServer] Debug: About to create met
+2025-06-21T08:22:27.033635 [ESP8266]  INFO: hod/id/params strings[0m
+2025-06-21T08:22:27.033664 [ESP8266]  INFO: [MCPServer] Debug: Calling parseRequest[0m
+2025-06-21T08:22:27.033670 [ESP8266]  INFO: [0;32mI
+2025-06-21T08:22:27.043859 [ESP8266]  INFO: [MCPServer] Debug: parseRequest succeeded[0m
+2025-06-21T08:22:27.043897 [ESP8266]  INFO: [0;32mI
+2025-06-21T08:22:27.054018 [ESP8266]  INFO: [MCPServer] JSON task: Processing operation type 3[0m
+2025-06-21T08:22:27.054039 [ESP8266]  INFO: 
+2025-06-21T08:22:27.064184 [ESP8266]  INFO: [MCPServer] Debug: Message processed, clearing buffer[0m
+2025-06-21T08:22:27.064208 [ESP8266]  INFO: [0;32mI (22919) MCPSe
+2025-06-21T08:22:27.074334 [ESP8266]  INFO: rver: Debug: Buffer cleared[0m
+2025-06-21T08:22:27.074353 [ESP8266]  INFO: [MCPServer] Deb
+2025-06-21T08:22:27.084446 [ESP8266]  INFO: ug: About to delay[0m
+2025-06-21T08:22:27.084456 [ESP8266]  INFO: [MCPServer] Debug: Delay completed[0m
+2025-06-21T08:22:27.084460 [ESP8266]  INFO: [0;32mI (22941)
+2025-06-21T08:22:27.094539 [ESP8266]  INFO: MCPServer: Debug: Loop iteration start[0m
+2025-06-21T08:22:27.094547 [ESP8266]  INFO: [0;32mI (22949) MC
+2025-06-21T08:22:27.104630 [ESP8266]  INFO: PServer: Debug: About to call isConnected()[0m
+2025-06-21T08:22:27.104639 [ESP8266]  INFO: [0;32mI (22959
+2025-06-21T08:22:27.114735 [ESP8266]  INFO: [MCPServer] Debug: isConnected() returned: true[0m
+2025-06-21T08:22:27.114810 [ESP8266]  INFO: [MCPServer] Debug: About t
+2025-06-21T08:22:27.115414 [ CLIENT]  INFO: ✅ Ping #3 successful
+2025-06-21T08:22:27.124903 [ESP8266]  INFO: o call transport->read()[0m
+2025-06-21T08:22:27.124915 [ESP8266]  INFO: [MCPServer] Debug:
+2025-06-21T08:22:27.136184 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:27.136198 [ESP8266]  INFO: [MCPServer] Debug: Read successful, buffe
+2025-06-21T08:22:27.146286 [ESP8266]  INFO: r size: 0[0m
+2025-06-21T08:22:27.146295 [ESP8266]  INFO: [MCPServer] Debug: About to delay
+2025-06-21T08:22:27.156434 [ESP8266]  INFO: [0m
+2025-06-21T08:22:27.156453 [ESP8266]  INFO: [MCPServer] Debug: Delay completed[0m
+2025-06-21T08:22:27.156458 [ESP8266]  INFO: [
+2025-06-21T08:22:27.166564 [ESP8266]  INFO: [MCPServer] Debug: Loop iteration start[0m
+2025-06-21T08:22:27.166578 [ESP8266]  INFO: [MCPServer] Debug: Ab
+2025-06-21T08:22:27.176666 [ESP8266]  INFO: out to call isConnected()[0m
+2025-06-21T08:22:27.176674 [ESP8266]  INFO: [MCPServer] Debug
+2025-06-21T08:22:27.186755 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:27.186762 [ESP8266]  INFO: [MCPServer] Debug: About to call transport->
+2025-06-21T08:22:27.196845 [ESP8266]  INFO: read()[0m
+2025-06-21T08:22:27.196853 [ESP8266]  INFO: [EspSocketTransport] Socket closed b
+2025-06-21T08:22:27.206928 [ESP8266]  INFO: y peer[0m
+2025-06-21T08:22:27.206932 [ESP8266]  INFO: [MCPServer] Debug: transport->read()
+2025-06-21T08:22:27.220182 [ESP8266]  INFO: returned: false[0m
+2025-06-21T08:22:27.220193 [ESP8266]  INFO: [MCPServer] Transport read failed, stopping server[0m
+2025-06-21T08:22:27.220197 [ESP8266]  INFO: [
+2025-06-21T08:22:27.230282 [ESP8266]  INFO: [MCPServer] MCP Server stopped[0m
+2025-06-21T08:22:27.230291 [ESP8266]  INFO: [ESP8266-MCP] Client disconnec
+2025-06-21T08:22:27.240375 [ESP8266]  INFO: ted[0m
+2025-06-21T08:22:27.240382 [ESP8266]  INFO: [ESP8266-MCP] [After client disconnect]
+2025-06-21T08:22:27.250462 [ESP8266]  INFO: Free heap: 54196 bytes, Min free: 51192 bytes, Stack remaining:
+2025-06-21T08:22:27.260543 [ESP8266]  INFO: 6580 bytes[0m
+2025-06-21T08:22:27.260549 [ESP8266]  INFO: [EspSocketTransport] Socket closed manually[0m
+2025-06-21T08:22:27.260552 [ESP8266]  INFO: [0;32mI (2311
+2025-06-21T08:22:27.270639 [ESP8266]  INFO: [MCPServer] MCPServer destroyed[0m
+2025-06-21T08:22:28.121973 [ CLIENT]  TEST: 📤 Sending invalid tool request (should fail)
+2025-06-21T08:22:28.137137 [ESP8266]  INFO: [ESP8266-MCP] Cl
+2025-06-21T08:22:28.147474 [ESP8266]  INFO: ient connected from 192.168.86.32:48710[0m
+2025-06-21T08:22:28.147494 [ESP8266]  INFO: [ESP8266-MCP] [Before MCP server cr
+2025-06-21T08:22:28.157587 [ESP8266]  INFO: eation] Free heap: 54072 bytes, Min free: 51192 bytes, Stack rem
+2025-06-21T08:22:28.167675 [ESP8266]  INFO: aining: 6580 bytes[0m
+2025-06-21T08:22:28.167683 [ESP8266]  INFO: [ESP8266-MCP] Stack remaining before MCP server: 6580 by
+2025-06-21T08:22:28.179175 [ESP8266]  INFO: tes[0m
+2025-06-21T08:22:28.179192 [ESP8266]  INFO: [EspSocketTransport] EspSocketTransport
+2025-06-21T08:22:28.189277 [ESP8266]  INFO: created with socket 55[0m
+2025-06-21T08:22:28.189285 [ESP8266]  INFO: [ESP8266-MCP] Stack remaining after transport creat
+2025-06-21T08:22:28.200158 [ESP8266]  INFO: ion: 6580 bytes[0m
+2025-06-21T08:22:28.200170 [ESP8266]  INFO: [MCPServer] MCPServer creat
+2025-06-21T08:22:28.210255 [ESP8266]  INFO: ed[0m
+2025-06-21T08:22:28.210262 [ESP8266]  INFO: [MCPServer] MCPServer: Testing basic JSON creation...[0m
+2025-06-21T08:22:28.210265 [ESP8266]  INFO: [0;32mI (240
+2025-06-21T08:22:28.220342 [ESP8266]  INFO: [MCPServer] MCPServer: Basic JSON null value created successf
+2025-06-21T08:22:28.230436 [ESP8266]  INFO: ully[0m
+2025-06-21T08:22:28.230449 [ESP8266]  INFO: [MCPServer] MCPServer: JSON object cre
+2025-06-21T08:22:28.240534 [ESP8266]  INFO: ated successfully[0m
+2025-06-21T08:22:28.240541 [ESP8266]  INFO: [MCPServer] MCPServer: JSON test passed during initializa
+2025-06-21T08:22:28.250618 [ESP8266]  INFO: tion[0m
+2025-06-21T08:22:28.250624 [ESP8266]  INFO: [ESP8266-MCP] Stack remaining after se
+2025-06-21T08:22:28.260702 [ESP8266]  INFO: rver creation: 6580 bytes[0m
+2025-06-21T08:22:28.260709 [ESP8266]  INFO: [ESP8266-MCP] Sta
+2025-06-21T08:22:28.270802 [ESP8266]  INFO: rting C++ MCP server for client[0m
+2025-06-21T08:22:28.270814 [ESP8266]  INFO: [MCPServer] MCP Server starting...[0m
+2025-06-21T08:22:28.270819 [ESP8266]  INFO: [0
+2025-06-21T08:22:28.280899 [ESP8266]  INFO: [MCPServer] Debug: About to create std::string buff
+2025-06-21T08:22:28.290994 [ESP8266]  INFO: er[0m
+2025-06-21T08:22:28.291006 [ESP8266]  INFO: [MCPServer] Debug: Buffer created succes
+2025-06-21T08:22:28.301169 [ESP8266]  INFO: sfully[0m
+2025-06-21T08:22:28.301189 [ESP8266]  INFO: [MCPServer] Debug: About to enter main loop[0m
+2025-06-21T08:22:28.301194 [ESP8266]  INFO: [0;32mI (24156) MC
+2025-06-21T08:22:28.311341 [ESP8266]  INFO: PServer: Debug: Loop iteration start[0m
+2025-06-21T08:22:28.311371 [ESP8266]  INFO: [0;32mI (24164) MCPSe
+2025-06-21T08:22:28.321488 [ESP8266]  INFO: rver: Debug: About to call isConnected()[0m
+2025-06-21T08:22:28.321504 [ESP8266]  INFO: [MCPServer] Debug: isConnected() r
+2025-06-21T08:22:28.331643 [ESP8266]  INFO: eturned: true[0m
+2025-06-21T08:22:28.331663 [ESP8266]  INFO: [MCPServer] Debug: About to c
+2025-06-21T08:22:28.341792 [ESP8266]  INFO: all transport->read()[0m
+2025-06-21T08:22:28.341807 [ESP8266]  INFO: [MCPServer] Debug: tr
+2025-06-21T08:22:28.351914 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:28.351930 [ESP8266]  INFO: [MCPServer] Debug: Read successful, buffer s
+2025-06-21T08:22:28.362042 [ESP8266]  INFO: ize: 110[0m
+2025-06-21T08:22:28.362054 [ESP8266]  INFO: [MCPServer] Debug: About to proces
+2025-06-21T08:22:28.372164 [ESP8266]  INFO: s message[0m
+2025-06-21T08:22:28.372173 [ESP8266]  INFO: [MCPServer] Debug: processMessage
+2025-06-21T08:22:28.382303 [ESP8266]  INFO: () entered[0m
+2025-06-21T08:22:28.382321 [ESP8266]  INFO: [MCPServer] Debug: Message length: 110[0m
+2025-06-21T08:22:28.382326 [ESP8266]  INFO: [0;32mI (24239) MCP
+2025-06-21T08:22:28.392484 [ESP8266]  INFO: Server: Debug: About to create method/id/params strings[0m
+2025-06-21T08:22:28.392511 [ESP8266]  INFO: [0
+2025-06-21T08:22:28.402631 [ESP8266]  INFO: [MCPServer] Debug: Calling parseRequest[0m
+2025-06-21T08:22:28.402650 [ESP8266]  INFO: [MCPServer] Debug: par
+2025-06-21T08:22:28.412774 [ESP8266]  INFO: seRequest succeeded[0m
+2025-06-21T08:22:28.412789 [ESP8266]  INFO: [MCPServer] createError
+2025-06-21T08:22:28.422885 [ESP8266]  INFO: Response: Creating error response - id: 999, code: -32002, messa
+2025-06-21T08:22:28.433000 [ESP8266]  INFO: ge: Server not initialized[0m
+2025-06-21T08:22:28.433014 [ESP8266]  INFO: [MCPServer] createErrorResponse: Response length
+2025-06-21T08:22:28.443159 [ESP8266]  INFO: : 0[0m
+2025-06-21T08:22:28.443175 [ESP8266]  INFO: [MCPServer] Debug: Message processed, c
+2025-06-21T08:22:28.453270 [ESP8266]  INFO: learing buffer[0m
+2025-06-21T08:22:28.453279 [ESP8266]  INFO: [MCPServer] Debug: Buffer cl
+2025-06-21T08:22:28.463392 [ESP8266]  INFO: eared[0m
+2025-06-21T08:22:28.463406 [ESP8266]  INFO: [MCPServer] Debug: About to delay[0m
+2025-06-21T08:22:28.463409 [ESP8266]  INFO: [MCPServer] De
+2025-06-21T08:22:28.473544 [ESP8266]  INFO: bug: Delay completed[0m
+2025-06-21T08:22:28.473565 [ESP8266]  INFO: [MCPServer] Debug: Loo
+2025-06-21T08:22:28.483656 [ESP8266]  INFO: p iteration start[0m
+2025-06-21T08:22:28.483665 [ESP8266]  INFO: [MCPServer] Debug: About to call isConnected()[0m
+2025-06-21T08:22:28.483668 [ESP8266]  INFO: [0;3
+2025-06-21T08:22:28.493779 [ESP8266]  INFO: [MCPServer] Debug: isConnected() returned: true[0m
+2025-06-21T08:22:28.503896 [ESP8266]  INFO: [MCPServer] Debug: About to call transport->read
+2025-06-21T08:22:28.514002 [ESP8266]  INFO: ()[0m
+2025-06-21T08:22:28.514012 [ESP8266]  INFO: [MCPServer] Debug: transport->read() returned: true[0m
+2025-06-21T08:22:28.514017 [ESP8266]  INFO: [0;32mI (24370
+2025-06-21T08:22:28.524170 [ESP8266]  INFO: [MCPServer] Debug: Read successful, buffer size: 0[0m
+2025-06-21T08:22:28.524194 [ESP8266]  INFO: [0;32m
+2025-06-21T08:22:28.534281 [ESP8266]  INFO: [MCPServer] Debug: About to delay[0m
+2025-06-21T08:22:28.534292 [ESP8266]  INFO: [0;32mI (24388)
+2025-06-21T08:22:28.544424 [ESP8266]  INFO: MCPServer: Debug: Delay completed[0m
+2025-06-21T08:22:28.544440 [ESP8266]  INFO: [MCPServer] Debug: Loop iteration start
+2025-06-21T08:22:28.554552 [ESP8266]  INFO: [0m
+2025-06-21T08:22:28.554562 [ESP8266]  INFO: [MCPServer] Debug: About to call isConnecte
+2025-06-21T08:22:28.567527 [ESP8266]  INFO: d()[0m
+2025-06-21T08:22:28.567546 [ESP8266]  INFO: [MCPServer] Debug: isConnected() return
+2025-06-21T08:22:28.577720 [ESP8266]  INFO: ed: true[0m
+2025-06-21T08:22:28.577753 [ESP8266]  INFO: [MCPServer] Debug: About to call transport->read()[0m
+2025-06-21T08:22:28.577759 [ESP8266]  INFO: [MCPServer] Debug: transpo
+2025-06-21T08:22:28.587895 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:28.587917 [ESP8266]  INFO: [MCPServer] Debug
+2025-06-21T08:22:28.598011 [ESP8266]  INFO: : Read successful, buffer size: 0[0m
+2025-06-21T08:22:28.598020 [ESP8266]  INFO: [0;32mI (24450) MCPServe
+2025-06-21T08:22:28.608241 [ESP8266]  INFO: r: Debug: About to delay[0m
+2025-06-21T08:22:28.608266 [ESP8266]  INFO: [MCPServer] Debug: Delay completed[0m
+2025-06-21T08:22:28.608273 [ESP8266]  INFO: [0;32mI (
+2025-06-21T08:22:28.618420 [ESP8266]  INFO: [MCPServer] Debug: Loop iteration start[0m
+2025-06-21T08:22:28.618445 [ESP8266]  INFO: [0;32mI (244
+2025-06-21T08:22:28.628814 [ESP8266]  INFO: [MCPServer] Debug: About to call isConnected()[0m
+2025-06-21T08:22:28.628830 [ESP8266]  INFO: [MCPServer] Debug: isConn
+2025-06-21T08:22:28.639005 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:28.639038 [ESP8266]  INFO: [MCPServer] Debug: A
+2025-06-21T08:22:28.649196 [ESP8266]  INFO: bout to call transport->read()[0m
+2025-06-21T08:22:28.649223 [ESP8266]  INFO: [0;32mI (24501) MCPServer:
+2025-06-21T08:22:28.662221 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:28.662254 [ESP8266]  INFO: [MCPServer] Debug: Read successful,
+2025-06-21T08:22:28.672404 [ESP8266]  INFO: buffer size: 0[0m
+2025-06-21T08:22:28.672426 [ESP8266]  INFO: [MCPServer] Debug: About to delay[0m
+2025-06-21T08:22:28.672430 [ESP8266]  INFO: [0;32mI (24528) MCP
+2025-06-21T08:22:28.682518 [ESP8266]  INFO: Server: Debug: Delay completed[0m
+2025-06-21T08:22:28.682524 [ESP8266]  INFO: [0;32mI (24535) MCPServer:
+2025-06-21T08:22:28.692617 [ESP8266]  INFO: Debug: Loop iteration start[0m
+2025-06-21T08:22:28.692627 [ESP8266]  INFO: [MCPServer] Deb
+2025-06-21T08:22:28.702771 [ESP8266]  INFO: ug: About to call isConnected()[0m
+2025-06-21T08:22:28.702791 [ESP8266]  INFO: [MCPServer] Debug: isConnected() returned:
+2025-06-21T08:22:28.712902 [ESP8266]  INFO: true[0m
+2025-06-21T08:22:28.712913 [ESP8266]  INFO: [MCPServer] Debug: About to call trans
+2025-06-21T08:22:28.723013 [ESP8266]  INFO: port->read()[0m
+2025-06-21T08:22:28.723023 [ESP8266]  INFO: [MCPServer] Debug: transport->read() returned: true[0m
+2025-06-21T08:22:28.723027 [ESP8266]  INFO: [0;3
+2025-06-21T08:22:28.733153 [ESP8266]  INFO: [MCPServer] Debug: Read successful, buffer size: 0[0
+2025-06-21T08:22:28.746205 [ESP8266]  INFO: m
+2025-06-21T08:22:28.746224 [ESP8266]  INFO: [MCPServer] Debug: About to delay[0m
+2025-06-21T08:22:28.746229 [ESP8266]  INFO: [MCPServer] Debug: Del
+2025-06-21T08:22:28.756378 [ESP8266]  INFO: ay completed[0m
+2025-06-21T08:22:28.756401 [ESP8266]  INFO: [MCPServer] Debug: Loop iterat
+2025-06-21T08:22:28.766513 [ESP8266]  INFO: ion start[0m
+2025-06-21T08:22:28.766525 [ESP8266]  INFO: [MCPServer] Debug: About to call isConnected()[0m
+2025-06-21T08:22:28.766528 [ESP8266]  INFO: [0;32mI (246
+2025-06-21T08:22:28.776641 [ESP8266]  INFO: [MCPServer] Debug: isConnected() returned: true[0m
+2025-06-21T08:22:28.776656 [ESP8266]  INFO: [0;32mI
+2025-06-21T08:22:28.786763 [ESP8266]  INFO: [MCPServer] Debug: About to call transport->read()[0m
+2025-06-21T08:22:28.796925 [ESP8266]  INFO: [MCPServer] Debug: transport->read() returned: true[0m
+2025-06-21T08:22:28.796950 [ESP8266]  INFO: [0;32mI (24651) MCPSer
+2025-06-21T08:22:28.807091 [ESP8266]  INFO: ver: Debug: Read successful, buffer size: 0[0m
+2025-06-21T08:22:28.807114 [ESP8266]  INFO: [0;32mI (24661
+2025-06-21T08:22:28.817425 [ESP8266]  INFO: [MCPServer] Debug: About to delay[0m
+2025-06-21T08:22:28.817447 [ESP8266]  INFO: [MCPServer] Debug: Delay completed[0m
+2025-06-21T08:22:28.827602 [ESP8266]  INFO: [MCPServer] Debug: Loop iteration start[0m
+2025-06-21T08:22:28.827629 [ESP8266]  INFO: [0
+2025-06-21T08:22:28.837764 [ESP8266]  INFO: [MCPServer] Debug: About to call isConnected()[0m
+2025-06-21T08:22:28.851227 [ESP8266]  INFO: [MCPServer] Debug: isConnected() returned: true[0m
+2025-06-21T08:22:28.851254 [ESP8266]  INFO: [0;32mI (24702) MCPServer
+2025-06-21T08:22:28.861406 [ESP8266]  INFO: : Debug: About to call transport->read()[0m
+2025-06-21T08:22:28.861430 [ESP8266]  INFO: [MCPServer] Debug: transport->read
+2025-06-21T08:22:28.871566 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:28.871591 [ESP8266]  INFO: [MCPServer] Debug: Read s
+2025-06-21T08:22:28.881686 [ESP8266]  INFO: uccessful, buffer size: 0[0m
+2025-06-21T08:22:28.881746 [ESP8266]  INFO: [MCPServer] Debug: About to delay[0m
+2025-06-21T08:22:28.881751 [ESP8266]  INFO: [0;32mI (
+2025-06-21T08:22:28.891895 [ESP8266]  INFO: [MCPServer] Debug: Delay completed[0m
+2025-06-21T08:22:28.891921 [ESP8266]  INFO: [0;32mI (24749) M
+2025-06-21T08:22:28.902257 [ESP8266]  INFO: CPServer: Debug: Loop iteration start[0m
+2025-06-21T08:22:28.902291 [ESP8266]  INFO: [MCPServer] Debug: About to call isCo
+2025-06-21T08:22:28.912409 [ESP8266]  INFO: nnected()[0m
+2025-06-21T08:22:28.912426 [ESP8266]  INFO: [MCPServer] Debug: isConnected()
+2025-06-21T08:22:28.922917 [ESP8266]  INFO: returned: true[0m
+2025-06-21T08:22:28.922940 [ESP8266]  INFO: [MCPServer] Debug: About to
+2025-06-21T08:22:28.933049 [ESP8266]  INFO: call transport->read()[0m
+2025-06-21T08:22:28.933064 [ESP8266]  INFO: [MCPServer] Debug: transport->read() returned: true
+2025-06-21T08:22:28.945280 [ESP8266]  INFO: [0m
+2025-06-21T08:22:28.945300 [ESP8266]  INFO: [MCPServer] Debug: Read successful, buffer size: 0[0m
+2025-06-21T08:22:28.945305 [ESP8266]  INFO: [0;32mI (24801) MC
+2025-06-21T08:22:28.955389 [ESP8266]  INFO: PServer: Debug: About to delay[0m
+2025-06-21T08:22:28.955396 [ESP8266]  INFO: [0;32mI (24818) MCPServer:
+2025-06-21T08:22:28.965478 [ESP8266]  INFO: Debug: Delay completed[0m
+2025-06-21T08:22:28.965485 [ESP8266]  INFO: [MCPServer] Debug: L
+2025-06-21T08:22:28.975576 [ESP8266]  INFO: oop iteration start[0m
+2025-06-21T08:22:28.975583 [ESP8266]  INFO: [MCPServer] Debug: About to call isConnected()[0m
+2025-06-21T08:22:28.975587 [ESP8266]  INFO: [0
+2025-06-21T08:22:28.985727 [ESP8266]  INFO: [MCPServer] Debug: isConnected() returned: true[0m
+2025-06-21T08:22:28.995865 [ESP8266]  INFO: [MCPServer] Debug: About to call transport->re
+2025-06-21T08:22:29.005997 [ESP8266]  INFO: ad()[0m
+2025-06-21T08:22:29.006013 [ESP8266]  INFO: [MCPServer] Debug: transport->read() returned: true[0m
+2025-06-21T08:22:29.006017 [ESP8266]  INFO: [0;32mI (248
+2025-06-21T08:22:29.016134 [ESP8266]  INFO: [MCPServer] Debug: Read successful, buffer size: 0[0m
+2025-06-21T08:22:29.016151 [ESP8266]  INFO: [0;3
+2025-06-21T08:22:29.026253 [ESP8266]  INFO: [MCPServer] Debug: About to delay[0m
+2025-06-21T08:22:29.026266 [ESP8266]  INFO: [MCPServer] Debug: Delay compl
+2025-06-21T08:22:29.036386 [ESP8266]  INFO: eted[0m
+2025-06-21T08:22:29.036405 [ESP8266]  INFO: [MCPServer] Debug: Loop iteration star
+2025-06-21T08:22:29.046510 [ESP8266]  INFO: t[0m
+2025-06-21T08:22:29.046521 [ESP8266]  INFO: [MCPServer] Debug: About to call isConnec
+2025-06-21T08:22:29.059037 [ESP8266]  INFO: ted()[0m
+2025-06-21T08:22:29.059075 [ESP8266]  INFO: [MCPServer] Debug: isConnected() returned: true[0m
+2025-06-21T08:22:29.059082 [ESP8266]  INFO: [0;32mI (24912)
+2025-06-21T08:22:29.069172 [ESP8266]  INFO: MCPServer: Debug: About to call transport->read()[0m
+2025-06-21T08:22:29.069181 [ESP8266]  INFO: [MCPServer] Debug: trans
+2025-06-21T08:22:29.080338 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:29.080376 [ESP8266]  INFO: [MCPServer] Deb
+2025-06-21T08:22:29.090468 [ESP8266]  INFO: ug: Read successful, buffer size: 0[0m
+2025-06-21T08:22:29.090479 [ESP8266]  INFO: [MCPServer] Debug: About to delay[0m
+2025-06-21T08:22:29.100559 [ESP8266]  INFO: [MCPServer] Debug: Delay completed[0m
+2025-06-21T08:22:29.100568 [ESP8266]  INFO: [0;32mI
+2025-06-21T08:22:29.110647 [ESP8266]  INFO: [MCPServer] Debug: Loop iteration start[0m
+2025-06-21T08:22:29.110657 [ESP8266]  INFO: [0;32mI (2
+2025-06-21T08:22:29.123174 [ESP8266]  INFO: [MCPServer] Debug: About to call isConnected()[0m
+2025-06-21T08:22:29.123190 [ESP8266]  INFO: [MCPServer] Debug: isCo
+2025-06-21T08:22:29.133277 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:29.133286 [ESP8266]  INFO: [MCPServer] Debug: About to call transport->read()
+2025-06-21T08:22:29.143371 [ESP8266]  INFO: [0m
+2025-06-21T08:22:29.143377 [ESP8266]  INFO: [MCPServer] Debug: transport->read() retur
+2025-06-21T08:22:29.153459 [ESP8266]  INFO: ned: true[0m
+2025-06-21T08:22:29.153466 [ESP8266]  INFO: [MCPServer] Debug: Read successfu
+2025-06-21T08:22:29.164948 [ESP8266]  INFO: l, buffer size: 0[0m
+2025-06-21T08:22:29.164981 [ESP8266]  INFO: [MCPServer] Debug: About to delay[0m
+2025-06-21T08:22:29.164988 [ESP8266]  INFO: [0;32mI (25028) M
+2025-06-21T08:22:29.175077 [ESP8266]  INFO: CPServer: Debug: Delay completed[0m
+2025-06-21T08:22:29.175086 [ESP8266]  INFO: [0;32mI (25029) MCPServer
+2025-06-21T08:22:29.185173 [ESP8266]  INFO: : Debug: Loop iteration start[0m
+2025-06-21T08:22:29.185183 [ESP8266]  INFO: [MCPServer] Debug: About to call isConnected(
+2025-06-21T08:22:29.195283 [ESP8266]  INFO: )[0m
+2025-06-21T08:22:29.195299 [ESP8266]  INFO: [MCPServer] Debug: isConnected() returned
+2025-06-21T08:22:29.205389 [ESP8266]  INFO: : true[0m
+2025-06-21T08:22:29.205399 [ESP8266]  INFO: [MCPServer] Debug: About to call tra
+2025-06-21T08:22:29.215489 [ESP8266]  INFO: nsport->read()[0m
+2025-06-21T08:22:29.215499 [ESP8266]  INFO: [MCPServer] Debug: transport->read() returned: true[0m
+2025-06-21T08:22:29.215504 [ESP8266]  INFO: [0
+2025-06-21T08:22:29.225588 [ESP8266]  INFO: [MCPServer] Debug: Read successful, buffer size: 0
+2025-06-21T08:22:29.235911 [ESP8266]  INFO: [0m
+2025-06-21T08:22:29.235925 [ESP8266]  INFO: [MCPServer] Debug: About to delay[0m
+2025-06-21T08:22:29.235930 [ESP8266]  INFO: [MCPServer] Debug: D
+2025-06-21T08:22:29.246015 [ESP8266]  INFO: elay completed[0m
+2025-06-21T08:22:29.246024 [ESP8266]  INFO: [MCPServer] Debug: Loop iter
+2025-06-21T08:22:29.256137 [ESP8266]  INFO: ation start[0m
+2025-06-21T08:22:29.256149 [ESP8266]  INFO: [MCPServer] Debug: About to cal
+2025-06-21T08:22:29.267174 [ESP8266]  INFO: l isConnected()[0m
+2025-06-21T08:22:29.267187 [ESP8266]  INFO: [MCPServer] Debug: isConnected() returned: true[0m
+2025-06-21T08:22:29.267191 [ESP8266]  INFO: [0;32
+2025-06-21T08:22:29.277285 [ESP8266]  INFO: [MCPServer] Debug: About to call transport->read()[0m
+2025-06-21T08:22:29.287394 [ESP8266]  INFO: [MCPServer] Debug: transport->read() returned: true[0m
+2025-06-21T08:22:29.287408 [ESP8266]  INFO: [0;32mI (25142) MCPS
+2025-06-21T08:22:29.297944 [ESP8266]  INFO: erver: Debug: Read successful, buffer size: 0[0m
+2025-06-21T08:22:29.297973 [ESP8266]  INFO: [0;32mI (251
+2025-06-21T08:22:29.308093 [ESP8266]  INFO: [MCPServer] Debug: About to delay[0m
+2025-06-21T08:22:29.308115 [ESP8266]  INFO: [MCPServer] Debug: Delay completed[0m
+2025-06-21T08:22:29.319228 [ESP8266]  INFO: [MCPServer] Debug: Loop iteration start[0m
+2025-06-21T08:22:29.319260 [ESP8266]  INFO: 
+2025-06-21T08:22:29.329363 [ESP8266]  INFO: [MCPServer] Debug: About to call isConnected()[0m
+2025-06-21T08:22:29.329384 [ESP8266]  INFO: [MCPServer] D
+2025-06-21T08:22:29.339476 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:29.339489 [ESP8266]  INFO: [0;32mI (25193) MCPServ
+2025-06-21T08:22:29.352162 [ESP8266]  INFO: er: Debug: About to call transport->read()[0m
+2025-06-21T08:22:29.352176 [ESP8266]  INFO: [MCPServer] Debug: transport->re
+2025-06-21T08:22:29.362267 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:29.362278 [ESP8266]  INFO: [MCPServer] Debug: Read
+2025-06-21T08:22:29.372356 [ESP8266]  INFO: successful, buffer size: 0[0m
+2025-06-21T08:22:29.372361 [ESP8266]  INFO: [MCPServer] Debug: About to delay[0m
+2025-06-21T08:22:29.372364 [ESP8266]  INFO: [0;32mI
+2025-06-21T08:22:29.382450 [ESP8266]  INFO: [MCPServer] Debug: Delay completed[0m
+2025-06-21T08:22:29.382462 [ESP8266]  INFO: [0;32mI (25239)
+2025-06-21T08:22:29.392548 [ESP8266]  INFO: MCPServer: Debug: Loop iteration start[0m
+2025-06-21T08:22:29.392557 [ESP8266]  INFO: [0;32mI (25245) MC
+2025-06-21T08:22:29.402741 [ESP8266]  INFO: PServer: Debug: About to call isConnected()[0m
+2025-06-21T08:22:29.402755 [ESP8266]  INFO: [MCPServer] Debug: isConnected(
+2025-06-21T08:22:29.415181 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:29.415195 [ESP8266]  INFO: [MCPServer] Debug: About to call transport->read()[0m
+2025-06-21T08:22:29.415199 [ESP8266]  INFO: [
+2025-06-21T08:22:29.425283 [ESP8266]  INFO: [MCPServer] Debug: transport->read() returned: tru
+2025-06-21T08:22:29.435369 [ESP8266]  INFO: e[0m
+2025-06-21T08:22:29.435375 [ESP8266]  INFO: [MCPServer] Debug: Read successful, buffe
+2025-06-21T08:22:29.445713 [ESP8266]  INFO: r size: 0[0m
+2025-06-21T08:22:29.445727 [ESP8266]  INFO: [MCPServer] Debug: About to delay[0m
+2025-06-21T08:22:29.445731 [ESP8266]  INFO: [0;32mI (25308) MCPServer
+2025-06-21T08:22:29.455874 [ESP8266]  INFO: : Debug: Delay completed[0m
+2025-06-21T08:22:29.455896 [ESP8266]  INFO: [MCPServer] Debug:
+2025-06-21T08:22:29.465994 [ESP8266]  INFO: Loop iteration start[0m
+2025-06-21T08:22:29.466007 [ESP8266]  INFO: [MCPServer] Debug: Ab
+2025-06-21T08:22:29.478990 [ESP8266]  INFO: out to call isConnected()[0m
+2025-06-21T08:22:29.479024 [ESP8266]  INFO: [MCPServer] Debug: isConnected() returned: true[0m
+2025-06-21T08:22:29.479030 [ESP8266]  INFO: [0;32mI (25334) MCPServer:
+2025-06-21T08:22:29.489119 [ESP8266]  INFO: Debug: About to call transport->read()[0m
+2025-06-21T08:22:29.489138 [ESP8266]  INFO: [0;32mI (25343) MCP
+2025-06-21T08:22:29.499221 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:29.499229 [ESP8266]  INFO: [0;32mI (2
+2025-06-21T08:22:29.509328 [ESP8266]  INFO: [MCPServer] Debug: Read successful, buffer size: 0[0m
+2025-06-21T08:22:29.509345 [ESP8266]  INFO: [MCPServer] Debug:
+2025-06-21T08:22:29.521207 [ESP8266]  INFO: About to delay[0m
+2025-06-21T08:22:29.521233 [ESP8266]  INFO: [MCPServer] Debug: Delay com
+2025-06-21T08:22:29.531355 [ESP8266]  INFO: pleted[0m
+2025-06-21T08:22:29.531371 [ESP8266]  INFO: [MCPServer] Debug: Loop iteration start[0m
+2025-06-21T08:22:29.531375 [ESP8266]  INFO: [0;32mI (25386) MCPSer
+2025-06-21T08:22:29.541461 [ESP8266]  INFO: ver: Debug: About to call isConnected()[0m
+2025-06-21T08:22:29.541469 [ESP8266]  INFO: [0;32mI (25395) MC
+2025-06-21T08:22:29.551544 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:29.551550 [ESP8266]  INFO: [MCPServer] Debug: About to ca
+2025-06-21T08:22:29.562441 [ESP8266]  INFO: ll transport->read()[0m
+2025-06-21T08:22:29.562453 [ESP8266]  INFO: [MCPServer] Debug: tra
+2025-06-21T08:22:29.572542 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:29.572555 [ESP8266]  INFO: [MCPServer] D
+2025-06-21T08:22:29.584020 [ESP8266]  INFO: ebug: Read successful, buffer size: 0[0m
+2025-06-21T08:22:29.584053 [ESP8266]  INFO: [MCPServer] Debug: About to delay[0m
+2025-06-21T08:22:29.594271 [ESP8266]  INFO: [MCPServer] Debug: Delay completed[0m
+2025-06-21T08:22:29.594321 [ESP8266]  INFO: [0;32
+2025-06-21T08:22:29.604412 [ESP8266]  INFO: [MCPServer] Debug: Loop iteration start[0m
+2025-06-21T08:22:29.604422 [ESP8266]  INFO: [MCPServer] Debug: About
+2025-06-21T08:22:29.614786 [ESP8266]  INFO: to call isConnected()[0m
+2025-06-21T08:22:29.614799 [ESP8266]  INFO: [MCPServer] Debug: is
+2025-06-21T08:22:29.624887 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:29.624897 [ESP8266]  INFO: [MCPServer] Debug: About to call transport->read
+2025-06-21T08:22:29.634975 [ESP8266]  INFO: ()[0m
+2025-06-21T08:22:29.634981 [ESP8266]  INFO: [MCPServer] Debug: transport->read() ret
+2025-06-21T08:22:29.645057 [ESP8266]  INFO: urned: true[0m
+2025-06-21T08:22:29.645062 [ESP8266]  INFO: [MCPServer] Debug: Read success
+2025-06-21T08:22:29.655147 [ESP8266]  INFO: ful, buffer size: 0[0m
+2025-06-21T08:22:29.655156 [ESP8266]  INFO: [MCPServer] Debug: About to delay[0m
+2025-06-21T08:22:29.655159 [ESP8266]  INFO: [0;32mI (25518)
+2025-06-21T08:22:29.665240 [ESP8266]  INFO: MCPServer: Debug: Delay completed[0m
+2025-06-21T08:22:29.665248 [ESP8266]  INFO: [0;32mI (25519) MCPServ
+2025-06-21T08:22:29.675331 [ESP8266]  INFO: er: Debug: Loop iteration start[0m
+2025-06-21T08:22:29.675338 [ESP8266]  INFO: [0;32mI (25526) MCPServer:
+2025-06-21T08:22:29.685419 [ESP8266]  INFO: Debug: About to call isConnected()[0m
+2025-06-21T08:22:29.685426 [ESP8266]  INFO: [MCPServer] Debug: isConnected() return
+2025-06-21T08:22:29.695501 [ESP8266]  INFO: ed: true[0m
+2025-06-21T08:22:29.695506 [ESP8266]  INFO: [MCPServer] Debug: About to call t
+2025-06-21T08:22:29.705591 [ESP8266]  INFO: ransport->read()[0m
+2025-06-21T08:22:29.705598 [ESP8266]  INFO: [MCPServer] Debug: transport->read() returned: true[0m
+2025-06-21T08:22:29.705602 [ESP8266]  INFO: 
+2025-06-21T08:22:29.715680 [ESP8266]  INFO: [MCPServer] Debug: Read successful, buffer size:
+2025-06-21T08:22:29.726277 [ESP8266]  INFO: 0[0m
+2025-06-21T08:22:29.726313 [ESP8266]  INFO: [MCPServer] Debug: About to delay[0m
+2025-06-21T08:22:29.726320 [ESP8266]  INFO: [
+2025-06-21T08:22:29.736448 [ESP8266]  INFO: [MCPServer] Debug: Delay completed[0m
+2025-06-21T08:22:29.736472 [ESP8266]  INFO: [MCPServer] Debug: Loop it
+2025-06-21T08:22:29.746575 [ESP8266]  INFO: eration start[0m
+2025-06-21T08:22:29.746589 [ESP8266]  INFO: [MCPServer] Debug: About to c
+2025-06-21T08:22:29.756697 [ESP8266]  INFO: all isConnected()[0m
+2025-06-21T08:22:29.756711 [ESP8266]  INFO: [MCPServer] Debug: isConnected() returned: true[0m
+2025-06-21T08:22:29.756716 [ESP8266]  INFO: [0;
+2025-06-21T08:22:29.767994 [ESP8266]  INFO: [MCPServer] Debug: About to call transport->read()[
+2025-06-21T08:22:29.778184 [ESP8266]  INFO: 0m
+2025-06-21T08:22:29.778201 [ESP8266]  INFO: [MCPServer] Debug: transport->read() returned: true[0m
+2025-06-21T08:22:29.778206 [ESP8266]  INFO: [0;32mI (25634) MC
+2025-06-21T08:22:29.788312 [ESP8266]  INFO: PServer: Debug: Read successful, buffer size: 0[0m
+2025-06-21T08:22:29.788324 [ESP8266]  INFO: [0;32mI (2
+2025-06-21T08:22:29.798445 [ESP8266]  INFO: [MCPServer] Debug: About to delay[0m
+2025-06-21T08:22:29.798469 [ESP8266]  INFO: [0;32mI (25658) MCP
+2025-06-21T08:22:29.808560 [ESP8266]  INFO: Server: Debug: Delay completed[0m
+2025-06-21T08:22:29.808570 [ESP8266]  INFO: [MCPServer] Debug: Loop iteration start[0m
+2025-06-21T08:22:29.818647 [ESP8266]  INFO: [MCPServer] Debug: About to call isConnected()
+2025-06-21T08:22:29.829995 [ESP8266]  INFO: [0m
+2025-06-21T08:22:29.830034 [ESP8266]  INFO: [MCPServer] Debug: isConnected() returned: true[0m
+2025-06-21T08:22:29.830040 [ESP8266]  INFO: [0;32mI (25685) MCPSe
+2025-06-21T08:22:29.840221 [ESP8266]  INFO: rver: Debug: About to call transport->read()[0m
+2025-06-21T08:22:29.840249 [ESP8266]  INFO: [0;32mI (2569
+2025-06-21T08:22:29.850370 [ESP8266]  INFO: [MCPServer] Debug: transport->read() returned: true[0m
+2025-06-21T08:22:29.850387 [ESP8266]  INFO: [0;3
+2025-06-21T08:22:29.860531 [ESP8266]  INFO: [MCPServer] Debug: Read successful, buffer size: 0[0m
+2025-06-21T08:22:29.860554 [ESP8266]  INFO: [MCPServer] D
+2025-06-21T08:22:29.870686 [ESP8266]  INFO: ebug: About to delay[0m
+2025-06-21T08:22:29.870705 [ESP8266]  INFO: [MCPServer] Debug: Del
+2025-06-21T08:22:29.880821 [ESP8266]  INFO: ay completed[0m
+2025-06-21T08:22:29.880834 [ESP8266]  INFO: [MCPServer] Debug: Loop iteration start[0m
+2025-06-21T08:22:29.880837 [ESP8266]  INFO: [0;32mI (25737)
+2025-06-21T08:22:29.890981 [ESP8266]  INFO: MCPServer: Debug: About to call isConnected()[0m
+2025-06-21T08:22:29.891003 [ESP8266]  INFO: [0;32mI (257
+2025-06-21T08:22:29.901197 [ESP8266]  INFO: [MCPServer] Debug: isConnected() returned: true[0m
+2025-06-21T08:22:29.901228 [ESP8266]  INFO: [0;32mI
+2025-06-21T08:22:29.912325 [ESP8266]  INFO: [MCPServer] Debug: About to call transport->read()[0m
+2025-06-21T08:22:29.912353 [ESP8266]  INFO: [MCPServer] Debu
+2025-06-21T08:22:29.922520 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:22:29.922549 [ESP8266]  INFO: [0;32mI (25774) MCPSer
+2025-06-21T08:22:29.932697 [ESP8266]  INFO: ver: Debug: Read successful, buffer size: 0[0m
+2025-06-21T08:22:29.932725 [ESP8266]  INFO: [MCPServer] Debug: About to del
+2025-06-21T08:22:29.942892 [ESP8266]  INFO: ay[0m
+2025-06-21T08:22:29.942919 [ESP8266]  INFO: [MCPServer] Debug: Delay completed[0m
+2025-06-21T08:22:29.953045 [ESP8266]  INFO: [MCPServer] Debug: Loop iteration start[0m
+2025-06-21T08:22:29.953068 [ESP8266]  INFO: [0
+2025-06-21T08:22:29.963181 [ESP8266]  INFO: [MCPServer] Debug: About to call isConnected()[0m
+2025-06-21T08:22:29.963195 [ESP8266]  INFO: [MCPServer] Deb

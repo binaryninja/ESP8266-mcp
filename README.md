@@ -27,8 +27,11 @@ This project implements a "from-zero-to-blinky" style MCP server for ESP8266 tha
 2. **[Complete Test Documentation](TEST_SESSION_MANAGEMENT.md)** - Comprehensive test suite guide
 
 ### Basic Setup
+
+⚠️ **IMPORTANT**: You must set up the ESP8266-RTOS-SDK environment before running any `idf.py` commands, or you'll get "command not found" errors.
+
 ```bash
-# 1. Set up ESP-IDF environment
+# 1. Set up ESP-IDF environment (REQUIRED for every terminal session)
 export IDF_PATH=/home/$USER/esp/ESP8266_RTOS_SDK
 source $IDF_PATH/export.sh
 
@@ -39,6 +42,13 @@ idf.py -p /dev/ttyUSB0 flash
 # 3. Find ESP8266 IP address and test
 python3 test_mcp_client.py 192.168.x.x
 ```
+
+💡 **Pro Tip**: Add the environment setup to your `~/.bashrc` to avoid repeating it:
+```bash
+echo 'export IDF_PATH=/home/$USER/esp/ESP8266_RTOS_SDK' >> ~/.bashrc
+echo 'alias esp-env="source $IDF_PATH/export.sh"' >> ~/.bashrc
+```
+Then just run `esp-env` before each development session.
 
 **Need help?** Check [QUICK_TEST_GUIDE.md](QUICK_TEST_GUIDE.md) for troubleshooting.
 
@@ -274,21 +284,35 @@ The current implementation focuses on Tools. To add Resources or Prompts:
 
 ### Common Issues
 
-1. **WiFi Connection Failed**
+1. **"idf.py: command not found" Error**
+   - **Cause**: ESP8266-RTOS-SDK environment not loaded
+   - **Solution**: Run these commands before building:
+     ```bash
+     export IDF_PATH=/home/$USER/esp/ESP8266_RTOS_SDK
+     source $IDF_PATH/export.sh
+     ```
+   - **Permanent Fix**: Add to your `~/.bashrc`:
+     ```bash
+     export IDF_PATH=/home/$USER/esp/ESP8266_RTOS_SDK
+     alias esp-env='source $IDF_PATH/export.sh'
+     ```
+     Then run `esp-env` before each development session
+
+2. **WiFi Connection Failed**
    - Check SSID/password in `app_main.cpp`
    - Verify 2.4GHz network (ESP8266 doesn't support 5GHz)
 
-2. **Build Errors**
+3. **Build Errors**
    - Ensure ESP8266-RTOS-SDK is properly installed
    - Check that `IDF_PATH` is set correctly
    - Run `git submodule update --init --recursive`
 
-3. **Memory Issues**
+4. **Memory Issues**
    - Enable compiler optimizations (`-Os`)
    - Reduce task stack sizes
    - Disable unused ESP8266-RTOS-SDK components
 
-4. **Connection Timeouts**
+5. **Connection Timeouts**
    - Check firewall settings
    - Verify ESP8266 and client are on same network
    - Try increasing socket timeouts

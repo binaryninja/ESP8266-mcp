@@ -1,0 +1,410 @@
+
+# ESP8266 MCP Integrated Test Log
+# Generated: 2025-06-20T18:49:53.924818
+# ESP8266 IP: 192.168.86.30
+# Serial Port: /dev/ttyUSB0
+# Baud Rate: 74880
+================================================================================
+2025-06-20T18:49:53.925850 [ CLIENT]  TEST: 🚀 Starting ESP8266 MCP Test Suite
+2025-06-20T18:49:53.925862 [ CLIENT]  INFO: ⏳ Waiting for ESP8266 to stabilize...
+2025-06-20T18:49:56.925939 [ CLIENT]  TEST: 📋 Running test: basic_connectivity
+2025-06-20T18:49:57.926049 [ CLIENT]  TEST: 🚀 Starting test: test_mcp_client.py
+2025-06-20T18:50:01.864012 [ CLIENT]  INFO: 🤖 ESP8266 MCP Client Test Script
+2025-06-20T18:50:01.864044 [ CLIENT]  INFO: ============================================================
+2025-06-20T18:50:01.864048 [ CLIENT]  INFO: Target: 192.168.86.30:8080
+2025-06-20T18:50:01.864051 [ CLIENT]  INFO: ============================================================
+2025-06-20T18:50:01.864054 [ CLIENT]  INFO: 🧪 Starting comprehensive MCP test suite...
+2025-06-20T18:50:01.864056 [ CLIENT]  INFO: ============================================================
+2025-06-20T18:50:01.864059 [ CLIENT]  INFO: 📡 TEST 1: Connection
+2025-06-20T18:50:01.864061 [ CLIENT]  INFO: 🔗 Connecting to MCP server at 192.168.86.30:8080...
+2025-06-20T18:50:01.864064 [ CLIENT]  INFO: ✅ Connected successfully!
+2025-06-20T18:50:01.864066 [ CLIENT]  INFO: 🚀 TEST 2: Initialization
+2025-06-20T18:50:01.864068 [ CLIENT]  INFO: 🚀 Initializing MCP session...
+2025-06-20T18:50:01.864071 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "1", "method": "initialize", "params": {"protocolVersion": "2024-11-05", "clientInfo": {"name": "ESP8266-MCP-Test-Client", "version": "1.0.0"}, "capabilities": {"roots": {"listChanged": false}, "sampling": {}}}}
+2025-06-20T18:50:01.864073 [ CLIENT]  INFO: 📤 Sent 237 bytes successfully
+2025-06-20T18:50:01.864075 [ CLIENT]  INFO: 📥 Waiting for response...
+2025-06-20T18:50:01.864077 [ CLIENT]  INFO: 📥 Received chunk: '{"jsonrpc":true,"id":"1","result":{"protocolVersion":true,"serverInfo":{"name":true,"version":true},"capabilities":{"tools":{"listChanged":false}}}}\n'
+2025-06-20T18:50:01.864080 [ CLIENT]  INFO: 📥 Complete response received: {"jsonrpc":true,"id":"1","result":{"protocolVersion":true,"serverInfo":{"name":true,"version":true},"capabilities":{"tools":{"listChanged":false}}}}
+2025-06-20T18:50:01.864083 [ CLIENT]  INFO: 📥 Parsing response: {"jsonrpc":true,"id":"1","result":{"protocolVersion":true,"serverInfo":{"name":true,"version":true},"capabilities":{"tools":{"listChanged":false}}}}
+2025-06-20T18:50:01.864090 [ CLIENT]  INFO: ✅ Server initialized!
+2025-06-20T18:50:01.864092 [ CLIENT]  INFO: 📋 Server: True vTrue
+2025-06-20T18:50:01.864094 [ CLIENT]  INFO: 🔧 Protocol: True
+2025-06-20T18:50:01.864096 [ CLIENT]  INFO: 🛠️  Tools supported: False
+2025-06-20T18:50:01.864098 [ CLIENT]  INFO: 🏓 TEST 3: Ping
+2025-06-20T18:50:01.864100 [ CLIENT]  INFO: 🏓 Sending ping...
+2025-06-20T18:50:01.864102 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "2", "method": "ping"}
+2025-06-20T18:50:01.864104 [ CLIENT]  INFO: 📤 Sent 48 bytes successfully
+2025-06-20T18:50:01.864106 [ CLIENT]  INFO: 📥 Waiting for response...
+2025-06-20T18:50:01.864108 [ CLIENT]  INFO: 📥 Received chunk: '{"jsonrpc":true,"id":"2","result":{}}\n'
+2025-06-20T18:50:01.864110 [ CLIENT]  INFO: 📥 Complete response received: {"jsonrpc":true,"id":"2","result":{}}
+2025-06-20T18:50:01.864113 [ CLIENT]  INFO: 📥 Parsing response: {"jsonrpc":true,"id":"2","result":{}}
+2025-06-20T18:50:01.864116 [ CLIENT]  INFO: ✅ Ping successful!
+2025-06-20T18:50:01.864118 [ CLIENT]  INFO: 🔍 TEST 4: Tool Discovery
+2025-06-20T18:50:01.864120 [ CLIENT]  INFO: 🔍 Discovering available tools...
+2025-06-20T18:50:01.864159 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "3", "method": "tools/list"}
+2025-06-20T18:50:01.864162 [ CLIENT]  INFO: 📤 Sent 54 bytes successfully
+2025-06-20T18:50:01.864163 [ CLIENT]  INFO: 📥 Waiting for response...
+2025-06-20T18:50:01.864167 [ CLIENT]  INFO: 📥 Received chunk: '{"jsonrpc":true,"id":"3","result":{"tools":[{"name":true,"description":true,"inputSchema":{"type":true,"properties":{"text":{"type":true,"description":true}},"required":["text"]}},{"name":true,"description":true,"inputSchema":{"type":true,"properties":{"pin":{"type":true,"description":true},"state":{"type":true,"enum":["high","low"],"description":true}},"required":["pin","state"]}}]}}\n'
+2025-06-20T18:50:01.864169 [ CLIENT]  INFO: 📥 Complete response received: {"jsonrpc":true,"id":"3","result":{"tools":[{"name":true,"description":true,"inputSchema":{"type":true,"properties":{"text":{"type":true,"description":true}},"required":["text"]}},{"name":true,"description":true,"inputSchema":{"type":true,"properties":{"pin":{"type":true,"description":true},"state":{"type":true,"enum":["high","low"],"description":true}},"required":["pin","state"]}}]}}
+2025-06-20T18:50:01.864172 [ CLIENT]  INFO: 📥 Parsing response: {"jsonrpc":true,"id":"3","result":{"tools":[{"name":true,"description":true,"inputSchema":{"type":true,"properties":{"text":{"type":true,"description":true}},"required":["text"]}},{"name":true,"description":true,"inputSchema":{"type":true,"properties":{"pin":{"type":true,"description":true},"state":{"type":true,"enum":["high","low"],"description":true}},"required":["pin","state"]}}]}}
+2025-06-20T18:50:01.864174 [ CLIENT]  INFO: ✅ Found 2 tools:
+2025-06-20T18:50:01.864176 [ CLIENT]  INFO: 1. 🛠️  True: True
+2025-06-20T18:50:01.864178 [ CLIENT]  INFO: 📝 Parameters:
+2025-06-20T18:50:01.864180 [ CLIENT]  INFO: • text (True) (required): True
+2025-06-20T18:50:01.864182 [ CLIENT]  INFO: 2. 🛠️  True: True
+2025-06-20T18:50:01.864183 [ CLIENT]  INFO: 📝 Parameters:
+2025-06-20T18:50:01.864185 [ CLIENT]  INFO: • pin (True) (required): True
+2025-06-20T18:50:01.864190 [ CLIENT]  INFO: • state (True) (required): True
+2025-06-20T18:50:01.864192 [ CLIENT]  INFO: 🔊 TEST 5: Echo Tool
+2025-06-20T18:50:01.864194 [ CLIENT]  INFO: 🔊 Echo Test 1/4
+2025-06-20T18:50:01.864196 [ CLIENT]  INFO: 🔧 Calling tool 'echo' with arguments: {'text': 'Hello ESP8266!'}
+2025-06-20T18:50:01.864198 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "4", "method": "tools/call", "params": {"name": "echo", "arguments": {"text": "Hello ESP8266!"}}}
+2025-06-20T18:50:01.864200 [ CLIENT]  INFO: 📤 Sent 123 bytes successfully
+2025-06-20T18:50:01.864202 [ CLIENT]  INFO: 📥 Waiting for response...
+2025-06-20T18:50:01.864204 [ CLIENT]  INFO: 📥 Received chunk: '{"jsonrpc":true,"id":"4","result":{"content":[{"type":true,"text":"Echo: Hello ESP8266!"}]}}\n'
+2025-06-20T18:50:01.864207 [ CLIENT]  INFO: 📥 Complete response received: {"jsonrpc":true,"id":"4","result":{"content":[{"type":true,"text":"Echo: Hello ESP8266!"}]}}
+2025-06-20T18:50:01.864209 [ CLIENT]  INFO: 📥 Parsing response: {"jsonrpc":true,"id":"4","result":{"content":[{"type":true,"text":"Echo: Hello ESP8266!"}]}}
+2025-06-20T18:50:01.864211 [ CLIENT]  INFO: ✅ Tool 'echo' executed successfully!
+2025-06-20T18:50:01.864213 [ CLIENT]  INFO: 📄 Response content:
+2025-06-20T18:50:01.864215 [ CLIENT]  INFO: 🔍 True: {'type': True, 'text': 'Echo: Hello ESP8266!'}
+2025-06-20T18:50:01.864217 [ CLIENT]  INFO: 🔊 Echo Test 2/4
+2025-06-20T18:50:01.864334 [ CLIENT]  INFO: 🔧 Calling tool 'echo' with arguments: {'text': 'Testing MCP protocol 🚀'}
+2025-06-20T18:50:01.864338 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "5", "method": "tools/call", "params": {"name": "echo", "arguments": {"text": "Testing MCP protocol \ud83d\ude80"}}}
+2025-06-20T18:50:01.864340 [ CLIENT]  INFO: 📤 Sent 142 bytes successfully
+2025-06-20T18:50:01.864342 [ CLIENT]  INFO: 📥 Waiting for response...
+2025-06-20T18:50:01.864344 [ CLIENT]  INFO: 📥 Received chunk: '{"jsonrpc":true,"id":"5","result":{"content":[{"type":true,"text":"Echo: Testing MCP protocol 🚀"}]}}\n'
+2025-06-20T18:50:01.864346 [ CLIENT]  INFO: 📥 Complete response received: {"jsonrpc":true,"id":"5","result":{"content":[{"type":true,"text":"Echo: Testing MCP protocol 🚀"}]}}
+2025-06-20T18:50:01.864348 [ CLIENT]  INFO: 📥 Parsing response: {"jsonrpc":true,"id":"5","result":{"content":[{"type":true,"text":"Echo: Testing MCP protocol 🚀"}]}}
+2025-06-20T18:50:01.864350 [ CLIENT]  INFO: ✅ Tool 'echo' executed successfully!
+2025-06-20T18:50:01.864352 [ CLIENT]  INFO: 📄 Response content:
+2025-06-20T18:50:01.864354 [ CLIENT]  INFO: 🔍 True: {'type': True, 'text': 'Echo: Testing MCP protocol 🚀'}
+2025-06-20T18:50:01.864356 [ CLIENT]  INFO: 🔊 Echo Test 3/4
+2025-06-20T18:50:01.864358 [ CLIENT]  INFO: 🔧 Calling tool 'echo' with arguments: {'text': 'Special characters: !@#$%^&*()'}
+2025-06-20T18:50:01.864360 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "6", "method": "tools/call", "params": {"name": "echo", "arguments": {"text": "Special characters: !@#$%^&*()"}}}
+2025-06-20T18:50:01.864362 [ CLIENT]  INFO: 📤 Sent 139 bytes successfully
+2025-06-20T18:50:01.864364 [ CLIENT]  INFO: 📥 Waiting for response...
+2025-06-20T18:50:01.864366 [ CLIENT]  INFO: 📥 Received chunk: '{"jsonrpc":true,"id":"6","result":{"content":[{"type":true,"text":"Echo: Special characters: !@#$%^&*()"}]}}\n'
+2025-06-20T18:50:01.864368 [ CLIENT]  INFO: 📥 Complete response received: {"jsonrpc":true,"id":"6","result":{"content":[{"type":true,"text":"Echo: Special characters: !@#$%^&*()"}]}}
+2025-06-20T18:50:01.864371 [ CLIENT]  INFO: 📥 Parsing response: {"jsonrpc":true,"id":"6","result":{"content":[{"type":true,"text":"Echo: Special characters: !@#$%^&*()"}]}}
+2025-06-20T18:50:01.864372 [ CLIENT]  INFO: ✅ Tool 'echo' executed successfully!
+2025-06-20T18:50:01.864374 [ CLIENT]  INFO: 📄 Response content:
+2025-06-20T18:50:01.864377 [ CLIENT]  INFO: 🔍 True: {'type': True, 'text': 'Echo: Special characters: !@#$%^&*()'}
+2025-06-20T18:50:01.864379 [ CLIENT]  INFO: 🔊 Echo Test 4/4
+2025-06-20T18:50:01.864384 [ CLIENT]  INFO: 🔧 Calling tool 'echo' with arguments: {'text': 'Multiple\nlines\ntest'}
+2025-06-20T18:50:01.864386 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "7", "method": "tools/call", "params": {"name": "echo", "arguments": {"text": "Multiple\nlines\ntest"}}}
+2025-06-20T18:50:01.864388 [ CLIENT]  INFO: 📤 Sent 130 bytes successfully
+2025-06-20T18:50:01.864390 [ CLIENT]  INFO: 📥 Waiting for response...
+2025-06-20T18:50:01.864392 [ CLIENT]  INFO: 📥 Received chunk: '{"jsonrpc":true,"id":"7","result":{"content":[{"type":true,"text":"Echo: Multiple\\nlines\\ntest"}]}}\n'
+2025-06-20T18:50:01.864394 [ CLIENT]  INFO: 📥 Complete response received: {"jsonrpc":true,"id":"7","result":{"content":[{"type":true,"text":"Echo: Multiple\nlines\ntest"}]}}
+2025-06-20T18:50:01.864396 [ CLIENT]  INFO: 📥 Parsing response: {"jsonrpc":true,"id":"7","result":{"content":[{"type":true,"text":"Echo: Multiple\nlines\ntest"}]}}
+2025-06-20T18:50:01.864398 [ CLIENT]  INFO: ✅ Tool 'echo' executed successfully!
+2025-06-20T18:50:01.864399 [ CLIENT]  INFO: 📄 Response content:
+2025-06-20T18:50:01.864401 [ CLIENT]  INFO: 🔍 True: {'type': True, 'text': 'Echo: Multiple\nlines\ntest'}
+2025-06-20T18:50:01.864406 [ CLIENT]  INFO: 📊 Echo test results: 4/4 passed
+2025-06-20T18:50:01.864408 [ CLIENT]  INFO: 🔌 TEST 6: GPIO Tool
+2025-06-20T18:50:01.864410 [ CLIENT]  INFO: 🔌 GPIO Test 1/6
+2025-06-20T18:50:01.864412 [ CLIENT]  INFO: 🔧 Calling tool 'gpio_control' with arguments: {'pin': 2, 'state': 'high'}
+2025-06-20T18:50:01.864416 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "8", "method": "tools/call", "params": {"name": "gpio_control", "arguments": {"pin": 2, "state": "high"}}}
+2025-06-20T18:50:01.864418 [ CLIENT]  INFO: 📤 Sent 132 bytes successfully
+2025-06-20T18:50:01.864420 [ CLIENT]  INFO: 📥 Waiting for response...
+2025-06-20T18:50:01.864422 [ CLIENT]  INFO: 📥 Received chunk: '{"jsonrpc":true,"id":"8","result":{"content":[{"type":true,"text":"GPIO pin 2 set to high"}]}}\n'
+2025-06-20T18:50:01.864424 [ CLIENT]  INFO: 📥 Complete response received: {"jsonrpc":true,"id":"8","result":{"content":[{"type":true,"text":"GPIO pin 2 set to high"}]}}
+2025-06-20T18:50:01.864426 [ CLIENT]  INFO: 📥 Parsing response: {"jsonrpc":true,"id":"8","result":{"content":[{"type":true,"text":"GPIO pin 2 set to high"}]}}
+2025-06-20T18:50:01.864428 [ CLIENT]  INFO: ✅ Tool 'gpio_control' executed successfully!
+2025-06-20T18:50:01.864430 [ CLIENT]  INFO: 📄 Response content:
+2025-06-20T18:50:01.864435 [ CLIENT]  INFO: 🔍 True: {'type': True, 'text': 'GPIO pin 2 set to high'}
+2025-06-20T18:50:01.864437 [ CLIENT]  INFO: 🔌 GPIO Test 2/6
+2025-06-20T18:50:01.864439 [ CLIENT]  INFO: 🔧 Calling tool 'gpio_control' with arguments: {'pin': 2, 'state': 'low'}
+2025-06-20T18:50:01.864441 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "9", "method": "tools/call", "params": {"name": "gpio_control", "arguments": {"pin": 2, "state": "low"}}}
+2025-06-20T18:50:01.864443 [ CLIENT]  INFO: 📤 Sent 131 bytes successfully
+2025-06-20T18:50:01.864445 [ CLIENT]  INFO: 📥 Waiting for response...
+2025-06-20T18:50:01.864447 [ CLIENT]  INFO: 📥 Received chunk: '{"jsonrpc":true,"id":"9","result":{"content":[{"type":true,"text":"GPIO pin 2 set to low"}]}}\n'
+2025-06-20T18:50:07.740099 [ CLIENT]  INFO: 📥 Complete response received: {"jsonrpc":true,"id":"9","result":{"content":[{"type":true,"text":"GPIO pin 2 set to low"}]}}
+2025-06-20T18:50:07.740157 [ CLIENT]  INFO: 📥 Parsing response: {"jsonrpc":true,"id":"9","result":{"content":[{"type":true,"text":"GPIO pin 2 set to low"}]}}
+2025-06-20T18:50:07.740162 [ CLIENT]  INFO: ✅ Tool 'gpio_control' executed successfully!
+2025-06-20T18:50:07.740165 [ CLIENT]  INFO: 📄 Response content:
+2025-06-20T18:50:07.740168 [ CLIENT]  INFO: 🔍 True: {'type': True, 'text': 'GPIO pin 2 set to low'}
+2025-06-20T18:50:07.740171 [ CLIENT]  INFO: 🔌 GPIO Test 3/6
+2025-06-20T18:50:07.740173 [ CLIENT]  INFO: 🔧 Calling tool 'gpio_control' with arguments: {'pin': 16, 'state': 'high'}
+2025-06-20T18:50:07.740176 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "10", "method": "tools/call", "params": {"name": "gpio_control", "arguments": {"pin": 16, "state": "high"}}}
+2025-06-20T18:50:07.740179 [ CLIENT]  INFO: 📤 Sent 134 bytes successfully
+2025-06-20T18:50:07.740181 [ CLIENT]  INFO: 📥 Waiting for response...
+2025-06-20T18:50:07.740183 [ CLIENT]  INFO: 📥 Received chunk: '{"jsonrpc":true,"id":"10","result":{"content":[{"type":true,"text":"GPIO pin 16 set to high"}]}}\n'
+2025-06-20T18:50:07.740185 [ CLIENT]  INFO: 📥 Complete response received: {"jsonrpc":true,"id":"10","result":{"content":[{"type":true,"text":"GPIO pin 16 set to high"}]}}
+2025-06-20T18:50:07.740188 [ CLIENT]  INFO: 📥 Parsing response: {"jsonrpc":true,"id":"10","result":{"content":[{"type":true,"text":"GPIO pin 16 set to high"}]}}
+2025-06-20T18:50:07.740190 [ CLIENT]  INFO: ✅ Tool 'gpio_control' executed successfully!
+2025-06-20T18:50:07.740191 [ CLIENT]  INFO: 📄 Response content:
+2025-06-20T18:50:07.740193 [ CLIENT]  INFO: 🔍 True: {'type': True, 'text': 'GPIO pin 16 set to high'}
+2025-06-20T18:50:07.740195 [ CLIENT]  INFO: 🔌 GPIO Test 4/6
+2025-06-20T18:50:07.740198 [ CLIENT]  INFO: 🔧 Calling tool 'gpio_control' with arguments: {'pin': 16, 'state': 'low'}
+2025-06-20T18:50:07.740200 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "11", "method": "tools/call", "params": {"name": "gpio_control", "arguments": {"pin": 16, "state": "low"}}}
+2025-06-20T18:50:07.740202 [ CLIENT]  INFO: 📤 Sent 133 bytes successfully
+2025-06-20T18:50:07.740203 [ CLIENT]  INFO: 📥 Waiting for response...
+2025-06-20T18:50:07.740205 [ CLIENT]  INFO: 📥 Received chunk: '{"jsonrpc":true,"id":"11","result":{"content":[{"type":true,"text":"GPIO pin 16 set to low"}]}}\n'
+2025-06-20T18:50:07.740207 [ CLIENT]  INFO: 📥 Complete response received: {"jsonrpc":true,"id":"11","result":{"content":[{"type":true,"text":"GPIO pin 16 set to low"}]}}
+2025-06-20T18:50:07.740209 [ CLIENT]  INFO: 📥 Parsing response: {"jsonrpc":true,"id":"11","result":{"content":[{"type":true,"text":"GPIO pin 16 set to low"}]}}
+2025-06-20T18:50:07.740211 [ CLIENT]  INFO: ✅ Tool 'gpio_control' executed successfully!
+2025-06-20T18:50:07.740213 [ CLIENT]  INFO: 📄 Response content:
+2025-06-20T18:50:07.740215 [ CLIENT]  INFO: 🔍 True: {'type': True, 'text': 'GPIO pin 16 set to low'}
+2025-06-20T18:50:07.740217 [ CLIENT]  INFO: 🔌 GPIO Test 5/6
+2025-06-20T18:50:07.740219 [ CLIENT]  INFO: 🔧 Calling tool 'gpio_control' with arguments: {'pin': 0, 'state': 'high'}
+2025-06-20T18:50:07.740221 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "12", "method": "tools/call", "params": {"name": "gpio_control", "arguments": {"pin": 0, "state": "high"}}}
+2025-06-20T18:50:07.740223 [ CLIENT]  INFO: 📤 Sent 133 bytes successfully
+2025-06-20T18:50:07.740224 [ CLIENT]  INFO: 📥 Waiting for response...
+2025-06-20T18:50:07.740227 [ CLIENT]  INFO: 📥 Received chunk: '{"jsonrpc":true,"id":"12","result":{"content":[{"type":true,"text":"GPIO pin 0 set to high"}]}}\n'
+2025-06-20T18:50:07.740229 [ CLIENT]  INFO: 📥 Complete response received: {"jsonrpc":true,"id":"12","result":{"content":[{"type":true,"text":"GPIO pin 0 set to high"}]}}
+2025-06-20T18:50:07.740231 [ CLIENT]  INFO: 📥 Parsing response: {"jsonrpc":true,"id":"12","result":{"content":[{"type":true,"text":"GPIO pin 0 set to high"}]}}
+2025-06-20T18:50:07.740232 [ CLIENT]  INFO: ✅ Tool 'gpio_control' executed successfully!
+2025-06-20T18:50:07.740234 [ CLIENT]  INFO: 📄 Response content:
+2025-06-20T18:50:07.740236 [ CLIENT]  INFO: 🔍 True: {'type': True, 'text': 'GPIO pin 0 set to high'}
+2025-06-20T18:50:07.740238 [ CLIENT]  INFO: 🔌 GPIO Test 6/6
+2025-06-20T18:50:07.740241 [ CLIENT]  INFO: 🔧 Calling tool 'gpio_control' with arguments: {'pin': 0, 'state': 'low'}
+2025-06-20T18:50:07.740243 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "13", "method": "tools/call", "params": {"name": "gpio_control", "arguments": {"pin": 0, "state": "low"}}}
+2025-06-20T18:50:07.740245 [ CLIENT]  INFO: 📤 Sent 132 bytes successfully
+2025-06-20T18:50:07.740247 [ CLIENT]  INFO: 📥 Waiting for response...
+2025-06-20T18:50:07.740249 [ CLIENT]  INFO: 📥 Received chunk: '{"jsonrpc":true,"id":"13","result":{"content":[{"type":true,"text":"GPIO pin 0 set to low"}]}}\n'
+2025-06-20T18:50:07.740251 [ CLIENT]  INFO: 📥 Complete response received: {"jsonrpc":true,"id":"13","result":{"content":[{"type":true,"text":"GPIO pin 0 set to low"}]}}
+2025-06-20T18:50:07.740253 [ CLIENT]  INFO: 📥 Parsing response: {"jsonrpc":true,"id":"13","result":{"content":[{"type":true,"text":"GPIO pin 0 set to low"}]}}
+2025-06-20T18:50:07.740255 [ CLIENT]  INFO: ✅ Tool 'gpio_control' executed successfully!
+2025-06-20T18:50:07.740258 [ CLIENT]  INFO: 📄 Response content:
+2025-06-20T18:50:07.740260 [ CLIENT]  INFO: 🔍 True: {'type': True, 'text': 'GPIO pin 0 set to low'}
+2025-06-20T18:50:07.740262 [ CLIENT]  INFO: 📊 GPIO test results: 6/6 passed
+2025-06-20T18:50:07.740265 [ CLIENT]  INFO: ❌ TEST 7: Error Handling
+2025-06-20T18:50:07.740267 [ CLIENT]  INFO: Testing invalid tool call...
+2025-06-20T18:50:07.740269 [ CLIENT]  INFO: 🔧 Testing error case: tool 'nonexistent_tool' with arguments: {}
+2025-06-20T18:50:07.740271 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "14", "method": "tools/call", "params": {"name": "nonexistent_tool", "arguments": {}}}
+2025-06-20T18:50:07.740273 [ CLIENT]  INFO: 📤 Sent 112 bytes successfully
+2025-06-20T18:50:07.740274 [ CLIENT]  INFO: 📥 Waiting for response...
+2025-06-20T18:50:07.740276 [ CLIENT]  INFO: 📥 Received chunk: '{"jsonrpc":"2.0","id":"14","error":{"code":-32601,"message":"Unknown tool: nonexistent_tool"}}\n'
+2025-06-20T18:50:07.740278 [ CLIENT]  INFO: 📥 Complete response received: {"jsonrpc":"2.0","id":"14","error":{"code":-32601,"message":"Unknown tool: nonexistent_tool"}}
+2025-06-20T18:50:07.740280 [ CLIENT]  INFO: 📥 Parsing response: {"jsonrpc":"2.0","id":"14","error":{"code":-32601,"message":"Unknown tool: nonexistent_tool"}}
+2025-06-20T18:50:07.740282 [ CLIENT]  INFO: ✅ Received expected error -32601: Unknown tool: nonexistent_tool
+2025-06-20T18:50:07.740284 [ CLIENT]  INFO: ❌ TEST 8: Invalid Parameters
+2025-06-20T18:50:07.740286 [ CLIENT]  INFO: Testing invalid parameters...
+2025-06-20T18:50:07.740287 [ CLIENT]  INFO: 🔧 Testing error case: tool 'echo' with arguments: {'wrong_param': 'test'}
+2025-06-20T18:50:07.740290 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "15", "method": "tools/call", "params": {"name": "echo", "arguments": {"wrong_param": "test"}}}
+2025-06-20T18:50:07.740292 [ CLIENT]  INFO: 📤 Sent 121 bytes successfully
+2025-06-20T18:50:07.740294 [ CLIENT]  INFO: 📥 Waiting for response...
+2025-06-20T18:50:07.740296 [ CLIENT]  INFO: 📥 Received chunk: '{"jsonrpc":"2.0","id":"15","error":{"code":-32602,"message":"Missing required parameter: text"}}\n'
+2025-06-20T18:50:07.740298 [ CLIENT]  INFO: 📥 Complete response received: {"jsonrpc":"2.0","id":"15","error":{"code":-32602,"message":"Missing required parameter: text"}}
+2025-06-20T18:50:07.740300 [ CLIENT]  INFO: 📥 Parsing response: {"jsonrpc":"2.0","id":"15","error":{"code":-32602,"message":"Missing required parameter: text"}}
+2025-06-20T18:50:07.740302 [ CLIENT]  INFO: ✅ Received expected error -32602: Missing required parameter: text
+2025-06-20T18:50:07.740304 [ CLIENT]  INFO: ============================================================
+2025-06-20T18:50:07.740306 [ CLIENT]  INFO: 🏁 COMPREHENSIVE TEST RESULTS
+2025-06-20T18:50:07.740308 [ CLIENT]  INFO: ============================================================
+2025-06-20T18:50:07.740310 [ CLIENT]  INFO: ✅ PASS - Connection
+2025-06-20T18:50:07.740312 [ CLIENT]  INFO: ✅ PASS - Initialization
+2025-06-20T18:50:07.740314 [ CLIENT]  INFO: ✅ PASS - Ping
+2025-06-20T18:50:07.740315 [ CLIENT]  INFO: ✅ PASS - Tool Discovery
+2025-06-20T18:50:07.740317 [ CLIENT]  INFO: ✅ PASS - Echo Tool
+2025-06-20T18:50:07.740319 [ CLIENT]  INFO: ✅ PASS - GPIO Tool
+2025-06-20T18:50:07.740321 [ CLIENT]  INFO: ✅ PASS - Error Handling
+2025-06-20T18:50:07.740323 [ CLIENT]  INFO: ✅ PASS - Invalid Parameters
+2025-06-20T18:50:07.740325 [ CLIENT]  INFO: 📊 Overall Results: 8/8 tests passed
+2025-06-20T18:50:07.740327 [ CLIENT]  INFO: 🎯 Success Rate: 100.0%
+2025-06-20T18:50:07.740329 [ CLIENT]  INFO: 🎉 All tests passed! ESP8266 MCP server is working perfectly!
+2025-06-20T18:50:07.740331 [ CLIENT]  INFO: 🔌 Disconnected from server
+2025-06-20T18:50:07.745890 [ CLIENT]  TEST: ✅ Test completed successfully: test_mcp_client.py
+2025-06-20T18:50:09.746069 [ CLIENT]  TEST: 📋 Running test: session_management
+2025-06-20T18:50:10.746204 [ CLIENT]  TEST: 🚀 Starting test: test_session_management.py
+2025-06-20T18:52:13.112709 [ CLIENT]  INFO: 🎯 Testing ESP8266 Session Management System at 192.168.86.30:8080
+2025-06-20T18:52:13.112737 [ CLIENT]  INFO: ================================================================================
+2025-06-20T18:52:13.112741 [ CLIENT]  INFO: 🚀 ESP8266 SESSION MANAGEMENT SYSTEM TEST SUITE
+2025-06-20T18:52:13.112744 [ CLIENT]  INFO: ================================================================================
+2025-06-20T18:52:13.112747 [ CLIENT]  INFO: 🧪 Running test: Basic Connection
+2025-06-20T18:52:13.112750 [ CLIENT]  INFO: 🔗 [connection_test] Connecting to 192.168.86.30:8080...
+2025-06-20T18:52:13.112752 [ CLIENT]  INFO: ✅ [connection_test] Connected successfully!
+2025-06-20T18:52:13.112754 [ CLIENT]  INFO: 🔌 [connection_test] Disconnected
+2025-06-20T18:52:13.112756 [ CLIENT]  INFO: ✅ PASS Basic Connection (5ms)
+2025-06-20T18:52:13.112758 [ CLIENT]  INFO: Details: {
+2025-06-20T18:52:13.112760 [ CLIENT]  INFO: "status": "Connection successful"
+2025-06-20T18:52:13.112762 [ CLIENT]  INFO: }
+2025-06-20T18:52:13.112765 [ CLIENT]  INFO: 🧪 Running test: Session Initialization
+2025-06-20T18:52:13.112767 [ CLIENT]  INFO: 🔗 [init_test] Connecting to 192.168.86.30:8080...
+2025-06-20T18:52:13.112769 [ CLIENT]  INFO: ✅ [init_test] Connected successfully!
+2025-06-20T18:52:13.112772 [ CLIENT]  INFO: 📤 [init_test] Request: {"jsonrpc": "2.0", "method": "initialize", "id": 1, "params": {"protocolVersion": "2024-11-05", "capabilities": {"roots": {"listChanged": true}, "sampling": {}}, "clientInfo": {"name": "SessionTestClient", "version": "1.0.0"}}}
+2025-06-20T18:52:13.112773 [ CLIENT]  INFO: ⏰ [init_test] Receive timeout
+2025-06-20T18:52:13.112776 [ CLIENT]  INFO: 🔌 [init_test] Disconnected
+2025-06-20T18:52:13.112777 [ CLIENT]  INFO: ❌ FAIL Session Initialization (15024ms)
+2025-06-20T18:52:13.112779 [ CLIENT]  INFO: Error: Initialization failed
+2025-06-20T18:52:13.112781 [ CLIENT]  INFO: Details: {
+2025-06-20T18:52:13.112783 [ CLIENT]  INFO: "error": "Initialization failed"
+2025-06-20T18:52:13.112785 [ CLIENT]  INFO: }
+2025-06-20T18:52:13.112788 [ CLIENT]  INFO: 🧪 Running test: Tool Discovery
+2025-06-20T18:52:13.112790 [ CLIENT]  INFO: 🔗 [tools_test] Connecting to 192.168.86.30:8080...
+2025-06-20T18:52:13.112792 [ CLIENT]  INFO: ✅ [tools_test] Connected successfully!
+2025-06-20T18:52:13.112794 [ CLIENT]  INFO: 📤 [tools_test] Request: {"jsonrpc": "2.0", "method": "initialize", "id": 1, "params": {"protocolVersion": "2024-11-05", "capabilities": {"roots": {"listChanged": true}, "sampling": {}}, "clientInfo": {"name": "SessionTestClient", "version": "1.0.0"}}}
+2025-06-20T18:52:13.112796 [ CLIENT]  INFO: ⏰ [tools_test] Receive timeout
+2025-06-20T18:52:13.112798 [ CLIENT]  INFO: 🔌 [tools_test] Disconnected
+2025-06-20T18:52:13.112799 [ CLIENT]  INFO: ❌ FAIL Tool Discovery (15021ms)
+2025-06-20T18:52:13.112801 [ CLIENT]  INFO: Error: Setup failed
+2025-06-20T18:52:13.112803 [ CLIENT]  INFO: Details: {
+2025-06-20T18:52:13.112805 [ CLIENT]  INFO: "error": "Setup failed"
+2025-06-20T18:52:13.112806 [ CLIENT]  INFO: }
+2025-06-20T18:52:13.112809 [ CLIENT]  INFO: 🧪 Running test: Concurrent Sessions
+2025-06-20T18:52:13.112811 [ CLIENT]  INFO: 🔗 [concurrent_0] Connecting to 192.168.86.30:8080...
+2025-06-20T18:52:13.112812 [ CLIENT]  INFO: ✅ [concurrent_0] Connected successfully!
+2025-06-20T18:52:13.112814 [ CLIENT]  INFO: 🔗 [concurrent_1] Connecting to 192.168.86.30:8080...
+2025-06-20T18:52:13.112816 [ CLIENT]  INFO: ✅ [concurrent_1] Connected successfully!
+2025-06-20T18:52:13.112818 [ CLIENT]  INFO: 🔗 [concurrent_2] Connecting to 192.168.86.30:8080...
+2025-06-20T18:52:13.112820 [ CLIENT]  INFO: ❌ [concurrent_2] Connection failed: timed out
+2025-06-20T18:52:13.112821 [ CLIENT]  INFO: 🔌 [concurrent_0] Disconnected
+2025-06-20T18:52:13.112823 [ CLIENT]  INFO: 🔌 [concurrent_1] Disconnected
+2025-06-20T18:52:13.112825 [ CLIENT]  INFO: 🔌 [concurrent_2] Disconnected
+2025-06-20T18:52:13.112827 [ CLIENT]  INFO: ❌ FAIL Concurrent Sessions (11077ms)
+2025-06-20T18:52:13.112829 [ CLIENT]  INFO: Error: Client concurrent_2 connection failed
+2025-06-20T18:52:13.112831 [ CLIENT]  INFO: Details: {
+2025-06-20T18:52:13.112833 [ CLIENT]  INFO: "error": "Client concurrent_2 connection failed"
+2025-06-20T18:52:13.112835 [ CLIENT]  INFO: }
+2025-06-20T18:52:13.112838 [ CLIENT]  INFO: 🧪 Running test: Async Tool Execution
+2025-06-20T18:52:13.112840 [ CLIENT]  INFO: 🔗 [async_test] Connecting to 192.168.86.30:8080...
+2025-06-20T18:52:13.112842 [ CLIENT]  INFO: ✅ [async_test] Connected successfully!
+2025-06-20T18:52:13.112844 [ CLIENT]  INFO: 📤 [async_test] Request: {"jsonrpc": "2.0", "method": "initialize", "id": 1, "params": {"protocolVersion": "2024-11-05", "capabilities": {"roots": {"listChanged": true}, "sampling": {}}, "clientInfo": {"name": "SessionTestClient", "version": "1.0.0"}}}
+2025-06-20T18:52:13.112846 [ CLIENT]  INFO: ⏰ [async_test] Receive timeout
+2025-06-20T18:52:13.112848 [ CLIENT]  INFO: 🔌 [async_test] Disconnected
+2025-06-20T18:52:13.112850 [ CLIENT]  INFO: ❌ FAIL Async Tool Execution (16076ms)
+2025-06-20T18:52:13.112852 [ CLIENT]  INFO: Error: Setup failed
+2025-06-20T18:52:13.112853 [ CLIENT]  INFO: Details: {
+2025-06-20T18:52:13.112855 [ CLIENT]  INFO: "error": "Setup failed"
+2025-06-20T18:52:13.112856 [ CLIENT]  INFO: }
+2025-06-20T18:52:13.112858 [ CLIENT]  INFO: 🧪 Running test: Error Handling
+2025-06-20T18:52:13.112860 [ CLIENT]  INFO: 🔗 [error_test] Connecting to 192.168.86.30:8080...
+2025-06-20T18:52:13.112862 [ CLIENT]  INFO: ✅ [error_test] Connected successfully!
+2025-06-20T18:52:13.112865 [ CLIENT]  INFO: 📤 [error_test] Request: {"jsonrpc": "2.0", "method": "initialize", "id": 1, "params": {"protocolVersion": "2024-11-05", "capabilities": {"roots": {"listChanged": true}, "sampling": {}}, "clientInfo": {"name": "SessionTestClient", "version": "1.0.0"}}}
+2025-06-20T18:52:13.112866 [ CLIENT]  INFO: ⏰ [error_test] Receive timeout
+2025-06-20T18:52:13.112868 [ CLIENT]  INFO: 🔌 [error_test] Disconnected
+2025-06-20T18:52:13.112870 [ CLIENT]  INFO: ❌ FAIL Error Handling (15021ms)
+2025-06-20T18:52:13.112872 [ CLIENT]  INFO: Error: Setup failed
+2025-06-20T18:52:13.112873 [ CLIENT]  INFO: Details: {
+2025-06-20T18:52:13.112875 [ CLIENT]  INFO: "error": "Setup failed"
+2025-06-20T18:52:13.112876 [ CLIENT]  INFO: }
+2025-06-20T18:52:13.112878 [ CLIENT]  INFO: 🧪 Running test: Session Persistence
+2025-06-20T18:52:13.112880 [ CLIENT]  INFO: 🔗 [persistence_test] Connecting to 192.168.86.30:8080...
+2025-06-20T18:52:13.112882 [ CLIENT]  INFO: ✅ [persistence_test] Connected successfully!
+2025-06-20T18:52:13.112885 [ CLIENT]  INFO: 📤 [persistence_test] Request: {"jsonrpc": "2.0", "method": "initialize", "id": 1, "params": {"protocolVersion": "2024-11-05", "capabilities": {"roots": {"listChanged": true}, "sampling": {}}, "clientInfo": {"name": "SessionTestClient", "version": "1.0.0"}}}
+2025-06-20T18:52:13.112887 [ CLIENT]  INFO: ⏰ [persistence_test] Receive timeout
+2025-06-20T18:52:13.112888 [ CLIENT]  INFO: 🔌 [persistence_test] Disconnected
+2025-06-20T18:52:13.112890 [ CLIENT]  INFO: ❌ FAIL Session Persistence (15025ms)
+2025-06-20T18:52:13.112892 [ CLIENT]  INFO: Error: Initial setup failed
+2025-06-20T18:52:13.112894 [ CLIENT]  INFO: Details: {
+2025-06-20T18:52:13.112896 [ CLIENT]  INFO: "error": "Initial setup failed"
+2025-06-20T18:52:13.112897 [ CLIENT]  INFO: }
+2025-06-20T18:52:13.112899 [ CLIENT]  INFO: 🧪 Running test: Performance Metrics
+2025-06-20T18:52:13.112901 [ CLIENT]  INFO: 🔗 [perf_test] Connecting to 192.168.86.30:8080...
+2025-06-20T18:52:13.112903 [ CLIENT]  INFO: ✅ [perf_test] Connected successfully!
+2025-06-20T18:52:13.112905 [ CLIENT]  INFO: 📤 [perf_test] Request: {"jsonrpc": "2.0", "method": "initialize", "id": 1, "params": {"protocolVersion": "2024-11-05", "capabilities": {"roots": {"listChanged": true}, "sampling": {}}, "clientInfo": {"name": "SessionTestClient", "version": "1.0.0"}}}
+2025-06-20T18:52:13.112907 [ CLIENT]  INFO: ⏰ [perf_test] Receive timeout
+2025-06-20T18:52:13.112909 [ CLIENT]  INFO: 🔌 [perf_test] Disconnected
+2025-06-20T18:52:13.112911 [ CLIENT]  INFO: ❌ FAIL Performance Metrics (15022ms)
+2025-06-20T18:52:13.112912 [ CLIENT]  INFO: Error: Setup failed
+2025-06-20T18:52:13.112914 [ CLIENT]  INFO: Details: {
+2025-06-20T18:52:13.112916 [ CLIENT]  INFO: "error": "Setup failed"
+2025-06-20T18:52:13.112917 [ CLIENT]  INFO: }
+2025-06-20T18:52:13.112920 [ CLIENT]  INFO: 🧪 Running test: Message Framing
+2025-06-20T18:52:13.112921 [ CLIENT]  INFO: 🔗 [framing_test] Connecting to 192.168.86.30:8080...
+2025-06-20T18:52:13.112923 [ CLIENT]  INFO: ✅ [framing_test] Connected successfully!
+2025-06-20T18:52:13.112925 [ CLIENT]  INFO: ⏰ [framing_test] Receive timeout
+2025-06-20T18:52:13.112928 [ CLIENT]  INFO: ⏰ [framing_test] Receive timeout
+2025-06-20T18:52:13.112929 [ CLIENT]  INFO: ⏰ [framing_test] Receive timeout
+2025-06-20T18:52:13.112931 [ CLIENT]  INFO: ⏰ [framing_test] Receive timeout
+2025-06-20T18:52:13.112933 [ CLIENT]  INFO: 🔌 [framing_test] Disconnected
+2025-06-20T18:52:13.112935 [ CLIENT]  INFO: ✅ PASS Message Framing (20031ms)
+2025-06-20T18:52:13.112936 [ CLIENT]  INFO: Details: {
+2025-06-20T18:52:13.112946 [ CLIENT]  INFO: "framing_tests": {
+2025-06-20T18:52:13.112948 [ CLIENT]  INFO: "size_72": {
+2025-06-20T18:52:13.112949 [ CLIENT]  INFO: "success": false,
+2025-06-20T18:52:13.112951 [ CLIENT]  INFO: "duration_ms": 5005.08
+2025-06-20T18:52:13.112953 [ CLIENT]  INFO: },
+2025-06-20T18:52:13.112954 [ CLIENT]  INFO: "size_122": {
+2025-06-20T18:52:13.112956 [ CLIENT]  INFO: "success": false,
+2025-06-20T18:52:13.112958 [ CLIENT]  INFO: "duration_ms": 5005.12
+2025-06-20T18:52:13.112959 [ CLIENT]  INFO: },
+2025-06-20T18:52:13.112961 [ CLIENT]  INFO: "size_1022": {
+2025-06-20T18:52:13.112963 [ CLIENT]  INFO: "success": false,
+2025-06-20T18:52:13.112965 [ CLIENT]  INFO: "duration_ms": 5005.12
+2025-06-20T18:52:13.112966 [ CLIENT]  INFO: },
+2025-06-20T18:52:13.112968 [ CLIENT]  INFO: "size_5022": {
+2025-06-20T18:52:13.112970 [ CLIENT]  INFO: "success": false,
+2025-06-20T18:52:13.112971 [ CLIENT]  INFO: "duration_ms": 5005.13
+2025-06-20T18:52:13.112973 [ CLIENT]  INFO: }
+2025-06-20T18:52:13.112975 [ CLIENT]  INFO: }
+2025-06-20T18:52:13.112976 [ CLIENT]  INFO: }
+2025-06-20T18:52:13.112978 [ CLIENT]  INFO: ================================================================================
+2025-06-20T18:52:13.112980 [ CLIENT]  INFO: 📊 TEST SUMMARY
+2025-06-20T18:52:13.112982 [ CLIENT]  INFO: ================================================================================
+2025-06-20T18:52:13.112985 [ CLIENT]  INFO: Tests run: 9
+2025-06-20T18:52:13.112987 [ CLIENT]  INFO: Passed: 2
+2025-06-20T18:52:13.112989 [ CLIENT]  INFO: Failed: 7
+2025-06-20T18:52:13.112991 [ CLIENT]  INFO: Success rate: 22.2%
+2025-06-20T18:52:13.112993 [ CLIENT]  INFO: Total time: 122302ms
+2025-06-20T18:52:13.112996 [ CLIENT]  INFO: ❌ Failed tests:
+2025-06-20T18:52:13.112998 [ CLIENT]  INFO: - Session Initialization: Initialization failed
+2025-06-20T18:52:13.113000 [ CLIENT]  INFO: - Tool Discovery: Setup failed
+2025-06-20T18:52:13.113003 [ CLIENT]  INFO: - Concurrent Sessions: Client concurrent_2 connection failed
+2025-06-20T18:52:13.113005 [ CLIENT]  INFO: - Async Tool Execution: Setup failed
+2025-06-20T18:52:13.113007 [ CLIENT]  INFO: - Error Handling: Setup failed
+2025-06-20T18:52:13.113009 [ CLIENT]  INFO: - Session Persistence: Initial setup failed
+2025-06-20T18:52:13.113010 [ CLIENT]  INFO: - Performance Metrics: Setup failed
+2025-06-20T18:52:13.113012 [ CLIENT]  INFO: ================================================================================
+2025-06-20T18:52:13.123503 [ CLIENT] ERROR: ❌ Test failed: test_session_management.py (exit code: 1)
+2025-06-20T18:52:15.123683 [ CLIENT]  TEST: 📋 Running test: tool_functionality
+2025-06-20T18:52:16.123816 [ CLIENT]  TEST: 🚀 Starting test: test_session_tools.py
+2025-06-20T18:52:31.189591 [ CLIENT]  INFO: 🎯 Testing ESP8266 tools at 192.168.86.30:8080
+2025-06-20T18:52:31.189621 [ CLIENT]  INFO: ================================================================================
+2025-06-20T18:52:31.189624 [ CLIENT]  INFO: 🛠️  ESP8266 TOOL TESTING SUITE
+2025-06-20T18:52:31.189627 [ CLIENT]  INFO: ================================================================================
+2025-06-20T18:52:31.189629 [ CLIENT]  INFO: 🔗 [tool_tester] Connecting to 192.168.86.30:8080...
+2025-06-20T18:52:31.189632 [ CLIENT]  INFO: ✅ [tool_tester] Connected successfully!
+2025-06-20T18:52:31.189635 [ CLIENT]  INFO: ❌ Failed to setup test client
+2025-06-20T18:52:31.197464 [ CLIENT]  TEST: ✅ Test completed successfully: test_session_tools.py
+2025-06-20T18:52:33.197619 [ CLIENT]  TEST: 📋 Running test: message_framing
+2025-06-20T18:52:34.197744 [ CLIENT]  TEST: 🚀 Starting test: test_message_framing.py
+2025-06-20T18:52:39.944045 [ CLIENT]  INFO: 🧪 ESP8266 Message Framing Test
+2025-06-20T18:52:39.944072 [ CLIENT]  INFO: ==================================================
+2025-06-20T18:52:39.944075 [ CLIENT]  INFO: Testing message framing with 192.168.86.30:8080
+2025-06-20T18:52:39.944078 [ CLIENT]  INFO: --- Test 1: Normal message ---
+2025-06-20T18:52:39.944080 [ CLIENT]  INFO: ✅ Session initialized
+2025-06-20T18:52:39.944082 [ CLIENT]  INFO: Sending: {"jsonrpc":"2.0","id":"1","method":"ping"}
+2025-06-20T18:52:39.944084 [ CLIENT]  INFO: Received: {"jsonrpc":true,"id":"1","result":{}}
+2025-06-20T18:52:39.944086 [ CLIENT]  INFO: ✅ Message processed successfully
+2025-06-20T18:52:39.944088 [ CLIENT]  INFO: --- Test 2: Large message (might get split) ---
+2025-06-20T18:52:39.944089 [ CLIENT]  INFO: ✅ Session initialized
+2025-06-20T18:52:39.944093 [ CLIENT]  INFO: Sending: {"jsonrpc":"2.0","id":"2","method":"echo","params":{"text":"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"}}
+2025-06-20T18:52:39.944095 [ CLIENT]  INFO: Received: {"jsonrpc":"2.0","id":"2","error":{"code":-32601,"message":"Method not found"}}
+2025-06-20T18:52:39.944096 [ CLIENT]  INFO: ❌ Server returned error
+2025-06-20T18:52:39.944098 [ CLIENT]  INFO: --- Test 3: Multiple messages in one send ---
+2025-06-20T18:52:39.944100 [ CLIENT]  INFO: ✅ Session initialized
+2025-06-20T18:52:39.944101 [ CLIENT]  INFO: Sending: {"jsonrpc":"2.0","id":"3","method":"ping"}
+2025-06-20T18:52:39.944103 [ CLIENT]  INFO: {"jsonrpc":"2.0","id":"4","method":"ping"}
+2025-06-20T18:52:39.944104 [ CLIENT]  INFO: Received: {"jsonrpc":true,"id":"3","result":{}}
+2025-06-20T18:52:39.944106 [ CLIENT]  INFO: ✅ Message processed successfully
+2025-06-20T18:52:39.944108 [ CLIENT]  INFO: --- Test 4: Message sent in chunks (simulating network delays) ---
+2025-06-20T18:52:39.944110 [ CLIENT]  INFO: ✅ Session initialized
+2025-06-20T18:52:39.944112 [ CLIENT]  INFO: Sending chunk 1: {"jsonrpc":"2.0","id":"5",
+2025-06-20T18:52:39.944113 [ CLIENT]  INFO: Sending chunk 2: "method":"echo","params":
+2025-06-20T18:52:39.944115 [ CLIENT]  INFO: Sending chunk 3: {"text":"chunked message"}}
+2025-06-20T18:52:39.944117 [ CLIENT]  INFO: Received: {"jsonrpc":"2.0","id":"5","error":{"code":-32601,"message":"Method not found"}}
+2025-06-20T18:52:39.944118 [ CLIENT]  INFO: ❌ Server returned error
+2025-06-20T18:52:39.944120 [ CLIENT]  INFO: --- Test 5: Unicode characters ---
+2025-06-20T18:52:39.944153 [ CLIENT]  INFO: ✅ Session initialized
+2025-06-20T18:52:39.944156 [ CLIENT]  INFO: Sending: {"jsonrpc":"2.0","id":"6","method":"echo","params":{"text":"Hello 🌍 World! 测试"}}
+2025-06-20T18:52:39.944158 [ CLIENT]  INFO: Received: {"jsonrpc":"2.0","id":"6","error":{"code":-32601,"message":"Method not found"}}
+2025-06-20T18:52:39.944159 [ CLIENT]  INFO: ❌ Server returned error
+2025-06-20T18:52:39.944161 [ CLIENT]  INFO: --- Rapid Message Test ---
+2025-06-20T18:52:39.944163 [ CLIENT]  INFO: ✅ Session initialized
+2025-06-20T18:52:39.944165 [ CLIENT]  INFO: Sent 10 rapid ping messages
+2025-06-20T18:52:39.944173 [ CLIENT]  INFO: Response 1: {"jsonrpc":true,"id":"ping_0","result":{}}
+2025-06-20T18:52:39.944175 [ CLIENT]  INFO: Response 2: {"jsonrpc":true,"id":"ping_1","result":{}}
+2025-06-20T18:52:39.944177 [ CLIENT]  INFO: Response 3: {"jsonrpc":true,"id":"ping_2","result":{}}
+2025-06-20T18:52:39.944178 [ CLIENT]  INFO: Response 4: {"jsonrpc":true,"id":"ping_3","result":{}}
+2025-06-20T18:52:39.944180 [ CLIENT]  INFO: Response 5: {"jsonrpc":true,"id":"ping_4","result":{}}
+2025-06-20T18:52:39.944181 [ CLIENT]  INFO: Response 6: {"jsonrpc":true,"id":"ping_5","result":{}}
+2025-06-20T18:52:39.944182 [ CLIENT]  INFO: Response 7: {"jsonrpc":true,"id":"ping_6","result":{}}
+2025-06-20T18:52:39.944184 [ CLIENT]  INFO: Response 8: {"jsonrpc":true,"id":"ping_7","result":{}}
+2025-06-20T18:52:39.944185 [ CLIENT]  INFO: Response 9: {"jsonrpc":true,"id":"ping_8","result":{}}
+2025-06-20T18:52:39.944187 [ CLIENT]  INFO: Response 10: {"jsonrpc":true,"id":"ping_9","result":{}}
+2025-06-20T18:52:39.944189 [ CLIENT]  INFO: ✅ Rapid message test passed
+2025-06-20T18:52:39.944191 [ CLIENT]  INFO: ==================================================
+2025-06-20T18:52:39.944192 [ CLIENT]  INFO: 🏁 Message framing tests complete
+2025-06-20T18:52:39.948930 [ CLIENT]  TEST: ✅ Test completed successfully: test_message_framing.py
+2025-06-20T18:52:41.949069 [ CLIENT]  INFO: 

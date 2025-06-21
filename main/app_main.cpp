@@ -42,8 +42,14 @@ static int s_retry_num = 0;
 void print_memory_info(const char* location) {
     size_t free_heap = esp_get_free_heap_size();
     size_t min_free_heap = esp_get_minimum_free_heap_size();
-    ESP_LOGI(TAG, "[%s] Free heap: %u bytes, Min free: %u bytes", 
-             location, (unsigned int)free_heap, (unsigned int)min_free_heap);
+    
+    // Check stack usage for current task
+    TaskHandle_t current_task = xTaskGetCurrentTaskHandle();
+    UBaseType_t stack_high_water_mark = uxTaskGetStackHighWaterMark(current_task);
+    
+    ESP_LOGI(TAG, "[%s] Free heap: %u bytes, Min free: %u bytes, Stack remaining: %u bytes", 
+             location, (unsigned int)free_heap, (unsigned int)min_free_heap, 
+             (unsigned int)(stack_high_water_mark * sizeof(StackType_t)));
 }
 
 
@@ -174,19 +180,31 @@ void mcp_server_task(void *pvParameters)
 
         print_memory_info("Before MCP server creation");
         
-        try {
-            // Create C++ MCP server with socket transport
-            auto transport = std::make_unique<tinymcp::EspSocketTransport>(client_sock);
-            tinymcp::MCPServer server(transport.get());
-            
-            ESP_LOGI(TAG, "Starting C++ MCP server for client");
-            server.run();  // This blocks until client disconnects
-            ESP_LOGI(TAG, "Client disconnected");
-        } catch (const std::exception& e) {
-            ESP_LOGE(TAG, "MCP server exception: %s", e.what());
-        } catch (...) {
-            ESP_LOGE(TAG, "Unknown MCP server exception");
-        }
+        // Check stack usage before creating MCP server objects
+        UBaseType_t stack_before = uxTaskGetStackHighWaterMark(NULL);
+        ESP_LOGI(TAG, "Stack remaining before MCP server: %u bytes", 
+                 (unsigned int)(stack_before * sizeof(StackType_t)));
+        
+        // Create C++ MCP server with socket transport
+        auto transport = std::make_unique<tinymcp::EspSocketTransport>(client_sock);
+        
+        // Check stack usage after transport creation
+        UBaseType_t stack_after_transport = uxTaskGetStackHighWaterMark(NULL);
+        ESP_LOGI(TAG, "Stack remaining after transport creation: %u bytes", 
+                 (unsigned int)(stack_after_transport * sizeof(StackType_t)));
+        
+        tinymcp::MCPServer server(transport.get());
+        
+        // Check stack usage after server creation
+        UBaseType_t stack_after_server = uxTaskGetStackHighWaterMark(NULL);
+        ESP_LOGI(TAG, "Stack remaining after server creation: %u bytes", 
+                 (unsigned int)(stack_after_server * sizeof(StackType_t)));
+        
+        ESP_LOGI(TAG, "Starting C++ MCP server for client");
+        server.run();  // This blocks until client disconnects
+        ESP_LOGI(TAG, "Client disconnected");
+        
+        // Transport will be automatically destroyed here
         
         print_memory_info("After client disconnect");
         // Socket is closed by transport destructor
@@ -220,11 +238,11 @@ extern "C" void app_main(void)
 
     ESP_LOGI(TAG, "WiFi connected, starting MCP server...");
 
-    // Create MCP server task with 4KB stack (ESP8266 memory limit)
+    // Create MCP server task with 8KB stack (increased for C++ stack usage)
     xTaskCreatePinnedToCore(
         mcp_server_task,
         "mcp_server",
-        4096,           // Stack size (4KB - ESP8266 limit)
+        8192,           // Stack size (8KB - increased for C++ stack usage)
         NULL,           // Parameters
         5,              // Priority
         NULL,           // Task handle

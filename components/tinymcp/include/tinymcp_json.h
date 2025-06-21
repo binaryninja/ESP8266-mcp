@@ -5,136 +5,138 @@
 
 #include <string>
 #include <memory>
-#include <cJSON.h>
 #include "tinymcp_constants.h"
 
 namespace tinymcp {
 
-// RAII wrapper for cJSON objects
+// Forward declarations
+namespace Json {
+    class Value;
+}
+
+// RAII wrapper for JSON objects
 class JsonValue {
 public:
-    explicit JsonValue(cJSON* json = nullptr) : json_(json) {}
+    JsonValue();
+    explicit JsonValue(const Json::Value& val);
+    JsonValue(const JsonValue& other);
+    JsonValue(JsonValue&& other) noexcept;
+    JsonValue& operator=(const JsonValue& other);
+    JsonValue& operator=(JsonValue&& other) noexcept;
+    ~JsonValue();
     
-    // Move constructor
-    JsonValue(JsonValue&& other) noexcept : json_(other.json_) {
-        other.json_ = nullptr;
-    }
-    
-    // Move assignment
-    JsonValue& operator=(JsonValue&& other) noexcept {
-        if (this != &other) {
-            if (json_) {
-                cJSON_Delete(json_);
-            }
-            json_ = other.json_;
-            other.json_ = nullptr;
-        }
-        return *this;
-    }
-    
-    // Delete copy constructor and assignment
-    JsonValue(const JsonValue&) = delete;
-    JsonValue& operator=(const JsonValue&) = delete;
-    
-    ~JsonValue() {
-        if (json_) {
-            cJSON_Delete(json_);
-        }
-    }
-    
-    cJSON* get() const { return json_; }
-    cJSON* release() {
-        cJSON* temp = json_;
-        json_ = nullptr;
-        return temp;
-    }
-    
-    bool isValid() const { return json_ != nullptr; }
+    bool isValid() const;
     
     // Static factory methods
-    static JsonValue createObject() {
-        return JsonValue(cJSON_CreateObject());
-    }
+    static JsonValue createObject();
+    static JsonValue createArray();
+    static JsonValue parse(const std::string& jsonStr);
+
+    // Type checking
+    bool isObject() const;
+    bool isArray() const;
+    bool isString() const;
+    bool isNumber() const;
+    bool isBool() const;
+    bool isNull() const;
     
-    static JsonValue createArray() {
-        return JsonValue(cJSON_CreateArray());
-    }
+    // Value getters
+    std::string asString() const;
+    int asInt() const;
+    double asDouble() const;
+    bool asBool() const;
     
-    static JsonValue parse(const std::string& jsonStr) {
-        return JsonValue(cJSON_Parse(jsonStr.c_str()));
-    }
+    // Object member access
+    JsonValue get(const std::string& key, const JsonValue& defaultValue = JsonValue()) const;
+    bool isMember(const std::string& key) const;
+    void set(const std::string& key, const std::string& value);
+    void set(const std::string& key, const char* value);
+    void set(const std::string& key, int value);
+    void set(const std::string& key, double value);
+    void set(const std::string& key, bool value);
+    void set(const std::string& key, const JsonValue& value);
+    
+    // Array operations
+    JsonValue operator[](int index) const;
+    void append(const JsonValue& value);
+    void append(const std::string& value);
+    int size() const;
+    
+    // Serialization
+    std::string toString() const;
+    std::string toStringCompact() const;
+    
+    // Internal use
+    const Json::Value& getInternalValue() const;
 
 private:
-    cJSON* json_;
+    class Impl;
+    std::unique_ptr<Impl> pImpl;
 };
 
 // JSON utility functions
 class JsonHelper {
 public:
     // Parsing utilities
-    static bool hasField(const cJSON* json, const char* key);
-    static bool isString(const cJSON* json, const char* key);
-    static bool isNumber(const cJSON* json, const char* key);
-    static bool isObject(const cJSON* json, const char* key);
-    static bool isArray(const cJSON* json, const char* key);
-    static bool isBool(const cJSON* json, const char* key);
+    static bool hasField(const JsonValue& json, const char* key);
+    static bool isString(const JsonValue& json, const char* key);
+    static bool isNumber(const JsonValue& json, const char* key);
+    static bool isObject(const JsonValue& json, const char* key);
+    static bool isArray(const JsonValue& json, const char* key);
+    static bool isBool(const JsonValue& json, const char* key);
     
     // Get values with default fallbacks
-    static std::string getString(const cJSON* json, const char* key, const std::string& defaultValue = "");
-    static int getInt(const cJSON* json, const char* key, int defaultValue = 0);
-    static double getDouble(const cJSON* json, const char* key, double defaultValue = 0.0);
-    static bool getBool(const cJSON* json, const char* key, bool defaultValue = false);
-    static cJSON* getObject(const cJSON* json, const char* key);
-    static cJSON* getArray(const cJSON* json, const char* key);
+    static std::string getString(const JsonValue& json, const char* key, const std::string& defaultValue = "");
+    static int getInt(const JsonValue& json, const char* key, int defaultValue = 0);
+    static double getDouble(const JsonValue& json, const char* key, double defaultValue = 0.0);
+    static bool getBool(const JsonValue& json, const char* key, bool defaultValue = false);
+    static JsonValue getObject(const JsonValue& json, const char* key);
+    static JsonValue getArray(const JsonValue& json, const char* key);
     
     // Set values safely
-    static bool setString(cJSON* json, const char* key, const std::string& value);
-    static bool setInt(cJSON* json, const char* key, int value);
-    static bool setDouble(cJSON* json, const char* key, double value);
-    static bool setBool(cJSON* json, const char* key, bool value);
-    static bool setObject(cJSON* json, const char* key, cJSON* object);
-    static bool setArray(cJSON* json, const char* key, cJSON* array);
+    static bool setString(JsonValue& json, const char* key, const std::string& value);
+    static bool setInt(JsonValue& json, const char* key, int value);
+    static bool setDouble(JsonValue& json, const char* key, double value);
+    static bool setBool(JsonValue& json, const char* key, bool value);
+    static bool setObject(JsonValue& json, const char* key, const JsonValue& object);
+    static bool setArray(JsonValue& json, const char* key, const JsonValue& array);
     
     // Array utilities
-    static int getArraySize(const cJSON* array);
-    static cJSON* getArrayItem(const cJSON* array, int index);
-    static bool addToArray(cJSON* array, cJSON* item);
+    static int getArraySize(const JsonValue& array);
+    static JsonValue getArrayItem(const JsonValue& array, int index);
+    static bool addToArray(JsonValue& array, const JsonValue& item);
     
     // Validation utilities
-    static bool validateJsonRpc(const cJSON* json);
-    static bool validateRequest(const cJSON* json);
-    static bool validateResponse(const cJSON* json);
-    static bool validateNotification(const cJSON* json);
+    static bool validateJsonRpc(const JsonValue& json);
+    static bool validateRequest(const JsonValue& json);
+    static bool validateResponse(const JsonValue& json);
+    static bool validateNotification(const JsonValue& json);
     
     // ID handling (can be string or integer)
-    static DataType getIdType(const cJSON* json);
-    static std::string getIdAsString(const cJSON* json);
-    static int getIdAsInt(const cJSON* json);
-    static bool setId(cJSON* json, const std::string& id);
-    static bool setId(cJSON* json, int id);
+    static DataType getIdType(const JsonValue& json);
+    static std::string getIdAsString(const JsonValue& json);
+    static int getIdAsInt(const JsonValue& json);
+    static bool setId(JsonValue& json, const std::string& id);
+    static bool setId(JsonValue& json, int id);
     
     // Serialization
-    static std::string toString(const cJSON* json, bool formatted = false);
-    static size_t getSerializedSize(const cJSON* json);
+    static std::string toString(const JsonValue& json, bool formatted = false);
+    static size_t getSerializedSize(const JsonValue& json);
     
     // Error response creation
     static JsonValue createErrorResponse(const std::string& id, int code, const std::string& message, const std::string& data = "");
     static JsonValue createErrorResponse(int id, int code, const std::string& message, const std::string& data = "");
     
     // Success response creation  
-    static JsonValue createSuccessResponse(const std::string& id, cJSON* result);
-    static JsonValue createSuccessResponse(int id, cJSON* result);
+    static JsonValue createSuccessResponse(const std::string& id, const JsonValue& result);
+    static JsonValue createSuccessResponse(int id, const JsonValue& result);
     
     // Notification creation
-    static JsonValue createNotification(const std::string& method, cJSON* params = nullptr);
+    static JsonValue createNotification(const std::string& method, const JsonValue& params = JsonValue());
     
     // Request creation
-    static JsonValue createRequest(const std::string& method, const std::string& id, cJSON* params = nullptr);
-    static JsonValue createRequest(const std::string& method, int id, cJSON* params = nullptr);
-    
-    // Memory management helpers
-    static void safeDelete(cJSON* json);
-    static cJSON* safeDuplicate(const cJSON* json);
+    static JsonValue createRequest(const std::string& method, const std::string& id, const JsonValue& params = JsonValue());
+    static JsonValue createRequest(const std::string& method, int id, const JsonValue& params = JsonValue());
     
     // Validation with detailed error reporting
     struct ValidationResult {
@@ -146,38 +148,38 @@ public:
             : isValid(valid), errorCode(code), errorMessage(msg) {}
     };
     
-    static ValidationResult validateMessage(const cJSON* json);
-    static ValidationResult validateMethodCall(const cJSON* json, const std::string& expectedMethod);
+    static ValidationResult validateMessage(const JsonValue& json);
+    static ValidationResult validateMethodCall(const JsonValue& json, const std::string& expectedMethod);
     
     // Content creation helpers
-    static cJSON* createTextContent(const std::string& text);
-    static cJSON* createErrorContent(const std::string& error);
+    static JsonValue createTextContent(const std::string& text);
+    static JsonValue createErrorContent(const std::string& error);
     
     // Tool schema helpers
-    static cJSON* createBasicToolSchema(const std::string& type = "object");
-    static bool validateAgainstSchema(const cJSON* data, const cJSON* schema);
+    static JsonValue createBasicToolSchema(const std::string& type = "object");
+    static bool validateAgainstSchema(const JsonValue& data, const JsonValue& schema);
     
     // Progress helpers
-    static cJSON* createProgressData(int progress, int total = 100);
+    static JsonValue createProgressData(int progress, int total = 100);
     static JsonValue createProgressNotification(const std::string& progressToken, int progress, int total = 100);
     
     // Capability helpers
-    static cJSON* createServerCapabilities(bool toolsListChanged = true, bool progressNotifications = true);
+    static JsonValue createServerCapabilities(bool toolsListChanged = true, bool progressNotifications = true);
     
     // Size and memory utilities
-    static bool exceedsMaxSize(const cJSON* json, size_t maxSize = MAX_MESSAGE_SIZE);
-    static size_t estimateMemoryUsage(const cJSON* json);
+    static bool exceedsMaxSize(const JsonValue& json, size_t maxSize = MAX_MESSAGE_SIZE);
+    static size_t estimateMemoryUsage(const JsonValue& json);
     
 private:
     // Internal validation helpers
-    static bool isValidJsonRpcVersion(const cJSON* json);
-    static bool isValidMethod(const cJSON* json);
-    static bool isValidId(const cJSON* json);
+    static bool isValidJsonRpcVersion(const JsonValue& json);
+    static bool isValidMethod(const JsonValue& json);
+    static bool isValidId(const JsonValue& json);
     
     // Memory tracking for ESP32/ESP8266
-    static size_t calculateObjectSize(const cJSON* json);
-    static size_t calculateArraySize(const cJSON* json);
-    static size_t calculateStringSize(const cJSON* json);
+    static size_t calculateObjectSize(const JsonValue& json);
+    static size_t calculateArraySize(const JsonValue& json);
+    static size_t calculateStringSize(const JsonValue& json);
 };
 
 // Convenience macros for common JSON operations

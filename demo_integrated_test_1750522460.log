@@ -1,0 +1,53 @@
+
+# ESP8266 MCP Integrated Test Log
+# Generated: 2025-06-21T12:14:20.723199
+# ESP8266 IP: 192.168.86.37
+# Serial Port: /dev/ttyUSB1
+# Baud Rate: 74880
+================================================================================
+2025-06-21T12:14:20.749278 [ESP8266]  INFO: ted with socket 55[0m
+2025-06-21T12:14:20.749310 [ESP8266]  INFO: [ESP8266-MCP] Stack re
+2025-06-21T12:14:20.759990 [ESP8266]  INFO: maining after transport creation: 6196 bytes[0m
+2025-06-21T12:14:20.760024 [ESP8266]  INFO: [MCPServer] MCPServer create
+2025-06-21T12:14:20.770118 [ESP8266]  INFO: d[0m
+2025-06-21T12:14:20.770136 [ESP8266]  INFO: [MCPServer] MCPServer: Testing basic JS
+2025-06-21T12:14:20.780892 [ESP8266]  INFO: ON creation...[0m
+2025-06-21T12:14:20.780908 [ESP8266]  INFO: [MCPServer] MCPServer: Basic JSON null value created succe
+2025-06-21T12:14:20.790996 [ESP8266]  INFO: ssfully[0m
+2025-06-21T12:14:20.791007 [ESP8266]  INFO: [MCPServer] MCPServer: JSON objec
+2025-06-21T12:14:20.802183 [ESP8266]  INFO: t created successfully[0m
+2025-06-21T12:14:20.802198 [ESP8266]  INFO: [MCPServer] MCPServer: JSON test passed during ini
+2025-06-21T12:14:20.812291 [ESP8266]  INFO: tialization[0m
+2025-06-21T12:14:20.812303 [ESP8266]  INFO: [ESP8266-MCP] Stack remaining
+2025-06-21T12:14:20.822399 [ESP8266]  INFO: after server creation: 6196 bytes[0m
+2025-06-21T12:14:20.822414 [ESP8266]  INFO: [ESP8266-MCP] Starting C++ MCP server
+2025-06-21T12:14:20.832503 [ESP8266]  INFO: for client[0m
+2025-06-21T12:14:20.832514 [ESP8266]  INFO: [MCPServer] MCP Server startin
+2025-06-21T12:14:20.842601 [ESP8266]  INFO: g...[0m
+2025-06-21T12:14:20.842611 [ESP8266]  INFO: [MCPServer] Debug: About to create s
+2025-06-21T12:14:20.852731 [ESP8266]  INFO: td::string buffer[0m
+2025-06-21T12:14:20.852743 [ESP8266]  INFO: [MCPServer] Debug: Buffer created successfully[0m
+2025-06-21T12:14:20.852748 [ESP8266]  INFO: [0
+2025-06-21T12:14:20.862835 [ESP8266]  INFO: [MCPServer] Debug: About to enter main loop[0m
+2025-06-21T12:14:20.874208 [ESP8266]  INFO: [MCPServer] Debug: Loop iteration start[0m
+2025-06-21T12:14:20.874224 [ESP8266]  INFO: [MCPServer] Deb
+2025-06-21T12:14:20.884310 [ESP8266]  INFO: ug: About to call isConnected()[0m
+2025-06-21T12:14:20.884320 [ESP8266]  INFO: [0;32mI (6073962) MCPServe
+2025-06-21T12:14:20.895195 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T12:14:20.895210 [ESP8266]  INFO: [MCPServer] Debug: About to call t
+2025-06-21T12:14:20.905301 [ESP8266]  INFO: ransport->read()[0m
+2025-06-21T12:14:20.905313 [ESP8266]  INFO: [EspSocketTransport] Soc
+2025-06-21T12:14:20.915601 [ESP8266]  INFO: ket closed by peer[0m
+2025-06-21T12:14:20.915616 [ESP8266]  INFO: [MCPServer] Debug: tra
+2025-06-21T12:14:20.926202 [ESP8266]  INFO: [returned] false[0m
+2025-06-21T12:14:20.926223 [ESP8266]  INFO: [MCPServer] Transport read failed, stoppin
+2025-06-21T12:14:20.936313 [ESP8266]  INFO: g server[0m
+2025-06-21T12:14:20.936322 [ESP8266]  INFO: [MCPServer] MCP Server stopped[
+2025-06-21T12:14:20.949160 [ESP8266]  INFO: 0m
+2025-06-21T12:14:20.949172 [ESP8266]  INFO: [ESP8266-MCP] Client disconnected[0m
+2025-06-21T12:14:20.949176 [ESP8266]  INFO: [ESP8266-MCP] [Af
+2025-06-21T12:14:20.959282 [ESP8266]  INFO: ter client disconnect] Free heap: 58876 bytes, Min free: 53168 bytes, Stack remaining: 6196 byte
+2025-06-21T12:14:20.969373 [ESP8266]  INFO: s[0m
+2025-06-21T12:14:20.969381 [ESP8266]  INFO: [EspSocketTransport] Socket closed manu
+2025-06-21T12:14:20.979462 [ESP8266]  INFO: ally[0m
+2025-06-21T12:14:20.979469 [ESP8266]  INFO: [MCPServer] MCPServer destroyed[0m
