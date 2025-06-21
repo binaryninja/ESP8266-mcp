@@ -1,0 +1,34 @@
+
+# ESP8266 MCP Integrated Test Log
+# Generated: 2025-06-20T18:52:53.455394
+# ESP8266 IP: 192.168.86.30
+# Serial Port: /dev/ttyUSB0
+# Baud Rate: 74880
+================================================================================
+2025-06-20T18:52:53.467941 [ESP8266]  INFO: [MCPServer] MCPServer created[0m
+2025-06-20T18:52:53.467974 [ESP8266]  INFO: [JsonValue] Testing cJSON operations...[
+2025-06-20T18:52:53.478068 [ESP8266]  INFO: 0m
+2025-06-20T18:52:53.478079 [ESP8266]  INFO: [JsonValue] String creation test passed[0m
+2025-06-20T18:52:53.488556 [ESP8266]  INFO: [JsonValue] Test object serialized as: {"test
+2025-06-20T18:52:53.498657 [ESP8266]  INFO: _key":"object_value"}[0m
+2025-06-20T18:52:53.498665 [ESP8266]  INFO: [JsonValue] All cJSON tests passed[0m
+2025-06-20T18:52:53.498669 [ESP8266]  INFO: [0;32mI (18
+2025-06-20T18:52:53.508754 [ESP8266]  INFO: [MCPServer] cJSON test passed during initialization[0m
+2025-06-20T18:52:53.508762 [ESP8266]  INFO: [
+2025-06-20T18:52:53.518852 [ESP8266]  INFO: [ESP8266-MCP] Starting C++ MCP server for client
+2025-06-20T18:52:53.528946 [ESP8266]  INFO: [0m
+2025-06-20T18:52:53.528954 [ESP8266]  INFO: [MCPServer] MCP Server starting...[0m
+2025-06-20T18:52:53.528958 [ESP8266]  INFO: [0;32mI (186401) EspSocketTranspo
+2025-06-20T18:52:53.539044 [ESP8266]  INFO: rt: Socket closed by peer[0m
+2025-06-20T18:52:53.539052 [ESP8266]  INFO: [MCPServer] Tran
+2025-06-20T18:52:53.549826 [ESP8266]  INFO: sport read failed, stopping server[0m
+2025-06-20T18:52:53.549839 [ESP8266]  INFO: [0;32mI (186418) MCPSer
+2025-06-20T18:52:53.559926 [ESP8266]  INFO: ver: MCP Server stopped[0m
+2025-06-20T18:52:53.559935 [ESP8266]  INFO: [ESP8266-MCP] Client disconnected[0m
+2025-06-20T18:52:53.559939 [ESP8266]  INFO: [0;32mI (1
+2025-06-20T18:52:53.570029 [ESP8266]  INFO: [EspSocketTransport] Socket closed manually[0m
+2025-06-20T18:52:53.570040 [ESP8266]  INFO: [0;32mI
+2025-06-20T18:52:53.580194 [ESP8266]  INFO: [MCPServer] MCPServer destroyed[0m
+2025-06-20T18:52:53.580215 [ESP8266]  INFO: [ESP8266-MCP] [After client discon
+2025-06-20T18:52:53.590313 [ESP8266]  INFO: nect] Free heap: 71780 bytes, Min free: 46764 bytes[0m
+2025-06-20T19:04:59.313822 [ESP8266] ERROR: Serial connection failed: [Errno 5] Input/output error

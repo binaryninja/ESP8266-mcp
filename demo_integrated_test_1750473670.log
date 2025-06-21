@@ -1,0 +1,1272 @@
+
+# ESP8266 MCP Integrated Test Log
+# Generated: 2025-06-20T22:41:10.592069
+# ESP8266 IP: 192.168.86.37
+# Serial Port: /dev/ttyUSB1
+# Baud Rate: 74880
+================================================================================
+2025-06-20T22:41:10.612676 [ESP8266]  INFO: [JsonValue] Testing cJSON operations...[0m
+2025-06-20T22:41:10.612709 [ESP8266]  INFO: [0
+2025-06-20T22:41:10.622814 [ESP8266]  INFO: [JsonValue] String creation test passed[0m
+2025-06-20T22:41:10.622830 [ESP8266]  INFO: [JsonValue] Test objec
+2025-06-20T22:41:10.632917 [ESP8266]  INFO: t serialized as: {"test_key":"object_value"}[0m
+2025-06-20T22:41:10.632926 [ESP8266]  INFO: [0;32mI (7128
+2025-06-20T22:41:10.643014 [ESP8266]  INFO: [JsonValue] All cJSON tests passed[0m
+2025-06-20T22:41:10.643027 [ESP8266]  INFO: [MCPServer] cJSON test passed during i
+2025-06-20T22:41:10.653115 [ESP8266]  INFO: nitialization[0m
+2025-06-20T22:41:10.653132 [ESP8266]  INFO: [ESP8266-MCP] Starting C++ MC
+2025-06-20T22:41:10.663221 [ESP8266]  INFO: P server for client[0m
+2025-06-20T22:41:10.663233 [ESP8266]  INFO: [MCPServer] MCP Server starting...[0m
+2025-06-20T22:41:10.663237 [ESP8266]  INFO: [0;32mI (71323
+2025-06-20T22:41:10.673326 [ESP8266]  INFO: [EspSocketTransport] Socket closed by peer[0m
+2025-06-20T22:41:10.673340 [ESP8266]  INFO: [0;32mI (71331
+2025-06-20T22:41:10.683427 [ESP8266]  INFO: [MCPServer] Transport read failed, stopping server[0m
+2025-06-20T22:41:10.683439 [ESP8266]  INFO: [0;32m
+2025-06-20T22:41:10.693528 [ESP8266]  INFO: [MCPServer] MCP Server stopped[0m
+2025-06-20T22:41:10.693541 [ESP8266]  INFO: [ESP8266-MCP] Client disconnected[
+2025-06-20T22:41:10.703634 [ESP8266]  INFO: 0m
+2025-06-20T22:41:10.703647 [ESP8266]  INFO: [EspSocketTransport] Socket closed manually
+2025-06-20T22:41:10.713732 [ESP8266]  INFO: [0m
+2025-06-20T22:41:10.713740 [ESP8266]  INFO: [MCPServer] MCPServer destroyed[0m
+2025-06-20T22:41:10.713743 [ESP8266]  INFO: [0;32
+2025-06-20T22:41:10.724191 [ESP8266]  INFO: [ESP8266-MCP] [After client disconnect] Free heap: 71976 bytes, Min free: 59324 bytes
+2025-06-20T22:41:10.734294 [ESP8266]  INFO: [0m
+2025-06-20T22:41:13.592732 [ CLIENT]  TEST: 🚀 Starting test: test_mcp_client.py
+2025-06-20T22:41:13.644169 [ESP8266]  INFO: [ESP8266-MCP] Client connected from 192.168.86.3
+2025-06-20T22:41:13.654273 [ESP8266]  INFO: 2:54342[0m
+2025-06-20T22:41:13.654282 [ESP8266]  INFO: [ESP8266-MCP] [Before MCP server cr
+2025-06-20T22:41:13.664376 [ESP8266]  INFO: eation] Free heap: 71616 bytes, Min free: 59324 bytes[0m
+2025-06-20T22:41:13.664392 [ESP8266]  INFO: [0;32mI (74320) EspSocketTransport:
+2025-06-20T22:41:13.674477 [ESP8266]  INFO: EspSocketTransport created with socket 55[0m
+2025-06-20T22:41:13.674489 [ESP8266]  INFO: [0;32mI (74331)
+2025-06-20T22:41:13.684570 [ESP8266]  INFO: MCPServer: MCPServer created[0m
+2025-06-20T22:41:13.684579 [ESP8266]  INFO: [JsonValue] Te
+2025-06-20T22:41:13.694658 [ESP8266]  INFO: sting cJSON operations...[0m
+2025-06-20T22:41:13.694667 [ESP8266]  INFO: [JsonValue] String creation test passed[0m
+2025-06-20T22:41:13.694670 [ESP8266]  INFO: [0;
+2025-06-20T22:41:13.706164 [ESP8266]  INFO: [JsonValue] Test obj
+2025-06-20T22:41:13.716264 [ESP8266]  INFO: ect serialized as: {"test_key":"object_value"}[0m
+2025-06-20T22:41:13.716275 [ESP8266]  INFO: [JsonValue] All cJSON tests passed[0m
+2025-06-20T22:41:13.716279 [ESP8266]  INFO: [0;32mI (74373) MCP
+2025-06-20T22:41:13.726364 [ESP8266]  INFO: Server: cJSON test passed during initialization[0m
+2025-06-20T22:41:13.726375 [ESP8266]  INFO: [0;32mI (7
+2025-06-20T22:41:13.736457 [ESP8266]  INFO: [ESP8266-MCP] Starting C++ MCP server for client[0m
+2025-06-20T22:41:13.736475 [ESP8266]  INFO: [0;3
+2025-06-20T22:41:13.746602 [ESP8266]  INFO: [MCPServer] MCP Server starting...[0m
+2025-06-20T22:41:13.746622 [ESP8266]  INFO: [JsonValue] Checking serializ
+2025-06-20T22:41:13.756710 [ESP8266]  INFO: ed JSON for corruption: {"protocolVersion":"2024-11-05","clientI
+2025-06-20T22:41:13.766796 [ESP8266]  INFO: nfo":{"name":"ESP8266-MCP-Test-Client","version":"1.0.0"},"capabilities":{"roots":{"listChanged"
+2025-06-20T22:41:13.776877 [ESP8266]  INFO: :false},"sampling":{}}}[0m
+2025-06-20T22:41:13.776882 [ESP8266]  INFO: [JsonValue] Detecti
+2025-06-20T22:41:13.786969 [ESP8266]  INFO: ng corruption in JSON: {"protocolVersion":"2024-11-05","clientIn
+2025-06-20T22:41:13.797051 [ESP8266]  INFO: fo":{"name":"ESP8266-MCP-Test-Client","version":"1.0.0"},"capabilities":{"roots":{"listChanged":
+2025-06-20T22:41:13.807160 [ESP8266]  INFO: false},"sampling":{}}}[0m
+2025-06-20T22:41:13.807166 [ESP8266]  INFO: [JsonValue] Corrupti
+2025-06-20T22:41:13.817258 [ESP8266]  INFO: on detection result: CLEAN[0m
+2025-06-20T22:41:13.817269 [ESP8266]  INFO: [JsonValue] No c
+2025-06-20T22:41:13.827353 [ESP8266]  INFO: orruption detected in serialized JSON[0m
+2025-06-20T22:41:13.827359 [ESP8266]  INFO: [MCPServer] handleInitialize: Startin
+2025-06-20T22:41:13.839159 [ESP8266]  INFO: g initialization[0m
+2025-06-20T22:41:13.839170 [ESP8266]  INFO: [MCPServer] handleInitiali
+2025-06-20T22:41:13.849255 [ESP8266]  INFO: ze: Request ID: 1[0m
+2025-06-20T22:41:13.849266 [ESP8266]  INFO: [MCPServer] handleInitialize: Creating response object[0
+2025-06-20T22:41:13.859355 [ESP8266]  INFO: m
+2025-06-20T22:41:13.859364 [ESP8266]  INFO: [MCPServer] handleInitialize: Setting jsonrpc
+2025-06-20T22:41:13.869486 [ESP8266]  INFO: field[0m
+2025-06-20T22:41:13.869499 [ESP8266]  INFO: [MCPServer] handleInitialize: Setting id field[0m
+2025-06-20T22:41:13.869504 [ESP8266]  INFO: [0;32mI (74527)
+2025-06-20T22:41:13.879598 [ESP8266]  INFO: MCPServer: handleInitialize: Creating result object[0m
+2025-06-20T22:41:13.879615 [ESP8266]  INFO: [0;32
+2025-06-20T22:41:13.889704 [ESP8266]  INFO: [MCPServer] handleInitialize: Setting protocolVersion
+2025-06-20T22:41:13.899904 [ESP8266]  INFO: [0m
+2025-06-20T22:41:13.899935 [ESP8266]  INFO: [MCPServer] handleInitialize: Creating serverInfo object[0m
+2025-06-20T22:41:13.899942 [ESP8266]  INFO: [0;32mI (745
+2025-06-20T22:41:13.910290 [ESP8266]  INFO: [MCPServer] handleInitialize: Setting server name[0m
+2025-06-20T22:41:13.910329 [ESP8266]  INFO: [0;32
+2025-06-20T22:41:13.921465 [ESP8266]  INFO: [MCPServer] handleInitialize: Setting server version[0m
+2025-06-20T22:41:13.921482 [ESP8266]  INFO: [0;32mI (74577) MCPServer:
+2025-06-20T22:41:13.931647 [ESP8266]  INFO: handleInitialize: Adding serverInfo to result[0m
+2025-06-20T22:41:13.931673 [ESP8266]  INFO: [0;32mI (745
+2025-06-20T22:41:13.941857 [ESP8266]  INFO: [MCPServer] handleInitialize: Creating capabilities object[0m
+2025-06-20T22:41:13.941897 [ESP8266]  INFO: [MCPServer] h
+2025-06-20T22:41:13.952078 [ESP8266]  INFO: andleInitialize: Creating tools capability object[0m
+2025-06-20T22:41:13.952112 [ESP8266]  INFO: [0;32mI
+2025-06-20T22:41:13.962297 [ESP8266]  INFO: [MCPServer] handleInitialize: Setting tools listChanged[
+2025-06-20T22:41:13.972493 [ESP8266]  INFO: 0m
+2025-06-20T22:41:13.972521 [ESP8266]  INFO: [MCPServer] handleInitialize: Adding tools to capabilities[0m
+2025-06-20T22:41:13.972527 [ESP8266]  INFO: [0;32mI (74
+2025-06-20T22:41:13.982639 [ESP8266]  INFO: [MCPServer] handleInitialize: Adding capabilities to result
+2025-06-20T22:41:13.992775 [ESP8266]  INFO: [0m
+2025-06-20T22:41:13.992790 [ESP8266]  INFO: [MCPServer] handleInitialize: Adding result
+2025-06-20T22:41:14.002898 [ESP8266]  INFO: to response[0m
+2025-06-20T22:41:14.002909 [ESP8266]  INFO: [MCPServer] handleInitialize: Validating response structure[0
+2025-06-20T22:41:14.013008 [ESP8266]  INFO: m
+2025-06-20T22:41:14.013027 [ESP8266]  INFO: [MCPServer] handleInitialize: Server initiali
+2025-06-20T22:41:14.023118 [ESP8266]  INFO: zed, serializing response[0m
+2025-06-20T22:41:14.023133 [ESP8266]  INFO: [JsonValue] Checking serialized JSON for corrupti
+2025-06-20T22:41:14.033281 [ESP8266]  INFO: on: {"jsonrpc":true,"id":"1","result":{"protocolVersion":true,"s
+2025-06-20T22:41:14.043429 [ESP8266]  INFO: erverInfo":{"name":true,"version":true},"capabilities":{"tools":
+2025-06-20T22:41:14.056005 [ESP8266]  INFO: {"listChanged":false}}}}[0m
+2025-06-20T22:41:14.056020 [ESP8266]  INFO: [JsonValue] Detecting corruption in JSON: {"jsonrp
+2025-06-20T22:41:14.066171 [ESP8266]  INFO: c":true,"id":"1","result":{"protocolVersion":true,"serverInfo":{"name":true,"version":true},"cap
+2025-06-20T22:41:14.076323 [ESP8266]  INFO: abilities":{"tools":{"listChanged":false}}}}[0m
+2025-06-20T22:41:14.076342 [ESP8266] ERROR: [0;31mE (7473
+2025-06-20T22:41:14.089189 [ESP8266]  INFO: [JsonValue] Found corrupted jsonrpc field[0m
+2025-06-20T22:41:14.089211 [ESP8266] ERROR: [JsonValue] Found corrupted nam
+2025-06-20T22:41:14.099340 [ESP8266]  INFO: e field[0m
+2025-06-20T22:41:14.099359 [ESP8266] ERROR: [JsonValue] Found corrupted version
+2025-06-20T22:41:14.109482 [ESP8266]  INFO: field[0m
+2025-06-20T22:41:14.109496 [ESP8266] ERROR: [JsonValue] Found corrupted protocolVersion field[0m
+2025-06-20T22:41:14.109499 [ESP8266]  INFO: [0;32mI (747
+2025-06-20T22:41:14.119638 [ESP8266]  INFO: [JsonValue] Corruption detection result: CORRUPTED[0m
+2025-06-20T22:41:14.119658 [ESP8266]  INFO: [0;3
+2025-06-20T22:41:14.129779 [ESP8266] ERROR: [JsonValue] Corruption detected in serialized JSON, using manual fallback[0m
+2025-06-20T22:41:14.129795 [ESP8266]  INFO: [0;32
+2025-06-20T22:41:14.142211 [ESP8266]  INFO: [JsonValue] Manual JSON result: {"name":true,"version"
+2025-06-20T22:41:14.152352 [ESP8266]  INFO: :true}[0m
+2025-06-20T22:41:14.152367 [ESP8266]  INFO: [JsonValue] Manual JSON result: {"listChanged":false}[0m
+2025-06-20T22:41:14.152373 [ESP8266]  INFO: [0;32mI
+2025-06-20T22:41:14.162540 [ESP8266]  INFO: [JsonValue] Manual JSON result: {"tools":{"listChanged":f
+2025-06-20T22:41:14.172706 [ESP8266]  INFO: alse}}[0m
+2025-06-20T22:41:14.172727 [ESP8266]  INFO: [JsonValue] Manual JSON result: {"protocolVersion":true,"serverInfo"
+2025-06-20T22:41:14.183573 [ESP8266]  INFO: :{"name":true,"version":true},"capabilities":{"tools":{"listChan
+2025-06-20T22:41:14.193774 [ESP8266]  INFO: ged":false}}}[0m
+2025-06-20T22:41:14.193810 [ESP8266]  INFO: [JsonValue] Manual JSON resul
+2025-06-20T22:41:14.203969 [ESP8266]  INFO: t: {"jsonrpc":true,"id":"1","result":{"protocolVersion":true,"serverInfo":{"name":true,"version"
+2025-06-20T22:41:14.214082 [ESP8266]  INFO: :true},"capabilities":{"tools":{"listChanged":false}}}}[0m
+2025-06-20T22:41:14.214096 [ESP8266]  INFO: [0
+2025-06-20T22:41:14.224203 [ESP8266] WARNING: [JsonValue] Manual JSON fallback succeeded after corruption detection[0m
+2025-06-20T22:41:14.224226 [ESP8266]  INFO: [0;32mI
+2025-06-20T22:41:14.234384 [ESP8266]  INFO: [MCPServer] handleInitialize: Serialized response length
+2025-06-20T22:41:14.244549 [ESP8266]  INFO: : 148[0m
+2025-06-20T22:41:14.244571 [ESP8266]  INFO: [MCPServer] handleInitialize: Response ready[0m
+2025-06-20T22:41:14.256139 [ESP8266]  INFO: [JsonValue] Chec
+2025-06-20T22:41:14.266262 [ESP8266]  INFO: king serialized JSON for corruption: {"jsonrpc":true,"id":"2","result":{}}[0m
+2025-06-20T22:41:14.266276 [ESP8266]  INFO: [0;32mI (74926)
+2025-06-20T22:41:14.276362 [ESP8266]  INFO: JsonValue: Detecting corruption in JSON: {"jsonrpc":true,"id":"
+2025-06-20T22:41:14.286457 [ESP8266]  INFO: 2","result":{}}[0m
+2025-06-20T22:41:14.286467 [ESP8266] ERROR: [JsonValue] Found corrupted
+2025-06-20T22:41:14.297928 [ESP8266]  INFO: jsonrpc field[0m
+2025-06-20T22:41:14.297943 [ESP8266]  INFO: [JsonValue] Corruption detection result: CORRUPTED[0m
+2025-06-20T22:41:14.297948 [ESP8266]  INFO: [0;
+2025-06-20T22:41:14.308035 [ESP8266] ERROR: [JsonValue] Corruption detected in serialized JSON, using manual fallback[0m
+2025-06-20T22:41:14.308048 [ESP8266]  INFO: [0;3
+2025-06-20T22:41:14.318160 [ESP8266]  INFO: [JsonValue] Manual JSON result: {}[0m
+2025-06-20T22:41:14.318171 [ESP8266]  INFO: [0;32mI (749
+2025-06-20T22:41:14.328256 [ESP8266]  INFO: [JsonValue] Manual JSON result: {"jsonrpc":true,"id":"2","res
+2025-06-20T22:41:14.338352 [ESP8266]  INFO: ult":{}}[0m
+2025-06-20T22:41:14.338363 [ESP8266] WARNING: [JsonValue] Manual JSON fallback succeeded after corruption detect
+2025-06-20T22:41:14.348448 [ESP8266]  INFO: ion[0m
+2025-06-20T22:41:14.348458 [ESP8266]  INFO: [JsonValue] Chec
+2025-06-20T22:41:14.359285 [ESP8266]  INFO: king serialized JSON for corruption: {"jsonrpc":true,"id":"3","r
+2025-06-20T22:41:14.369389 [ESP8266]  INFO: esult":{"tools":[{"name":true,"description":true,"inputSchema":{"type":true,"properties":{"text"
+2025-06-20T22:41:14.379485 [ESP8266]  INFO: :{"type":true,"description":true}},"required":["text"]}},{"name"
+2025-06-20T22:41:14.389579 [ESP8266]  INFO: :true,"description":true,"inputSchema":{"type":true,"properties"
+2025-06-20T22:41:14.399675 [ESP8266]  INFO: :{"pin":{"type":true,"description":true},"state":{"type":true,"enum":["high","low"],"description
+2025-06-20T22:41:14.409773 [ESP8266]  INFO: ":true}},"required":["pin","state"]}}]}}[0m
+2025-06-20T22:41:14.409785 [ESP8266]  INFO: [0;32mI (75065) J
+2025-06-20T22:41:14.419988 [ESP8266]  INFO: sonValue: Detecting corruption in JSON: {"jsonrpc":true,"id":"3","result":{"tools":[{"name":true
+2025-06-20T22:41:14.430196 [ESP8266]  INFO: ,"description":true,"inputSchema":{"type":true,"properties":{"te
+2025-06-20T22:41:14.440336 [ESP8266]  INFO: xt":{"type":true,"description":true}},"required":["text"]}},{"na
+2025-06-20T22:41:14.450455 [ESP8266]  INFO: me":true,"description":true,"inputSchema":{"type":true,"properties":{"pin":{"type":true,"descrip
+2025-06-20T22:41:14.460583 [ESP8266]  INFO: tion":true},"state":{"type":true,"enum":["high","low"],"descript
+2025-06-20T22:41:14.470711 [ESP8266]  INFO: ion":true}},"required":["pin","state"]}}]}}[0m
+2025-06-20T22:41:14.470727 [ESP8266] ERROR: [0;31mE (75125
+2025-06-20T22:41:14.480821 [ESP8266]  INFO: [JsonValue] Found corrupted jsonrpc field[0m
+2025-06-20T22:41:14.480834 [ESP8266] ERROR: [JsonValue] Found corrupted name
+2025-06-20T22:41:14.490950 [ESP8266]  INFO: field[0m
+2025-06-20T22:41:14.490966 [ESP8266] ERROR: [JsonValue] Found corrupted descript
+2025-06-20T22:41:14.501054 [ESP8266]  INFO: ion field[0m
+2025-06-20T22:41:14.501062 [ESP8266]  INFO: [JsonValue] Corruption detection result: CORRUPTED[0m
+2025-06-20T22:41:14.501066 [ESP8266]  INFO: [0;31mE
+2025-06-20T22:41:14.511770 [ESP8266]  INFO: [JsonValue] Corruption detected in serialized JSON, using
+2025-06-20T22:41:14.521895 [ESP8266]  INFO: manual fallback[0m
+2025-06-20T22:41:14.521905 [ESP8266]  INFO: [JsonValue] Manual JSON re
+2025-06-20T22:41:14.531997 [ESP8266]  INFO: sult: {"type":true,"description":true}[0m
+2025-06-20T22:41:14.532005 [ESP8266]  INFO: [JsonValue] Manual JSON result: {"te
+2025-06-20T22:41:14.542095 [ESP8266]  INFO: xt":{"type":true,"description":true}}[0m
+2025-06-20T22:41:14.542104 [ESP8266]  INFO: [0;32mI (75197) Json
+2025-06-20T22:41:14.552362 [ESP8266]  INFO: Value: Manual JSON result: {"type":true,"properties":{"text":{"type":true,"description":true}},"
+2025-06-20T22:41:14.562453 [ESP8266]  INFO: required":["text"]}[0m
+2025-06-20T22:41:14.562460 [ESP8266]  INFO: [JsonValue] Manual JSON
+2025-06-20T22:41:14.572558 [ESP8266]  INFO: result: {"name":true,"description":true,"inputSchema":{"type":t
+2025-06-20T22:41:14.586157 [ESP8266]  INFO: rue,"properties":{"text":{"type":true,"description":true}},"required":["text"]}}[0m
+2025-06-20T22:41:14.586170 [ESP8266]  INFO: [0;32mI (
+2025-06-20T22:41:14.596257 [ESP8266]  INFO: [JsonValue] Manual JSON result: {"type":true,"description":true}[0m
+2025-06-20T22:41:14.596270 [ESP8266]  INFO: [0;32mI (75253) Jso
+2025-06-20T22:41:14.606356 [ESP8266]  INFO: nValue: Manual JSON result: {"type":true,"enum":["high","low"],"
+2025-06-20T22:41:14.616449 [ESP8266]  INFO: description":true}[0m
+2025-06-20T22:41:14.616458 [ESP8266]  INFO: [JsonValue] Manual JSON result: {"pin":{"type":true,"des
+2025-06-20T22:41:14.626544 [ESP8266]  INFO: cription":true},"state":{"type":true,"enum":["high","low"],"desc
+2025-06-20T22:41:14.636634 [ESP8266]  INFO: ription":true}}[0m
+2025-06-20T22:41:14.636643 [ESP8266]  INFO: [JsonValue] Manual JSON res
+2025-06-20T22:41:14.647659 [ESP8266]  INFO: ult: {"type":true,"properties":{"pin":{"type":true,"description":true},"state":{"type":true,"enu
+2025-06-20T22:41:14.657787 [ESP8266]  INFO: m":["high","low"],"description":true}},"required":["pin","state"
+2025-06-20T22:41:14.667905 [ESP8266]  INFO: ]}[0m
+2025-06-20T22:41:14.667920 [ESP8266]  INFO: [JsonValue] Manual JSON result: {"name":true,"description":true,"inputSc
+2025-06-20T22:41:14.678038 [ESP8266]  INFO: hema":{"type":true,"properties":{"pin":{"type":true,"description
+2025-06-20T22:41:14.688182 [ESP8266]  INFO: ":true},"state":{"type":true,"enum":["high","low"],"description"
+2025-06-20T22:41:14.698415 [ESP8266]  INFO: :true}},"required":["pin","state"]}}[0m
+2025-06-20T22:41:14.698433 [ESP8266]  INFO: [JsonValue] Manual JSON result: {"tool
+2025-06-20T22:41:14.708534 [ESP8266]  INFO: s":[{"name":true,"description":true,"inputSchema":{"type":true,"
+2025-06-20T22:41:14.718641 [ESP8266]  INFO: properties":{"text":{"type":true,"description":true}},"required"
+2025-06-20T22:41:14.728750 [ESP8266]  INFO: :["text"]}},{"name":true,"description":true,"inputSchema":{"type":true,"properties":{"pin":{"typ
+2025-06-20T22:41:14.740192 [ESP8266]  INFO: e":true,"description":true},"state":{"type":true,"enum":["high",
+2025-06-20T22:41:14.750319 [ESP8266]  INFO: "low"],"description":true}},"required":["pin","state"]}}]}[0m
+2025-06-20T22:41:14.750334 [ESP8266]  INFO: [JsonValue] Manu
+2025-06-20T22:41:14.760424 [ESP8266]  INFO: al JSON result: {"jsonrpc":true,"id":"3","result":{"tools":[{"na
+2025-06-20T22:41:14.770511 [ESP8266]  INFO: me":true,"description":true,"inputSchema":{"type":true,"properties":{"text":{"type":true,"descri
+2025-06-20T22:41:14.780608 [ESP8266]  INFO: ption":true}},"required":["text"]}},{"name":true,"description":t
+2025-06-20T22:41:14.790692 [ESP8266]  INFO: rue,"inputSchema":{"type":true,"properties":{"pin":{"type":true,
+2025-06-20T22:41:14.800775 [ESP8266]  INFO: "description":true},"state":{"type":true,"enum":["high","low"],"description":true}},"required":[
+2025-06-20T22:41:14.810886 [ESP8266]  INFO: "pin","state"]}}]}}[0m
+2025-06-20T22:41:14.810898 [ESP8266] WARNING: [JsonValue] Manual JSON
+2025-06-20T22:41:14.820985 [ESP8266]  INFO: fallback succeeded after corruption detection[0m
+2025-06-20T22:41:14.831071 [ESP8266]  INFO: [JsonValue] Checking serialized JSON for corrupt
+2025-06-20T22:41:14.841159 [ESP8266]  INFO: ion: {"name":"echo","arguments":{"text":"Hello ESP8266!"}}[0m
+2025-06-20T22:41:14.841166 [ESP8266]  INFO: [JsonValue] Dete
+2025-06-20T22:41:14.851261 [ESP8266]  INFO: cting corruption in JSON: {"name":"echo","arguments":{"text":"He
+2025-06-20T22:41:14.861353 [ESP8266]  INFO: llo ESP8266!"}}[0m
+2025-06-20T22:41:14.861361 [ESP8266]  INFO: [JsonValue] Corruption dete
+2025-06-20T22:41:14.871450 [ESP8266]  INFO: ction result: CLEAN[0m
+2025-06-20T22:41:14.871458 [ESP8266]  INFO: [JsonValue] No corruption detected in serialized JSON[
+2025-06-20T22:41:14.881550 [ESP8266]  INFO: 0m
+2025-06-20T22:41:14.881560 [ESP8266]  INFO: [MCPServer] handleToolsCall: Starting to pro
+2025-06-20T22:41:14.891644 [ESP8266]  INFO: cess tool call[0m
+2025-06-20T22:41:14.891649 [ESP8266]  INFO: [MCPServer] handleToolsCall:
+2025-06-20T22:41:14.901737 [ESP8266]  INFO: Request ID: 4[0m
+2025-06-20T22:41:14.901744 [ESP8266]  INFO: [MCPServer] handleToolsCall: Tool name: echo[0m
+2025-06-20T22:41:14.901748 [ESP8266]  INFO: [0;32mI (
+2025-06-20T22:41:14.911835 [ESP8266]  INFO: [MCPServer] handleToolsCall: Processing echo tool[0m
+2025-06-20T22:41:14.911845 [ESP8266]  INFO: [0
+2025-06-20T22:41:14.921929 [ESP8266]  INFO: [MCPServer] handleToolsCall: Echo has text paramete
+2025-06-20T22:41:14.932012 [ESP8266]  INFO: r[0m
+2025-06-20T22:41:14.932017 [ESP8266]  INFO: [MCPServer] Echo tool called with: Hello ESP8266![0m
+2025-06-20T22:41:14.932020 [ESP8266]  INFO: [0;32mI (75588) M
+2025-06-20T22:41:14.942099 [ESP8266]  INFO: CPServer: handleToolsCall: Setting result and returning success
+2025-06-20T22:41:14.952154 [ESP8266]  INFO: response[0m
+2025-06-20T22:41:14.952161 [ESP8266]  INFO: [JsonValue] Checking serialized JSON for corruption: {"jsonrpc":tr
+2025-06-20T22:41:14.962245 [ESP8266]  INFO: ue,"id":"4","result":{"content":[{"type":true,"text":"Echo: Hell
+2025-06-20T22:41:14.972335 [ESP8266]  INFO: o ESP8266!"}]}}[0m
+2025-06-20T22:41:14.972343 [ESP8266]  INFO: [JsonValue] Detecting corru
+2025-06-20T22:41:14.982420 [ESP8266]  INFO: ption in JSON: {"jsonrpc":true,"id":"4","result":{"content":[{"type":true,"text":"Echo: Hello ES
+2025-06-20T22:41:14.992507 [ESP8266]  INFO: P8266!"}]}}[0m
+2025-06-20T22:41:14.992514 [ESP8266] ERROR: [JsonValue] Found corrupted jso
+2025-06-20T22:41:15.002601 [ESP8266]  INFO: nrpc field[0m
+2025-06-20T22:41:15.002611 [ESP8266]  INFO: [JsonValue] Corruption detection
+2025-06-20T22:41:15.012696 [ESP8266]  INFO: result: CORRUPTED[0m
+2025-06-20T22:41:15.012703 [ESP8266] ERROR: [JsonValue] Corruption detected in serialized JSON, usin
+2025-06-20T22:41:15.022792 [ESP8266]  INFO: g manual fallback[0m
+2025-06-20T22:41:15.022800 [ESP8266]  INFO: [JsonValue] Manual JSON r
+2025-06-20T22:41:15.035394 [ESP8266]  INFO: esult: {"type":true,"text":"Echo: Hello ESP8266!"}[0m
+2025-06-20T22:41:15.035411 [ESP8266]  INFO: [JsonValue] Manual JSON
+2025-06-20T22:41:15.045504 [ESP8266]  INFO: result: {"content":[{"type":true,"text":"Echo: Hello ESP8266!"}]
+2025-06-20T22:41:15.055599 [ESP8266]  INFO: }[0m
+2025-06-20T22:41:15.055607 [ESP8266]  INFO: [JsonValue] Manual JSON result: {"jsonrpc":true,"id":"4","result":{"conte
+2025-06-20T22:41:15.067756 [ESP8266]  INFO: nt":[{"type":true,"text":"Echo: Hello ESP8266!"}]}}[0m
+2025-06-20T22:41:15.067791 [ESP8266] WARNING: [JsonValue] Manual JSON
+2025-06-20T22:41:15.077887 [ESP8266]  INFO: fallback succeeded after corruption detection[0m
+2025-06-20T22:41:15.683242 [ESP8266]  INFO: [JsonValue] Checking serialized JSON for corruption: {"name":"echo","arguments":
+2025-06-20T22:41:15.695776 [ESP8266]  INFO: {"text":"Testing MCP protocol 🚀"}}[0m
+2025-06-20T22:41:15.695820 [ESP8266]  INFO: [0;32mI (76348) Json
+2025-06-20T22:41:15.705939 [ESP8266]  INFO: Value: Detecting corruption in JSON: {"name":"echo","arguments":{"text":"Testing MCP protocol
+2025-06-20T22:41:15.716052 [ESP8266]  INFO: "}}[0m
+2025-06-20T22:41:15.716064 [ESP8266]  INFO: [JsonValue] Corruption detection resu
+2025-06-20T22:41:15.728249 [ESP8266]  INFO: lt: CLEAN[0m
+2025-06-20T22:41:15.728277 [ESP8266]  INFO: [JsonValue] No corruption detected in serialized JSON[0m
+2025-06-20T22:41:15.728282 [ESP8266]  INFO: [0;32
+2025-06-20T22:41:15.738387 [ESP8266]  INFO: [MCPServer] handleToolsCall: Starting to process tool
+2025-06-20T22:41:15.748510 [ESP8266]  INFO: call[0m
+2025-06-20T22:41:15.748524 [ESP8266]  INFO: [MCPServer] handleToolsCall: Request ID: 5[0m
+2025-06-20T22:41:15.748529 [ESP8266]  INFO: [0;32mI (76404) MCPSe
+2025-06-20T22:41:15.758614 [ESP8266]  INFO: rver: handleToolsCall: Tool name: echo[0m
+2025-06-20T22:41:15.758627 [ESP8266]  INFO: [0;32mI (76413) MCP
+2025-06-20T22:41:15.768718 [ESP8266]  INFO: Server: handleToolsCall: Processing echo tool[0m
+2025-06-20T22:41:15.768731 [ESP8266]  INFO: [MCPServer] handleToolsCall:
+2025-06-20T22:41:15.778818 [ESP8266]  INFO: Echo has text parameter[0m
+2025-06-20T22:41:15.778827 [ESP8266]  INFO: [MCPServer] Echo to
+2025-06-20T22:41:15.791179 [ESP8266]  INFO: ol called with: Testing MCP protocol 🚀[0m
+2025-06-20T22:41:15.791194 [ESP8266]  INFO: [MCPServer] handleToolsCall: Sett
+2025-06-20T22:41:15.801290 [ESP8266]  INFO: ing result and returning success response[0m
+2025-06-20T22:41:15.801302 [ESP8266]  INFO: [0;32mI (76456)
+2025-06-20T22:41:15.811725 [ESP8266]  INFO: JsonValue: Checking serialized JSON for corruption: {"jsonrpc":true,"id":"5","result":{"content"
+2025-06-20T22:41:15.821952 [ESP8266]  INFO: :[{"type":true,"text":"Echo: Testing MCP protocol 🚀"}]}}[0m
+2025-06-20T22:41:15.832280 [ESP8266]  INFO: [JsonValue] Detecting corruption in JSON: {"jso
+2025-06-20T22:41:15.842404 [ESP8266]  INFO: nrpc":true,"id":"5","result":{"content":[{"type":true,"text":"Echo: Testing MCP protocol 🚀"}]
+2025-06-20T22:41:15.852496 [ESP8266]  INFO: }}[0m
+2025-06-20T22:41:15.852506 [ESP8266] ERROR: [JsonValue] Found corrupted jsonrpc fiel
+2025-06-20T22:41:15.862612 [ESP8266]  INFO: d[0m
+2025-06-20T22:41:15.862628 [ESP8266]  INFO: [JsonValue] Corruption detection result: CORRUPTED[0m
+2025-06-20T22:41:15.862632 [ESP8266] ERROR: [0;31mE (76520)
+2025-06-20T22:41:15.872855 [ESP8266]  INFO: JsonValue: Corruption detected in serialized JSON, using manual
+2025-06-20T22:41:15.882952 [ESP8266]  INFO: fallback[0m
+2025-06-20T22:41:15.882962 [ESP8266]  INFO: [JsonValue] Manual JSON result: {"
+2025-06-20T22:41:15.893050 [ESP8266]  INFO: type":true,"text":"Echo: Testing MCP protocol 🚀"}[0m
+2025-06-20T22:41:15.893059 [ESP8266]  INFO: [JsonValue] Manual JSO
+2025-06-20T22:41:15.903152 [ESP8266]  INFO: N result: {"content":[{"type":true,"text":"Echo: Testing MCP pro
+2025-06-20T22:41:15.915193 [ESP8266]  INFO: tocol 🚀"}]}[0m
+2025-06-20T22:41:15.915208 [ESP8266]  INFO: [JsonValue] Manual JSON result: {"jsonrpc":true,"id":"5","re
+2025-06-20T22:41:15.925303 [ESP8266]  INFO: sult":{"content":[{"type":true,"text":"Echo: Testing MCP protoco
+2025-06-20T22:41:15.935406 [ESP8266]  INFO: l 🚀"}]}}[0m
+2025-06-20T22:41:15.935419 [ESP8266] WARNING: [JsonValue] Manual JSON fallback succeeded after corruption det
+2025-06-20T22:41:15.945556 [ESP8266]  INFO: ection[0m
+2025-06-20T22:41:16.489217 [ESP8266]  INFO: [JsonValue] Checking serialized JSON for corrupt
+2025-06-20T22:41:16.499321 [ESP8266]  INFO: ion: {"name":"echo","arguments":{"text":"Special characters: !@#
+2025-06-20T22:41:16.509657 [ESP8266]  INFO: $%^&*()"}}[0m
+2025-06-20T22:41:16.509688 [ESP8266]  INFO: [JsonValue] Detecting corruption
+2025-06-20T22:41:16.519785 [ESP8266]  INFO: in JSON: {"name":"echo","arguments":{"text":"Special characters: !@#$%^&*()"}}[0m
+2025-06-20T22:41:16.519798 [ESP8266]  INFO: [0;32mI (7
+2025-06-20T22:41:16.529883 [ESP8266]  INFO: [JsonValue] Corruption detection result: CLEAN[0m
+2025-06-20T22:41:16.529895 [ESP8266]  INFO: [0;32m
+2025-06-20T22:41:16.541197 [ESP8266]  INFO: [JsonValue] No corruption detected in serialized JSON[0m
+2025-06-20T22:41:16.541212 [ESP8266]  INFO: [0;32mI (77196) MCPServer:
+2025-06-20T22:41:16.551299 [ESP8266]  INFO: handleToolsCall: Starting to process tool call[0m
+2025-06-20T22:41:16.551311 [ESP8266]  INFO: [0;32mI (77
+2025-06-20T22:41:16.561397 [ESP8266]  INFO: [MCPServer] handleToolsCall: Request ID: 6[0m
+2025-06-20T22:41:16.561410 [ESP8266]  INFO: [0;32mI (77
+2025-06-20T22:41:16.571696 [ESP8266]  INFO: [MCPServer] handleToolsCall: Tool name: echo[0m
+2025-06-20T22:41:16.571721 [ESP8266]  INFO: [MCPServer] handleToolsCal
+2025-06-20T22:41:16.581828 [ESP8266]  INFO: l: Processing echo tool[0m
+2025-06-20T22:41:16.581843 [ESP8266]  INFO: [MCPServer] handleT
+2025-06-20T22:41:16.591941 [ESP8266]  INFO: oolsCall: Echo has text parameter[0m
+2025-06-20T22:41:16.591952 [ESP8266]  INFO: [MCPServer] Echo tool called with: Specia
+2025-06-20T22:41:16.602042 [ESP8266]  INFO: l characters: !@#$%^&*()[0m
+2025-06-20T22:41:16.602050 [ESP8266]  INFO: [MCPServer] handle
+2025-06-20T22:41:16.612203 [ESP8266]  INFO: ToolsCall: Setting result and returning success response[0m
+2025-06-20T22:41:16.612220 [ESP8266]  INFO: [
+2025-06-20T22:41:16.622312 [ESP8266]  INFO: [JsonValue] Checking serialized JSON for corruption: {"jsonrpc":true,"id":"6","res
+2025-06-20T22:41:16.632404 [ESP8266]  INFO: ult":{"content":[{"type":true,"text":"Echo: Special characters:
+2025-06-20T22:41:16.642515 [ESP8266]  INFO: !@#$%^&*()"}]}}[0m
+2025-06-20T22:41:16.642533 [ESP8266]  INFO: [JsonValue] Detecting corru
+2025-06-20T22:41:16.652628 [ESP8266]  INFO: ption in JSON: {"jsonrpc":true,"id":"6","result":{"content":[{"type":true,"text":"Echo: Special
+2025-06-20T22:41:16.662725 [ESP8266]  INFO: characters: !@#$%^&*()"}]}}[0m
+2025-06-20T22:41:16.662734 [ESP8266] ERROR: [JsonValue] Fou
+2025-06-20T22:41:16.672820 [ESP8266]  INFO: nd corrupted jsonrpc field[0m
+2025-06-20T22:41:16.672828 [ESP8266]  INFO: [JsonValue] Corruption detection result: CORRUPT
+2025-06-20T22:41:16.684351 [ESP8266]  INFO: ED[0m
+2025-06-20T22:41:16.684380 [ESP8266] ERROR: [JsonValue] Corruption detected in seria
+2025-06-20T22:41:16.694473 [ESP8266]  INFO: lized JSON, using manual fallback[0m
+2025-06-20T22:41:16.694484 [ESP8266]  INFO: [JsonValue] Manual JSON result: {"type":t
+2025-06-20T22:41:16.704563 [ESP8266]  INFO: rue,"text":"Echo: Special characters: !@#$%^&*()"}[0m
+2025-06-20T22:41:16.704570 [ESP8266]  INFO: [0;32mI
+2025-06-20T22:41:16.714651 [ESP8266]  INFO: [JsonValue] Manual JSON result: {"content":[{"type":true
+2025-06-20T22:41:16.724748 [ESP8266]  INFO: ,"text":"Echo: Special characters: !@#$%^&*()"}]}[0m
+2025-06-20T22:41:16.724759 [ESP8266]  INFO: [JsonValue] Manual JSON r
+2025-06-20T22:41:16.734848 [ESP8266]  INFO: esult: {"jsonrpc":true,"id":"6","result":{"content":[{"type":tru
+2025-06-20T22:41:16.744938 [ESP8266]  INFO: e,"text":"Echo: Special characters: !@#$%^&*()"}]}}[0m
+2025-06-20T22:41:16.744946 [ESP8266]  INFO: [0;33m
+2025-06-20T22:41:16.755091 [ESP8266] WARNING: [JsonValue] Manual JSON fallback succeeded after corruption detection[0m
+2025-06-20T22:41:17.261895 [ESP8266]  INFO: [JsonValue] Checking serialized JSON for corrupt
+2025-06-20T22:41:17.274219 [ESP8266]  INFO: ion: {"name":"echo","arguments":{"text":"Multiple\nlines\ntest"}}[0m
+2025-06-20T22:41:17.274241 [ESP8266]  INFO: [0;32mI (77929) JsonValu
+2025-06-20T22:41:17.284354 [ESP8266]  INFO: e: Detecting corruption in JSON: {"name":"echo","arguments":{"te
+2025-06-20T22:41:17.294457 [ESP8266]  INFO: xt":"Multiple\nlines\ntest"}}[0m
+2025-06-20T22:41:17.294468 [ESP8266]  INFO: [JsonValue] Corruption detection result: CLEA
+2025-06-20T22:41:17.306202 [ESP8266]  INFO: N[0m
+2025-06-20T22:41:17.306219 [ESP8266]  INFO: [JsonValue] No corruption detected in ser
+2025-06-20T22:41:17.316338 [ESP8266]  INFO: ialized JSON[0m
+2025-06-20T22:41:17.316354 [ESP8266]  INFO: [MCPServer] handleToolsCall: Starting to process tool call[0m
+2025-06-20T22:41:17.326443 [ESP8266]  INFO: [MCPServer] handleToolsCall: Request ID: 7[0m
+2025-06-20T22:41:17.340219 [ESP8266]  INFO: [MCPServer] handleToolsCall: Tool name: echo[0m
+2025-06-20T22:41:17.340244 [ESP8266]  INFO: [0;32mI (77993) MCPServer:
+2025-06-20T22:41:17.350374 [ESP8266]  INFO: handleToolsCall: Processing echo tool[0m
+2025-06-20T22:41:17.350392 [ESP8266]  INFO: [MCPServer] handleToolsCall: Echo has
+2025-06-20T22:41:17.360499 [ESP8266]  INFO: text parameter[0m
+2025-06-20T22:41:17.360512 [ESP8266]  INFO: [MCPServer] Echo tool calle
+2025-06-20T22:41:17.370619 [ESP8266]  INFO: d with: Multiple
+2025-06-20T22:41:17.370634 [ESP8266]  INFO: lines
+2025-06-20T22:41:17.370637 [ESP8266]  INFO: test[0m
+2025-06-20T22:41:17.370639 [ESP8266]  INFO: [MCPServer] h
+2025-06-20T22:41:17.380805 [ESP8266]  INFO: andleToolsCall: Setting result and returning success response[0m
+2025-06-20T22:41:17.380832 [ESP8266]  INFO: [JsonValue] C
+2025-06-20T22:41:17.390937 [ESP8266]  INFO: hecking serialized JSON for corruption: {"jsonrpc":true,"id":"7"
+2025-06-20T22:41:17.401031 [ESP8266]  INFO: ,"result":{"content":[{"type":true,"text":"Echo: Multiple\nlines\ntest"}]}}[0m
+2025-06-20T22:41:17.401041 [ESP8266]  INFO: [0;32mI (78059
+2025-06-20T22:41:17.411158 [ESP8266]  INFO: [JsonValue] Detecting corruption in JSON: {"jsonrpc":true,"id":
+2025-06-20T22:41:17.421305 [ESP8266]  INFO: "7","result":{"content":[{"type":true,"text":"Echo: Multiple\nli
+2025-06-20T22:41:17.431410 [ESP8266]  INFO: nes\ntest"}]}}[0m
+2025-06-20T22:41:17.431419 [ESP8266] ERROR: [JsonValue] Found corrupted jsonrpc field[0m
+2025-06-20T22:41:17.431424 [ESP8266]  INFO: [0;32mI (780
+2025-06-20T22:41:17.441524 [ESP8266]  INFO: [JsonValue] Corruption detection result: CORRUPTED[0m
+2025-06-20T22:41:17.441537 [ESP8266]  INFO: [0;3
+2025-06-20T22:41:17.451680 [ESP8266] ERROR: [JsonValue] Corruption detected in serialized JSON, u
+2025-06-20T22:41:17.461802 [ESP8266]  INFO: sing manual fallback[0m
+2025-06-20T22:41:17.461815 [ESP8266]  INFO: [JsonValue] Manual JSON result: {"type":true,"text":"E
+2025-06-20T22:41:17.471902 [ESP8266]  INFO: cho: Multiple\nlines\ntest"}[0m
+2025-06-20T22:41:17.471910 [ESP8266]  INFO: [JsonValue] Ma
+2025-06-20T22:41:17.482028 [ESP8266]  INFO: nual JSON result: {"content":[{"type":true,"text":"Echo: Multiple\nlines\ntest"}]}[0m
+2025-06-20T22:41:17.482042 [ESP8266]  INFO: [0;32mI
+2025-06-20T22:41:17.492159 [ESP8266]  INFO: [JsonValue] Manual JSON result: {"jsonrpc":true,"id":"7"
+2025-06-20T22:41:17.502261 [ESP8266]  INFO: ,"result":{"content":[{"type":true,"text":"Echo: Multiple\nlines
+2025-06-20T22:41:17.512353 [ESP8266]  INFO: \ntest"}]}}[0m
+2025-06-20T22:41:17.512363 [ESP8266] WARNING: [JsonValue] Manual JSON fallback succeeded after corruption det
+2025-06-20T22:41:17.522478 [ESP8266]  INFO: ection[0m
+2025-06-20T22:41:18.026761 [ESP8266] ERROR: [JsonValue] cJSO
+2025-06-20T22:41:18.036878 [ESP8266]  INFO: N_PrintUnformatted returned NULL even after validation[0m
+2025-06-20T22:41:18.036891 [ESP8266]  INFO: [0;
+2025-06-20T22:41:18.046987 [ESP8266]  INFO: [JsonValue] Manual JSON result: {"pin":2,"state":"high"}[0m
+2025-06-20T22:41:18.047000 [ESP8266]  INFO: [0;32mI (78703) JsonV
+2025-06-20T22:41:18.057087 [ESP8266]  INFO: alue: Manual JSON result: {"name":"gpio_control","arguments":{"p
+2025-06-20T22:41:18.067179 [ESP8266]  INFO: in":2,"state":"high"}}[0m
+2025-06-20T22:41:18.067187 [ESP8266] WARNING: [JsonValue] Manual JSON fallback succeeded after ser
+2025-06-20T22:41:18.078080 [ESP8266]  INFO: ialization failure[0m
+2025-06-20T22:41:18.078094 [ESP8266]  INFO: [MCPServer] handleToolsC
+2025-06-20T22:41:18.088167 [ESP8266]  INFO: all: Starting to process tool call[0m
+2025-06-20T22:41:18.088178 [ESP8266]  INFO: [0;32mI (78742) MCPServ
+2025-06-20T22:41:18.098259 [ESP8266]  INFO: er: handleToolsCall: Request ID: 8[0m
+2025-06-20T22:41:18.098268 [ESP8266]  INFO: [MCPServer] handleToolsCall: Tool name:
+2025-06-20T22:41:18.110170 [ESP8266]  INFO: gpio_control[0m
+2025-06-20T22:41:18.110184 [ESP8266]  INFO: [MCPServer] GPIO tool called:
+2025-06-20T22:41:18.120279 [ESP8266]  INFO: pin 2, state high[0m
+2025-06-20T22:41:18.120292 [ESP8266]  INFO: [MCPServer] handleToolsCall: Setting result and returning
+2025-06-20T22:41:18.130382 [ESP8266]  INFO: success response[0m
+2025-06-20T22:41:18.130393 [ESP8266]  INFO: [JsonValue] Checking seri
+2025-06-20T22:41:18.141167 [ESP8266]  INFO: alized JSON for corruption: {"jsonrpc":true,"id":"8","result":{"content":[{"type":true,"text":"G
+2025-06-20T22:41:18.151266 [ESP8266]  INFO: PIO pin 2 set to high"}]}}[0m
+2025-06-20T22:41:18.151274 [ESP8266]  INFO: [JsonValue] Dete
+2025-06-20T22:41:18.161351 [ESP8266]  INFO: cting corruption in JSON: {"jsonrpc":true,"id":"8","result":{"content":[{"type":true,"text":"GPI
+2025-06-20T22:41:18.171434 [ESP8266]  INFO: O pin 2 set to high"}]}}[0m
+2025-06-20T22:41:18.171441 [ESP8266] ERROR: [JsonValue] Found
+2025-06-20T22:41:18.181534 [ESP8266]  INFO: corrupted jsonrpc field[0m
+2025-06-20T22:41:18.181548 [ESP8266]  INFO: [JsonValue] Corrupt
+2025-06-20T22:41:18.191631 [ESP8266]  INFO: ion detection result: CORRUPTED[0m
+2025-06-20T22:41:18.191638 [ESP8266] ERROR: [JsonValue] Corruption detected in serializ
+2025-06-20T22:41:18.201714 [ESP8266]  INFO: ed JSON, using manual fallback[0m
+2025-06-20T22:41:18.201719 [ESP8266]  INFO: [0;32mI (78856) JsonValue:
+2025-06-20T22:41:18.212336 [ESP8266]  INFO: Manual JSON result: {"type":true,"text":"GPIO pin 2 set to high"
+2025-06-20T22:41:18.222519 [ESP8266]  INFO: }[0m
+2025-06-20T22:41:18.222545 [ESP8266]  INFO: [JsonValue] Manual JSON result: {"content":[{"type":true,"text":"GPIO pin
+2025-06-20T22:41:18.232705 [ESP8266]  INFO: 2 set to high"}]}[0m
+2025-06-20T22:41:18.232731 [ESP8266]  INFO: [JsonValue] Manual JSON
+2025-06-20T22:41:18.242862 [ESP8266]  INFO: result: {"jsonrpc":true,"id":"8","result":{"content":[{"type":true,"text":"GPIO pin 2 set to hig
+2025-06-20T22:41:18.253003 [ESP8266]  INFO: h"}]}}[0m
+2025-06-20T22:41:18.253023 [ESP8266] WARNING: [JsonValue] Manual JSON fallback suc
+2025-06-20T22:41:18.263195 [ESP8266]  INFO: ceeded after corruption detection[0m
+2025-06-20T22:41:19.270434 [ESP8266] ERROR: [JsonValue] cJSON_PrintUnformatted returned NULL
+2025-06-20T22:41:19.280562 [ESP8266]  INFO: even after validation[0m
+2025-06-20T22:41:19.280575 [ESP8266]  INFO: [JsonValue] Manual J
+2025-06-20T22:41:19.290706 [ESP8266]  INFO: SON result: {"pin":2,"state":"low"}[0m
+2025-06-20T22:41:19.290723 [ESP8266]  INFO: [JsonValue] Manual JSON result: {"name"
+2025-06-20T22:41:19.300817 [ESP8266]  INFO: :"gpio_control","arguments":{"pin":2,"state":"low"}}[0m
+2025-06-20T22:41:19.300827 [ESP8266]  INFO: [0;33
+2025-06-20T22:41:19.310947 [ESP8266] WARNING: [JsonValue] Manual JSON fallback succeeded after seria
+2025-06-20T22:41:19.324201 [ESP8266]  INFO: lization failure[0m
+2025-06-20T22:41:19.324223 [ESP8266]  INFO: [MCPServer] handleToolsCall: Starting to process tool call
+2025-06-20T22:41:19.334321 [ESP8266]  INFO: [0m
+2025-06-20T22:41:19.334331 [ESP8266]  INFO: [MCPServer] handleToolsCall: Request ID: 9[0m
+2025-06-20T22:41:19.334335 [ESP8266]  INFO: [0;32mI (79989) MCPServer
+2025-06-20T22:41:19.344450 [ESP8266]  INFO: : handleToolsCall: Tool name: gpio_control[0m
+2025-06-20T22:41:19.344462 [ESP8266]  INFO: [0;32mI (80000)
+2025-06-20T22:41:19.356527 [ESP8266]  INFO: MCPServer: GPIO tool called: pin 2, state low[0m
+2025-06-20T22:41:19.356564 [ESP8266]  INFO: [MCPServer] handleToolsCall:
+2025-06-20T22:41:19.366687 [ESP8266]  INFO: Setting result and returning success response[0m
+2025-06-20T22:41:19.366705 [ESP8266]  INFO: [0;32mI (80
+2025-06-20T22:41:19.376796 [ESP8266]  INFO: [JsonValue] Checking serialized JSON for corruption: {"jsonrpc":true,"id":"9","result":{"con
+2025-06-20T22:41:19.386888 [ESP8266]  INFO: tent":[{"type":true,"text":"GPIO pin 2 set to low"}]}}[0m
+2025-06-20T22:41:19.386896 [ESP8266]  INFO: [0;
+2025-06-20T22:41:19.397008 [ESP8266]  INFO: [JsonValue] Detecting corruption in JSON: {"jsonrpc"
+2025-06-20T22:41:19.407102 [ESP8266]  INFO: :true,"id":"9","result":{"content":[{"type":true,"text":"GPIO pin 2 set to low"}]}}[0m
+2025-06-20T22:41:19.407109 [ESP8266]  INFO: [0;31m
+2025-06-20T22:41:19.417192 [ESP8266] ERROR: [JsonValue] Found corrupted jsonrpc field[0m
+2025-06-20T22:41:19.417200 [ESP8266]  INFO: [0;32mI
+2025-06-20T22:41:19.428607 [ESP8266]  INFO: [JsonValue] Corruption detection result: CORRUPTED[0m
+2025-06-20T22:41:19.428633 [ESP8266] ERROR: [JsonValue] Corr
+2025-06-20T22:41:19.438732 [ESP8266]  INFO: uption detected in serialized JSON, using manual fallback[0m
+2025-06-20T22:41:19.438744 [ESP8266]  INFO: 
+2025-06-20T22:41:19.448820 [ESP8266]  INFO: [JsonValue] Manual JSON result: {"type":true,"text":"GPIO pin 2 set to low"}[0m
+2025-06-20T22:41:19.462192 [ESP8266]  INFO: [JsonValue] Manual JSON result: {"content":[{"type":true,"text":"GPIO pin 2 set
+2025-06-20T22:41:19.472306 [ESP8266]  INFO: to low"}]}[0m
+2025-06-20T22:41:19.472320 [ESP8266]  INFO: [JsonValue] Manual JSON result:
+2025-06-20T22:41:19.481698 [ CLIENT]  INFO: 🤖 ESP8266 MCP Client Test Script
+2025-06-20T22:41:19.481728 [ CLIENT]  INFO: ============================================================
+2025-06-20T22:41:19.481731 [ CLIENT]  INFO: Target: 192.168.86.37:8080
+2025-06-20T22:41:19.481734 [ CLIENT]  INFO: ============================================================
+2025-06-20T22:41:19.481736 [ CLIENT]  INFO: 🧪 Starting comprehensive MCP test suite...
+2025-06-20T22:41:19.481738 [ CLIENT]  INFO: ============================================================
+2025-06-20T22:41:19.481741 [ CLIENT]  INFO: 📡 TEST 1: Connection
+2025-06-20T22:41:19.481743 [ CLIENT]  INFO: 🔗 Connecting to MCP server at 192.168.86.37:8080...
+2025-06-20T22:41:19.481745 [ CLIENT]  INFO: ✅ Connected successfully!
+2025-06-20T22:41:19.481747 [ CLIENT]  INFO: 🚀 TEST 2: Initialization
+2025-06-20T22:41:19.481750 [ CLIENT]  INFO: 🚀 Initializing MCP session...
+2025-06-20T22:41:19.481753 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "1", "method": "initialize", "params": {"protocolVersion": "2024-11-05", "clientInfo": {"name": "ESP8266-MCP-Test-Client", "version": "1.0.0"}, "capabilities": {"roots": {"listChanged": false}, "sampling": {}}}}
+2025-06-20T22:41:19.481755 [ CLIENT]  INFO: 📤 Sent 237 bytes successfully
+2025-06-20T22:41:19.481757 [ CLIENT]  INFO: 📥 Waiting for response...
+2025-06-20T22:41:19.481767 [ CLIENT]  INFO: 📥 Received chunk: '{"jsonrpc":true,"id":"1","result":{"protocolVersion":true,"serverInfo":{"name":true,"version":true},"capabilities":{"tools":{"listChanged":false}}}}\n'
+2025-06-20T22:41:19.481769 [ CLIENT]  INFO: 📥 Complete response received: {"jsonrpc":true,"id":"1","result":{"protocolVersion":true,"serverInfo":{"name":true,"version":true},"capabilities":{"tools":{"listChanged":false}}}}
+2025-06-20T22:41:19.481771 [ CLIENT]  INFO: 📥 Parsing response: {"jsonrpc":true,"id":"1","result":{"protocolVersion":true,"serverInfo":{"name":true,"version":true},"capabilities":{"tools":{"listChanged":false}}}}
+2025-06-20T22:41:19.481773 [ CLIENT]  INFO: ✅ Server initialized!
+2025-06-20T22:41:19.481775 [ CLIENT]  INFO: 📋 Server: True vTrue
+2025-06-20T22:41:19.481776 [ CLIENT]  INFO: 🔧 Protocol: True
+2025-06-20T22:41:19.481778 [ CLIENT]  INFO: 🛠️  Tools supported: False
+2025-06-20T22:41:19.481780 [ CLIENT]  INFO: 🏓 TEST 3: Ping
+2025-06-20T22:41:19.481781 [ CLIENT]  INFO: 🏓 Sending ping...
+2025-06-20T22:41:19.481783 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "2", "method": "ping"}
+2025-06-20T22:41:19.481785 [ CLIENT]  INFO: 📤 Sent 48 bytes successfully
+2025-06-20T22:41:19.481786 [ CLIENT]  INFO: 📥 Waiting for response...
+2025-06-20T22:41:19.481791 [ CLIENT]  INFO: 📥 Received chunk: '{"jsonrpc":true,"id":"2","result":{}}\n'
+2025-06-20T22:41:19.481793 [ CLIENT]  INFO: 📥 Complete response received: {"jsonrpc":true,"id":"2","result":{}}
+2025-06-20T22:41:19.481795 [ CLIENT]  INFO: 📥 Parsing response: {"jsonrpc":true,"id":"2","result":{}}
+2025-06-20T22:41:19.481797 [ CLIENT]  INFO: ✅ Ping successful!
+2025-06-20T22:41:19.481799 [ CLIENT]  INFO: 🔍 TEST 4: Tool Discovery
+2025-06-20T22:41:19.481801 [ CLIENT]  INFO: 🔍 Discovering available tools...
+2025-06-20T22:41:19.481805 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "3", "method": "tools/list"}
+2025-06-20T22:41:19.481806 [ CLIENT]  INFO: 📤 Sent 54 bytes successfully
+2025-06-20T22:41:19.481808 [ CLIENT]  INFO: 📥 Waiting for response...
+2025-06-20T22:41:19.481810 [ CLIENT]  INFO: 📥 Received chunk: '{"jsonrpc":true,"id":"3","result":{"tools":[{"name":true,"description":true,"inputSchema":{"type":true,"properties":{"text":{"type":true,"description":true}},"required":["text"]}},{"name":true,"description":true,"inputSchema":{"type":true,"properties":{"pin":{"type":true,"description":true},"state":{"type":true,"enum":["high","low"],"description":true}},"required":["pin","state"]}}]}}\n'
+2025-06-20T22:41:19.481813 [ CLIENT]  INFO: 📥 Complete response received: {"jsonrpc":true,"id":"3","result":{"tools":[{"name":true,"description":true,"inputSchema":{"type":true,"properties":{"text":{"type":true,"description":true}},"required":["text"]}},{"name":true,"description":true,"inputSchema":{"type":true,"properties":{"pin":{"type":true,"description":true},"state":{"type":true,"enum":["high","low"],"description":true}},"required":["pin","state"]}}]}}
+2025-06-20T22:41:19.481815 [ CLIENT]  INFO: 📥 Parsing response: {"jsonrpc":true,"id":"3","result":{"tools":[{"name":true,"description":true,"inputSchema":{"type":true,"properties":{"text":{"type":true,"description":true}},"required":["text"]}},{"name":true,"description":true,"inputSchema":{"type":true,"properties":{"pin":{"type":true,"description":true},"state":{"type":true,"enum":["high","low"],"description":true}},"required":["pin","state"]}}]}}
+2025-06-20T22:41:19.481818 [ CLIENT]  INFO: ✅ Found 2 tools:
+2025-06-20T22:41:19.481820 [ CLIENT]  INFO: 1. 🛠️  True: True
+2025-06-20T22:41:19.481822 [ CLIENT]  INFO: 📝 Parameters:
+2025-06-20T22:41:19.481825 [ CLIENT]  INFO: • text (True) (required): True
+2025-06-20T22:41:19.481826 [ CLIENT]  INFO: 2. 🛠️  True: True
+2025-06-20T22:41:19.481828 [ CLIENT]  INFO: 📝 Parameters:
+2025-06-20T22:41:19.481830 [ CLIENT]  INFO: • pin (True) (required): True
+2025-06-20T22:41:19.481832 [ CLIENT]  INFO: • state (True) (required): True
+2025-06-20T22:41:19.481833 [ CLIENT]  INFO: 🔊 TEST 5: Echo Tool
+2025-06-20T22:41:19.481835 [ CLIENT]  INFO: 🔊 Echo Test 1/4
+2025-06-20T22:41:19.481837 [ CLIENT]  INFO: 🔧 Calling tool 'echo' with arguments: {'text': 'Hello ESP8266!'}
+2025-06-20T22:41:19.481839 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "4", "method": "tools/call", "params": {"name": "echo", "arguments": {"text": "Hello ESP8266!"}}}
+2025-06-20T22:41:19.481841 [ CLIENT]  INFO: 📤 Sent 123 bytes successfully
+2025-06-20T22:41:19.481842 [ CLIENT]  INFO: 📥 Waiting for response...
+2025-06-20T22:41:19.481845 [ CLIENT]  INFO: 📥 Received chunk: '{"jsonrpc":true,"id":"4","result":{"content":[{"type":true,"text":"Echo: Hello ESP8266!"}]}}\n'
+2025-06-20T22:41:19.481847 [ CLIENT]  INFO: 📥 Complete response received: {"jsonrpc":true,"id":"4","result":{"content":[{"type":true,"text":"Echo: Hello ESP8266!"}]}}
+2025-06-20T22:41:19.481849 [ CLIENT]  INFO: 📥 Parsing response: {"jsonrpc":true,"id":"4","result":{"content":[{"type":true,"text":"Echo: Hello ESP8266!"}]}}
+2025-06-20T22:41:19.481850 [ CLIENT]  INFO: ✅ Tool 'echo' executed successfully!
+2025-06-20T22:41:19.481852 [ CLIENT]  INFO: 📄 Response content:
+2025-06-20T22:41:19.481854 [ CLIENT]  INFO: 🔍 True: {'type': True, 'text': 'Echo: Hello ESP8266!'}
+2025-06-20T22:41:19.481855 [ CLIENT]  INFO: 🔊 Echo Test 2/4
+2025-06-20T22:41:19.481858 [ CLIENT]  INFO: 🔧 Calling tool 'echo' with arguments: {'text': 'Testing MCP protocol 🚀'}
+2025-06-20T22:41:19.481860 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "5", "method": "tools/call", "params": {"name": "echo", "arguments": {"text": "Testing MCP protocol \ud83d\ude80"}}}
+2025-06-20T22:41:19.481861 [ CLIENT]  INFO: 📤 Sent 142 bytes successfully
+2025-06-20T22:41:19.481863 [ CLIENT]  INFO: 📥 Waiting for response...
+2025-06-20T22:41:19.481864 [ CLIENT]  INFO: 📥 Received chunk: '{"jsonrpc":true,"id":"5","result":{"content":[{"type":true,"text":"Echo: Testing MCP protocol 🚀"}]}}\n'
+2025-06-20T22:41:19.481866 [ CLIENT]  INFO: 📥 Complete response received: {"jsonrpc":true,"id":"5","result":{"content":[{"type":true,"text":"Echo: Testing MCP protocol 🚀"}]}}
+2025-06-20T22:41:19.481868 [ CLIENT]  INFO: 📥 Parsing response: {"jsonrpc":true,"id":"5","result":{"content":[{"type":true,"text":"Echo: Testing MCP protocol 🚀"}]}}
+2025-06-20T22:41:19.481870 [ CLIENT]  INFO: ✅ Tool 'echo' executed successfully!
+2025-06-20T22:41:19.481871 [ CLIENT]  INFO: 📄 Response content:
+2025-06-20T22:41:19.481873 [ CLIENT]  INFO: 🔍 True: {'type': True, 'text': 'Echo: Testing MCP protocol 🚀'}
+2025-06-20T22:41:19.481875 [ CLIENT]  INFO: 🔊 Echo Test 3/4
+2025-06-20T22:41:19.481876 [ CLIENT]  INFO: 🔧 Calling tool 'echo' with arguments: {'text': 'Special characters: !@#$%^&*()'}
+2025-06-20T22:41:19.481878 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "6", "method": "tools/call", "params": {"name": "echo", "arguments": {"text": "Special characters: !@#$%^&*()"}}}
+2025-06-20T22:41:19.481880 [ CLIENT]  INFO: 📤 Sent 139 bytes successfully
+2025-06-20T22:41:19.481882 [ CLIENT]  INFO: 📥 Waiting for response...
+2025-06-20T22:41:19.481883 [ CLIENT]  INFO: 📥 Received chunk: '{"jsonrpc":true,"id":"6","result":{"content":[{"type":true,"text":"Echo: Special characters: !@#$%^&*()"}]}}\n'
+2025-06-20T22:41:19.481885 [ CLIENT]  INFO: 📥 Complete response received: {"jsonrpc":true,"id":"6","result":{"content":[{"type":true,"text":"Echo: Special characters: !@#$%^&*()"}]}}
+2025-06-20T22:41:19.481887 [ CLIENT]  INFO: 📥 Parsing response: {"jsonrpc":true,"id":"6","result":{"content":[{"type":true,"text":"Echo: Special characters: !@#$%^&*()"}]}}
+2025-06-20T22:41:19.481888 [ CLIENT]  INFO: ✅ Tool 'echo' executed successfully!
+2025-06-20T22:41:19.481890 [ CLIENT]  INFO: 📄 Response content:
+2025-06-20T22:41:19.481892 [ CLIENT]  INFO: 🔍 True: {'type': True, 'text': 'Echo: Special characters: !@#$%^&*()'}
+2025-06-20T22:41:19.481893 [ CLIENT]  INFO: 🔊 Echo Test 4/4
+2025-06-20T22:41:19.481895 [ CLIENT]  INFO: 🔧 Calling tool 'echo' with arguments: {'text': 'Multiple\nlines\ntest'}
+2025-06-20T22:41:19.481897 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "7", "method": "tools/call", "params": {"name": "echo", "arguments": {"text": "Multiple\nlines\ntest"}}}
+2025-06-20T22:41:19.481898 [ CLIENT]  INFO: 📤 Sent 130 bytes successfully
+2025-06-20T22:41:19.481900 [ CLIENT]  INFO: 📥 Waiting for response...
+2025-06-20T22:41:19.481902 [ CLIENT]  INFO: 📥 Received chunk: '{"jsonrpc":true,"id":"7","result":{"content":[{"type":true,"text":"Echo: Multiple\\nlines\\ntest"}]}}\n'
+2025-06-20T22:41:19.481903 [ CLIENT]  INFO: 📥 Complete response received: {"jsonrpc":true,"id":"7","result":{"content":[{"type":true,"text":"Echo: Multiple\nlines\ntest"}]}}
+2025-06-20T22:41:19.481905 [ CLIENT]  INFO: 📥 Parsing response: {"jsonrpc":true,"id":"7","result":{"content":[{"type":true,"text":"Echo: Multiple\nlines\ntest"}]}}
+2025-06-20T22:41:19.481907 [ CLIENT]  INFO: ✅ Tool 'echo' executed successfully!
+2025-06-20T22:41:19.481910 [ CLIENT]  INFO: 📄 Response content:
+2025-06-20T22:41:19.481912 [ CLIENT]  INFO: 🔍 True: {'type': True, 'text': 'Echo: Multiple\nlines\ntest'}
+2025-06-20T22:41:19.481914 [ CLIENT]  INFO: 📊 Echo test results: 4/4 passed
+2025-06-20T22:41:19.481915 [ CLIENT]  INFO: 🔌 TEST 6: GPIO Tool
+2025-06-20T22:41:19.481917 [ CLIENT]  INFO: 🔌 GPIO Test 1/6
+2025-06-20T22:41:19.481919 [ CLIENT]  INFO: 🔧 Calling tool 'gpio_control' with arguments: {'pin': 2, 'state': 'high'}
+2025-06-20T22:41:19.481920 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "8", "method": "tools/call", "params": {"name": "gpio_control", "arguments": {"pin": 2, "state": "high"}}}
+2025-06-20T22:41:19.481922 [ CLIENT]  INFO: 📤 Sent 132 bytes successfully
+2025-06-20T22:41:19.481924 [ CLIENT]  INFO: 📥 Waiting for response...
+2025-06-20T22:41:19.481925 [ CLIENT]  INFO: 📥 Received chunk: '{"jsonrpc":true,"id":"8","result":{"content":[{"type":true,"text":"GPIO pin 2 set to high"}]}}\n'
+2025-06-20T22:41:19.481927 [ CLIENT]  INFO: 📥 Complete response received: {"jsonrpc":true,"id":"8","result":{"content":[{"type":true,"text":"GPIO pin 2 set to high"}]}}
+2025-06-20T22:41:19.481929 [ CLIENT]  INFO: 📥 Parsing response: {"jsonrpc":true,"id":"8","result":{"content":[{"type":true,"text":"GPIO pin 2 set to high"}]}}
+2025-06-20T22:41:19.481933 [ CLIENT]  INFO: ✅ Tool 'gpio_control' executed successfully!
+2025-06-20T22:41:19.481936 [ CLIENT]  INFO: 📄 Response content:
+2025-06-20T22:41:19.481940 [ CLIENT]  INFO: 🔍 True: {'type': True, 'text': 'GPIO pin 2 set to high'}
+2025-06-20T22:41:19.481942 [ CLIENT]  INFO: 🔌 GPIO Test 2/6
+2025-06-20T22:41:19.481944 [ CLIENT]  INFO: 🔧 Calling tool 'gpio_control' with arguments: {'pin': 2, 'state': 'low'}
+2025-06-20T22:41:19.481945 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "9", "method": "tools/call", "params": {"name": "gpio_control", "arguments": {"pin": 2, "state": "low"}}}
+2025-06-20T22:41:19.481947 [ CLIENT]  INFO: 📤 Sent 131 bytes successfully
+2025-06-20T22:41:19.481948 [ CLIENT]  INFO: 📥 Waiting for response...
+2025-06-20T22:41:19.481950 [ CLIENT]  INFO: 📥 Received chunk: '{"jsonrpc":true,"id":"9","result":{"content":[{"type":true,"text":"GPIO pin 2 set to low"}]}}\n'
+2025-06-20T22:41:19.482655 [ESP8266]  INFO: {"jsonrpc":true,"id":"9","result":{"content":[{"type":true,"tex
+2025-06-20T22:41:19.492749 [ESP8266]  INFO: t":"GPIO pin 2 set to low"}]}}[0m
+2025-06-20T22:41:19.492760 [ESP8266] WARNING: [JsonValue] Manual JSON fallback succeeded a
+2025-06-20T22:41:19.502881 [ESP8266]  INFO: fter corruption detection[0m
+2025-06-20T22:41:20.542091 [ESP8266] ERROR: [JsonValue] cJSON_PrintUnformatted returned NULL
+2025-06-20T22:41:20.552188 [ESP8266]  INFO: even after validation[0m
+2025-06-20T22:41:20.552193 [ESP8266]  INFO: [JsonValue] Manual J
+2025-06-20T22:41:20.564170 [ESP8266]  INFO: SON result: {"pin":16,"state":"high"}[0m
+2025-06-20T22:41:20.564184 [ESP8266]  INFO: [JsonValue] Manual JSON result: {"nam
+2025-06-20T22:41:20.574278 [ESP8266]  INFO: e":"gpio_control","arguments":{"pin":16,"state":"high"}}[0m
+2025-06-20T22:41:20.574290 [ESP8266] WARNING: [JsonValue] Manual
+2025-06-20T22:41:20.584370 [ESP8266]  INFO: JSON fallback succeeded after serialization failure[0m
+2025-06-20T22:41:20.584379 [ESP8266]  INFO: [0;32
+2025-06-20T22:41:20.594473 [ESP8266]  INFO: [MCPServer] handleToolsCall: Starting to process tool
+2025-06-20T22:41:20.604577 [ESP8266]  INFO: call[0m
+2025-06-20T22:41:20.604587 [ESP8266]  INFO: [MCPServer] handleToolsCall: Request ID: 10[0m
+2025-06-20T22:41:20.604591 [ESP8266]  INFO: [0;32mI (81260) MCPS
+2025-06-20T22:41:20.614675 [ESP8266]  INFO: erver: handleToolsCall: Tool name: gpio_control[0m
+2025-06-20T22:41:20.614683 [ESP8266]  INFO: [0;32mI (8
+2025-06-20T22:41:20.624768 [ESP8266]  INFO: [MCPServer] GPIO tool called: pin 16, state high[0m
+2025-06-20T22:41:20.624779 [ESP8266]  INFO: [0;3
+2025-06-20T22:41:20.636633 [ESP8266]  INFO: [MCPServer] handleToolsCall: Setting result and returning success response[0m
+2025-06-20T22:41:20.636668 [ESP8266]  INFO: [0;3
+2025-06-20T22:41:20.646754 [ESP8266]  INFO: [JsonValue] Checking serialized JSON for corruption: {"jsonrpc":true,"id":"10","resul
+2025-06-20T22:41:20.656846 [ESP8266]  INFO: t":{"content":[{"type":true,"text":"GPIO pin 16 set to high"}]}}
+2025-06-20T22:41:20.666933 [ESP8266]  INFO: [0m
+2025-06-20T22:41:20.666939 [ESP8266]  INFO: [JsonValue] Detecting corruption in JSON:
+2025-06-20T22:41:20.677525 [ESP8266]  INFO: {"jsonrpc":true,"id":"10","result":{"content":[{"type":true,"text":"GPIO pin 16 set to high"}]}}
+2025-06-20T22:41:20.687688 [ESP8266]  INFO: [0m
+2025-06-20T22:41:20.687706 [ESP8266] ERROR: [JsonValue] Found corrupted jsonrpc field
+2025-06-20T22:41:20.697824 [ESP8266]  INFO: [0m
+2025-06-20T22:41:20.697841 [ESP8266]  INFO: [JsonValue] Corruption detection result: CORRUPTED[0m
+2025-06-20T22:41:20.697847 [ESP8266] ERROR: [0;31mE (81354) Js
+2025-06-20T22:41:20.707951 [ESP8266]  INFO: onValue: Corruption detected in serialized JSON, using manual fa
+2025-06-20T22:41:20.718116 [ESP8266]  INFO: llback[0m
+2025-06-20T22:41:20.718201 [ESP8266]  INFO: [JsonValue] Manual JSON result: {"ty
+2025-06-20T22:41:20.728326 [ESP8266]  INFO: pe":true,"text":"GPIO pin 16 set to high"}[0m
+2025-06-20T22:41:20.728344 [ESP8266]  INFO: [JsonValue] Manual JSON result:
+2025-06-20T22:41:20.738449 [ESP8266]  INFO: {"content":[{"type":true,"text":"GPIO pin 16 set to high"}]}[0m
+2025-06-20T22:41:20.751211 [ESP8266]  INFO: [JsonValue] Manual JSON result: {"jsonrpc":true,"id":"10","result":{"content":
+2025-06-20T22:41:20.761324 [ESP8266]  INFO: [{"type":true,"text":"GPIO pin 16 set to high"}]}}[0m
+2025-06-20T22:41:20.761335 [ESP8266]  INFO: [0;33mW
+2025-06-20T22:41:20.771418 [ESP8266]  INFO: [JsonValue] Manual JSON fallback succeeded after corruption detection[0m
+2025-06-20T22:41:21.780195 [ESP8266] ERROR: [JsonValue] cJSON_PrintUnformatted returned NULL
+2025-06-20T22:41:21.791179 [ESP8266]  INFO: even after validation[0m
+2025-06-20T22:41:21.791200 [ESP8266]  INFO: [JsonValue] Manual J
+2025-06-20T22:41:21.801288 [ESP8266]  INFO: SON result: {"pin":16,"state":"low"}[0m
+2025-06-20T22:41:21.801297 [ESP8266]  INFO: [JsonValue] Manual JSON result: {"name
+2025-06-20T22:41:21.811381 [ESP8266]  INFO: ":"gpio_control","arguments":{"pin":16,"state":"low"}}[0m
+2025-06-20T22:41:21.811389 [ESP8266]  INFO: [0;
+2025-06-20T22:41:21.821466 [ESP8266] WARNING: [JsonValue] Manual JSON fallback succeeded after ser
+2025-06-20T22:41:21.832176 [ESP8266]  INFO: ialization failure[0m
+2025-06-20T22:41:21.832188 [ESP8266]  INFO: [MCPServer] handleToolsC
+2025-06-20T22:41:21.842279 [ESP8266]  INFO: all: Starting to process tool call[0m
+2025-06-20T22:41:21.842290 [ESP8266]  INFO: [MCPServer] handleToolsCall: Request ID:
+2025-06-20T22:41:21.852374 [ESP8266]  INFO: 11[0m
+2025-06-20T22:41:21.852383 [ESP8266]  INFO: [MCPServer] handleToolsCall: Tool name:
+2025-06-20T22:41:21.862483 [ESP8266]  INFO: gpio_control[0m
+2025-06-20T22:41:21.862498 [ESP8266]  INFO: [MCPServer] GPIO tool called: pin 16, state low[0m
+2025-06-20T22:41:21.862504 [ESP8266]  INFO: [0;32mI
+2025-06-20T22:41:21.872596 [ESP8266]  INFO: [MCPServer] handleToolsCall: Setting result and returnin
+2025-06-20T22:41:21.882688 [ESP8266]  INFO: g success response[0m
+2025-06-20T22:41:21.882697 [ESP8266]  INFO: [JsonValue] Checking serialized JSON for corruption: {"j
+2025-06-20T22:41:21.892776 [ESP8266]  INFO: sonrpc":true,"id":"11","result":{"content":[{"type":true,"text":
+2025-06-20T22:41:21.902881 [ESP8266]  INFO: "GPIO pin 16 set to low"}]}}[0m
+2025-06-20T22:41:21.902896 [ESP8266]  INFO: [JsonValue] De
+2025-06-20T22:41:21.912986 [ESP8266]  INFO: tecting corruption in JSON: {"jsonrpc":true,"id":"11","result":{"content":[{"type":true,"text":"
+2025-06-20T22:41:21.923079 [ESP8266]  INFO: GPIO pin 16 set to low"}]}}[0m
+2025-06-20T22:41:21.923088 [ESP8266] ERROR: [JsonValue] Fou
+2025-06-20T22:41:21.933169 [ESP8266]  INFO: nd corrupted jsonrpc field[0m
+2025-06-20T22:41:21.933177 [ESP8266]  INFO: [JsonValue] Corr
+2025-06-20T22:41:21.943256 [ESP8266]  INFO: uption detection result: CORRUPTED[0m
+2025-06-20T22:41:21.943263 [ESP8266] ERROR: [JsonValue] Corruption detected in seria
+2025-06-20T22:41:21.953351 [ESP8266]  INFO: lized JSON, using manual fallback[0m
+2025-06-20T22:41:21.953362 [ESP8266]  INFO: [0;32mI (82607) JsonValu
+2025-06-20T22:41:21.963450 [ESP8266]  INFO: e: Manual JSON result: {"type":true,"text":"GPIO pin 16 set to l
+2025-06-20T22:41:21.973551 [ESP8266]  INFO: ow"}[0m
+2025-06-20T22:41:21.973561 [ESP8266]  INFO: [JsonValue] Manual JSON result: {"content":[{"type":true,"text":"GPIO
+2025-06-20T22:41:21.983642 [ESP8266]  INFO: pin 16 set to low"}]}[0m
+2025-06-20T22:41:21.983650 [ESP8266]  INFO: [JsonValue] Manual JS
+2025-06-20T22:41:21.995581 [ESP8266]  INFO: ON result: {"jsonrpc":true,"id":"11","result":{"content":[{"type":true,"text":"GPIO pin 16 set t
+2025-06-20T22:41:22.005676 [ESP8266]  INFO: o low"}]}}[0m
+2025-06-20T22:41:22.005686 [ESP8266] WARNING: [JsonValue] Manual JSON fallback
+2025-06-20T22:41:22.015764 [ESP8266]  INFO: succeeded after corruption detection[0m
+2025-06-20T22:41:23.046252 [ESP8266] ERROR: [JsonValue] cJSON_PrintUnformatted returned NULL even after validation[0m
+2025-06-20T22:41:23.046285 [ESP8266]  INFO: [0;
+2025-06-20T22:41:23.058169 [ESP8266]  INFO: [JsonValue] Manual JSON result: {"pin":0,"state":"hi
+2025-06-20T22:41:23.068277 [ESP8266]  INFO: gh"}[0m
+2025-06-20T22:41:23.068289 [ESP8266]  INFO: [JsonValue] Manual JSON result: {"name":"gpio_control","arguments":{"p
+2025-06-20T22:41:23.078376 [ESP8266]  INFO: in":0,"state":"high"}}[0m
+2025-06-20T22:41:23.078385 [ESP8266] WARNING: [JsonValue] Manual J
+2025-06-20T22:41:23.088469 [ESP8266]  INFO: SON fallback succeeded after serialization failure[0m
+2025-06-20T22:41:23.088478 [ESP8266]  INFO: [MCPServer] handleToolsC
+2025-06-20T22:41:23.098566 [ESP8266]  INFO: all: Starting to process tool call[0m
+2025-06-20T22:41:23.098577 [ESP8266]  INFO: [0;32mI (83753) MCPServ
+2025-06-20T22:41:23.108660 [ESP8266]  INFO: er: handleToolsCall: Request ID: 12[0m
+2025-06-20T22:41:23.108670 [ESP8266]  INFO: [0;32mI (83761) MCPSer
+2025-06-20T22:41:23.118751 [ESP8266]  INFO: ver: handleToolsCall: Tool name: gpio_control[0m
+2025-06-20T22:41:23.118758 [ESP8266]  INFO: [MCPServer] GPIO tool called:
+2025-06-20T22:41:23.128850 [ESP8266]  INFO: pin 0, state high[0m
+2025-06-20T22:41:23.128860 [ESP8266]  INFO: [MCPServer] handleToolsC
+2025-06-20T22:41:23.140197 [ESP8266]  INFO: all: Setting result and returning success response[0m
+2025-06-20T22:41:23.140228 [ESP8266]  INFO: [JsonValue] Checking ser
+2025-06-20T22:41:23.150318 [ESP8266]  INFO: ialized JSON for corruption: {"jsonrpc":true,"id":"12","result":
+2025-06-20T22:41:23.160413 [ESP8266]  INFO: {"content":[{"type":true,"text":"GPIO pin 0 set to high"}]}}[0m
+2025-06-20T22:41:23.170507 [ESP8266]  INFO: [JsonValue] Detecting corruption in JSON: {"jsonrpc":true,"id":"12","result":{
+2025-06-20T22:41:23.180632 [ESP8266]  INFO: "content":[{"type":true,"text":"GPIO pin 0 set to high"}]}}[0m
+2025-06-20T22:41:23.190777 [ESP8266] ERROR: [JsonValue] Found corrupted jsonrpc field[0m
+2025-06-20T22:41:23.200930 [ESP8266]  INFO: [JsonValue] Corruption detection result: CORRUPTED[0m
+2025-06-20T22:41:23.200953 [ESP8266] ERROR: [0;31mE (83855) JsonVal
+2025-06-20T22:41:23.211115 [ESP8266]  INFO: ue: Corruption detected in serialized JSON, using manual fallbac
+2025-06-20T22:41:23.221300 [ESP8266]  INFO: k[0m
+2025-06-20T22:41:23.221320 [ESP8266]  INFO: [JsonValue] Manual JSON result: {"type":true,"text":"GPIO pin 0 set to hi
+2025-06-20T22:41:23.231918 [ESP8266]  INFO: gh"}[0m
+2025-06-20T22:41:23.231949 [ESP8266]  INFO: [JsonValue] Manual JSON result: {"cont
+2025-06-20T22:41:23.242099 [ESP8266]  INFO: ent":[{"type":true,"text":"GPIO pin 0 set to high"}]}[0m
+2025-06-20T22:41:23.242153 [ESP8266]  INFO: [0;3
+2025-06-20T22:41:23.252277 [ESP8266]  INFO: [JsonValue] Manual JSON result: {"jsonrpc":true,"id":"12","result":{"content":[{"type
+2025-06-20T22:41:23.265248 [ESP8266]  INFO: ":true,"text":"GPIO pin 0 set to high"}]}}[0m
+2025-06-20T22:41:23.265280 [ESP8266] WARNING: [JsonValue] Manual JSON fallback
+2025-06-20T22:41:23.275436 [ESP8266]  INFO: succeeded after corruption detection[0m
+2025-06-20T22:41:24.383819 [ESP8266] ERROR: [JsonValue] cJSON_PrintUnformatted returned NULL
+2025-06-20T22:41:24.395195 [ESP8266]  INFO: even after validation[0m
+2025-06-20T22:41:24.395211 [ESP8266]  INFO: [JsonValue] Manual JSON result: {"pin":0,"state":"lo
+2025-06-20T22:41:24.405302 [ESP8266]  INFO: w"}[0m
+2025-06-20T22:41:24.405313 [ESP8266]  INFO: [JsonValue] Manual JSON result: {"name"
+2025-06-20T22:41:24.415397 [ESP8266]  INFO: :"gpio_control","arguments":{"pin":0,"state":"low"}}[0m
+2025-06-20T22:41:24.415406 [ESP8266] WARNING: [JsonValue] Manual JSO
+2025-06-20T22:41:24.428172 [ESP8266]  INFO: N fallback succeeded after serialization failure[0m
+2025-06-20T22:41:24.428189 [ESP8266]  INFO: [MCPServer] handleToolsCal
+2025-06-20T22:41:24.438281 [ESP8266]  INFO: l: Starting to process tool call[0m
+2025-06-20T22:41:24.438293 [ESP8266]  INFO: [0;32mI (85092) MCPServer
+2025-06-20T22:41:24.448384 [ESP8266]  INFO: : handleToolsCall: Request ID: 13[0m
+2025-06-20T22:41:24.448396 [ESP8266]  INFO: [0;32mI (85100) MCPServe
+2025-06-20T22:41:24.458484 [ESP8266]  INFO: r: handleToolsCall: Tool name: gpio_control[0m
+2025-06-20T22:41:24.458494 [ESP8266]  INFO: [MCPServer] GPIO tool called: p
+2025-06-20T22:41:24.468593 [ESP8266]  INFO: in 0, state low[0m
+2025-06-20T22:41:24.468608 [ESP8266]  INFO: [MCPServer] handleToolsCall
+2025-06-20T22:41:24.478697 [ESP8266]  INFO: : Setting result and returning success response[0m
+2025-06-20T22:41:24.478709 [ESP8266]  INFO: [0;32mI (8
+2025-06-20T22:41:24.488798 [ESP8266]  INFO: [JsonValue] Checking serialized JSON for corruption: {"jsonrpc":true,"id":"13","result":{"c
+2025-06-20T22:41:24.498905 [ESP8266]  INFO: ontent":[{"type":true,"text":"GPIO pin 0 set to low"}]}}[0m
+2025-06-20T22:41:24.498919 [ESP8266]  INFO: [
+2025-06-20T22:41:24.509200 [ESP8266]  INFO: [JsonValue] Detecting corruption in JSON: {"jsonrpc":true,"id":"13","result":{"con
+2025-06-20T22:41:24.519302 [ESP8266]  INFO: tent":[{"type":true,"text":"GPIO pin 0 set to low"}]}}[0m
+2025-06-20T22:41:24.519311 [ESP8266]  INFO: [0;
+2025-06-20T22:41:24.529397 [ESP8266] ERROR: [JsonValue] Found corrupted jsonrpc field[0m
+2025-06-20T22:41:24.529406 [ESP8266]  INFO: [0;3
+2025-06-20T22:41:24.539495 [ESP8266]  INFO: [JsonValue] Corruption detection result: CORRUPTED[0m
+2025-06-20T22:41:24.539506 [ESP8266] ERROR: [JsonValue] C
+2025-06-20T22:41:24.549592 [ESP8266]  INFO: orruption detected in serialized JSON, using manual fallback[0m
+2025-06-20T22:41:24.559681 [ESP8266]  INFO: [JsonValue] Manual JSON result: {"type":true,"
+2025-06-20T22:41:24.569767 [ESP8266]  INFO: text":"GPIO pin 0 set to low"}[0m
+2025-06-20T22:41:24.569773 [ESP8266]  INFO: [JsonValue] Manual JSON result: {"content":[
+2025-06-20T22:41:24.579863 [ESP8266]  INFO: {"type":true,"text":"GPIO pin 0 set to low"}]}[0m
+2025-06-20T22:41:24.579875 [ESP8266]  INFO: [0;32mI (85
+2025-06-20T22:41:24.589968 [ESP8266]  INFO: [JsonValue] Manual JSON result: {"jsonrpc":true,"id":"13","result":{"content":[{"type":true,
+2025-06-20T22:41:24.600070 [ESP8266]  INFO: "text":"GPIO pin 0 set to low"}]}}[0m
+2025-06-20T22:41:24.600084 [ESP8266] WARNING: [0;33mW (85253) JsonVal
+2025-06-20T22:41:24.610170 [ESP8266]  INFO: ue: Manual JSON fallback succeeded after corruption detection[0m
+2025-06-20T22:41:25.646698 [ESP8266]  INFO: [JsonValue] Checking serialized JSON for corrupt
+2025-06-20T22:41:25.656950 [ESP8266]  INFO: ion: {"name":"nonexistent_tool","arguments":{}}[0m
+2025-06-20T22:41:25.656986 [ESP8266]  INFO: [JsonValue] Detecting corru
+2025-06-20T22:41:25.667096 [ESP8266]  INFO: ption in JSON: {"name":"nonexistent_tool","arguments":{}}[0m
+2025-06-20T22:41:25.667111 [ESP8266]  INFO: 
+2025-06-20T22:41:25.677192 [ESP8266]  INFO: [JsonValue] Corruption detection result: CLEAN[0
+2025-06-20T22:41:25.687273 [ESP8266]  INFO: m
+2025-06-20T22:41:25.687277 [ESP8266]  INFO: [JsonValue] No corruption detected in serialized JSON[0m
+2025-06-20T22:41:25.687280 [ESP8266]  INFO: [0;32mI (86341) M
+2025-06-20T22:41:25.698165 [ESP8266]  INFO: CPServer: handleToolsCall: Starting to process tool call[0m
+2025-06-20T22:41:25.698183 [ESP8266]  INFO: [
+2025-06-20T22:41:25.708272 [ESP8266]  INFO: [MCPServer] handleToolsCall: Request ID: 14[0m
+2025-06-20T22:41:25.708281 [ESP8266]  INFO: [MCPServer] handl
+2025-06-20T22:41:25.718360 [ESP8266]  INFO: eToolsCall: Tool name: nonexistent_tool[0m
+2025-06-20T22:41:25.718366 [ESP8266]  INFO: [0;32mI (86371) MC
+2025-06-20T22:41:25.728450 [ESP8266]  INFO: PServer: handleToolsCall: Unknown tool 'nonexistent_tool', retur
+2025-06-20T22:41:25.738540 [ESP8266]  INFO: ning error[0m
+2025-06-20T22:41:25.738548 [ESP8266]  INFO: [MCPServer] createErrorResponse: Creating error response - id: 1
+2025-06-20T22:41:25.748630 [ESP8266]  INFO: 4, code: -32601, message: Unknown tool: nonexistent_tool[0m
+2025-06-20T22:41:25.748638 [ESP8266]  INFO: [
+2025-06-20T22:41:25.760192 [ESP8266]  INFO: [MCPServer] createErrorResponse: Creating root object[0m
+2025-06-20T22:41:25.760209 [ESP8266]  INFO: [0;32mI (86413) MCPSer
+2025-06-20T22:41:25.770308 [ESP8266]  INFO: ver: createErrorResponse: Setting jsonrpc field[0m
+2025-06-20T22:41:25.770319 [ESP8266]  INFO: [0;32mI (8
+2025-06-20T22:41:25.780399 [ESP8266]  INFO: [MCPServer] createErrorResponse: Setting id field[0m
+2025-06-20T22:41:25.780408 [ESP8266]  INFO: [MCPServer] createEr
+2025-06-20T22:41:25.790489 [ESP8266]  INFO: rorResponse: Creating error object[0m
+2025-06-20T22:41:25.790496 [ESP8266]  INFO: [0;32mI (86443) MCPServ
+2025-06-20T22:41:25.800586 [ESP8266]  INFO: er: createErrorResponse: Setting error code: -32601[0m
+2025-06-20T22:41:25.800610 [ESP8266]  INFO: [0;32m
+2025-06-20T22:41:25.810695 [ESP8266]  INFO: [MCPServer] createErrorResponse: Setting error message: Unknown tool: nonexistent_tool
+2025-06-20T22:41:25.820780 [ESP8266]  INFO: [0m
+2025-06-20T22:41:25.820786 [ESP8266]  INFO: [MCPServer] createErrorResponse: Setting er
+2025-06-20T22:41:25.832161 [ESP8266]  INFO: ror object on response[0m
+2025-06-20T22:41:25.832175 [ESP8266]  INFO: [MCPServer] createEr
+2025-06-20T22:41:25.842265 [ESP8266]  INFO: rorResponse: About to serialize response[0m
+2025-06-20T22:41:25.842275 [ESP8266] ERROR: [JsonValue] cJSON_PrintUnformatted
+2025-06-20T22:41:25.852364 [ESP8266]  INFO: returned NULL even after validation[0m
+2025-06-20T22:41:25.852372 [ESP8266]  INFO: [0;32mI (86504) JsonV
+2025-06-20T22:41:25.864186 [ESP8266]  INFO: alue: Manual JSON result: {"code":-32601,"message":"Unknown tool: nonexistent_tool"}[0m
+2025-06-20T22:41:25.864199 [ESP8266]  INFO: [0;32
+2025-06-20T22:41:25.874290 [ESP8266]  INFO: [JsonValue] Manual JSON result: {"jsonrpc":true,"id":"14","error":{"code":-32601,"mess
+2025-06-20T22:41:25.884388 [ESP8266]  INFO: age":"Unknown tool: nonexistent_tool"}}[0m
+2025-06-20T22:41:25.884398 [ESP8266] WARNING: [0;33mW (86538) Js
+2025-06-20T22:41:25.894485 [ESP8266]  INFO: onValue: Manual JSON fallback succeeded after serialization fail
+2025-06-20T22:41:25.904578 [ESP8266]  INFO: ure[0m
+2025-06-20T22:41:25.904589 [ESP8266]  INFO: [MCPServer] createErrorResponse: Serialized response length: 93[0m
+2025-06-20T22:41:25.904593 [ESP8266]  INFO: [
+2025-06-20T22:41:25.914685 [ESP8266]  INFO: [MCPServer] createErrorResponse: Serialized respon
+2025-06-20T22:41:25.924778 [ESP8266]  INFO: se: {"jsonrpc":true,"id":"14","error":{"code":-32601,"message":"
+2025-06-20T22:41:25.934867 [ESP8266]  INFO: Unknown tool: nonexistent_tool"}}[0m
+2025-06-20T22:41:26.028324 [ESP8266]  INFO: [JsonValue] Chec
+2025-06-20T22:41:26.039392 [ESP8266]  INFO: king serialized JSON for corruption: {"name":"echo","arguments":
+2025-06-20T22:41:26.049541 [ESP8266]  INFO: {"wrong_param":"test"}}[0m
+2025-06-20T22:41:26.049557 [ESP8266]  INFO: [JsonValue] Detecting corruption in JSON: {"name":"
+2025-06-20T22:41:26.059656 [ESP8266]  INFO: echo","arguments":{"wrong_param":"test"}}[0m
+2025-06-20T22:41:26.059668 [ESP8266]  INFO: [0;32mI (86713)
+2025-06-20T22:41:26.071171 [ESP8266]  INFO: JsonValue: Corruption detection result: CLEAN[0m
+2025-06-20T22:41:26.071185 [ESP8266]  INFO: [JsonValue] No corruption det
+2025-06-20T22:41:26.081277 [ESP8266]  INFO: ected in serialized JSON[0m
+2025-06-20T22:41:26.081289 [ESP8266]  INFO: [MCPServer] handle
+2025-06-20T22:41:26.091372 [ESP8266]  INFO: ToolsCall: Starting to process tool call[0m
+2025-06-20T22:41:26.091382 [ESP8266]  INFO: [MCPServer] handleToolsCall: Reque
+2025-06-20T22:41:26.101478 [ESP8266]  INFO: st ID: 15[0m
+2025-06-20T22:41:26.101489 [ESP8266]  INFO: [MCPServer] handleToolsCall: Tool
+2025-06-20T22:41:26.111590 [ESP8266]  INFO: name: echo[0m
+2025-06-20T22:41:26.111604 [ESP8266]  INFO: [MCPServer] handleToolsCall: Pr
+2025-06-20T22:41:26.121695 [ESP8266]  INFO: ocessing echo tool[0m
+2025-06-20T22:41:26.121704 [ESP8266]  INFO: [MCPServer] handleToolsCall: Echo missing text parameter
+2025-06-20T22:41:26.131804 [ESP8266]  INFO: , returning error[0m
+2025-06-20T22:41:26.131820 [ESP8266]  INFO: [MCPServer] createErrorRe
+2025-06-20T22:41:26.141912 [ESP8266]  INFO: sponse: Creating error response - id: 15, code: -32602, message:
+2025-06-20T22:41:26.152008 [ESP8266]  INFO: Missing required parameter: text[0m
+2025-06-20T22:41:26.152019 [ESP8266]  INFO: [MCPServer] createErrorResponse: Creating
+2025-06-20T22:41:26.162821 [ESP8266]  INFO: root object[0m
+2025-06-20T22:41:26.162845 [ESP8266]  INFO: [MCPServer] createErrorRespons
+2025-06-20T22:41:26.173002 [ESP8266]  INFO: e: Setting jsonrpc field[0m
+2025-06-20T22:41:26.173027 [ESP8266]  INFO: [MCPServer] createErrorResponse: Setting id field
+2025-06-20T22:41:26.183120 [ESP8266]  INFO: [0m
+2025-06-20T22:41:26.183134 [ESP8266]  INFO: [MCPServer] createErrorResponse: Creating e
+2025-06-20T22:41:26.193215 [ESP8266]  INFO: rror object[0m
+2025-06-20T22:41:26.193221 [ESP8266]  INFO: [MCPServer] createErrorResponse
+2025-06-20T22:41:26.203309 [ESP8266]  INFO: : Setting error code: -32602[0m
+2025-06-20T22:41:26.203318 [ESP8266]  INFO: [MCPServer] createErrorResponse: Setting error
+2025-06-20T22:41:26.213451 [ESP8266]  INFO: message: Missing required parameter: text[0m
+2025-06-20T22:41:26.213473 [ESP8266]  INFO: [0;32mI (86867)
+2025-06-20T22:41:26.223580 [ESP8266]  INFO: MCPServer: createErrorResponse: Setting error object on response[0m
+2025-06-20T22:41:26.223591 [ESP8266]  INFO: [0;32mI (86879) MCPServe
+2025-06-20T22:41:26.233680 [ESP8266]  INFO: r: createErrorResponse: About to serialize response[0m
+2025-06-20T22:41:26.233689 [ESP8266]  INFO: [0;31m
+2025-06-20T22:41:26.243784 [ESP8266] ERROR: [JsonValue] cJSON_PrintUnformatted returned NULL even a
+2025-06-20T22:41:26.257197 [ESP8266]  INFO: fter validation[0m
+2025-06-20T22:41:26.257215 [ESP8266]  INFO: [JsonValue] Manual JSON result: {"code":-32602,"message":"M
+2025-06-20T22:41:26.267306 [ESP8266]  INFO: issing required parameter: text"}[0m
+2025-06-20T22:41:26.267315 [ESP8266]  INFO: [JsonValue] Manual JSON result: {"jsonrpc
+2025-06-20T22:41:26.277403 [ESP8266]  INFO: ":true,"id":"15","error":{"code":-32602,"message":"Missing requi
+2025-06-20T22:41:26.287492 [ESP8266]  INFO: red parameter: text"}}[0m
+2025-06-20T22:41:26.287499 [ESP8266] WARNING: [JsonValue] Manual J
+2025-06-20T22:41:26.298764 [ESP8266]  INFO: SON fallback succeeded after serialization failure[0m
+2025-06-20T22:41:26.298791 [ESP8266]  INFO: [MCPServer] createErrorR
+2025-06-20T22:41:26.308891 [ESP8266]  INFO: esponse: Serialized response length: 95[0m
+2025-06-20T22:41:26.308902 [ESP8266]  INFO: [0;32mI (86961) MC
+2025-06-20T22:41:26.318942 [ CLIENT]  INFO: 📥 Complete response received: {"jsonrpc":true,"id":"9","result":{"content":[{"type":true,"text":"GPIO pin 2 set to low"}]}}
+2025-06-20T22:41:26.318968 [ CLIENT]  INFO: 📥 Parsing response: {"jsonrpc":true,"id":"9","result":{"content":[{"type":true,"text":"GPIO pin 2 set to low"}]}}
+2025-06-20T22:41:26.318971 [ CLIENT]  INFO: ✅ Tool 'gpio_control' executed successfully!
+2025-06-20T22:41:26.318974 [ CLIENT]  INFO: 📄 Response content:
+2025-06-20T22:41:26.318977 [ CLIENT]  INFO: 🔍 True: {'type': True, 'text': 'GPIO pin 2 set to low'}
+2025-06-20T22:41:26.318980 [ CLIENT]  INFO: 🔌 GPIO Test 3/6
+2025-06-20T22:41:26.318982 [ CLIENT]  INFO: 🔧 Calling tool 'gpio_control' with arguments: {'pin': 16, 'state': 'high'}
+2025-06-20T22:41:26.318985 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "10", "method": "tools/call", "params": {"name": "gpio_control", "arguments": {"pin": 16, "state": "high"}}}
+2025-06-20T22:41:26.318987 [ CLIENT]  INFO: 📤 Sent 134 bytes successfully
+2025-06-20T22:41:26.318990 [ CLIENT]  INFO: 📥 Waiting for response...
+2025-06-20T22:41:26.318992 [ CLIENT]  INFO: 📥 Received chunk: '{"jsonrpc":true,"id":"10","result":{"content":[{"type":true,"text":"GPIO pin 16 set to high"}]}}\n'
+2025-06-20T22:41:26.318994 [ CLIENT]  INFO: 📥 Complete response received: {"jsonrpc":true,"id":"10","result":{"content":[{"type":true,"text":"GPIO pin 16 set to high"}]}}
+2025-06-20T22:41:26.318996 [ CLIENT]  INFO: 📥 Parsing response: {"jsonrpc":true,"id":"10","result":{"content":[{"type":true,"text":"GPIO pin 16 set to high"}]}}
+2025-06-20T22:41:26.318998 [ CLIENT]  INFO: ✅ Tool 'gpio_control' executed successfully!
+2025-06-20T22:41:26.319000 [ CLIENT]  INFO: 📄 Response content:
+2025-06-20T22:41:26.319001 [ CLIENT]  INFO: 🔍 True: {'type': True, 'text': 'GPIO pin 16 set to high'}
+2025-06-20T22:41:26.319003 [ CLIENT]  INFO: 🔌 GPIO Test 4/6
+2025-06-20T22:41:26.319005 [ CLIENT]  INFO: 🔧 Calling tool 'gpio_control' with arguments: {'pin': 16, 'state': 'low'}
+2025-06-20T22:41:26.319007 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "11", "method": "tools/call", "params": {"name": "gpio_control", "arguments": {"pin": 16, "state": "low"}}}
+2025-06-20T22:41:26.319009 [ CLIENT]  INFO: 📤 Sent 133 bytes successfully
+2025-06-20T22:41:26.319010 [ CLIENT]  INFO: 📥 Waiting for response...
+2025-06-20T22:41:26.319013 [ CLIENT]  INFO: 📥 Received chunk: '{"jsonrpc":true,"id":"11","result":{"content":[{"type":true,"text":"GPIO pin 16 set to low"}]}}\n'
+2025-06-20T22:41:26.319023 [ CLIENT]  INFO: 📥 Complete response received: {"jsonrpc":true,"id":"11","result":{"content":[{"type":true,"text":"GPIO pin 16 set to low"}]}}
+2025-06-20T22:41:26.319025 [ CLIENT]  INFO: 📥 Parsing response: {"jsonrpc":true,"id":"11","result":{"content":[{"type":true,"text":"GPIO pin 16 set to low"}]}}
+2025-06-20T22:41:26.319026 [ CLIENT]  INFO: ✅ Tool 'gpio_control' executed successfully!
+2025-06-20T22:41:26.319028 [ CLIENT]  INFO: 📄 Response content:
+2025-06-20T22:41:26.319030 [ CLIENT]  INFO: 🔍 True: {'type': True, 'text': 'GPIO pin 16 set to low'}
+2025-06-20T22:41:26.319031 [ CLIENT]  INFO: 🔌 GPIO Test 5/6
+2025-06-20T22:41:26.319033 [ CLIENT]  INFO: 🔧 Calling tool 'gpio_control' with arguments: {'pin': 0, 'state': 'high'}
+2025-06-20T22:41:26.319035 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "12", "method": "tools/call", "params": {"name": "gpio_control", "arguments": {"pin": 0, "state": "high"}}}
+2025-06-20T22:41:26.319037 [ CLIENT]  INFO: 📤 Sent 133 bytes successfully
+2025-06-20T22:41:26.319039 [ CLIENT]  INFO: 📥 Waiting for response...
+2025-06-20T22:41:26.319041 [ CLIENT]  INFO: 📥 Received chunk: '{"jsonrpc":true,"id":"12","result":{"content":[{"type":true,"text":"GPIO pin 0 set to high"}]}}\n'
+2025-06-20T22:41:26.319043 [ CLIENT]  INFO: 📥 Complete response received: {"jsonrpc":true,"id":"12","result":{"content":[{"type":true,"text":"GPIO pin 0 set to high"}]}}
+2025-06-20T22:41:26.319044 [ CLIENT]  INFO: 📥 Parsing response: {"jsonrpc":true,"id":"12","result":{"content":[{"type":true,"text":"GPIO pin 0 set to high"}]}}
+2025-06-20T22:41:26.319046 [ CLIENT]  INFO: ✅ Tool 'gpio_control' executed successfully!
+2025-06-20T22:41:26.319047 [ CLIENT]  INFO: 📄 Response content:
+2025-06-20T22:41:26.319049 [ CLIENT]  INFO: 🔍 True: {'type': True, 'text': 'GPIO pin 0 set to high'}
+2025-06-20T22:41:26.319051 [ CLIENT]  INFO: 🔌 GPIO Test 6/6
+2025-06-20T22:41:26.319053 [ CLIENT]  INFO: 🔧 Calling tool 'gpio_control' with arguments: {'pin': 0, 'state': 'low'}
+2025-06-20T22:41:26.319054 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "13", "method": "tools/call", "params": {"name": "gpio_control", "arguments": {"pin": 0, "state": "low"}}}
+2025-06-20T22:41:26.319056 [ CLIENT]  INFO: 📤 Sent 132 bytes successfully
+2025-06-20T22:41:26.319058 [ CLIENT]  INFO: 📥 Waiting for response...
+2025-06-20T22:41:26.319059 [ CLIENT]  INFO: 📥 Received chunk: '{"jsonrpc":true,"id":"13","result":{"content":[{"type":true,"text":"GPIO pin 0 set to low"}]}}\n'
+2025-06-20T22:41:26.319061 [ CLIENT]  INFO: 📥 Complete response received: {"jsonrpc":true,"id":"13","result":{"content":[{"type":true,"text":"GPIO pin 0 set to low"}]}}
+2025-06-20T22:41:26.319063 [ CLIENT]  INFO: 📥 Parsing response: {"jsonrpc":true,"id":"13","result":{"content":[{"type":true,"text":"GPIO pin 0 set to low"}]}}
+2025-06-20T22:41:26.319065 [ CLIENT]  INFO: ✅ Tool 'gpio_control' executed successfully!
+2025-06-20T22:41:26.319066 [ CLIENT]  INFO: 📄 Response content:
+2025-06-20T22:41:26.319068 [ CLIENT]  INFO: 🔍 True: {'type': True, 'text': 'GPIO pin 0 set to low'}
+2025-06-20T22:41:26.319070 [ CLIENT]  INFO: 📊 GPIO test results: 6/6 passed
+2025-06-20T22:41:26.319072 [ CLIENT]  INFO: ❌ TEST 7: Error Handling
+2025-06-20T22:41:26.319073 [ CLIENT]  INFO: Testing invalid tool call...
+2025-06-20T22:41:26.319076 [ CLIENT]  INFO: 🔧 Testing error case: tool 'nonexistent_tool' with arguments: {}
+2025-06-20T22:41:26.319078 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "14", "method": "tools/call", "params": {"name": "nonexistent_tool", "arguments": {}}}
+2025-06-20T22:41:26.319079 [ CLIENT]  INFO: 📤 Sent 112 bytes successfully
+2025-06-20T22:41:26.319081 [ CLIENT]  INFO: 📥 Waiting for response...
+2025-06-20T22:41:26.319082 [ CLIENT]  INFO: 📥 Received chunk: '{"jsonrpc":true,"id":"14","error":{"code":-32601,"message":"Unknown tool: nonexistent_tool"}}\n'
+2025-06-20T22:41:26.319084 [ CLIENT]  INFO: 📥 Complete response received: {"jsonrpc":true,"id":"14","error":{"code":-32601,"message":"Unknown tool: nonexistent_tool"}}
+2025-06-20T22:41:26.319086 [ CLIENT]  INFO: 📥 Parsing response: {"jsonrpc":true,"id":"14","error":{"code":-32601,"message":"Unknown tool: nonexistent_tool"}}
+2025-06-20T22:41:26.319087 [ CLIENT]  INFO: ✅ Received expected error -32601: Unknown tool: nonexistent_tool
+2025-06-20T22:41:26.319089 [ CLIENT]  INFO: ❌ TEST 8: Invalid Parameters
+2025-06-20T22:41:26.319091 [ CLIENT]  INFO: Testing invalid parameters...
+2025-06-20T22:41:26.319093 [ CLIENT]  INFO: 🔧 Testing error case: tool 'echo' with arguments: {'wrong_param': 'test'}
+2025-06-20T22:41:26.319095 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "15", "method": "tools/call", "params": {"name": "echo", "arguments": {"wrong_param": "test"}}}
+2025-06-20T22:41:26.319097 [ CLIENT]  INFO: 📤 Sent 121 bytes successfully
+2025-06-20T22:41:26.319099 [ CLIENT]  INFO: 📥 Waiting for response...
+2025-06-20T22:41:26.319100 [ CLIENT]  INFO: 📥 Received chunk: '{"jsonrpc":true,"id":"15","error":{"code":-32602,"message":"Missing required parameter: text"}}\n'
+2025-06-20T22:41:26.319102 [ CLIENT]  INFO: 📥 Complete response received: {"jsonrpc":true,"id":"15","error":{"code":-32602,"message":"Missing required parameter: text"}}
+2025-06-20T22:41:26.319104 [ CLIENT]  INFO: 📥 Parsing response: {"jsonrpc":true,"id":"15","error":{"code":-32602,"message":"Missing required parameter: text"}}
+2025-06-20T22:41:26.319105 [ CLIENT]  INFO: ✅ Received expected error -32602: Missing required parameter: text
+2025-06-20T22:41:26.319107 [ CLIENT]  INFO: ============================================================
+2025-06-20T22:41:26.319109 [ CLIENT]  INFO: 🏁 COMPREHENSIVE TEST RESULTS
+2025-06-20T22:41:26.319111 [ CLIENT]  INFO: ============================================================
+2025-06-20T22:41:26.319113 [ CLIENT]  INFO: ✅ PASS - Connection
+2025-06-20T22:41:26.319114 [ CLIENT]  INFO: ✅ PASS - Initialization
+2025-06-20T22:41:26.319116 [ CLIENT]  INFO: ✅ PASS - Ping
+2025-06-20T22:41:26.319118 [ CLIENT]  INFO: ✅ PASS - Tool Discovery
+2025-06-20T22:41:26.319120 [ CLIENT]  INFO: ✅ PASS - Echo Tool
+2025-06-20T22:41:26.319151 [ CLIENT]  INFO: ✅ PASS - GPIO Tool
+2025-06-20T22:41:26.319153 [ CLIENT]  INFO: ✅ PASS - Error Handling
+2025-06-20T22:41:26.319155 [ CLIENT]  INFO: ✅ PASS - Invalid Parameters
+2025-06-20T22:41:26.319158 [ CLIENT]  INFO: 📊 Overall Results: 8/8 tests passed
+2025-06-20T22:41:26.319160 [ CLIENT]  INFO: 🎯 Success Rate: 100.0%
+2025-06-20T22:41:26.319161 [ CLIENT]  INFO: 🎉 All tests passed! ESP8266 MCP server is working perfectly!
+2025-06-20T22:41:26.319163 [ CLIENT]  INFO: 🔌 Disconnected from server
+2025-06-20T22:41:26.319207 [ESP8266]  INFO: PServer: createErrorResponse: Serialized response: {"jsonrpc":true,"id":"15","error":{"code":-32
+2025-06-20T22:41:26.323701 [ CLIENT]  TEST: ✅ Test completed successfully: test_mcp_client.py
+2025-06-20T22:41:26.329300 [ESP8266]  INFO: 602,"message":"Missing required parameter: text"}}[0m
+2025-06-20T22:41:26.341969 [ESP8266]  INFO: [EspSocketTransport] Socket closed by peer[0m
+2025-06-20T22:41:26.341996 [ESP8266]  INFO: [MCPServer] Tran
+2025-06-20T22:41:26.352085 [ESP8266]  INFO: sport read failed, stopping server[0m
+2025-06-20T22:41:26.352094 [ESP8266]  INFO: [0;32mI (87006) MCPServ
+2025-06-20T22:41:26.362160 [ESP8266]  INFO: er: MCP Server stopped[0m
+2025-06-20T22:41:26.362169 [ESP8266]  INFO: [ESP8266-MCP] Client
+2025-06-20T22:41:26.372256 [ESP8266]  INFO: disconnected[0m
+2025-06-20T22:41:26.372264 [ESP8266]  INFO: [EspSocketTransport] Socket closed manually[0m
+2025-06-20T22:41:26.372268 [ESP8266]  INFO: [0;32mI (87
+2025-06-20T22:41:26.386189 [ESP8266]  INFO: [MCPServer] MCPServer destroyed[0m
+2025-06-20T22:41:26.386203 [ESP8266]  INFO: [ESP8266-MCP] [After client disconnect]
+2025-06-20T22:41:26.396293 [ESP8266]  INFO: Free heap: 71976 bytes, Min free: 49596 bytes[0m
+2025-06-20T22:41:28.324002 [ CLIENT]  TEST: 🔧 Testing echo tool with custom message
+2025-06-20T22:41:28.337017 [ CLIENT]  INFO: 📤 Sending echo request: Hello from integrated test demo!
+2025-06-20T22:41:28.354384 [ESP8266]  INFO: [ESP8266-MCP] Client connected from 192.168.86.3
+2025-06-20T22:41:28.364556 [ESP8266]  INFO: 2:56816[0m
+2025-06-20T22:41:28.364580 [ESP8266]  INFO: [ESP8266-MCP] [Before MCP server creation] Free heap: 71616 bytes,
+2025-06-20T22:41:28.375423 [ESP8266]  INFO: Min free: 49596 bytes[0m
+2025-06-20T22:41:28.375454 [ESP8266]  INFO: [0;32mI (89026) EspSocketTransport:
+2025-06-20T22:41:28.385546 [ESP8266]  INFO: EspSocketTransport created with socket 55[0m
+2025-06-20T22:41:28.385558 [ESP8266]  INFO: [MCPServer] MCPServer created[0m
+2025-06-20T22:41:28.395644 [ESP8266]  INFO: [JsonValue] Testing cJSON operations...[0m
+2025-06-20T22:41:28.395656 [ESP8266]  INFO: 
+2025-06-20T22:41:28.407304 [ESP8266]  INFO: [JsonValue] String creation test passed[0m
+2025-06-20T22:41:28.407344 [ESP8266]  INFO: [0;
+2025-06-20T22:41:28.417433 [ESP8266]  INFO: [JsonValue] Test object serialized as: {"test_key":"object_value"}[0m
+2025-06-20T22:41:28.417443 [ESP8266]  INFO: [0;32mI (89
+2025-06-20T22:41:28.427519 [ESP8266]  INFO: [JsonValue] All cJSON tests passed[0m
+2025-06-20T22:41:28.427524 [ESP8266]  INFO: [0;32mI (89079) MCP
+2025-06-20T22:41:28.438066 [ESP8266]  INFO: Server: cJSON test passed during initialization[0m
+2025-06-20T22:41:28.438103 [ESP8266]  INFO: [ESP8266-MCP] Starting C++
+2025-06-20T22:41:28.448208 [ESP8266]  INFO: MCP server for client[0m
+2025-06-20T22:41:28.448229 [ESP8266]  INFO: [MCPServer] MCP Serve
+2025-06-20T22:41:28.458402 [ESP8266]  INFO: r starting...[0m
+2025-06-20T22:41:28.458432 [ESP8266]  INFO: [JsonValue] Checking serialized JSON for corruption: {"name":
+2025-06-20T22:41:28.468577 [ESP8266]  INFO: "echo","arguments":{"message":"Hello from integrated test demo!"
+2025-06-20T22:41:28.478763 [ESP8266]  INFO: }}[0m
+2025-06-20T22:41:28.478794 [ESP8266]  INFO: [JsonValue] Detecting corruption in JSON
+2025-06-20T22:41:28.490992 [ESP8266]  INFO: : {"name":"echo","arguments":{"message":"Hello from integrated test demo!"}}[0m
+2025-06-20T22:41:28.491020 [ESP8266]  INFO: [0;32mI (8914
+2025-06-20T22:41:28.501183 [ESP8266]  INFO: [JsonValue] Corruption detection result: CLEAN[0m
+2025-06-20T22:41:28.501212 [ESP8266]  INFO: [JsonValue] No corruption
+2025-06-20T22:41:28.511371 [ESP8266]  INFO: detected in serialized JSON[0m
+2025-06-20T22:41:28.511398 [ESP8266]  INFO: [MCPServer] cre
+2025-06-20T22:41:28.521577 [ESP8266]  INFO: ateErrorResponse: Creating error response - id: , code: -32002,
+2025-06-20T22:41:28.531781 [ESP8266]  INFO: message: Server not initialized[0m
+2025-06-20T22:41:28.531814 [ESP8266]  INFO: [MCPServer] createErrorResponse: Creating r
+2025-06-20T22:41:28.541942 [ESP8266]  INFO: oot object[0m
+2025-06-20T22:41:28.541965 [ESP8266]  INFO: [MCPServer] createErrorResponse:
+2025-06-20T22:41:28.552207 [ESP8266]  INFO: Setting jsonrpc field[0m
+2025-06-20T22:41:28.552238 [ESP8266]  INFO: [MCPServer] createErrorResponse: Setting id field[0
+2025-06-20T22:41:28.562396 [ESP8266]  INFO: m
+2025-06-20T22:41:28.562421 [ESP8266]  INFO: [MCPServer] createErrorResponse: Creating err
+2025-06-20T22:41:28.572585 [ESP8266]  INFO: or object[0m
+2025-06-20T22:41:28.572612 [ESP8266]  INFO: [MCPServer] createErrorResponse:
+2025-06-20T22:41:28.582771 [ESP8266]  INFO: Setting error code: -32002[0m
+2025-06-20T22:41:28.582799 [ESP8266]  INFO: [MCPServer] createErrorResponse: Setting error m
+2025-06-20T22:41:28.593387 [ESP8266]  INFO: essage: Server not initialized[0m
+2025-06-20T22:41:28.593422 [ESP8266]  INFO: [0;32mI (89245) MCPServer:
+2025-06-20T22:41:28.603513 [ESP8266]  INFO: createErrorResponse: Setting error object on response[0m
+2025-06-20T22:41:28.603523 [ESP8266]  INFO: [MCPServer] createErr
+2025-06-20T22:41:28.613610 [ESP8266]  INFO: orResponse: About to serialize response[0m
+2025-06-20T22:41:28.613618 [ESP8266] ERROR: [0;31mE (89268) Js
+2025-06-20T22:41:28.625228 [ESP8266]  INFO: onValue: cJSON_PrintUnformatted returned NULL even after validation[0m
+2025-06-20T22:41:28.625265 [ESP8266]  INFO: [0;32mI (89280) JsonVa
+2025-06-20T22:41:28.635352 [ESP8266]  INFO: lue: Manual JSON result: {"code":-32002,"message":"Server not in
+2025-06-20T22:41:28.645443 [ESP8266]  INFO: itialized"}[0m
+2025-06-20T22:41:28.645451 [ESP8266]  INFO: [JsonValue] Manual JSON result:
+2025-06-20T22:41:28.655551 [ESP8266]  INFO: {"jsonrpc":true,"id":null,"error":{"code":-32002,"message":"Server not initialized"}}[0m
+2025-06-20T22:41:28.655563 [ESP8266]  INFO: [0;
+2025-06-20T22:41:28.665647 [ESP8266] WARNING: [JsonValue] Manual JSON fallback succeeded after ser
+2025-06-20T22:41:28.675735 [ESP8266]  INFO: ialization failure[0m
+2025-06-20T22:41:28.675743 [ESP8266]  INFO: [MCPServer] createErrorR
+2025-06-20T22:41:28.685833 [ESP8266]  INFO: esponse: Serialized response length: 85[0m
+2025-06-20T22:41:28.685841 [ESP8266]  INFO: [MCPServer] createErrorResponse: Se
+2025-06-20T22:41:28.686544 [ CLIENT]  INFO: 📥 Received response: 85 bytes
+2025-06-20T22:41:28.686645 [ CLIENT]  TEST: ✅ Echo test completed successfully
+2025-06-20T22:41:28.695928 [ESP8266]  INFO: rialized response: {"jsonrpc":true,"id":null,"error":{"code":-32
+2025-06-20T22:41:28.708195 [ESP8266]  INFO: 002,"message":"Server not initialized"}}[0m
+2025-06-20T22:41:28.708217 [ESP8266]  INFO: [EspSocketTransport] Socket closed
+2025-06-20T22:41:28.718380 [ESP8266]  INFO: by peer[0m
+2025-06-20T22:41:28.718412 [ESP8266]  INFO: [MCPServer] Transport read failed,
+2025-06-20T22:41:28.728525 [ESP8266]  INFO: stopping server[0m
+2025-06-20T22:41:28.728537 [ESP8266]  INFO: [MCPServer] MCP Server stopped[0m
+2025-06-20T22:41:28.728540 [ESP8266]  INFO: [0;32mI (89382) ESP82
+2025-06-20T22:41:28.740190 [ESP8266]  INFO: 66-MCP: Client disconnected[0m
+2025-06-20T22:41:28.740207 [ESP8266]  INFO: [0;32mI (89392) EspSocketTrans
+2025-06-20T22:41:28.750294 [ESP8266]  INFO: port: Socket closed manually[0m
+2025-06-20T22:41:28.750301 [ESP8266]  INFO: [MCPServer] MCPServer destroyed[0m
+2025-06-20T22:41:28.750305 [ESP8266]  INFO: [0;32mI
+2025-06-20T22:41:28.760389 [ESP8266]  INFO: [ESP8266-MCP] [After client disconnect] Free heap: 71976
+2025-06-20T22:41:28.770484 [ESP8266]  INFO: bytes, Min free: 49596 bytes[0m
+2025-06-20T22:41:30.686764 [ CLIENT]  TEST: 🔄 Sending ping request #1
+2025-06-20T22:41:30.706979 [ESP8266]  INFO: [ESP8266-MCP] Cl
+2025-06-20T22:41:30.717179 [ESP8266]  INFO: ient connected from 192.168.86.32:56818[0m
+2025-06-20T22:41:30.717203 [ESP8266]  INFO: [0;32mI (91375) ES
+2025-06-20T22:41:30.730241 [ESP8266]  INFO: P8266-MCP: [Before MCP server creation] Free heap: 71460 bytes, Min free: 49596 bytes[0m
+2025-06-20T22:41:30.730269 [ESP8266]  INFO: [0;3
+2025-06-20T22:41:30.740408 [ESP8266]  INFO: [EspSocketTransport] EspSocketTransport created with socket 55[0m
+2025-06-20T22:41:30.740430 [ESP8266]  INFO: [0;32mI (91394)
+2025-06-20T22:41:30.750582 [ESP8266]  INFO: MCPServer: MCPServer created[0m
+2025-06-20T22:41:30.750609 [ESP8266]  INFO: [JsonValue] Te
+2025-06-20T22:41:30.760720 [ESP8266]  INFO: sting cJSON operations...[0m
+2025-06-20T22:41:30.760733 [ESP8266]  INFO: [JsonValue] String creation test passed[0m
+2025-06-20T22:41:30.760737 [ESP8266]  INFO: [0;
+2025-06-20T22:41:30.770869 [ESP8266]  INFO: [JsonValue] Test object serialized as: {"test_key":"
+2025-06-20T22:41:30.781028 [ESP8266]  INFO: object_value"}[0m
+2025-06-20T22:41:30.781049 [ESP8266]  INFO: [JsonValue] All cJSON tests
+2025-06-20T22:41:30.791191 [ESP8266]  INFO: passed[0m
+2025-06-20T22:41:30.791210 [ESP8266]  INFO: [MCPServer] cJSON test passed during initialization[0m
+2025-06-20T22:41:30.791215 [ESP8266]  INFO: [0;32mI (9
+2025-06-20T22:41:30.801342 [ESP8266]  INFO: [ESP8266-MCP] Starting C++ MCP server for client[0m
+2025-06-20T22:41:30.801363 [ESP8266]  INFO: [0;3
+2025-06-20T22:41:30.811500 [ESP8266]  INFO: [MCPServer] MCP Server starting...[0m
+2025-06-20T22:41:30.811519 [ESP8266]  INFO: [0;32mI (914
+2025-06-20T22:41:30.821647 [ESP8266]  INFO: [JsonValue] Checking serialized JSON for corruption: {"jsonrpc":true,"id":"","result":{}}[0m
+2025-06-20T22:41:30.833948 [ESP8266]  INFO: [JsonValue] Detecting corruption in JSON: {"js
+2025-06-20T22:41:30.844076 [ESP8266]  INFO: onrpc":true,"id":"","result":{}}[0m
+2025-06-20T22:41:30.844088 [ESP8266] ERROR: [JsonValue] Found corrupted jsonrpc field
+2025-06-20T22:41:30.854175 [ESP8266]  INFO: [0m
+2025-06-20T22:41:30.854184 [ESP8266]  INFO: [JsonValue] Corruption detection result: CO
+2025-06-20T22:41:30.864268 [ESP8266]  INFO: RRUPTED[0m
+2025-06-20T22:41:30.864276 [ESP8266] ERROR: [JsonValue] Corruption detected in serialized JSON, using manual fa
+2025-06-20T22:41:30.874358 [ESP8266]  INFO: llback[0m
+2025-06-20T22:41:30.874366 [ESP8266]  INFO: [JsonValue] Manual JSON result: {}[
+2025-06-20T22:41:30.884455 [ESP8266]  INFO: 0m
+2025-06-20T22:41:30.884465 [ESP8266]  INFO: [JsonValue] Manual JSON result: {"jsonrpc":true,"id":"string_value_corrupted
+2025-06-20T22:41:30.885510 [ CLIENT]  INFO: ✅ Ping #1 successful
+2025-06-20T22:41:30.894575 [ESP8266]  INFO: ","result":{}}[0m
+2025-06-20T22:41:30.894590 [ESP8266] WARNING: [JsonValue] Manual JSON fall
+2025-06-20T22:41:30.904682 [ESP8266]  INFO: back succeeded after corruption detection[0m
+2025-06-20T22:41:30.904692 [ESP8266]  INFO: [0;32mI (91573)
+2025-06-20T22:41:30.914773 [ESP8266]  INFO: EspSocketTransport: Socket closed by peer[0m
+2025-06-20T22:41:30.914781 [ESP8266]  INFO: [0;32mI (91574)
+2025-06-20T22:41:30.924872 [ESP8266]  INFO: MCPServer: Transport read failed, stopping server[0m
+2025-06-20T22:41:30.924884 [ESP8266]  INFO: [MCPServer] MCP Server st
+2025-06-20T22:41:30.935027 [ESP8266]  INFO: opped[0m
+2025-06-20T22:41:30.935050 [ESP8266]  INFO: [ESP8266-MCP] Client disconnected[0m
+2025-06-20T22:41:30.946706 [ESP8266]  INFO: [EspSocketTransport] Socket closed manually[0m
+2025-06-20T22:41:30.946748 [ESP8266]  INFO: [MCPServer] M
+2025-06-20T22:41:30.956839 [ESP8266]  INFO: CPServer destroyed[0m
+2025-06-20T22:41:30.956849 [ESP8266]  INFO: [ESP8266-MCP] [After cli
+2025-06-20T22:41:30.966928 [ESP8266]  INFO: ent disconnect] Free heap: 71976 bytes, Min free: 49596 bytes[0m
+2025-06-20T22:41:31.885644 [ CLIENT]  TEST: 🔄 Sending ping request #2
+2025-06-20T22:41:31.907196 [ESP8266]  INFO: [ESP8266-MCP] Cl
+2025-06-20T22:41:31.917313 [ESP8266]  INFO: ient connected from 192.168.86.32:56820[0m
+2025-06-20T22:41:31.917322 [ESP8266]  INFO: [ESP8266-MCP] [Before MCP server cr
+2025-06-20T22:41:31.927406 [ESP8266]  INFO: eation] Free heap: 71460 bytes, Min free: 49596 bytes[0m
+2025-06-20T22:41:31.927414 [ESP8266]  INFO: [0;3
+2025-06-20T22:41:31.937488 [ESP8266]  INFO: [EspSocketTransport] EspSocketTransport created with socket 55[0m
+2025-06-20T22:41:31.937494 [ESP8266]  INFO: [0;32mI (92592)
+2025-06-20T22:41:31.947569 [ESP8266]  INFO: MCPServer: MCPServer created[0m
+2025-06-20T22:41:31.947575 [ESP8266]  INFO: [JsonValue] Te
+2025-06-20T22:41:31.957988 [ESP8266]  INFO: sting cJSON operations...[0m
+2025-06-20T22:41:31.958024 [ESP8266]  INFO: [JsonValue] Strin
+2025-06-20T22:41:31.968118 [ESP8266]  INFO: g creation test passed[0m
+2025-06-20T22:41:31.968157 [ESP8266]  INFO: [JsonValue] Test object serialized as: {"test_key":"
+2025-06-20T22:41:31.978253 [ESP8266]  INFO: object_value"}[0m
+2025-06-20T22:41:31.978266 [ESP8266]  INFO: [JsonValue] All cJSON tests
+2025-06-20T22:41:31.988363 [ESP8266]  INFO: passed[0m
+2025-06-20T22:41:31.988379 [ESP8266]  INFO: [MCPServer] cJSON test passed during
+2025-06-20T22:41:31.998468 [ESP8266]  INFO: initialization[0m
+2025-06-20T22:41:31.998478 [ESP8266]  INFO: [ESP8266-MCP] Starting C++ MCP server for client[0m
+2025-06-20T22:41:31.998482 [ESP8266]  INFO: [0;3
+2025-06-20T22:41:32.008622 [ESP8266]  INFO: [MCPServer] MCP Server starting...[0m
+2025-06-20T22:41:32.008647 [ESP8266]  INFO: [0;32mI (926
+2025-06-20T22:41:32.018811 [ESP8266]  INFO: [JsonValue] Checking serialized JSON for corruption: {"jsonrpc":true,"id":"","result":{}}[0m
+2025-06-20T22:41:32.028942 [ESP8266]  INFO: [JsonValue] Detecting corruption in JSON: {"js
+2025-06-20T22:41:32.039041 [ESP8266]  INFO: onrpc":true,"id":"","result":{}}[0m
+2025-06-20T22:41:32.039049 [ESP8266] ERROR: [0;31mE (92689) JsonValue
+2025-06-20T22:41:32.049176 [ESP8266]  INFO: : Found corrupted jsonrpc field[0m
+2025-06-20T22:41:32.049189 [ESP8266]  INFO: [JsonValue] Corruption detection result: CO
+2025-06-20T22:41:32.059367 [ESP8266]  INFO: RRUPTED[0m
+2025-06-20T22:41:32.059398 [ESP8266] ERROR: [JsonValue] Corruption detected in
+2025-06-20T22:41:32.069580 [ESP8266]  INFO: serialized JSON, using manual fallback[0m
+2025-06-20T22:41:32.069610 [ESP8266]  INFO: [JsonValue] Manual JSON result: {}[
+2025-06-20T22:41:32.079754 [ESP8266]  INFO: 0m
+2025-06-20T22:41:32.079779 [ESP8266]  INFO: [JsonValue] Manual JSON result: {"jsonrpc":t
+2025-06-20T22:41:32.089950 [ESP8266]  INFO: rue,"id":"string_value_corrupted","result":{}}[0m
+2025-06-20T22:41:32.089981 [ESP8266] WARNING: [0;33mW (92
+2025-06-20T22:41:32.100173 [ESP8266]  INFO: [JsonValue] Manual JSON fallback succeeded after corruption detection[0m
+2025-06-20T22:41:32.155789 [ CLIENT]  INFO: ✅ Ping #2 successful
+2025-06-20T22:41:32.175280 [ESP8266]  INFO: [0;32mI (92843) EspSocketTransp
+2025-06-20T22:41:32.185392 [ESP8266]  INFO: ort: Socket closed by peer[0m
+2025-06-20T22:41:32.185404 [ESP8266]  INFO: [MCPServer] Tran
+2025-06-20T22:41:32.195495 [ESP8266]  INFO: sport read failed, stopping server[0m
+2025-06-20T22:41:32.195508 [ESP8266]  INFO: [0;32mI (92846) MCPServ
+2025-06-20T22:41:32.205593 [ESP8266]  INFO: er: MCP Server stopped[0m
+2025-06-20T22:41:32.205603 [ESP8266]  INFO: [ESP8266-MCP] Client disconnected[0m
+2025-06-20T22:41:32.205607 [ESP8266]  INFO: [0;32mI (928
+2025-06-20T22:41:32.215698 [ESP8266]  INFO: [EspSocketTransport] Socket closed manually[0m
+2025-06-20T22:41:32.215712 [ESP8266]  INFO: [0;32mI (92
+2025-06-20T22:41:32.225906 [ESP8266]  INFO: [MCPServer] MCPServer destroyed[0m
+2025-06-20T22:41:32.225942 [ESP8266]  INFO: [0;32mI (92875) ESP826
+2025-06-20T22:41:32.236080 [ESP8266]  INFO: 6-MCP: [After client disconnect] Free heap: 71976 bytes, Min free: 49596 bytes[0m
+2025-06-20T22:41:33.156019 [ CLIENT]  TEST: 🔄 Sending ping request #3
+2025-06-20T22:41:33.183271 [ESP8266]  INFO: [ESP8266-MCP] Client connected from 192.168.86.32:41520[0m
+2025-06-20T22:41:33.183303 [ESP8266]  INFO: [0;32mI (93843) ES
+2025-06-20T22:41:33.193391 [ESP8266]  INFO: P8266-MCP: [Before MCP server creation] Free heap: 71460 bytes,
+2025-06-20T22:41:33.203488 [ESP8266]  INFO: Min free: 49596 bytes[0m
+2025-06-20T22:41:33.203500 [ESP8266]  INFO: [0;32mI (93851) EspSocketTransport:
+2025-06-20T22:41:33.213596 [ESP8266]  INFO: EspSocketTransport created with socket 55[0m
+2025-06-20T22:41:33.213610 [ESP8266]  INFO: [MCPServer] MCPServer created[0m
+2025-06-20T22:41:33.226464 [ESP8266]  INFO: [JsonValue] Testing cJSON operations...[0m
+2025-06-20T22:41:33.226498 [ESP8266]  INFO: [JsonValue] Strin
+2025-06-20T22:41:33.236630 [ESP8266]  INFO: g creation test passed[0m
+2025-06-20T22:41:33.236649 [ESP8266]  INFO: [JsonValue] Test obj
+2025-06-20T22:41:33.246779 [ESP8266]  INFO: ect serialized as: {"test_key":"object_value"}[0m
+2025-06-20T22:41:33.246793 [ESP8266]  INFO: [JsonValue] All cJSON tests
+2025-06-20T22:41:33.258216 [ESP8266]  INFO: passed[0m
+2025-06-20T22:41:33.258246 [ESP8266]  INFO: [MCPServer] cJSON test passed during
+2025-06-20T22:41:33.268338 [ESP8266]  INFO: initialization[0m
+2025-06-20T22:41:33.268347 [ESP8266]  INFO: [ESP8266-MCP] Starting C++ MCP server for client[0m
+2025-06-20T22:41:33.268351 [ESP8266]  INFO: [0;3
+2025-06-20T22:41:33.278427 [ESP8266]  INFO: [MCPServer] MCP Server starting...[0m
+2025-06-20T22:41:33.278433 [ESP8266]  INFO: [0;32mI (939
+2025-06-20T22:41:33.288508 [ESP8266]  INFO: [JsonValue] Checking serialized JSON for corruption: {"jsonrp
+2025-06-20T22:41:33.298587 [ESP8266]  INFO: c":true,"id":"","result":{}}[0m
+2025-06-20T22:41:33.298592 [ESP8266]  INFO: [JsonValue] Detecting corruption in JSON: {"js
+2025-06-20T22:41:33.309598 [ESP8266]  INFO: onrpc":true,"id":"","result":{}}[0m
+2025-06-20T22:41:33.309612 [ESP8266] ERROR: [0;31mE (93959) JsonValue
+2025-06-20T22:41:33.319713 [ESP8266]  INFO: : Found corrupted jsonrpc field[0m
+2025-06-20T22:41:33.319726 [ESP8266]  INFO: [0;32mI (93968) JsonValue:
+2025-06-20T22:41:33.329811 [ESP8266]  INFO: Corruption detection result: CORRUPTED[0m
+2025-06-20T22:41:33.329819 [ESP8266] ERROR: [JsonValue] Corruption detected in
+2025-06-20T22:41:33.339895 [ESP8266]  INFO: serialized JSON, using manual fallback[0m
+2025-06-20T22:41:33.339900 [ESP8266]  INFO: [0;32mI (93991) Jso
+2025-06-20T22:41:33.349984 [ESP8266]  INFO: nValue: Manual JSON result: {}[0m
+2025-06-20T22:41:33.349992 [ESP8266]  INFO: [JsonValue] Manual JSON result: {"jsonrpc":t
+2025-06-20T22:41:33.354879 [ CLIENT]  INFO: ✅ Ping #3 successful
+2025-06-20T22:41:33.360079 [ESP8266]  INFO: rue,"id":"string_value_corrupted","result":{}}[0m
+2025-06-20T22:41:33.360087 [ESP8266] WARNING: [0;33mW (94
+2025-06-20T22:41:33.370158 [ESP8266]  INFO: [JsonValue] Manual JSON fallback succeeded after corruption
+2025-06-20T22:41:33.380240 [ESP8266]  INFO: detection[0m
+2025-06-20T22:41:33.380245 [ESP8266]  INFO: [EspSocketTransport] Socket closed by peer[0m
+2025-06-20T22:41:33.380248 [ESP8266]  INFO: [0;32mI (94036)
+2025-06-20T22:41:33.391180 [ESP8266]  INFO: MCPServer: Transport read failed, stopping server[0m
+2025-06-20T22:41:33.391195 [ESP8266]  INFO: [0;32mI
+2025-06-20T22:41:33.401287 [ESP8266]  INFO: [MCPServer] MCP Server stopped[0m
+2025-06-20T22:41:33.401301 [ESP8266]  INFO: [ESP8266-MCP] Client disconnected[0m
+2025-06-20T22:41:33.411381 [ESP8266]  INFO: [EspSocketTransport] Socket closed manually[0
+2025-06-20T22:41:33.421469 [ESP8266]  INFO: m
+2025-06-20T22:41:33.421478 [ESP8266]  INFO: [MCPServer] MCPServer destroyed[0m
+2025-06-20T22:41:33.421481 [ESP8266]  INFO: [0;32mI
+2025-06-20T22:41:33.431561 [ESP8266]  INFO: [ESP8266-MCP] [After client disconnect] Free heap: 71976 bytes, Min free: 49596 bytes[0
+2025-06-20T22:41:33.443391 [ESP8266]  INFO: m
+2025-06-20T22:41:34.378841 [ CLIENT]  TEST: 📤 Sending invalid tool request (should fail)
+2025-06-20T22:41:34.393442 [ESP8266]  INFO: [ESP8266-MCP] Cl
+2025-06-20T22:41:34.403563 [ESP8266]  INFO: ient connected from 192.168.86.32:41530[0m
+2025-06-20T22:41:34.403574 [ESP8266]  INFO: [ESP8266-MCP] [Before MCP server cr
+2025-06-20T22:41:34.413747 [ESP8266]  INFO: eation] Free heap: 71396 bytes, Min free: 49596 bytes[0m
+2025-06-20T22:41:34.413778 [ESP8266]  INFO: [0;3
+2025-06-20T22:41:34.423952 [ESP8266]  INFO: [EspSocketTransport] EspSocketTransport created with
+2025-06-20T22:41:34.434744 [ESP8266]  INFO: socket 55[0m
+2025-06-20T22:41:34.434777 [ESP8266]  INFO: [MCPServer] MCPServer created[0m
+2025-06-20T22:41:34.434783 [ESP8266]  INFO: [JsonValue] Te
+2025-06-20T22:41:34.444897 [ESP8266]  INFO: sting cJSON operations...[0m
+2025-06-20T22:41:34.444912 [ESP8266]  INFO: [JsonValue] Strin
+2025-06-20T22:41:34.455028 [ESP8266]  INFO: g creation test passed[0m
+2025-06-20T22:41:34.455044 [ESP8266]  INFO: [JsonValue] Test object serialized as: {"test_key":"
+2025-06-20T22:41:34.465146 [ESP8266]  INFO: object_value"}[0m
+2025-06-20T22:41:34.465156 [ESP8266]  INFO: [JsonValue] All cJSON tests
+2025-06-20T22:41:34.475306 [ESP8266]  INFO: passed[0m
+2025-06-20T22:41:34.475336 [ESP8266]  INFO: [MCPServer] cJSON test passed during
+2025-06-20T22:41:34.485455 [ESP8266]  INFO: initialization[0m
+2025-06-20T22:41:34.485470 [ESP8266]  INFO: [ESP8266-MCP] Starting C++ MCP server for client[0m
+2025-06-20T22:41:34.485475 [ESP8266]  INFO: [0;3
+2025-06-20T22:41:34.495566 [ESP8266]  INFO: [MCPServer] MCP Server starting...[0m
+2025-06-20T22:41:34.495578 [ESP8266]  INFO: [0;32mI (951
+2025-06-20T22:41:34.507215 [ESP8266]  INFO: [JsonValue] Checking serialized JSON for corruption: {"name":"nonexistent_tool","arguments":{
+2025-06-20T22:41:34.517316 [ESP8266]  INFO: }}[0m
+2025-06-20T22:41:34.517325 [ESP8266]  INFO: [JsonValue] Detecting corruption in JSON
+2025-06-20T22:41:34.527412 [ESP8266]  INFO: : {"name":"nonexistent_tool","arguments":{}}[0m
+2025-06-20T22:41:34.527420 [ESP8266]  INFO: [JsonValue] Corruption detecti
+2025-06-20T22:41:34.537512 [ESP8266]  INFO: on result: CLEAN[0m
+2025-06-20T22:41:34.537522 [ESP8266]  INFO: [JsonValue] No corruption
+2025-06-20T22:41:34.547605 [ESP8266]  INFO: detected in serialized JSON[0m
+2025-06-20T22:41:34.547612 [ESP8266]  INFO: [MCPServer] cre
+2025-06-20T22:41:34.557826 [ESP8266]  INFO: ateErrorResponse: Creating error response - id: , code: -32002, message: Server not initialized
+2025-06-20T22:41:34.567959 [ESP8266]  INFO: [0m
+2025-06-20T22:41:34.567974 [ESP8266]  INFO: [MCPServer] createErrorResponse: Creating r
+2025-06-20T22:41:34.578066 [ESP8266]  INFO: oot object[0m
+2025-06-20T22:41:34.578078 [ESP8266]  INFO: [MCPServer] createErrorResponse:
+2025-06-20T22:41:34.588941 [ESP8266]  INFO: Setting jsonrpc field[0m
+2025-06-20T22:41:34.588958 [ESP8266]  INFO: [MCPServer] createErrorResponse: Setting id field[0
+2025-06-20T22:41:34.599048 [ESP8266]  INFO: m
+2025-06-20T22:41:34.599059 [ESP8266]  INFO: [MCPServer] createErrorResponse: Creating err
+2025-06-20T22:41:34.609149 [ESP8266]  INFO: or object[0m
+2025-06-20T22:41:34.609159 [ESP8266]  INFO: [MCPServer] createErrorResponse: Setting error code: -32002[0m
+2025-06-20T22:41:34.619244 [ESP8266]  INFO: [MCPServer] createErrorResponse: Setting error m
+2025-06-20T22:41:34.629342 [ESP8266]  INFO: essage: Server not initialized[0m
+2025-06-20T22:41:34.629359 [ESP8266]  INFO: [0;32mI (95278) MCPServer:
+2025-06-20T22:41:34.639449 [ESP8266]  INFO: createErrorResponse: Setting error object on response[0m
+2025-06-20T22:41:34.639461 [ESP8266]  INFO: [MCPServer] createErr
+2025-06-20T22:41:34.649551 [ESP8266]  INFO: orResponse: About to serialize response[0m
+2025-06-20T22:41:34.649562 [ESP8266] ERROR: [0;31mE (95301) Js
+2025-06-20T22:41:34.659648 [ESP8266]  INFO: onValue: cJSON_PrintUnformatted returned NULL even after validation[0m
+2025-06-20T22:41:34.659657 [ESP8266]  INFO: [0;32mI (95313) JsonVa
+2025-06-20T22:41:34.670177 [ESP8266]  INFO: lue: Manual JSON result: {"code":-32002,"message":"Server not in
+2025-06-20T22:41:34.680284 [ESP8266]  INFO: itialized"}[0m
+2025-06-20T22:41:34.680297 [ESP8266]  INFO: [JsonValue] Manual JSON result:
+2025-06-20T22:41:34.690383 [ESP8266]  INFO: {"jsonrpc":true,"id":null,"error":{"code":-32002,"message":"Server not initialized"}}[0m
+2025-06-20T22:41:34.690393 [ESP8266]  INFO: [0;
+2025-06-20T22:41:34.702196 [ESP8266] WARNING: [JsonValue] Manual JSON fallback succeeded after serialization failure[0m
+2025-06-20T22:41:34.702217 [ESP8266]  INFO: [0;32mI
+2025-06-20T22:41:34.712346 [ESP8266]  INFO: [MCPServer] createErrorResponse: Serialized response len
+2025-06-20T22:41:34.721231 [ CLIENT]  INFO: 📥 Error response received (expected): 85 bytes
+2025-06-20T22:41:34.722456 [ESP8266]  INFO: gth: 85[0m
+2025-06-20T22:41:34.722467 [ESP8266]  INFO: [MCPServer] createErrorResponse: Se
+2025-06-20T22:41:34.732555 [ESP8266]  INFO: rialized response: {"jsonrpc":true,"id":null,"error":{"code":-32002,"message":"Server not initia
+2025-06-20T22:41:34.743217 [ESP8266]  INFO: lized"}}[0m
+2025-06-20T22:41:34.743239 [ESP8266]  INFO: [EspSocketTransport] Socket closed
+2025-06-20T22:41:34.753390 [ESP8266]  INFO: by peer[0m
+2025-06-20T22:41:34.753417 [ESP8266]  INFO: [MCPServer] Transport read failed, stopping server[0m
+2025-06-20T22:41:34.753423 [ESP8266]  INFO: [0;32mI (
+2025-06-20T22:41:34.763545 [ESP8266]  INFO: [MCPServer] MCP Server stopped[0m
+2025-06-20T22:41:34.763564 [ESP8266]  INFO: [0;32mI (95415) ESP82
+2025-06-20T22:41:34.773752 [ESP8266]  INFO: 66-MCP: Client disconnected[0m
+2025-06-20T22:41:34.773781 [ESP8266]  INFO: [0;32mI (95424) EspSocketTrans
+2025-06-20T22:41:34.784107 [ESP8266]  INFO: port: Socket closed manually[0m
+2025-06-20T22:41:34.784180 [ESP8266]  INFO: [MCPServer] MCPServer destroyed[0m
+2025-06-20T22:41:34.784187 [ESP8266]  INFO: [0;32mI
+2025-06-20T22:41:34.794273 [ESP8266]  INFO: [ESP8266-MCP] [After client disconnect] Free heap: 71976
+2025-06-20T22:41:34.804375 [ESP8266]  INFO: bytes, Min free: 49596 bytes[0m
+2025-06-20T22:41:36.721400 [ CLIENT]  TEST: 🎉 Integrated Testing Demo Complete!
+2025-06-20T22:41:36.721431 [ CLIENT]  INFO: 
+2025-06-20T22:41:36.721434 [ CLIENT]  TEST: 📊 Demo Summary:
+2025-06-20T22:41:36.721436 [ CLIENT]  TEST: ✅ Basic connectivity test
+2025-06-20T22:41:36.721439 [ CLIENT]  TEST: ✅ Single tool test
+2025-06-20T22:41:36.721440 [ CLIENT]  TEST: ✅ Real-time correlation demo
+2025-06-20T22:41:36.721442 [ CLIENT]  TEST: ✅ Error handling demo
+2025-06-20T22:41:36.721443 [ CLIENT]  INFO: 
+2025-06-20T22:41:36.721472 [ CLIENT]  INFO: 📝 Full log saved to: demo_integrated_test_1750473670.log

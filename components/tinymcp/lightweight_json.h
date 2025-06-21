@@ -1,385 +1,260 @@
 #pragma once
 
-#include "cJSON.h"
-#include "esp_log.h"
+// Direct jsoncpp usage for TinyMCP
+// Simplified JSON utilities for ESP32/ESP8266 with jsoncpp
+
 #include <string>
 #include <memory>
-#include <cstring>
+#include <sstream>
+#include <json/json.h>
+#include "esp_log.h"
 
 namespace tinymcp {
 
-static const char* JSON_TAG = "JsonValue";
-
+// Simple wrapper class that matches the original lightweight_json.h API
 class JsonValue {
 private:
-    cJSON* m_json;
-    bool m_owner;
+    Json::Value m_json;
 
 public:
-    JsonValue() : m_json(nullptr), m_owner(false) {}
-
-    JsonValue(cJSON* json, bool owner = false) : m_json(json), m_owner(owner) {}
-
-    ~JsonValue() {
-        if (m_owner && m_json) {
-            cJSON_Delete(m_json);
-        }
-    }
-
-    // Copy constructor
-    JsonValue(const JsonValue& other) : m_owner(false) {
-        if (other.m_json) {
-            m_json = cJSON_Duplicate(other.m_json, 1);
-            m_owner = true;
-        } else {
-            m_json = nullptr;
-        }
-    }
-
-    // Assignment operator
+    JsonValue() : m_json(Json::nullValue) {}
+    
+    explicit JsonValue(const Json::Value& val) : m_json(val) {}
+    
+    JsonValue(const JsonValue& other) : m_json(other.m_json) {}
+    
+    JsonValue(JsonValue&& other) noexcept : m_json(std::move(other.m_json)) {}
+    
     JsonValue& operator=(const JsonValue& other) {
         if (this != &other) {
-            if (m_owner && m_json) {
-                cJSON_Delete(m_json);
-            }
-            if (other.m_json) {
-                m_json = cJSON_Duplicate(other.m_json, 1);
-                m_owner = true;
-            } else {
-                m_json = nullptr;
-                m_owner = false;
-            }
+            m_json = other.m_json;
         }
         return *this;
     }
-
-    // Move constructor
-    JsonValue(JsonValue&& other) noexcept : m_json(other.m_json), m_owner(other.m_owner) {
-        other.m_json = nullptr;
-        other.m_owner = false;
-    }
-
-    // Move assignment operator
+    
     JsonValue& operator=(JsonValue&& other) noexcept {
         if (this != &other) {
-            if (m_owner && m_json) {
-                cJSON_Delete(m_json);
-            }
-            m_json = other.m_json;
-            m_owner = other.m_owner;
-            other.m_json = nullptr;
-            other.m_owner = false;
+            m_json = std::move(other.m_json);
         }
         return *this;
     }
 
-    // Static factory methods
+    // Factory methods
     static JsonValue createObject() {
-        return JsonValue(cJSON_CreateObject(), true);
+        return JsonValue(Json::Value(Json::objectValue));
     }
-
+    
     static JsonValue createArray() {
-        return JsonValue(cJSON_CreateArray(), true);
+        return JsonValue(Json::Value(Json::arrayValue));
     }
-
+    
     static JsonValue createString(const std::string& str) {
-        return JsonValue(cJSON_CreateString(str.c_str()), true);
+        return JsonValue(Json::Value(str));
     }
-
+    
     static JsonValue createNumber(double num) {
-        return JsonValue(cJSON_CreateNumber(num), true);
+        return JsonValue(Json::Value(num));
     }
-
+    
     static JsonValue createBool(bool val) {
-        return JsonValue(val ? cJSON_CreateTrue() : cJSON_CreateFalse(), true);
+        return JsonValue(Json::Value(val));
     }
-
+    
     static JsonValue createNull() {
-        return JsonValue(cJSON_CreateNull(), true);
+        return JsonValue(Json::Value(Json::nullValue));
     }
 
     // Type checking
-    bool isObject() const { return m_json && cJSON_IsObject(m_json); }
-    bool isArray() const { return m_json && cJSON_IsArray(m_json); }
-    bool isString() const { return m_json && cJSON_IsString(m_json); }
-    bool isNumber() const { return m_json && cJSON_IsNumber(m_json); }
-    bool isBool() const { return m_json && cJSON_IsBool(m_json); }
-    bool isNull() const { return m_json && cJSON_IsNull(m_json); }
-    bool isValid() const { return m_json != nullptr; }
+    bool isObject() const { return m_json.isObject(); }
+    bool isArray() const { return m_json.isArray(); }
+    bool isString() const { return m_json.isString(); }
+    bool isNumber() const { return m_json.isNumeric(); }
+    bool isBool() const { return m_json.isBool(); }
+    bool isNull() const { return m_json.isNull(); }
+    bool isValid() const { return !m_json.isNull() || m_json.type() == Json::nullValue; }
 
     // Value getters
     std::string asString() const {
-        if (isString() && m_json->valuestring) {
-            return std::string(m_json->valuestring);
-        }
-        return "";
+        return m_json.isString() ? m_json.asString() : "";
     }
-
+    
     int asInt() const {
-        if (isNumber()) {
-            return (int)m_json->valuedouble;
-        }
-        return 0;
+        return m_json.isInt() ? m_json.asInt() : 0;
     }
-
+    
     double asDouble() const {
-        if (isNumber()) {
-            return m_json->valuedouble;
-        }
-        return 0.0;
+        return m_json.isDouble() ? m_json.asDouble() : 0.0;
     }
-
+    
     bool asBool() const {
-        if (isBool()) {
-            return cJSON_IsTrue(m_json);
-        }
-        return false;
+        return m_json.isBool() ? m_json.asBool() : false;
     }
 
-    // Object access
+    // Object member access
     JsonValue get(const std::string& key, const JsonValue& defaultValue = JsonValue()) const {
-        if (isObject()) {
-            cJSON* item = cJSON_GetObjectItem(m_json, key.c_str());
-            if (item) {
-                return JsonValue(item, false);
-            }
+        if (m_json.isObject() && m_json.isMember(key)) {
+            return JsonValue(m_json[key]);
         }
         return defaultValue;
     }
-
+    
     bool isMember(const std::string& key) const {
-        if (isObject()) {
-            return cJSON_GetObjectItem(m_json, key.c_str()) != nullptr;
-        }
-        return false;
+        return m_json.isObject() && m_json.isMember(key);
     }
-
-    void set(const std::string& key, const JsonValue& value) {
-        if (isObject() && value.m_json) {
-            // Validate inputs
-            if (key.empty()) {
-                return;
-            }
-            
-            // Remove existing item with same key to prevent duplicates
-            cJSON_DeleteItemFromObject(m_json, key.c_str());
-            
-            cJSON* duplicated = cJSON_Duplicate(value.m_json, 1);
-            if (duplicated) {
-                cJSON_AddItemToObject(m_json, key.c_str(), duplicated);
-            }
-        }
-    }
-
+    
     void set(const std::string& key, const std::string& value) {
-        if (isObject()) {
-            // Validate inputs
-            if (key.empty()) {
-                ESP_LOGE(JSON_TAG, "Empty key provided to set()");
-                return;
-            }
-            
-            // Remove existing item with same key to prevent duplicates
-            cJSON_DeleteItemFromObject(m_json, key.c_str());
-            
-            cJSON* str_item = cJSON_CreateString(value.c_str());
-            if (str_item) {
-                // Validate the created string item
-                if (str_item->valuestring && strcmp(str_item->valuestring, value.c_str()) == 0) {
-                    cJSON_AddItemToObject(m_json, key.c_str(), str_item);
-                } else {
-                    ESP_LOGE(JSON_TAG, "String value mismatch after creation: key=%s", key.c_str());
-                    cJSON_Delete(str_item);
-                }
-            } else {
-                ESP_LOGE(JSON_TAG, "cJSON_CreateString returned NULL for key=%s value=%s", key.c_str(), value.c_str());
-            }
+        if (!m_json.isObject()) {
+            m_json = Json::Value(Json::objectValue);
         }
+        m_json[key] = value;
     }
-
+    
+    void set(const std::string& key, const char* value) {
+        set(key, std::string(value));
+    }
+    
     void set(const std::string& key, int value) {
-        if (isObject() && !key.empty()) {
-            // Remove existing item with same key to prevent duplicates
-            cJSON_DeleteItemFromObject(m_json, key.c_str());
-            cJSON_AddNumberToObject(m_json, key.c_str(), value);
+        if (!m_json.isObject()) {
+            m_json = Json::Value(Json::objectValue);
         }
+        m_json[key] = value;
     }
-
+    
     void set(const std::string& key, double value) {
-        if (isObject() && !key.empty()) {
-            // Remove existing item with same key to prevent duplicates
-            cJSON_DeleteItemFromObject(m_json, key.c_str());
-            cJSON_AddNumberToObject(m_json, key.c_str(), value);
+        if (!m_json.isObject()) {
+            m_json = Json::Value(Json::objectValue);
         }
+        m_json[key] = value;
     }
-
+    
     void set(const std::string& key, bool value) {
-        if (isObject() && !key.empty()) {
-            // Remove existing item with same key to prevent duplicates
-            cJSON_DeleteItemFromObject(m_json, key.c_str());
-            cJSON_AddBoolToObject(m_json, key.c_str(), value);
+        if (!m_json.isObject()) {
+            m_json = Json::Value(Json::objectValue);
         }
+        m_json[key] = value;
+    }
+    
+    void set(const std::string& key, const JsonValue& value) {
+        if (!m_json.isObject()) {
+            m_json = Json::Value(Json::objectValue);
+        }
+        m_json[key] = value.m_json;
     }
 
-    // Array access
+    // Array operations
     JsonValue operator[](int index) const {
-        if (isArray()) {
-            cJSON* item = cJSON_GetArrayItem(m_json, index);
-            if (item) {
-                return JsonValue(item, false);
-            }
+        if (m_json.isArray() && index >= 0 && index < static_cast<int>(m_json.size())) {
+            return JsonValue(m_json[index]);
         }
         return JsonValue();
     }
-
+    
     void append(const JsonValue& value) {
-        if (isArray() && value.m_json) {
-            cJSON_AddItemToArray(m_json, cJSON_Duplicate(value.m_json, 1));
+        if (!m_json.isArray()) {
+            m_json = Json::Value(Json::arrayValue);
         }
+        m_json.append(value.m_json);
     }
-
+    
     void append(const std::string& value) {
-        if (isArray()) {
-            cJSON_AddItemToArray(m_json, cJSON_CreateString(value.c_str()));
+        if (!m_json.isArray()) {
+            m_json = Json::Value(Json::arrayValue);
         }
+        m_json.append(value);
     }
-
+    
     int size() const {
-        if (isArray()) {
-            return cJSON_GetArraySize(m_json);
+        if (m_json.isArray() || m_json.isObject()) {
+            return m_json.size();
         }
         return 0;
     }
 
     // Serialization
     std::string toString() const {
-        if (m_json && !cJSON_IsInvalid(m_json)) {
-            char* str = cJSON_Print(m_json);
-            if (str) {
-                std::string result(str);
-                free(str);
-                return result;
-            }
-        }
-        return "";
+        Json::StreamWriterBuilder builder;
+        builder["indentation"] = "  ";
+        std::unique_ptr<Json::StreamWriter> writer(builder.newStreamWriter());
+        std::ostringstream oss;
+        writer->write(m_json, &oss);
+        return oss.str();
     }
-
+    
     std::string toStringCompact() const {
-        if (!m_json) {
-            ESP_LOGE(JSON_TAG, "m_json is NULL in toStringCompact()");
-            return "";
+        Json::StreamWriterBuilder builder;
+        builder["indentation"] = "";
+        builder["commentStyle"] = "None";
+        builder["enableYAMLCompatibility"] = false;
+        builder["dropNullPlaceholders"] = false;
+        builder["useSpecialFloats"] = false;
+        std::unique_ptr<Json::StreamWriter> writer(builder.newStreamWriter());
+        std::ostringstream oss;
+        writer->write(m_json, &oss);
+        std::string result = oss.str();
+        // Remove trailing newline if present
+        if (!result.empty() && result.back() == '\n') {
+            result.pop_back();
         }
-
-        // Use validation helper first
-        if (!isValidStructure()) {
-            ESP_LOGE(JSON_TAG, "JSON structure validation failed");
-            return "";
-        }
-
-        char* str = cJSON_PrintUnformatted(m_json);
-        if (str) {
-            std::string result(str);
-            free(str);
-            return result;
-        } else {
-            ESP_LOGE(JSON_TAG, "cJSON_PrintUnformatted returned NULL even after validation");
-            // Try formatted print as fallback
-            str = cJSON_Print(m_json);
-            if (str) {
-                ESP_LOGW(JSON_TAG, "Fallback to formatted print worked");
-                std::string result(str);
-                free(str);
-                return result;
-            } else {
-                ESP_LOGE(JSON_TAG, "Both formatted and unformatted print failed");
-            }
-        }
-        return "";
+        return result;
     }
 
-    // Validation helper
-    bool isValidStructure() const {
-        if (!m_json) return false;
-        if (cJSON_IsInvalid(m_json)) return false;
-        
-        // Additional validation for objects and arrays
-        if (cJSON_IsObject(m_json)) {
-            cJSON* item = m_json->child;
-            while (item) {
-                if (!item->string) {
-                    ESP_LOGE(JSON_TAG, "Found object item with NULL key");
-                    return false;
-                }
-                if (cJSON_IsString(item) && !item->valuestring) {
-                    ESP_LOGE(JSON_TAG, "Found string item with NULL valuestring for key: %s", item->string ? item->string : "unknown");
-                    return false;
-                }
-                item = item->next;
-            }
-        }
-        return true;
-    }
-
-    // Debug test method to validate cJSON operations
+    // Test function for compatibility
     static bool testCJSONOperations() {
-        ESP_LOGI(JSON_TAG, "Testing cJSON operations...");
+        // Test object creation
+        JsonValue obj = createObject();
+        obj.set("test", "value");
+        obj.set("number", 42);
+        obj.set("bool", true);
         
-        // Test 1: Simple string creation
-        cJSON* test_str = cJSON_CreateString("test_value");
-        if (!test_str) {
-            ESP_LOGE(JSON_TAG, "cJSON_CreateString failed");
-            return false;
-        }
-        if (!test_str->valuestring || strcmp(test_str->valuestring, "test_value") != 0) {
-            ESP_LOGE(JSON_TAG, "String value corrupted after creation");
-            cJSON_Delete(test_str);
-            return false;
-        }
-        ESP_LOGI(JSON_TAG, "String creation test passed");
-        cJSON_Delete(test_str);
+        // Test array creation
+        JsonValue arr = createArray();
+        arr.append("item1");
+        arr.append("item2");
         
-        // Test 2: Object with string
-        cJSON* test_obj = cJSON_CreateObject();
-        if (!test_obj) {
-            ESP_LOGE(JSON_TAG, "cJSON_CreateObject failed");
-            return false;
-        }
-        
-        cJSON* str_item = cJSON_CreateString("object_value");
-        if (!str_item) {
-            ESP_LOGE(JSON_TAG, "cJSON_CreateString failed for object");
-            cJSON_Delete(test_obj);
-            return false;
-        }
-        
-        cJSON_AddItemToObject(test_obj, "test_key", str_item);
+        // Test nested structures
+        obj.set("array", arr);
         
         // Test serialization
-        char* json_str = cJSON_PrintUnformatted(test_obj);
-        if (!json_str) {
-            ESP_LOGE(JSON_TAG, "cJSON_PrintUnformatted failed on test object");
-            cJSON_Delete(test_obj);
+        std::string json = obj.toStringCompact();
+        
+        // Test parsing
+        Json::CharReaderBuilder readerBuilder;
+        std::unique_ptr<Json::CharReader> reader(readerBuilder.newCharReader());
+        Json::Value root;
+        std::string errs;
+        
+        if (!reader->parse(json.c_str(), json.c_str() + json.length(), &root, &errs)) {
             return false;
         }
         
-        ESP_LOGI(JSON_TAG, "Test object serialized as: %s", json_str);
-        free(json_str);
-        cJSON_Delete(test_obj);
-        
-        ESP_LOGI(JSON_TAG, "All cJSON tests passed");
         return true;
+    }
+
+    // For internal use
+    const Json::Value& getInternalValue() const {
+        return m_json;
+    }
+    
+    Json::Value& getInternalValue() {
+        return m_json;
     }
 };
 
 class JsonReader {
 public:
     bool parse(const std::string& json, JsonValue& root) {
-        cJSON* parsed = cJSON_Parse(json.c_str());
-        if (parsed) {
-            root = JsonValue(parsed, true);
-            return true;
+        Json::CharReaderBuilder readerBuilder;
+        std::unique_ptr<Json::CharReader> reader(readerBuilder.newCharReader());
+        Json::Value jsonRoot;
+        std::string errs;
+        
+        bool success = reader->parse(json.c_str(), json.c_str() + json.length(), &jsonRoot, &errs);
+        
+        if (success) {
+            root = JsonValue(jsonRoot);
         }
-        return false;
+        
+        return success;
     }
 };
 
@@ -389,21 +264,21 @@ private:
 
 public:
     JsonStreamWriterBuilder() : m_compact(false) {}
-
+    
     void operator[](const std::string& key) {
-        if (key == "indentation" || key == "indent") {
-            m_compact = true;
+        if (key == "indentation" && m_compact) {
+            // Compact mode
         }
     }
-
+    
     std::string writeString(const JsonValue& value) {
         return m_compact ? value.toStringCompact() : value.toString();
     }
 };
 
-// Helper function to write JSON as string
-inline std::string writeString(JsonStreamWriterBuilder& builder, const JsonValue& value) {
-    return builder.writeString(value);
+// Helper function
+inline std::string writeString(const JsonStreamWriterBuilder& builder, const JsonValue& value) {
+    return value.toStringCompact();
 }
 
 } // namespace tinymcp

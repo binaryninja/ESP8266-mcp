@@ -40,6 +40,10 @@ class JsonCorruptionDiagnostic:
 
             # Read response
             response = sock.recv(4096).decode().strip()
+
+            # DEBUG: Log raw response for analysis
+            print(f"🔍 RAW RESPONSE: {response}")
+
             return response
         except Exception as e:
             print(f"❌ Request failed: {e}")
@@ -76,6 +80,10 @@ class JsonCorruptionDiagnostic:
                     # Check if it appears as 'true' instead
                     if 'true' in response_lower:
                         analysis['corruption_details'].append(f"Expected '{expected}' possibly replaced with 'true'")
+
+            # DEBUG: Show what we parsed vs what we expected
+            print(f"🔍 PARSED JSON STRUCTURE:")
+            self._print_json_structure(parsed, "")
 
         except json.JSONDecodeError as e:
             analysis['json_error'] = str(e)
@@ -400,6 +408,35 @@ class JsonCorruptionDiagnostic:
             print(f"📝 Results saved to: {filename}")
         except Exception as e:
             print(f"❌ Failed to save results: {e}")
+
+    def _print_json_structure(self, obj: Any, prefix: str, max_depth: int = 3):
+        """Print JSON structure for debugging"""
+        if max_depth <= 0:
+            return
+
+        if isinstance(obj, dict):
+            for key, value in obj.items():
+                value_type = type(value).__name__
+                if isinstance(value, str):
+                    print(f"🔍 {prefix}{key}: \"{value}\" ({value_type})")
+                elif isinstance(value, bool):
+                    print(f"🔍 {prefix}{key}: {value} ({value_type})")
+                elif isinstance(value, (int, float)):
+                    print(f"🔍 {prefix}{key}: {value} ({value_type})")
+                elif isinstance(value, dict):
+                    print(f"🔍 {prefix}{key}: object ({len(value)} keys)")
+                    self._print_json_structure(value, prefix + "  ", max_depth - 1)
+                elif isinstance(value, list):
+                    print(f"🔍 {prefix}{key}: array ({len(value)} items)")
+                    for i, item in enumerate(value[:3]):  # Only show first 3 items
+                        self._print_json_structure(item, prefix + f"  [{i}].", max_depth - 1)
+                else:
+                    print(f"🔍 {prefix}{key}: {value} ({value_type})")
+        elif isinstance(obj, list):
+            for i, item in enumerate(obj[:3]):  # Only show first 3 items
+                self._print_json_structure(item, prefix + f"[{i}].", max_depth - 1)
+        else:
+            print(f"🔍 {prefix}: {obj} ({type(obj).__name__})")
 
 def main():
     parser = argparse.ArgumentParser(description='ESP8266 MCP JSON Corruption Diagnostic Tool')

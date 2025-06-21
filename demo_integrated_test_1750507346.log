@@ -1,0 +1,1184 @@
+
+# ESP8266 MCP Integrated Test Log
+# Generated: 2025-06-21T08:02:26.224743
+# ESP8266 IP: 192.168.86.37
+# Serial Port: /dev/ttyUSB1
+# Baud Rate: 74880
+================================================================================
+2025-06-21T08:02:26.250595 [ESP8266]  INFO: ansport creation: 7320 bytes[0m
+2025-06-21T08:02:26.250624 [ESP8266]  INFO: [MCPServer] MCP
+2025-06-21T08:02:26.260719 [ESP8266]  INFO: Server created[0m
+2025-06-21T08:02:26.260728 [ESP8266]  INFO: [MCPServer] MCPServer: Testing basic JSON creation...[0m
+2025-06-21T08:02:26.260733 [ESP8266]  INFO: [
+2025-06-21T08:02:26.270818 [ESP8266]  INFO: [MCPServer] MCPServer: Basic JSON null value create
+2025-06-21T08:02:26.280902 [ESP8266]  INFO: d successfully[0m
+2025-06-21T08:02:26.280909 [ESP8266]  INFO: [MCPServer] MCPServer: JSON object created successfully[0m
+2025-06-21T08:02:26.291006 [ESP8266]  INFO: [MCPServer] MCPServer: JSON test passed during in
+2025-06-21T08:02:26.301106 [ESP8266]  INFO: itialization[0m
+2025-06-21T08:02:26.301116 [ESP8266]  INFO: [ESP8266-MCP] Stack remaining a
+2025-06-21T08:02:26.311210 [ESP8266]  INFO: fter server creation: 7320 bytes[0m
+2025-06-21T08:02:26.311237 [ESP8266]  INFO: [ESP8266-MCP] Starting C++ MCP server for c
+2025-06-21T08:02:26.321320 [ESP8266]  INFO: lient[0m
+2025-06-21T08:02:26.321328 [ESP8266]  INFO: [MCPServer] MCP Server starting...[0m
+2025-06-21T08:02:26.331413 [ESP8266]  INFO: [MCPServer] Debug: About to create std::string
+2025-06-21T08:02:26.341550 [ESP8266]  INFO: buffer[0m
+2025-06-21T08:02:26.341568 [ESP8266]  INFO: [MCPServer] Debug: Buffer created successfully[0m
+2025-06-21T08:02:26.341572 [ESP8266]  INFO: [0;32mI (7894) M
+2025-06-21T08:02:26.351648 [ESP8266]  INFO: CPServer: Debug: About to enter main loop[0m
+2025-06-21T08:02:26.351653 [ESP8266]  INFO: [0;32mI (7903) M
+2025-06-21T08:02:26.361741 [ESP8266]  INFO: CPServer: Debug: Loop iteration start[0m
+2025-06-21T08:02:26.361755 [ESP8266]  INFO: [0;32mI (7911) MCPSe
+2025-06-21T08:02:26.371838 [ESP8266]  INFO: rver: Debug: About to call isConnected()[0m
+2025-06-21T08:02:26.371845 [ESP8266]  INFO: [MCPServer] Debug: isConnected() re
+2025-06-21T08:02:26.381923 [ESP8266]  INFO: turned: true[0m
+2025-06-21T08:02:26.381928 [ESP8266]  INFO: [MCPServer] Debug: About to cal
+2025-06-21T08:02:26.392007 [ESP8266]  INFO: l transport->read()[0m
+2025-06-21T08:02:26.392014 [ESP8266]  INFO: [EspSocketTransport] Socket closed by peer[0m
+2025-06-21T08:02:26.392017 [ESP8266]  INFO: [0;32mI
+2025-06-21T08:02:26.402093 [ESP8266]  INFO: [MCPServer] Debug: transport->read() returned: false[0m
+2025-06-21T08:02:26.412182 [ESP8266]  INFO: [MCPServer] Transport read failed, stopping serv
+2025-06-21T08:02:26.422338 [ESP8266]  INFO: er[0m
+2025-06-21T08:02:26.422361 [ESP8266]  INFO: [MCPServer] MCP Server stopped[0m
+2025-06-21T08:02:26.422366 [ESP8266]  INFO: [ESP8266-MCP] Client d
+2025-06-21T08:02:26.432457 [ESP8266]  INFO: isconnected[0m
+2025-06-21T08:02:26.432467 [ESP8266]  INFO: [ESP8266-MCP] [After client disc
+2025-06-21T08:02:26.442640 [ESP8266]  INFO: onnect] Free heap: 62652 bytes, Min free: 53244 bytes, Stack rem
+2025-06-21T08:02:26.452761 [ESP8266]  INFO: aining: 6696 bytes[0m
+2025-06-21T08:02:26.452770 [ESP8266]  INFO: [EspSocketTransport] Socket closed manually[0m
+2025-06-21T08:02:26.452775 [ESP8266]  INFO: [0;32mI
+2025-06-21T08:02:26.462854 [ESP8266]  INFO: [MCPServer] MCPServer destroyed[0m
+2025-06-21T08:02:29.225374 [ CLIENT]  TEST: 🚀 Starting test: test_mcp_client.py
+2025-06-21T08:02:29.334319 [ESP8266]  INFO: [ESP8266-MCP] Client connected from 192.168.86.32:46722[0m
+2025-06-21T08:02:29.334347 [ESP8266]  INFO: [0;32mI (10893) ES
+2025-06-21T08:02:29.344479 [ESP8266]  INFO: P8266-MCP: [Before MCP server creation] Free heap: 62692 bytes,
+2025-06-21T08:02:29.354619 [ESP8266]  INFO: Min free: 53244 bytes, Stack remaining: 6696 bytes[0m
+2025-06-21T08:02:29.354638 [ESP8266]  INFO: [ESP8266-MCP] Stack rema
+2025-06-21T08:02:29.364773 [ESP8266]  INFO: ining before MCP server: 6696 bytes[0m
+2025-06-21T08:02:29.364793 [ESP8266]  INFO: [0;32mI (10915) EspSoc
+2025-06-21T08:02:29.374951 [ESP8266]  INFO: ketTransport: EspSocketTransport created with socket 55[0m
+2025-06-21T08:02:29.374978 [ESP8266]  INFO: [0
+2025-06-21T08:02:29.385155 [ESP8266]  INFO: [ESP8266-MCP] Stack remaining after transport creation: 6696 bytes[0m
+2025-06-21T08:02:29.385182 [ESP8266]  INFO: [0;32mI (1
+2025-06-21T08:02:29.395339 [ESP8266]  INFO: [MCPServer] MCPServer created[0m
+2025-06-21T08:02:29.395366 [ESP8266]  INFO: [0;32mI (10945) MCPServ
+2025-06-21T08:02:29.405462 [ESP8266]  INFO: er: MCPServer: Testing basic JSON creation...[0m
+2025-06-21T08:02:29.405472 [ESP8266]  INFO: [0;32mI (109
+2025-06-21T08:02:29.415571 [ESP8266]  INFO: [MCPServer] MCPServer: Basic JSON null value created successfully[0m
+2025-06-21T08:02:29.415585 [ESP8266]  INFO: [0;32mI (10967) MCPSe
+2025-06-21T08:02:29.425700 [ESP8266]  INFO: rver: MCPServer: JSON object created successfully[0m
+2025-06-21T08:02:29.425715 [ESP8266]  INFO: [0;32mI
+2025-06-21T08:02:29.435814 [ESP8266]  INFO: [MCPServer] MCPServer: JSON test passed during initialization[0m
+2025-06-21T08:02:29.435827 [ESP8266]  INFO: [0;32mI (10988) ESP82
+2025-06-21T08:02:29.445950 [ESP8266]  INFO: 66-MCP: Stack remaining after server creation: 6696 bytes[0m
+2025-06-21T08:02:29.445966 [ESP8266]  INFO: 
+2025-06-21T08:02:29.456107 [ESP8266]  INFO: [ESP8266-MCP] Starting C++ MCP server for client
+2025-06-21T08:02:29.466238 [ESP8266]  INFO: [0m
+2025-06-21T08:02:29.466249 [ESP8266]  INFO: [MCPServer] MCP Server starting...[0m
+2025-06-21T08:02:29.466253 [ESP8266]  INFO: [MCPServer] Debug:
+2025-06-21T08:02:29.476343 [ESP8266]  INFO: About to create std::string buffer[0m
+2025-06-21T08:02:29.476350 [ESP8266]  INFO: [0;32mI (11026) MCPServ
+2025-06-21T08:02:29.486433 [ESP8266]  INFO: er: Debug: Buffer created successfully[0m
+2025-06-21T08:02:29.486441 [ESP8266]  INFO: [0;32mI (11035) MCP
+2025-06-21T08:02:29.496531 [ESP8266]  INFO: Server: Debug: About to enter main loop[0m
+2025-06-21T08:02:29.496539 [ESP8266]  INFO: [MCPServer] Debug: Loop iteration s
+2025-06-21T08:02:29.506634 [ESP8266]  INFO: tart[0m
+2025-06-21T08:02:29.506645 [ESP8266]  INFO: [MCPServer] Debug: About to call isCon
+2025-06-21T08:02:29.516781 [ESP8266]  INFO: nected()[0m
+2025-06-21T08:02:29.516800 [ESP8266]  INFO: [MCPServer] Debug: isConnected() r
+2025-06-21T08:02:29.526934 [ESP8266]  INFO: eturned: true[0m
+2025-06-21T08:02:29.526949 [ESP8266]  INFO: [MCPServer] Debug: About to call transport->read()[0m
+2025-06-21T08:02:29.526961 [ESP8266]  INFO: [0;3
+2025-06-21T08:02:29.537036 [ESP8266]  INFO: [MCPServer] Debug: transport->read() returned: true[
+2025-06-21T08:02:29.547152 [ESP8266]  INFO: 0m
+2025-06-21T08:02:29.547160 [ESP8266]  INFO: [MCPServer] Debug: Read successful, buffer size: 236[0m
+2025-06-21T08:02:29.547163 [ESP8266]  INFO: [0;32mI (11100) M
+2025-06-21T08:02:29.557251 [ESP8266]  INFO: CPServer: Debug: About to process message[0m
+2025-06-21T08:02:29.557260 [ESP8266]  INFO: [0;32mI (11108)
+2025-06-21T08:02:29.567337 [ESP8266]  INFO: entered[0m
+2025-06-21T08:02:29.567342 [ESP8266]  INFO: [0;32mI (11117)
+2025-06-21T08:02:29.577421 [ESP8266]  INFO: MCPServer: Debug: Message length: 236[0m
+2025-06-21T08:02:29.577426 [ESP8266]  INFO: [MCPServer] Debug: About to create m
+2025-06-21T08:02:29.587501 [ESP8266]  INFO: ethod/id/params strings[0m
+2025-06-21T08:02:29.587510 [ESP8266]  INFO: [MCPServer] Debug:
+2025-06-21T08:02:29.597587 [ESP8266]  INFO: Calling parseRequest[0m
+2025-06-21T08:02:29.597592 [ESP8266]  INFO: [MCPServer] Debug: par
+2025-06-21T08:02:29.607677 [ESP8266]  INFO: seRequest succeeded[0m
+2025-06-21T08:02:29.607683 [ESP8266]  INFO: [MCPServer] handleInitialize: Starting initialization[
+2025-06-21T08:02:29.617760 [ESP8266]  INFO: 0m
+2025-06-21T08:02:29.617764 [ESP8266]  INFO: [MCPServer] JSON task: Processing request[0
+2025-06-21T08:02:29.627854 [ESP8266]  INFO: m
+2025-06-21T08:02:29.627864 [ESP8266]  INFO: [MCPServer] handleInitialize: Server initiali
+2025-06-21T08:02:29.637943 [ESP8266]  INFO: zed[0m
+2025-06-21T08:02:29.637948 [ESP8266]  INFO: [MCPServer] handleInitialize: Response length: 169[0m
+2025-06-21T08:02:29.637950 [ESP8266]  INFO: [0;32mI (11192
+2025-06-21T08:02:29.648047 [ESP8266]  INFO: [MCPServer] Debug: Message processed, clearing buffer[0m
+2025-06-21T08:02:29.648061 [ESP8266]  INFO: [0;
+2025-06-21T08:02:29.658153 [ESP8266]  INFO: [MCPServer] Debug: Buffer cleared[0m
+2025-06-21T08:02:29.658161 [ESP8266]  INFO: [MCPServer] Debug: About to d
+2025-06-21T08:02:29.668240 [ESP8266]  INFO: elay[0m
+2025-06-21T08:02:29.668245 [ESP8266]  INFO: [MCPServer] Debug: Delay completed[0m
+2025-06-21T08:02:29.678331 [ESP8266]  INFO: [MCPServer] Debug: Loop iteration start[0m
+2025-06-21T08:02:29.678340 [ESP8266]  INFO: 
+2025-06-21T08:02:29.688427 [ESP8266]  INFO: [MCPServer] Debug: About to call isConnected()[0m
+2025-06-21T08:02:29.688436 [ESP8266]  INFO: [MCPServer] D
+2025-06-21T08:02:29.698514 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:02:29.698520 [ESP8266]  INFO: [0;32mI (11248) MCPServ
+2025-06-21T08:02:29.708601 [ESP8266]  INFO: er: Debug: About to call transport->read()[0m
+2025-06-21T08:02:29.708608 [ESP8266]  INFO: [0;32mI (11259)
+2025-06-21T08:02:29.718690 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:02:29.718698 [ESP8266]  INFO: [MCPServer] Debug: Read
+2025-06-21T08:02:29.728789 [ESP8266]  INFO: successful, buffer size: 47[0m
+2025-06-21T08:02:29.728798 [ESP8266]  INFO: [MCPServer] De
+2025-06-21T08:02:29.738881 [ESP8266]  INFO: bug: About to process message[0m
+2025-06-21T08:02:29.738887 [ESP8266]  INFO: [MCPServer] D
+2025-06-21T08:02:29.748976 [ESP8266]  INFO: entered[0m
+2025-06-21T08:02:29.748985 [ESP8266]  INFO: [MCPServer] Debug: Message length: 47[0m
+2025-06-21T08:02:29.748989 [ESP8266]  INFO: 
+2025-06-21T08:02:29.759065 [ESP8266]  INFO: [MCPServer] Debug: About to create method/id/para
+2025-06-21T08:02:29.769147 [ESP8266]  INFO: ms strings[0m
+2025-06-21T08:02:29.769152 [ESP8266]  INFO: [MCPServer] Debug: Calling parseRequest[0m
+2025-06-21T08:02:29.769154 [ESP8266]  INFO: [0;32mI (11322) MC
+2025-06-21T08:02:29.779230 [ESP8266]  INFO: PServer: Debug: parseRequest succeeded[0m
+2025-06-21T08:02:29.779235 [ESP8266]  INFO: abort() was called a
+2025-06-21T08:02:29.789312 [ESP8266]  INFO: t PC 0x40285cf9 on core 0
+2025-06-21T08:02:29.789317 [ESP8266]  INFO: Guru Meditation Error: Core  0 panic
+2025-06-21T08:02:29.799395 [ESP8266]  INFO: 'ed (StoreProhibited). Exception was unhandled.
+2025-06-21T08:02:29.799400 [ESP8266]  INFO: Core 0 register dump:
+2025-06-21T08:02:29.799402 [ESP8266]  INFO: PC      : 0x40215a8a  P
+2025-06-21T08:02:29.809480 [ESP8266]  INFO: S      : 0x00000030  A0      : 0x40215a88  A1      : 0x3fff6a50
+2025-06-21T08:02:29.819560 [ESP8266]  INFO: A2      : 0x00000000  A3      : 0xffffffdb  A4      : 0x0000
+2025-06-21T08:02:29.829655 [ESP8266]  INFO: 0001  A5      : 0x00000001
+2025-06-21T08:02:29.829665 [ESP8266]  INFO: A6      : 0x00000000  A7      : 0x00000000  A8      : 0x0000006e
+2025-06-21T08:02:29.839754 [ESP8266]  INFO: A9      : 0x000000e0
+2025-06-21T08:02:29.839761 [ESP8266]  INFO: A10     : 0x40297248  A11     : 0x0000
+2025-06-21T08:02:29.849846 [ESP8266]  INFO: 0002  A12     : 0x3fff6c74  A13     : 0x4028625d
+2025-06-21T08:02:29.849854 [ESP8266]  INFO: A14     : 0
+2025-06-21T08:02:29.859934 [ESP8266]  INFO: x4026564e  A15     : 0x3fff6d10  SAR     : 0x0000001e  EXCCAUSE: 0x0000001d
+2025-06-21T08:02:29.859940 [ESP8266]  INFO: Backtrace: 0x
+2025-06-21T08:02:29.870019 [ESP8266]  INFO: 40215a8a:0x3fff6a50 0x40285cfc:0x3fff6a60 0x4028625d:0x3fff6b40
+2025-06-21T08:02:29.880100 [ESP8266]  INFO: Guru Meditation Error: Core  0 panic'ed (LoadStoreAlignment). Exception was unhandled.
+2025-06-21T08:02:29.880107 [ESP8266]  INFO: Core 0
+2025-06-21T08:02:29.890182 [ESP8266]  INFO: register dump:
+2025-06-21T08:02:29.890187 [ESP8266]  INFO: PC      : 0x4021eb51  PS      : 0x00000033  A0
+2025-06-21T08:02:29.900263 [ESP8266]  INFO: : 0x4021eac4  A1      : 0x3ffe8d40
+2025-06-21T08:02:29.900269 [ESP8266]  INFO: A2      : 0x0007624d
+2025-06-21T08:02:29.910349 [ESP8266]  INFO: A3      : 0x00000031  A4      : 0x3fff6c11  A5      : 0x3fff6c0d
+2025-06-21T08:02:29.910356 [ESP8266]  INFO: A6      : 0x000007fe  A7
+2025-06-21T08:02:29.920431 [ESP8266]  INFO: : 0x000000a1  A8      : 0x000000c0  A9      : 0x000000e0
+2025-06-21T08:02:29.930520 [ESP8266]  INFO: A10     : 0x40297248  A11     : 0x00000002  A12     : 0x4028625
+2025-06-21T08:02:29.940606 [ESP8266]  INFO: d  A13     : 0x3ffe8d84
+2025-06-21T08:02:29.940611 [ESP8266]  INFO: A14     : 0x40215a88  A15     : 0x40215a88  SAR     : 0x0000001f  EX
+2025-06-21T08:02:29.950695 [ESP8266]  INFO: CCAUSE: 0x00000009
+2025-06-21T08:02:29.950703 [ESP8266]  INFO: Backtrace: 0x4021eb51:0x3ffe8d40 0x402
+2025-06-21T08:02:29.960779 [ESP8266]  INFO: 15593:0x3ffe8d70 0x40100eec:0x3ffe8dc0 0x4021eac4:0x3ffe8de0
+2025-06-21T08:02:29.970866 [ESP8266]  INFO: @r-dP1M'γ	%yh)xP
+2025-06-21T08:02:29.980952 [ESP8266]  INFO: ʈP9E	)DP]	5@LA
+2025-06-21T08:02:29.980958 [ESP8266]  INFO: I~^-[P9e@|)5
+2025-06-21T08:02:29.980960 [ESP8266]  INFO: 1r
+2025-06-21T08:02:29.991038 [ESP8266]  INFO: HQ(JHi 1U
+2025-06-21T08:02:29.991044 [ESP8266]  INFO: A
+2025-06-21T08:02:29.991046 [ESP8266]  INFO: X	)@9A,
+2025-06-21T08:02:30.001149 [ESP8266]  INFO: Nz 	T	ү 1])G؛ PEVu
+2025-06-21T08:02:30.001154 [ESP8266]  INFO: 	5.S@ԇ tK)PG) !%Z'
+2025-06-21T08:02:30.011240 [ESP8266]  INFO: YQ	eJ	U 3oQ*lPz	)ΊP
+2025-06-21T08:02:30.011247 [ESP8266]  INFO: %z@)
+2025-06-21T08:02:30.011249 [ESP8266]  INFO: (JA	%yB7
+2025-06-21T08:02:30.021326 [ESP8266]  INFO: T!)ae-E	%y@+Pd)Xj	9%Z7-I@PPqy	E
+2025-06-21T08:02:30.031418 [ESP8266]  INFO: B	E %~w qV{	eJ	u%sJҥ !3P1T7ֻt
+2025-06-21T08:02:30.041506 [ESP8266]  INFO: J+*5 `oVXq !IAjL !1
+2025-06-21T08:02:30.041512 [ESP8266]  INFO: 1)PG5) !%s
+2025-06-21T08:02:30.051597 [ESP8266]  INFO: 1aG!5HP
+2025-06-21T08:02:30.051605 [ESP8266]  INFO: 1%!1%EB	%ZIR^ !!%.i#
+2025-06-21T08:02:30.061686 [ESP8266]  INFO: !1G1y	EB	%!-l|1$}eJ	=#yn!SP1DTXoX
+2025-06-21T08:02:30.071768 [ESP8266]  INFO: xn+G!yD5j	#yn!S1DTRT7P!!]5
+2025-06-21T08:02:30.081854 [ESP8266]  INFO: +ʁ5 h!X7nVP RX5LTe5X@@E)LE
+2025-06-21T08:02:30.091934 [ESP8266]  INFO: 5 h)Ju@ֵLreR\m		)IH)XJ
+2025-06-21T08:02:30.102018 [ESP8266]  INFO: 1#yn!q1DTXLX5N\9Em1	)IH)PG5) b%[
+2025-06-21T08:02:30.112105 [ESP8266]  INFO: [V%
+2025-06-21T08:02:30.112113 [ESP8266]  INFO: 1Lsq@-R1Y
+2025-06-21T08:02:30.142328 [ESP8266]  INFO: [ESP8266-MCP] ESP8
+2025-06-21T08:02:30.152420 [ESP8266]  INFO: 266-MCP starting up...[0m
+2025-06-21T08:02:30.152428 [ESP8266]  INFO: [ESP8266-MCP] [App start] Free heap: 90828 bytes, Min
+2025-06-21T08:02:30.162506 [ESP8266]  INFO: free: 88148 bytes, Stack remaining: 7304 bytes[0m
+2025-06-21T08:02:30.162511 [ESP8266]  INFO: [0;32mI (23
+2025-06-21T08:02:30.172589 [ESP8266]  INFO: [ESP8266-MCP] [After NVS init] Free heap: 90828 bytes, Min fre
+2025-06-21T08:02:30.182669 [ESP8266]  INFO: e: 88148 bytes, Stack remaining: 7304 bytes[0m
+2025-06-21T08:02:30.182674 [ESP8266]  INFO: [ESP8266-MCP] Initializing WiFi..
+2025-06-21T08:02:30.192757 [ESP8266]  INFO: .[0m
+2025-06-21T08:02:30.192764 [ESP8266]  INFO: [system_api] Base MAC address is not set, r
+2025-06-21T08:02:30.202842 [ESP8266]  INFO: ead default base MAC address from EFUSE[0m
+2025-06-21T08:02:30.202848 [ESP8266]  INFO: [0;32mI (272) syst
+2025-06-21T08:02:30.212932 [ESP8266]  INFO: em_api: Base MAC address is not set, read default base MAC address from EFUSE[0m
+2025-06-21T08:02:30.263284 [ESP8266]  INFO: phy_version: 1163.0, 665d56c, Jun 24 2020, 10:00:08, RTOS new
+2025-06-21T08:02:30.263293 [ESP8266]  INFO: 
+2025-06-21T08:02:30.273378 [ESP8266]  INFO: [phy_init] phy ver: 1163_0[0m
+2025-06-21T08:02:30.283471 [ESP8266]  INFO: [ESP8266-MCP] wifi_init_sta finished.[0m
+2025-06-21T08:02:30.404259 [ESP8266]  INFO: [wifi:state] 0 -> 2 (b0)
+2025-06-21T08:02:30.404269 [ESP8266]  INFO: [0m
+2025-06-21T08:02:30.434485 [ESP8266]  INFO: [wifi:state] 2 -> 3 (0)
+2025-06-21T08:02:30.434495 [ESP8266]  INFO: [0m
+2025-06-21T08:02:30.454648 [ESP8266]  INFO: [wifi:state] 3 -> 5 (10)
+2025-06-21T08:02:30.454658 [ESP8266]  INFO: [0m
+2025-06-21T08:02:30.474800 [ESP8266]  INFO: [0;32mI (552) wifi:connected with FBI Surveillance Van, aid = 1, channel 1, HT20, bssid = d8:6c
+2025-06-21T08:02:30.484879 [ESP8266]  INFO: :63:e6:14:02
+2025-06-21T08:02:30.484885 [ESP8266]  INFO: [0m
+2025-06-21T08:02:31.179390 [ESP8266]  INFO: [tcpip_adapter] s
+2025-06-21T08:02:31.189486 [ESP8266]  INFO: ta ip: 192.168.86.37, mask: 255.255.255.0, gw: 192.168.86.1[0m
+2025-06-21T08:02:31.189491 [ESP8266]  INFO: [ESP8266-MCP] go
+2025-06-21T08:02:31.199566 [ESP8266]  INFO: t ip:192.168.86.37[0m
+2025-06-21T08:02:31.199571 [ESP8266]  INFO: [ESP8266-MCP] connected t
+2025-06-21T08:02:31.209650 [ESP8266]  INFO: o ap SSID:FBI Surveillance Van[0m
+2025-06-21T08:02:31.209655 [ESP8266]  INFO: [ESP8266-MCP] [After WiFi init] Free heap: 63
+2025-06-21T08:02:31.219734 [ESP8266]  INFO: 732 bytes, Min free: 61332 bytes, Stack remaining: 6744 bytes[0
+2025-06-21T08:02:31.229835 [ESP8266]  INFO: m
+2025-06-21T08:02:31.229848 [ESP8266]  INFO: [0;32mI (1291) wifi:pm stop
+2025-06-21T08:02:31.229851 [ESP8266]  INFO: [0m[0;32mI (1296) ESP8266-MCP
+2025-06-21T08:02:31.239931 [ESP8266]  INFO: : WiFi connected, starting MCP server...[0m
+2025-06-21T08:02:31.239937 [ESP8266]  INFO: [ESP8266-MCP] [MCP task start] Free
+2025-06-21T08:02:31.250021 [ESP8266]  INFO: heap: 55412 bytes, Min free: 53820 bytes, Stack remaining: 8040
+2025-06-21T08:02:31.260101 [ESP8266]  INFO: bytes[0m
+2025-06-21T08:02:31.260105 [ESP8266]  INFO: [ESP8266-MCP] TinyMCP server listenin
+2025-06-21T08:02:31.270203 [ESP8266]  INFO: g on port 8080[0m
+2025-06-21T08:02:31.270213 [ESP8266]  INFO: [ESP8266-MCP] ESP8266-MCP ini
+2025-06-21T08:02:31.280303 [ESP8266]  INFO: tialization complete[0m
+2025-06-21T08:02:40.370312 [ CLIENT]  INFO: 🤖 ESP8266 MCP Client Test Script
+2025-06-21T08:02:40.370339 [ CLIENT]  INFO: ============================================================
+2025-06-21T08:02:40.370343 [ CLIENT]  INFO: Target: 192.168.86.37:8080
+2025-06-21T08:02:40.370345 [ CLIENT]  INFO: ============================================================
+2025-06-21T08:02:40.370348 [ CLIENT]  INFO: 🧪 Starting comprehensive MCP test suite...
+2025-06-21T08:02:40.370350 [ CLIENT]  INFO: ============================================================
+2025-06-21T08:02:40.370353 [ CLIENT]  INFO: 📡 TEST 1: Connection
+2025-06-21T08:02:40.370355 [ CLIENT]  INFO: 🔗 Connecting to MCP server at 192.168.86.37:8080...
+2025-06-21T08:02:40.370358 [ CLIENT]  INFO: ✅ Connected successfully!
+2025-06-21T08:02:40.370360 [ CLIENT]  INFO: 🚀 TEST 2: Initialization
+2025-06-21T08:02:40.370362 [ CLIENT]  INFO: 🚀 Initializing MCP session...
+2025-06-21T08:02:40.370365 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "1", "method": "initialize", "params": {"protocolVersion": "2024-11-05", "clientInfo": {"name": "ESP8266-MCP-Test-Client", "version": "1.0.0"}, "capabilities": {"roots": {"listChanged": false}, "sampling": {}}}}
+2025-06-21T08:02:40.370367 [ CLIENT]  INFO: 📤 Sent 237 bytes successfully
+2025-06-21T08:02:40.370369 [ CLIENT]  INFO: 📥 Waiting for response...
+2025-06-21T08:02:40.370372 [ CLIENT]  INFO: 📥 Received chunk: '{"jsonrpc":"2.0","id":"1","result":{"protocolVersion":"2024-11-05","serverInfo":{"name":"ESP8266-MCP","version":"1.0.0"},"capabilities":{"tools":{"listChanged":false}}}}\n'
+2025-06-21T08:02:40.370378 [ CLIENT]  INFO: 📥 Complete response received: {"jsonrpc":"2.0","id":"1","result":{"protocolVersion":"2024-11-05","serverInfo":{"name":"ESP8266-MCP","version":"1.0.0"},"capabilities":{"tools":{"listChanged":false}}}}
+2025-06-21T08:02:40.370380 [ CLIENT]  INFO: 📥 Parsing response: {"jsonrpc":"2.0","id":"1","result":{"protocolVersion":"2024-11-05","serverInfo":{"name":"ESP8266-MCP","version":"1.0.0"},"capabilities":{"tools":{"listChanged":false}}}}
+2025-06-21T08:02:40.370382 [ CLIENT]  INFO: ✅ Server initialized!
+2025-06-21T08:02:40.370384 [ CLIENT]  INFO: 📋 Server: ESP8266-MCP v1.0.0
+2025-06-21T08:02:40.370386 [ CLIENT]  INFO: 🔧 Protocol: 2024-11-05
+2025-06-21T08:02:40.370388 [ CLIENT]  INFO: 🛠️  Tools supported: False
+2025-06-21T08:02:40.370391 [ CLIENT]  INFO: 🏓 TEST 3: Ping
+2025-06-21T08:02:40.370393 [ CLIENT]  INFO: 🏓 Sending ping...
+2025-06-21T08:02:40.370395 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "2", "method": "ping"}
+2025-06-21T08:02:40.370397 [ CLIENT]  INFO: 📤 Sent 48 bytes successfully
+2025-06-21T08:02:40.370399 [ CLIENT]  INFO: 📥 Waiting for response...
+2025-06-21T08:02:40.370401 [ CLIENT]  INFO: ❌ Request failed: [Errno 104] Connection reset by peer
+2025-06-21T08:02:40.370403 [ CLIENT]  INFO: ❌ Ping failed!
+2025-06-21T08:02:40.370407 [ CLIENT]  INFO: 🔍 TEST 4: Tool Discovery
+2025-06-21T08:02:40.370409 [ CLIENT]  INFO: 🔍 Discovering available tools...
+2025-06-21T08:02:40.370411 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "3", "method": "tools/list"}
+2025-06-21T08:02:40.370413 [ CLIENT]  INFO: ❌ Request failed: [Errno 32] Broken pipe
+2025-06-21T08:02:40.370415 [ CLIENT]  INFO: 🔊 TEST 5: Echo Tool
+2025-06-21T08:02:40.370417 [ CLIENT]  INFO: 🔊 Echo Test 1/4
+2025-06-21T08:02:40.370419 [ CLIENT]  INFO: 🔧 Calling tool 'echo' with arguments: {'text': 'Hello ESP8266!'}
+2025-06-21T08:02:40.370421 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "4", "method": "tools/call", "params": {"name": "echo", "arguments": {"text": "Hello ESP8266!"}}}
+2025-06-21T08:02:40.370423 [ CLIENT]  INFO: ❌ Request failed: [Errno 32] Broken pipe
+2025-06-21T08:02:40.370424 [ CLIENT]  INFO: 🔊 Echo Test 2/4
+2025-06-21T08:02:40.370427 [ CLIENT]  INFO: 🔧 Calling tool 'echo' with arguments: {'text': 'Testing MCP protocol 🚀'}
+2025-06-21T08:02:40.370429 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "5", "method": "tools/call", "params": {"name": "echo", "arguments": {"text": "Testing MCP protocol \ud83d\ude80"}}}
+2025-06-21T08:02:40.370431 [ CLIENT]  INFO: ❌ Request failed: [Errno 32] Broken pipe
+2025-06-21T08:02:40.370433 [ CLIENT]  INFO: 🔊 Echo Test 3/4
+2025-06-21T08:02:40.370435 [ CLIENT]  INFO: 🔧 Calling tool 'echo' with arguments: {'text': 'Special characters: !@#$%^&*()'}
+2025-06-21T08:02:40.370437 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "6", "method": "tools/call", "params": {"name": "echo", "arguments": {"text": "Special characters: !@#$%^&*()"}}}
+2025-06-21T08:02:40.370439 [ CLIENT]  INFO: ❌ Request failed: [Errno 32] Broken pipe
+2025-06-21T08:02:40.370440 [ CLIENT]  INFO: 🔊 Echo Test 4/4
+2025-06-21T08:02:40.370442 [ CLIENT]  INFO: 🔧 Calling tool 'echo' with arguments: {'text': 'Multiple\nlines\ntest'}
+2025-06-21T08:02:40.370445 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "7", "method": "tools/call", "params": {"name": "echo", "arguments": {"text": "Multiple\nlines\ntest"}}}
+2025-06-21T08:02:40.370446 [ CLIENT]  INFO: ❌ Request failed: [Errno 32] Broken pipe
+2025-06-21T08:02:40.370448 [ CLIENT]  INFO: 📊 Echo test results: 0/4 passed
+2025-06-21T08:02:40.370450 [ CLIENT]  INFO: 🔌 TEST 6: GPIO Tool
+2025-06-21T08:02:40.370452 [ CLIENT]  INFO: 🔌 GPIO Test 1/6
+2025-06-21T08:02:40.370454 [ CLIENT]  INFO: 🔧 Calling tool 'gpio_control' with arguments: {'pin': 2, 'state': 'high'}
+2025-06-21T08:02:40.370456 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "8", "method": "tools/call", "params": {"name": "gpio_control", "arguments": {"pin": 2, "state": "high"}}}
+2025-06-21T08:02:40.370458 [ CLIENT]  INFO: ❌ Request failed: [Errno 32] Broken pipe
+2025-06-21T08:02:40.370459 [ CLIENT]  INFO: 🔌 GPIO Test 2/6
+2025-06-21T08:02:40.370461 [ CLIENT]  INFO: 🔧 Calling tool 'gpio_control' with arguments: {'pin': 2, 'state': 'low'}
+2025-06-21T08:02:40.370463 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "9", "method": "tools/call", "params": {"name": "gpio_control", "arguments": {"pin": 2, "state": "low"}}}
+2025-06-21T08:02:40.370465 [ CLIENT]  INFO: ❌ Request failed: [Errno 32] Broken pipe
+2025-06-21T08:02:40.370467 [ CLIENT]  INFO: 🔌 GPIO Test 3/6
+2025-06-21T08:02:40.370469 [ CLIENT]  INFO: 🔧 Calling tool 'gpio_control' with arguments: {'pin': 16, 'state': 'high'}
+2025-06-21T08:02:40.370471 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "10", "method": "tools/call", "params": {"name": "gpio_control", "arguments": {"pin": 16, "state": "high"}}}
+2025-06-21T08:02:40.370472 [ CLIENT]  INFO: ❌ Request failed: [Errno 32] Broken pipe
+2025-06-21T08:02:40.370474 [ CLIENT]  INFO: 🔌 GPIO Test 4/6
+2025-06-21T08:02:40.370476 [ CLIENT]  INFO: 🔧 Calling tool 'gpio_control' with arguments: {'pin': 16, 'state': 'low'}
+2025-06-21T08:02:40.370478 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "11", "method": "tools/call", "params": {"name": "gpio_control", "arguments": {"pin": 16, "state": "low"}}}
+2025-06-21T08:02:40.370480 [ CLIENT]  INFO: ❌ Request failed: [Errno 32] Broken pipe
+2025-06-21T08:02:40.370481 [ CLIENT]  INFO: 🔌 GPIO Test 5/6
+2025-06-21T08:02:40.370483 [ CLIENT]  INFO: 🔧 Calling tool 'gpio_control' with arguments: {'pin': 0, 'state': 'high'}
+2025-06-21T08:02:40.370485 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "12", "method": "tools/call", "params": {"name": "gpio_control", "arguments": {"pin": 0, "state": "high"}}}
+2025-06-21T08:02:40.370487 [ CLIENT]  INFO: ❌ Request failed: [Errno 32] Broken pipe
+2025-06-21T08:02:40.370489 [ CLIENT]  INFO: 🔌 GPIO Test 6/6
+2025-06-21T08:02:40.370494 [ CLIENT]  INFO: 🔧 Calling tool 'gpio_control' with arguments: {'pin': 0, 'state': 'low'}
+2025-06-21T08:02:40.370498 [ CLIENT]  INFO: ❌ Request failed: [Errno 32] Broken pipe
+2025-06-21T08:02:40.370500 [ CLIENT]  INFO: 📊 GPIO test results: 0/6 passed
+2025-06-21T08:02:40.370502 [ CLIENT]  INFO: ❌ TEST 7: Error Handling
+2025-06-21T08:02:40.370504 [ CLIENT]  INFO: Testing invalid tool call...
+2025-06-21T08:02:40.370506 [ CLIENT]  INFO: 🔧 Testing error case: tool 'nonexistent_tool' with arguments: {}
+2025-06-21T08:02:40.370513 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "14", "method": "tools/call", "params": {"name": "nonexistent_tool", "arguments": {}}}
+2025-06-21T08:02:40.370515 [ CLIENT]  INFO: ❌ Request failed: [Errno 32] Broken pipe
+2025-06-21T08:02:40.370517 [ CLIENT]  INFO: ❌ No response received (timeout)
+2025-06-21T08:02:40.370519 [ CLIENT]  INFO: ❌ TEST 8: Invalid Parameters
+2025-06-21T08:02:40.370520 [ CLIENT]  INFO: Testing invalid parameters...
+2025-06-21T08:02:40.370522 [ CLIENT]  INFO: 🔧 Testing error case: tool 'echo' with arguments: {'wrong_param': 'test'}
+2025-06-21T08:02:40.370524 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "15", "method": "tools/call", "params": {"name": "echo", "arguments": {"wrong_param": "test"}}}
+2025-06-21T08:02:40.370526 [ CLIENT]  INFO: ❌ Request failed: [Errno 32] Broken pipe
+2025-06-21T08:02:40.370528 [ CLIENT]  INFO: ❌ No response received (timeout)
+2025-06-21T08:02:40.370530 [ CLIENT]  INFO: ============================================================
+2025-06-21T08:02:40.370532 [ CLIENT]  INFO: 🏁 COMPREHENSIVE TEST RESULTS
+2025-06-21T08:02:40.370533 [ CLIENT]  INFO: ============================================================
+2025-06-21T08:02:40.370535 [ CLIENT]  INFO: ✅ PASS - Connection
+2025-06-21T08:02:40.370537 [ CLIENT]  INFO: ✅ PASS - Initialization
+2025-06-21T08:02:40.370539 [ CLIENT]  INFO: ❌ FAIL - Ping
+2025-06-21T08:02:40.370540 [ CLIENT]  INFO: ❌ FAIL - Tool Discovery
+2025-06-21T08:02:40.370542 [ CLIENT]  INFO: ❌ FAIL - Echo Tool
+2025-06-21T08:02:40.370544 [ CLIENT]  INFO: ❌ FAIL - GPIO Tool
+2025-06-21T08:02:40.370546 [ CLIENT]  INFO: ❌ FAIL - Error Handling
+2025-06-21T08:02:40.370547 [ CLIENT]  INFO: ❌ FAIL - Invalid Parameters
+2025-06-21T08:02:40.370550 [ CLIENT]  INFO: 📊 Overall Results: 2/8 tests passed
+2025-06-21T08:02:40.370551 [ CLIENT]  INFO: 🎯 Success Rate: 25.0%
+2025-06-21T08:02:40.370553 [ CLIENT]  INFO: ⚠️  Some tests failed. Check the server implementation.
+2025-06-21T08:02:40.370555 [ CLIENT]  INFO: 🔌 Disconnected from server
+2025-06-21T08:02:40.375012 [ CLIENT] ERROR: ❌ Test failed: test_mcp_client.py (exit code: 1)
+2025-06-21T08:02:42.375182 [ CLIENT]  TEST: 🔧 Testing echo tool with custom message
+2025-06-21T08:02:42.467479 [ CLIENT]  INFO: 📤 Sending echo request: Hello from integrated test demo!
+2025-06-21T08:02:42.488330 [ESP8266]  INFO: [ESP8266-MCP] Client connected from 192.168.86.32:48958[0m
+2025-06-21T08:02:42.488363 [ESP8266]  INFO: [0;32mI (12564) ES
+2025-06-21T08:02:42.498457 [ESP8266]  INFO: P8266-MCP: [Before MCP server creation] Free heap: 62828 bytes,
+2025-06-21T08:02:42.508539 [ESP8266]  INFO: Min free: 53244 bytes, Stack remaining: 7320 bytes[0m
+2025-06-21T08:02:42.508546 [ESP8266]  INFO: [0;32mI
+2025-06-21T08:02:42.518620 [ESP8266]  INFO: [ESP8266-MCP] Stack remaining before MCP server: 7320 bytes[0m
+2025-06-21T08:02:42.518628 [ESP8266]  INFO: [0;32mI (12586) EspSoc
+2025-06-21T08:02:42.528725 [ESP8266]  INFO: ketTransport: EspSocketTransport created with socket 55[0m
+2025-06-21T08:02:42.528738 [ESP8266]  INFO: [0
+2025-06-21T08:02:42.538827 [ESP8266]  INFO: [ESP8266-MCP] Stack remaining after transport creat
+2025-06-21T08:02:42.548917 [ESP8266]  INFO: ion: 7320 bytes[0m
+2025-06-21T08:02:42.548925 [ESP8266]  INFO: [MCPServer] MCPServer created[0m
+2025-06-21T08:02:42.548930 [ESP8266]  INFO: [0;32mI (12615) MCPServ
+2025-06-21T08:02:42.559009 [ESP8266]  INFO: er: MCPServer: Testing basic JSON creation...[0m
+2025-06-21T08:02:42.559016 [ESP8266]  INFO: [0;32mI (126
+2025-06-21T08:02:42.569103 [ESP8266]  INFO: [MCPServer] MCPServer: Basic JSON null value created successf
+2025-06-21T08:02:42.579194 [ESP8266]  INFO: ully[0m
+2025-06-21T08:02:42.579202 [ESP8266]  INFO: [MCPServer] MCPServer: JSON object created successfully[0m
+2025-06-21T08:02:42.579206 [ESP8266]  INFO: [0;32mI
+2025-06-21T08:02:42.589280 [ESP8266]  INFO: [MCPServer] MCPServer: JSON test passed during initializa
+2025-06-21T08:02:42.599364 [ESP8266]  INFO: tion[0m
+2025-06-21T08:02:42.599372 [ESP8266]  INFO: [ESP8266-MCP] Stack remaining after server creation: 7320 bytes[0m
+2025-06-21T08:02:42.599376 [ESP8266]  INFO: 
+2025-06-21T08:02:42.609452 [ESP8266]  INFO: [ESP8266-MCP] Starting C++ MCP server for client
+2025-06-21T08:02:42.619536 [ESP8266]  INFO: [0m
+2025-06-21T08:02:42.619544 [ESP8266]  INFO: [MCPServer] MCP Server starting...[0m
+2025-06-21T08:02:42.619548 [ESP8266]  INFO: [0
+2025-06-21T08:02:42.629635 [ESP8266]  INFO: [MCPServer] Debug: About to create std::string buffer[0m
+2025-06-21T08:02:42.629647 [ESP8266]  INFO: [0;32mI (12697) MCPServ
+2025-06-21T08:02:42.639727 [ESP8266]  INFO: er: Debug: Buffer created successfully[0m
+2025-06-21T08:02:42.639734 [ESP8266]  INFO: [0;32mI (12706) MCP
+2025-06-21T08:02:42.649809 [ESP8266]  INFO: Server: Debug: About to enter main loop[0m
+2025-06-21T08:02:42.649816 [ESP8266]  INFO: [0;32mI (12714) MC
+2025-06-21T08:02:42.659894 [ESP8266]  INFO: PServer: Debug: Loop iteration start[0m
+2025-06-21T08:02:42.659900 [ESP8266]  INFO: [MCPServer] Debug: About to call isCon
+2025-06-21T08:02:42.669991 [ESP8266]  INFO: nected()[0m
+2025-06-21T08:02:42.670002 [ESP8266]  INFO: [MCPServer] Debug: isConnected() r
+2025-06-21T08:02:42.680082 [ESP8266]  INFO: eturned: true[0m
+2025-06-21T08:02:42.680089 [ESP8266]  INFO: [MCPServer] Debug: About to c
+2025-06-21T08:02:42.690167 [ESP8266]  INFO: all transport->read()[0m
+2025-06-21T08:02:42.690174 [ESP8266]  INFO: [MCPServer] Debug: transport->read() returned: true[
+2025-06-21T08:02:42.700255 [ESP8266]  INFO: 0m
+2025-06-21T08:02:42.700263 [ESP8266]  INFO: [MCPServer] Debug: Read successful, buffer s
+2025-06-21T08:02:42.710353 [ESP8266]  INFO: ize: 141[0m
+2025-06-21T08:02:42.710367 [ESP8266]  INFO: [MCPServer] Debug: About to process message[0m
+2025-06-21T08:02:42.710371 [ESP8266]  INFO: [0;32mI (12779)
+2025-06-21T08:02:42.720453 [ESP8266]  INFO: entered[0m
+2025-06-21T08:02:42.720459 [ESP8266]  INFO: [0;32mI (12787)
+2025-06-21T08:02:42.730544 [ESP8266]  INFO: MCPServer: Debug: Message length: 141[0m
+2025-06-21T08:02:42.730552 [ESP8266]  INFO: [0;32mI (12796) MCP
+2025-06-21T08:02:42.740641 [ESP8266]  INFO: Server: Debug: About to create method/id/params strings[0m
+2025-06-21T08:02:42.740650 [ESP8266]  INFO: [MCPServer] Debug:
+2025-06-21T08:02:42.750728 [ESP8266]  INFO: Calling parseRequest[0m
+2025-06-21T08:02:42.750732 [ESP8266]  INFO: [MCPServer] Debug: par
+2025-06-21T08:02:42.760806 [ESP8266]  INFO: seRequest succeeded[0m
+2025-06-21T08:02:42.760810 [ESP8266]  INFO: [MCPServer] createError
+2025-06-21T08:02:42.770895 [ESP8266]  INFO: Response: Creating error response - id: 1, code: -32002, message: Server not initialized[0m
+2025-06-21T08:02:42.770903 [ESP8266]  INFO: ab
+2025-06-21T08:02:42.780988 [ESP8266]  INFO: ort() was called at PC 0x40285cf9 on core 0
+2025-06-21T08:02:42.780996 [ESP8266]  INFO: Guru Meditation Er
+2025-06-21T08:02:42.791071 [ESP8266]  INFO: ror: Core  0 panic'ed (StoreProhibited). Exception was unhandled
+2025-06-21T08:02:42.801163 [ESP8266]  INFO: .
+2025-06-21T08:02:42.801173 [ESP8266]  INFO: Core 0 register dump:
+2025-06-21T08:02:42.801176 [ESP8266]  INFO: PC      : 0x40215a8a  PS      : 0x00000030  A0      : 0x40215a88  A1
+2025-06-21T08:02:42.811253 [ESP8266]  INFO: : 0x3fff6aa0
+2025-06-21T08:02:42.811257 [ESP8266]  INFO: A2      : 0x00000000  A3      : 0xffffffdb
+2025-06-21T08:02:42.821341 [ESP8266]  INFO: A4      : 0x00000001  A5      : 0x00000001
+2025-06-21T08:02:42.821349 [ESP8266]  INFO: A6      : 0x00000000  A7      : 0x00000000  A8
+2025-06-21T08:02:42.831436 [ESP8266]  INFO: : 0x0000006e  A9      : 0x000000e0
+2025-06-21T08:02:42.831444 [ESP8266]  INFO: A10     : 0x4010755a
+2025-06-21T08:02:42.841523 [ESP8266]  INFO: A11     : 0x00000002  A12     : 0x3fff6cc4  A13     : 0x402862
+2025-06-21T08:02:42.851602 [ESP8266]  INFO: 5d
+2025-06-21T08:02:42.851607 [ESP8266]  INFO: A14     : 0x4026564e  A15     : 0x3fff6d60  SAR     : 0x0000001e  EXCCAUSE: 0x0000001d
+2025-06-21T08:02:42.861682 [ESP8266]  INFO: Backtrace: 0x40215a8a:0x3fff6aa0 0x40285cfc:0x3fff6ab0 0x40
+2025-06-21T08:02:42.871768 [ESP8266]  INFO: 28625d:0x3fff6b90 Guru Meditation Error: Core  0 panic'ed (LoadS
+2025-06-21T08:02:42.881852 [ESP8266]  INFO: toreAlignment). Exception was unhandled.
+2025-06-21T08:02:42.881857 [ESP8266]  INFO: Core 0 register dump:
+2025-06-21T08:02:42.881860 [ESP8266]  INFO: PC      : 0x4021eb51  PS
+2025-06-21T08:02:42.891938 [ESP8266]  INFO: A2
+2025-06-21T08:02:42.902015 [ESP8266]  INFO: : 0x0007624d  A3      : 0x00000031  A4      : 0x3fff6c61  A
+2025-06-21T08:02:42.912090 [ESP8266]  INFO: 5      : 0x3fff6c5d
+2025-06-21T08:02:42.912094 [ESP8266]  INFO: A6      : 0x000007fe  A7      : 0x000000a1  A8      : 0x000000c0  A9
+2025-06-21T08:02:42.922169 [ESP8266]  INFO: : 0x000000e0
+2025-06-21T08:02:42.922173 [ESP8266]  INFO: A10     : 0x4010755a  A11     : 0x00000002  A
+2025-06-21T08:02:42.932263 [ESP8266]  INFO: 12     : 0x4028625d  A13     : 0x3ffe8d84
+2025-06-21T08:02:42.932272 [ESP8266]  INFO: A14     : 0x40215a
+2025-06-21T08:02:42.942358 [ESP8266]  INFO: 88  A15     : 0x40215a88  SAR     : 0x0000001f  EXCCAUSE: 0x00000009
+2025-06-21T08:02:42.942366 [ESP8266]  INFO: Backtrace: 0x4021eb5
+2025-06-21T08:02:42.952441 [ESP8266]  INFO: 1:0x3ffe8d40 0x40215593:0x3ffe8d70 0x40100eec:0x3ffe8dc0 0x4021e
+2025-06-21T08:02:42.962517 [ESP8266]  INFO: ac4:0x3ffe8de0
+2025-06-21T08:02:42.962521 [ESP8266]  INFO: @
+2025-06-21T08:02:42.962523 [ESP8266]  INFO: n MT'uBy)Q*	O8
+2025-06-21T08:02:42.972614 [ESP8266]  INFO: T5V-A
+2025-06-21T08:02:42.972625 [ESP8266]  INFO: 1	)=5Y*
+2025-06-21T08:02:42.982701 [ESP8266]  INFO: LAl
+2025-06-21T08:02:42.982705 [ESP8266]  INFO: I\-YP9g1@5% y !nzC KP9C
+2025-06-21T08:02:42.982707 [ESP8266]  INFO: e@|P!
+2025-06-21T08:02:42.992782 [ESP8266]  INFO: LRP	غA,%Aҧ 9])EB	U %~wBED55t5Ѝ qN
+2025-06-21T08:02:42.992788 [ESP8266]  INFO: ʉ-EB	U %!
+2025-06-21T08:02:43.002877 [ESP8266]  INFO: ~YMTuD5U)X5j	=3m#rPY|I@A@)%+*
+2025-06-21T08:02:43.002886 [ESP8266]  INFO: JA	%yJ7
+2025-06-21T08:02:43.012963 [ESP8266]  INFO: T)ay	eJ	!%[
+2025-06-21T08:02:43.012967 [ESP8266]  INFO:  3mG5 PD^w@AC
+2025-06-21T08:02:43.012970 [ESP8266]  INFO: APE
+2025-06-21T08:02:43.023045 [ESP8266]  INFO: /E	%yPzALQm)P%JC%sJХ !3P1V7ԛ
+2025-06-21T08:02:43.033164 [ESP8266]  INFO: !)nYEB	%!-ZIAj !
+2025-06-21T08:02:43.033173 [ESP8266]  INFO: )Xj	%[
+2025-06-21T08:02:43.043253 [ESP8266]  INFO: 1iA!5J !
+2025-06-21T08:02:43.043258 [ESP8266]  INFO: %11**5 hD%y5%.ak
+2025-06-21T08:02:43.053349 [ESP8266]  INFO: #G)Xj	%Y.lT/LXL[1.ʉ-E(#OYn
+2025-06-21T08:02:43.063435 [ESP8266]  INFO: SP1DTX\9e	)ʉ
+2025-06-21T08:02:43.063440 [ESP8266]  INFO: (%JCB
+2025-06-21T08:02:43.063442 [ESP8266]  INFO: nTQ
+2025-06-21T08:02:43.073553 [ESP8266]  INFO: @1N\9RT9E@P^9EE@E5
+2025-06-21T08:02:43.073567 [ESP8266]  INFO: PHE)SVvs 1LT
+2025-06-21T08:02:43.083659 [ESP8266]  INFO: 5N
+2025-06-21T08:02:43.083666 [ESP8266]  INFO: ^9e7P!@@)AJ)P%JAB!#OYnl\PX
+2025-06-21T08:02:43.093743 [ESP8266]  INFO: 15N
+2025-06-21T08:02:43.093747 [ESP8266]  INFO: ^9EoX!()CJ+(JAB!I5d޷9LrGR
+2025-06-21T08:02:43.103836 [ESP8266]  INFO: \1^9=o)IH)PG5) %[[T-~1L[#ԻZQ
+2025-06-21T08:02:43.144167 [ESP8266]  INFO: [ESP8266-MCP] ESP8266-MCP starting up...[0m
+2025-06-21T08:02:43.144179 [ESP8266]  INFO: [ESP8266-MCP] [App sta
+2025-06-21T08:02:43.154257 [ESP8266]  INFO: rt] Free heap: 90828 bytes, Min free: 88148 bytes, Stack remaini
+2025-06-21T08:02:43.164344 [ESP8266]  INFO: ng: 7304 bytes[0m
+2025-06-21T08:02:43.164352 [ESP8266]  INFO: [ESP8266-MCP] [After NVS init] Free heap: 90828 bytes, Min fre
+2025-06-21T08:02:43.174439 [ESP8266]  INFO: e: 88148 bytes, Stack remaining: 7304 bytes[0m
+2025-06-21T08:02:43.174447 [ESP8266]  INFO: [0;32mI (250)
+2025-06-21T08:02:43.184522 [ESP8266]  INFO: ESP8266-MCP: Initializing WiFi...[0m
+2025-06-21T08:02:43.184526 [ESP8266]  INFO: [0;32mI (259) system_api
+2025-06-21T08:02:43.194598 [ESP8266]  INFO: : Base MAC address is not set, read default base MAC address from EFUSE[0m
+2025-06-21T08:02:43.194603 [ESP8266]  INFO: [0;32mI (272) syst
+2025-06-21T08:02:43.204685 [ESP8266]  INFO: em_api: Base MAC address is not set, read default base MAC addre
+2025-06-21T08:02:43.214768 [ESP8266]  INFO: ss from EFUSE[0m
+2025-06-21T08:02:43.255051 [ESP8266]  INFO: phy_version: 1163.0, 665d56c, Ju
+2025-06-21T08:02:43.265160 [ESP8266]  INFO: n 24 2020, 10:00:08, RTOS new
+2025-06-21T08:02:43.265168 [ESP8266]  INFO: [phy_init] phy ver:
+2025-06-21T08:02:43.275254 [ESP8266]  INFO: 1163_0[0m
+2025-06-21T08:02:43.275262 [ESP8266]  INFO: [ESP8266-MCP] wifi
+2025-06-21T08:02:43.285341 [ESP8266]  INFO: _init_sta finished.[0m
+2025-06-21T08:02:43.396054 [ESP8266]  INFO: [wifi:state] 0 ->
+2025-06-21T08:02:43.406140 [ESP8266]  INFO: 2 (b0)
+2025-06-21T08:02:43.406145 [ESP8266]  INFO: [0m
+2025-06-21T08:02:43.426282 [ESP8266]  INFO: [wifi:state] 2 -> 3 (0)
+2025-06-21T08:02:43.426288 [ESP8266]  INFO: [0m
+2025-06-21T08:02:43.436380 [ESP8266]  INFO: [wifi:state] 3 ->
+2025-06-21T08:02:43.446466 [ESP8266]  INFO: 5 (10)
+2025-06-21T08:02:43.446471 [ESP8266]  INFO: [0m
+2025-06-21T08:02:43.526997 [ESP8266]  INFO: [0;32mI (613) wifi:connected with FBI Surveillance Van, aid = 1
+2025-06-21T08:02:43.537088 [ESP8266]  INFO: , channel 1, HT20, bssid = d8:6c:63:e6:14:02
+2025-06-21T08:02:43.537097 [ESP8266]  INFO: [0m
+2025-06-21T08:02:44.674598 [ESP8266]  INFO: [tcpip_adapter] sta ip: 192.168.86.37, mask: 255.
+2025-06-21T08:02:44.684721 [ESP8266]  INFO: 255.255.0, gw: 192.168.86.1[0m
+2025-06-21T08:02:44.684737 [ESP8266]  INFO: [ESP8266-MCP] go
+2025-06-21T08:02:44.694825 [ESP8266]  INFO: t ip:192.168.86.37[0m
+2025-06-21T08:02:44.694833 [ESP8266]  INFO: [ESP8266-MCP] connected t
+2025-06-21T08:02:44.704923 [ESP8266]  INFO: o ap SSID:FBI Surveillance Van[0m
+2025-06-21T08:02:44.704932 [ESP8266]  INFO: [ESP8266-MCP] [After WiFi init] Free heap: 63
+2025-06-21T08:02:44.715018 [ESP8266]  INFO: 732 bytes, Min free: 61332 bytes, Stack remaining: 6744 bytes[0
+2025-06-21T08:02:44.725107 [ESP8266]  INFO: m
+2025-06-21T08:02:44.725116 [ESP8266]  INFO: [0;32mI (1790) wifi:pm stop
+2025-06-21T08:02:44.725119 [ESP8266]  INFO: [ESP8266-MCP] WiFi connected, starting MCP s
+2025-06-21T08:02:44.735263 [ESP8266]  INFO: erver...[0m
+2025-06-21T08:02:44.735275 [ESP8266]  INFO: [ESP8266-MCP] [MCP task start] Free
+2025-06-21T08:02:44.745361 [ESP8266]  INFO: heap: 55412 bytes, Min free: 53820 bytes, Stack remaining: 8040
+2025-06-21T08:02:44.755476 [ESP8266]  INFO: bytes[0m
+2025-06-21T08:02:44.755490 [ESP8266]  INFO: [ESP8266-MCP] TinyMCP server listening on port 8080[0m
+2025-06-21T08:02:44.755494 [ESP8266]  INFO: [0;32mI (18
+2025-06-21T08:02:44.765574 [ESP8266]  INFO: [ESP8266-MCP] ESP8266-MCP initialization complete[0m
+2025-06-21T08:02:47.472168 [ CLIENT] ERROR: ❌ Echo test failed: timed out
+2025-06-21T08:02:49.472298 [ CLIENT]  TEST: 🔄 Sending ping request #1
+2025-06-21T08:02:49.658765 [ESP8266]  INFO: [ESP8266-MCP] Cli
+2025-06-21T08:02:49.668877 [ESP8266]  INFO: ent connected from 192.168.86.32:48966[0m
+2025-06-21T08:02:49.668887 [ESP8266]  INFO: [0;32mI (6748) ESP8
+2025-06-21T08:02:49.678967 [ESP8266]  INFO: 266-MCP: [Before MCP server creation] Free heap: 62840 bytes, Mi
+2025-06-21T08:02:49.689058 [ESP8266]  INFO: n free: 53244 bytes, Stack remaining: 7320 bytes[0m
+2025-06-21T08:02:49.689066 [ESP8266]  INFO: [ESP8266-MCP] Stack remaini
+2025-06-21T08:02:49.699155 [ESP8266]  INFO: ng before MCP server: 7320 bytes[0m
+2025-06-21T08:02:49.699165 [ESP8266]  INFO: [0;32mI (6770) EspSocketT
+2025-06-21T08:02:49.709255 [ESP8266]  INFO: ransport: EspSocketTransport created with socket 55[0m
+2025-06-21T08:02:49.709262 [ESP8266]  INFO: [0;32m
+2025-06-21T08:02:49.719353 [ESP8266]  INFO: [ESP8266-MCP] Stack remaining after transport creation: 7320 bytes[0m
+2025-06-21T08:02:49.719366 [ESP8266]  INFO: [0;32mI (6793)
+2025-06-21T08:02:49.729440 [ESP8266]  INFO: MCPServer: MCPServer created[0m
+2025-06-21T08:02:49.729444 [ESP8266]  INFO: [MCPServer] MCP
+2025-06-21T08:02:49.739539 [ESP8266]  INFO: Server: Testing basic JSON creation...[0m
+2025-06-21T08:02:49.739549 [ESP8266]  INFO: [0;32mI (6809) MCPS
+2025-06-21T08:02:49.749626 [ESP8266]  INFO: erver: MCPServer: Basic JSON null value created successfully[0m
+2025-06-21T08:02:49.749630 [ESP8266]  INFO: [MCPServer] MCP
+2025-06-21T08:02:49.759708 [ESP8266]  INFO: Server: JSON object created successfully[0m
+2025-06-21T08:02:49.759713 [ESP8266]  INFO: [0;32mI (6831) MC
+2025-06-21T08:02:49.769785 [ESP8266]  INFO: PServer: MCPServer: JSON test passed during initialization[0m
+2025-06-21T08:02:49.769789 [ESP8266]  INFO: [ESP8266-MCP] Sta
+2025-06-21T08:02:49.779878 [ESP8266]  INFO: ck remaining after server creation: 7320 bytes[0m
+2025-06-21T08:02:49.779886 [ESP8266]  INFO: [0;32mI (68
+2025-06-21T08:02:49.789965 [ESP8266]  INFO: [ESP8266-MCP] Starting C++ MCP server for client[0m
+2025-06-21T08:02:49.789972 [ESP8266]  INFO: [0;32m
+2025-06-21T08:02:49.800075 [ESP8266]  INFO: [MCPServer] MCP Server starting...[0m
+2025-06-21T08:02:49.800088 [ESP8266]  INFO: [MCPServer] Debug: About to creat
+2025-06-21T08:02:49.810174 [ESP8266]  INFO: e std::string buffer[0m
+2025-06-21T08:02:49.820288 [ESP8266]  INFO: er created successfully[0m
+2025-06-21T08:02:49.820296 [ESP8266]  INFO: [MCPServer] Debug: A
+2025-06-21T08:02:49.830486 [ESP8266]  INFO: bout to enter main loop[0m
+2025-06-21T08:02:49.830528 [ESP8266]  INFO: [MCPServer] Debug: Loop iteration start[0m
+2025-06-21T08:02:49.830535 [ESP8266]  INFO: [0;32m
+2025-06-21T08:02:49.840704 [ESP8266]  INFO: [MCPServer] Debug: About to call isConnected()[0m
+2025-06-21T08:02:49.840734 [ESP8266]  INFO: [0;
+2025-06-21T08:02:49.850814 [ESP8266]  INFO: [MCPServer] Debug: isConnected() returned: true[0m
+2025-06-21T08:02:49.860899 [ESP8266]  INFO: [MCPServer] Debug: About to call transport->read()[0m
+2025-06-21T08:02:49.860905 [ESP8266]  INFO: [0;32mI (6933) MCPServer
+2025-06-21T08:02:49.870995 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:02:49.871006 [ESP8266]  INFO: [0;32mI (6943) M
+2025-06-21T08:02:49.881094 [ESP8266]  INFO: CPServer: Debug: Read successful, buffer size: 46[0m
+2025-06-21T08:02:49.881101 [ESP8266]  INFO: [MCPServer] Debug: About t
+2025-06-21T08:02:49.891178 [ESP8266]  INFO: o process message[0m
+2025-06-21T08:02:49.891183 [ESP8266]  INFO: [MCPServer] Debug: process
+2025-06-21T08:02:49.901258 [ESP8266]  INFO: Message() entered[0m
+2025-06-21T08:02:49.901263 [ESP8266]  INFO: [MCPServer] Debug: Message
+2025-06-21T08:02:49.911344 [ESP8266]  INFO: length: 46[0m
+2025-06-21T08:02:49.911349 [ESP8266]  INFO: [MCPServer] Debug: About to create method/id/params strings[0m
+2025-06-21T08:02:49.921447 [ESP8266]  INFO: [MCPServer] Debug: Calling parseRequest[0m
+2025-06-21T08:02:49.921457 [ESP8266]  INFO: [0
+2025-06-21T08:02:49.931550 [ESP8266]  INFO: [MCPServer] Debug: parseRequest succeeded[0m
+2025-06-21T08:02:49.931561 [ESP8266]  INFO: abort
+2025-06-21T08:02:49.941678 [ESP8266]  INFO: () was called at PC 0x40285cf9 on core 0
+2025-06-21T08:02:49.941692 [ESP8266]  INFO: Guru Meditation Error: Core  0 panic'ed (StoreProhibi
+2025-06-21T08:02:49.951783 [ESP8266]  INFO: ted). Exception was unhandled.
+2025-06-21T08:02:49.951789 [ESP8266]  INFO: Core 0 register dump:
+2025-06-21T08:02:49.951791 [ESP8266]  INFO: PC
+2025-06-21T08:02:49.961867 [ESP8266]  INFO: : 0x40215a8a  PS      : 0x00000030  A0      : 0x40215a88  A1
+2025-06-21T08:02:49.971942 [ESP8266]  INFO: : 0x3fff6a50
+2025-06-21T08:02:49.971946 [ESP8266]  INFO: A2      : 0x00000000  A3      : 0xffffffdb  A4      : 0x00000001  A5      : 0
+2025-06-21T08:02:49.982019 [ESP8266]  INFO: x00000001
+2025-06-21T08:02:49.982023 [ESP8266]  INFO: A6      : 0x00000000  A7      : 0x00000000  A8
+2025-06-21T08:02:49.994189 [ESP8266]  INFO: : 0x0000006e  A9      : 0x000000e0
+2025-06-21T08:02:49.994208 [ESP8266]  INFO: A10     : 0x40297248  A11     : 0x00000002  A12     : 0
+2025-06-21T08:02:50.004332 [ESP8266]  INFO: x3fff6c74  A13     : 0x4028625d
+2025-06-21T08:02:50.004348 [ESP8266]  INFO: A14     : 0x4026564e  A15
+2025-06-21T08:02:50.014434 [ESP8266]  INFO: : 0x3fff6d10  SAR     : 0x0000001e  EXCCAUSE: 0x0000001d
+2025-06-21T08:02:50.014439 [ESP8266]  INFO: Backtrace: 0x40215a8a:0x3fff6a
+2025-06-21T08:02:50.024523 [ESP8266]  INFO: 50 0x40285cfc:0x3fff6a60 0x4028625d:0x3fff6b40 Guru Meditation E
+2025-06-21T08:02:50.034635 [ESP8266]  INFO: rror: Core  0 panic'ed (LoadStoreAlignment). Exception was unhandled.
+2025-06-21T08:02:50.034649 [ESP8266]  INFO: Core 0 register dump:
+2025-06-21T08:02:50.034652 [ESP8266]  INFO: P
+2025-06-21T08:02:50.044736 [ESP8266]  INFO: C      : 0x4021eb51  PS      : 0x00000033  A0      : 0x4021eac4
+2025-06-21T08:02:50.054826 [ESP8266]  INFO: A1      : 0x3ffe8d40
+2025-06-21T08:02:50.054832 [ESP8266]  INFO: A2      : 0x0007624d  A3      : 0x0000
+2025-06-21T08:02:50.064913 [ESP8266]  INFO: 0031  A4      : 0x3fff6c11  A5      : 0x3fff6c0d
+2025-06-21T08:02:50.064918 [ESP8266]  INFO: A6      : 0x000007fe  A7      : 0x000000a1
+2025-06-21T08:02:50.074996 [ESP8266]  INFO: A8      : 0x000000c0  A9      : 0x000000e0
+2025-06-21T08:02:50.075002 [ESP8266]  INFO: A10     : 0x4029
+2025-06-21T08:02:50.085172 [ESP8266]  INFO: 7248  A11     : 0x00000002  A12     : 0x4028625d  A13     : 0x3f
+2025-06-21T08:02:50.095352 [ESP8266]  INFO: fe8d84
+2025-06-21T08:02:50.095377 [ESP8266]  INFO: A14     : 0x40215a88  A15     : 0x40215a88  SAR     : 0x0000001f  EXCCAUSE: 0x0000000
+2025-06-21T08:02:50.105526 [ESP8266]  INFO: 9
+2025-06-21T08:02:50.105554 [ESP8266]  INFO: Backtrace: 0x4021eb51:0x3ffe8d40 0x40215593:0x3ffe8d70
+2025-06-21T08:02:50.115643 [ESP8266]  INFO: 0x40100eec:0x3ffe8dc0 0x4021eac4:0x3ffe8de0
+2025-06-21T08:02:50.125727 [ESP8266]  INFO: @r-DPM\'X% QTE
+2025-06-21T08:02:50.125732 [ESP8266]  INFO: 5߈DN 9E	)DP])5S@
+2025-06-21T08:02:50.135808 [ESP8266]  INFO: LPA
+2025-06-21T08:02:50.135812 [ESP8266]  INFO: i
+2025-06-21T08:02:50.135815 [ESP8266]  INFO: 1T'YN 1gS% ~
+2025-06-21T08:02:50.145891 [ESP8266]  INFO: SJi 1RKTe@PNZ 	kA	 9_(%JA%~w
+2025-06-21T08:02:50.156010 [ESP8266]  INFO: BMF55t5Ѝ qN
+2025-06-21T08:02:50.156029 [ESP8266]  INFO: ʉ-E	(~YO
+2025-06-21T08:02:50.156031 [ESP8266]  INFO: uDy	EB	]1oQ*l
+2025-06-21T08:02:50.166131 [ESP8266]  INFO: N%z@)%EJ	!%s
+2025-06-21T08:02:50.166140 [ESP8266]  INFO: 7և !9+kE5PXFVu@AmP!
+2025-06-21T08:02:50.176222 [ESP8266]  INFO: K+*
+2025-06-21T08:02:50.176228 [ESP8266]  INFO: JA	%yB%C
+2025-06-21T08:02:50.176230 [ESP8266]  INFO: AP	E/E(	%~w 䋊qu)Xj	9
+2025-06-21T08:02:50.186316 [ESP8266]  INFO: %[I
+2025-06-21T08:02:50.186322 [ESP8266]  INFO: !V!XV7QIPS\eJ	%Zy-!KAH
+2025-06-21T08:02:50.196422 [ESP8266]  INFO: LP
+2025-06-21T08:02:50.196431 [ESP8266]  INFO: )Xj	!%Z
+2025-06-21T08:02:50.196433 [ESP8266]  INFO: 1aG!5HP
+2025-06-21T08:02:50.196435 [ESP8266]  INFO: %
+2025-06-21T08:02:50.206535 [ESP8266]  INFO: yDj	%Y%.a,MP EQCJAH
+2025-06-21T08:02:50.206546 [ESP8266]  INFO: ^w
+2025-06-21T08:02:50.216647 [ESP8266]  INFO: V	1LY1.ʉ-E( #I5OP1DTXmE
+2025-06-21T08:02:50.226757 [ESP8266]  INFO:  pN))Xj	!X7lԵlt99T\97P!u
+2025-06-21T08:02:50.236868 [ESP8266]  INFO: )j	#Z7nTR1PePZ17P)IH)P
+2025-06-21T08:02:50.246979 [ESP8266]  INFO: G5) b#X7n\!R1PReP\1m1	)rw
+2025-06-21T08:02:50.246991 [ESP8266]  INFO: +xj
+2025-06-21T08:02:50.257094 [ESP8266]  INFO: !Z7nVPu RXPET1oe@)ʉ/G؛ H	%y
+2025-06-21T08:02:50.267203 [ESP8266]  INFO: YvP%T1Lq|!t׊P91)
+2025-06-21T08:02:50.297547 [ESP8266]  INFO: [ESP8266-MCP] ESP8266-MCP starting up...[0m
+2025-06-21T08:02:50.297605 [ESP8266]  INFO: [0;
+2025-06-21T08:02:50.307702 [ESP8266]  INFO: [ESP8266-MCP] [App start] Free heap: 90828 bytes, Min
+2025-06-21T08:02:50.317793 [ESP8266]  INFO: free: 88148 bytes, Stack remaining: 7304 bytes[0m
+2025-06-21T08:02:50.317799 [ESP8266]  INFO: [ESP8266-MCP] [After NVS init]
+2025-06-21T08:02:50.327876 [ESP8266]  INFO: Free heap: 90828 bytes, Min free: 88148 bytes, Stack remaining:
+2025-06-21T08:02:50.337964 [ESP8266]  INFO: 7304 bytes[0m
+2025-06-21T08:02:50.337972 [ESP8266]  INFO: [ESP8266-MCP] Initializing WiFi..
+2025-06-21T08:02:50.348066 [ESP8266]  INFO: .[0m
+2025-06-21T08:02:50.348076 [ESP8266]  INFO: [system_api] Base MAC address is not set, read default base MAC address fro
+2025-06-21T08:02:50.358152 [ESP8266]  INFO: m EFUSE[0m
+2025-06-21T08:02:50.358158 [ESP8266]  INFO: [system_api] Base MAC address is not
+2025-06-21T08:02:50.368237 [ESP8266]  INFO: set, read default base MAC address from EFUSE[0m
+2025-06-21T08:02:50.418581 [ESP8266]  INFO: phy_version: 1163.0, 665d56c, Jun 24 2020, 10:00:08, RTOS new
+2025-06-21T08:02:50.418589 [ESP8266]  INFO: [phy_init] phy ver:
+2025-06-21T08:02:50.428667 [ESP8266]  INFO: 1163_0[0m
+2025-06-21T08:02:50.428673 [ESP8266]  INFO: [ESP8266-MCP] wifi
+2025-06-21T08:02:50.438758 [ESP8266]  INFO: _init_sta finished.[0m
+2025-06-21T08:02:50.559550 [ESP8266]  INFO: [wifi:state] 0 -> 2 (b0)
+2025-06-21T08:02:50.559560 [ESP8266]  INFO: [0m
+2025-06-21T08:02:50.579702 [ESP8266]  INFO: [wifi:state] 2 -> 3 (0)
+2025-06-21T08:02:50.579710 [ESP8266]  INFO: [0m
+2025-06-21T08:02:50.589784 [ESP8266]  INFO: [wifi:state] 3 -> 5 (10)
+2025-06-21T08:02:50.589789 [ESP8266]  INFO: [0m
+2025-06-21T08:02:50.690499 [ESP8266]  INFO: [0;32mI (620) wifi:connected wi
+2025-06-21T08:02:50.700591 [ESP8266]  INFO: th FBI Surveillance Van, aid = 1, channel 1, HT20, bssid = d8:6c:63:e6:14:02
+2025-06-21T08:02:50.700597 [ESP8266]  INFO: [0m
+2025-06-21T08:02:51.837800 [ESP8266]  INFO: [tcpip_adapter] s
+2025-06-21T08:02:51.847893 [ESP8266]  INFO: ta ip: 192.168.86.37, mask: 255.255.255.0, gw: 192.168.86.1[0m
+2025-06-21T08:02:51.857973 [ESP8266]  INFO: [ESP8266-MCP] got ip:192.168.86.37[0m
+2025-06-21T08:02:51.857979 [ESP8266]  INFO: [ESP8266-MCP] connected t
+2025-06-21T08:02:51.868056 [ESP8266]  INFO: o ap SSID:FBI Surveillance Van[0m
+2025-06-21T08:02:51.868061 [ESP8266]  INFO: [0;32mI (1782) ESP8266-MCP:
+2025-06-21T08:02:51.878165 [ESP8266]  INFO: [After WiFi init] Free heap: 63596 bytes, Min free: 61332 bytes
+2025-06-21T08:02:51.888244 [ESP8266]  INFO: , Stack remaining: 6744 bytes[0m
+2025-06-21T08:02:51.888250 [ESP8266]  INFO: [0m[0;32mI (1803) ESP8266-MCP
+2025-06-21T08:02:51.898326 [ESP8266]  INFO: : WiFi connected, starting MCP server...[0m
+2025-06-21T08:02:51.898332 [ESP8266]  INFO: [0;32mI (1813) ES
+2025-06-21T08:02:51.908416 [ESP8266]  INFO: P8266-MCP: [MCP task start] Free heap: 55276 bytes, Min free: 53820 bytes, Stack remaining: 8040
+2025-06-21T08:02:51.918500 [ESP8266]  INFO: bytes[0m
+2025-06-21T08:02:51.918505 [ESP8266]  INFO: [ESP8266-MCP] TinyMCP server listenin
+2025-06-21T08:02:51.928582 [ESP8266]  INFO: g on port 8080[0m
+2025-06-21T08:02:51.928586 [ESP8266]  INFO: [ESP8266-MCP] ESP8266-MCP ini
+2025-06-21T08:02:51.938674 [ESP8266]  INFO: tialization complete[0m
+2025-06-21T08:02:54.653808 [ CLIENT] ERROR: ❌ Ping #1 failed: timed out
+2025-06-21T08:02:55.653943 [ CLIENT]  TEST: 🔄 Sending ping request #2
+2025-06-21T08:03:00.604342 [ESP8266]  INFO: [ESP8266-MCP] Client connected from 192.168.86.32:60188[0m
+2025-06-21T08:03:00.604373 [ESP8266]  INFO: [0;32mI (10528) ES
+2025-06-21T08:03:00.614455 [ESP8266]  INFO: P8266-MCP: [Before MCP server creation] Free heap: 62704 bytes,
+2025-06-21T08:03:00.624539 [ESP8266]  INFO: Min free: 52936 bytes, Stack remaining: 7320 bytes[0m
+2025-06-21T08:03:00.624546 [ESP8266]  INFO: [0;32mI
+2025-06-21T08:03:00.634623 [ESP8266]  INFO: [ESP8266-MCP] Stack remaining before MCP server: 7320 bytes[0m
+2025-06-21T08:03:00.634631 [ESP8266]  INFO: [0;32mI (10549) EspSoc
+2025-06-21T08:03:00.644733 [ESP8266]  INFO: ketTransport: EspSocketTransport created with socket 55[0m
+2025-06-21T08:03:00.644752 [ESP8266]  INFO: [0
+2025-06-21T08:03:00.654847 [ESP8266]  INFO: [ESP8266-MCP] Stack remaining after transport creat
+2025-06-21T08:03:00.664938 [ESP8266]  INFO: ion: 7320 bytes[0m
+2025-06-21T08:03:00.664942 [ESP8266]  INFO: [MCPServer] MCPServer created[0m
+2025-06-21T08:03:00.664946 [ESP8266]  INFO: [0;32mI (10579) MCPServ
+2025-06-21T08:03:00.675020 [ESP8266]  INFO: er: MCPServer: Testing basic JSON creation...[0m
+2025-06-21T08:03:00.675024 [ESP8266]  INFO: [0;32mI (105
+2025-06-21T08:03:00.685103 [ESP8266]  INFO: [MCPServer] MCPServer: Basic JSON null value created successf
+2025-06-21T08:03:00.695175 [ESP8266]  INFO: ully[0m
+2025-06-21T08:03:00.695189 [ESP8266]  INFO: [MCPServer] MCPServer: JSON object created successfully[0m
+2025-06-21T08:03:00.695194 [ESP8266]  INFO: [0;32mI
+2025-06-21T08:03:00.705285 [ESP8266]  INFO: [MCPServer] MCPServer: JSON test passed during initializa
+2025-06-21T08:03:00.715372 [ESP8266]  INFO: tion[0m
+2025-06-21T08:03:00.715377 [ESP8266]  INFO: [ESP8266-MCP] Stack remaining after server creation: 7320 bytes[0m
+2025-06-21T08:03:00.715381 [ESP8266]  INFO: 
+2025-06-21T08:03:00.725455 [ESP8266]  INFO: [ESP8266-MCP] Starting C++ MCP server for client
+2025-06-21T08:03:00.735547 [ESP8266]  INFO: [0m
+2025-06-21T08:03:00.735557 [ESP8266]  INFO: [MCPServer] MCP Server starting...[0m
+2025-06-21T08:03:00.735560 [ESP8266]  INFO: [0
+2025-06-21T08:03:00.745635 [ESP8266]  INFO: [MCPServer] Debug: About to create std::string buffer[0m
+2025-06-21T08:03:00.745640 [ESP8266]  INFO: [0;32mI (10660) MCPServ
+2025-06-21T08:03:00.755744 [ESP8266]  INFO: er: Debug: Buffer created successfully[0m
+2025-06-21T08:03:00.755755 [ESP8266]  INFO: [0;32mI (10669) MCP
+2025-06-21T08:03:00.765831 [ESP8266]  INFO: Server: Debug: About to enter main loop[0m
+2025-06-21T08:03:00.765836 [ESP8266]  INFO: [0;32mI (10678) MC
+2025-06-21T08:03:00.775968 [ESP8266]  INFO: PServer: Debug: Loop iteration start[0m
+2025-06-21T08:03:00.775992 [ESP8266]  INFO: [MCPServer] Debug: About to call isCon
+2025-06-21T08:03:00.786171 [ESP8266]  INFO: nected()[0m
+2025-06-21T08:03:00.786191 [ESP8266]  INFO: [MCPServer] Debug: isConnected() r
+2025-06-21T08:03:00.796274 [ESP8266]  INFO: eturned: true[0m
+2025-06-21T08:03:00.796280 [ESP8266]  INFO: [MCPServer] Debug: About to c
+2025-06-21T08:03:00.806369 [ESP8266]  INFO: all transport->read()[0m
+2025-06-21T08:03:00.806378 [ESP8266]  INFO: [MCPServer] Debug: transport->read() returned: true[
+2025-06-21T08:03:00.816457 [ESP8266]  INFO: 0m
+2025-06-21T08:03:00.816462 [ESP8266]  INFO: [MCPServer] Debug: Read successful, buffer s
+2025-06-21T08:03:00.826567 [ESP8266]  INFO: ize: 46[0m
+2025-06-21T08:03:00.826580 [ESP8266]  INFO: [MCPServer] Debug: About to process message[0m
+2025-06-21T08:03:00.826584 [ESP8266]  INFO: [0;32mI (10742) M
+2025-06-21T08:03:00.836671 [ESP8266]  INFO: entered[0m
+2025-06-21T08:03:00.836680 [ESP8266]  INFO: [0;32mI (10751)
+2025-06-21T08:03:00.846798 [ESP8266]  INFO: MCPServer: Debug: Message length: 46[0m
+2025-06-21T08:03:00.846814 [ESP8266]  INFO: [0;32mI (10759) MCPSe
+2025-06-21T08:03:00.856906 [ESP8266]  INFO: rver: Debug: About to create method/id/params strings[0m
+2025-06-21T08:03:00.856916 [ESP8266]  INFO: [MCPServer] Debug: Ca
+2025-06-21T08:03:00.866999 [ESP8266]  INFO: lling parseRequest[0m
+2025-06-21T08:03:00.867004 [ESP8266]  INFO: [MCPServer] Debug: parse
+2025-06-21T08:03:00.877079 [ESP8266]  INFO: Request succeeded[0m
+2025-06-21T08:03:00.877083 [ESP8266]  INFO: abort() was called at PC 0x40285cf9 on co
+2025-06-21T08:03:00.887158 [ESP8266]  INFO: re 0
+2025-06-21T08:03:00.887162 [ESP8266]  INFO: Guru Meditation Error: Core  0 panic'ed (StoreProhibited). Exception was unhandled.
+2025-06-21T08:03:00.887165 [ESP8266]  INFO: Cor
+2025-06-21T08:03:00.897253 [ESP8266]  INFO: e 0 register dump:
+2025-06-21T08:03:00.897262 [ESP8266]  INFO: PC      : 0x40215a8a  PS      : 0x00000030
+2025-06-21T08:03:00.907338 [ESP8266]  INFO: A0      : 0x40215a88  A1      : 0x3fff6a50
+2025-06-21T08:03:00.907343 [ESP8266]  INFO: A2      : 0x00000
+2025-06-21T08:03:00.917417 [ESP8266]  INFO: 000  A3      : 0xffffffdb  A4      : 0x00000001  A5      : 0x00000001
+2025-06-21T08:03:00.917422 [ESP8266]  INFO: A6      : 0x00000000
+2025-06-21T08:03:00.927494 [ESP8266]  INFO: A7      : 0x00000000  A8      : 0x0000006e  A9      : 0x000000e0
+2025-06-21T08:03:00.937570 [ESP8266]  INFO: A10     : 0x40297248  A11     : 0x00000002  A12     : 0x3fff6c74  A13     : 0x4028625d
+2025-06-21T08:03:00.947724 [ESP8266]  INFO: A14     : 0x4026564e  A15     : 0x3fff6d10  SAR     : 0x0000001e
+2025-06-21T08:03:00.957911 [ESP8266]  INFO: EXCCAUSE: 0x0000001d
+2025-06-21T08:03:00.957936 [ESP8266]  INFO: Backtrace: 0x40215a8a:0x3fff6a50 0
+2025-06-21T08:03:00.968019 [ESP8266]  INFO: x40285cfc:0x3fff6a60 0x4028625d:0x3fff6b40 Guru Meditation Error: Core  0 panic'ed (LoadStoreAli
+2025-06-21T08:03:00.978098 [ESP8266]  INFO: gnment). Exception was unhandled.
+2025-06-21T08:03:00.978103 [ESP8266]  INFO: Core 0 register dump:
+2025-06-21T08:03:00.978105 [ESP8266]  INFO: PC
+2025-06-21T08:03:00.988181 [ESP8266]  INFO: : 0x4021eb51  PS      : 0x00000033  A0      : 0x4021eac4  A1
+2025-06-21T08:03:00.998271 [ESP8266]  INFO: : 0x3ffe8d40
+2025-06-21T08:03:00.998281 [ESP8266]  INFO: A2      : 0x0007624d  A3      : 0x00000031  A4      : 0x3fff6c11  A5
+2025-06-21T08:03:01.008359 [ESP8266]  INFO: : 0x3fff6c0d
+2025-06-21T08:03:01.008363 [ESP8266]  INFO: A6      : 0x000007fe  A7      : 0x000000a1  A8
+2025-06-21T08:03:01.018436 [ESP8266]  INFO: : 0x000000c0  A9      : 0x000000e0
+2025-06-21T08:03:01.018440 [ESP8266]  INFO: A10     : 0x40297248
+2025-06-21T08:03:01.028514 [ESP8266]  INFO: A11     : 0x00000002  A12     : 0x4028625d  A13     : 0x3ffe8d84
+2025-06-21T08:03:01.028519 [ESP8266]  INFO: A14     : 0x40215a88  A15
+2025-06-21T08:03:01.038591 [ESP8266]  INFO: : 0x40215a88  SAR     : 0x0000001f  EXCCAUSE: 0x00000009
+2025-06-21T08:03:01.048664 [ESP8266]  INFO: Backtrace: 0x4021eb51:0x3ffe8d40 0x40215593:0x3ffe8d70 0x40100eec:0x3ffe8dc0 0x4021eac4:0x3
+2025-06-21T08:03:01.058748 [ESP8266]  INFO: ffe8de0
+2025-06-21T08:03:01.058756 [ESP8266]  INFO: "BZ-n MT'uVmXz
+2025-06-21T08:03:01.058758 [ESP8266]  INFO: 
+2025-06-21T08:03:01.068834 [ESP8266]  INFO: 5߈Dr\1	)lP5y@
+2025-06-21T08:03:01.078924 [ESP8266]  INFO: NZ 	سTT'YN 1gA	5Y*
+2025-06-21T08:03:01.078930 [ESP8266]  INFO:  kA	1R1)DБ)5A
+2025-06-21T08:03:01.089006 [ESP8266]  INFO: Nz 	T	ү 1])E؛PEVuJ
+2025-06-21T08:03:01.099092 [ESP8266]  INFO: M	=QHP^K)P%JA%yVz9Ov5U+*5 po#r
+2025-06-21T08:03:01.109170 [ESP8266]  INFO: PYl\A-P+
+2025-06-21T08:03:01.109174 [ESP8266]  INFO: +x5 xEVX77 9+kG!j	%[
+2025-06-21T08:03:01.109176 [ESP8266]  INFO: )Q 
+2025-06-21T08:03:01.119250 [ESP8266]  INFO: 1eʉ/E؛PDVu@LA7)XJ	E%!䋊qV[%E@	U%
+2025-06-21T08:03:01.129325 [ESP8266]  INFO: yC
+2025-06-21T08:03:01.129329 [ESP8266]  INFO: !V)[KV )J+x5 `oXy-!IAJ 1E/G؛ hF
+2025-06-21T08:03:01.139401 [ESP8266]  INFO: VX
+2025-06-21T08:03:01.139405 [ESP8266]  INFO: 1iC!5HP1
+2025-06-21T08:03:01.139407 [ESP8266]  INFO: -1C5 hD%Y%.i!^
+2025-06-21T08:03:01.149478 [ESP8266]  INFO: @XP!E+xD5j	%Y.lT/LZZ[Rʬ
+2025-06-21T08:03:01.149482 [ESP8266]  INFO: +x
+2025-06-21T08:03:01.149483 [ESP8266]  INFO: !Z
+2025-06-21T08:03:01.159574 [ESP8266]  INFO: 7MVP1DTX!1Tm9	1)ʢ%EB	#OQvvs
+2025-06-21T08:03:01.169679 [ESP8266]  INFO: !Z7nVP P
+2025-06-21T08:03:01.179757 [ESP8266]  INFO: X15N
+2025-06-21T08:03:01.179761 [ESP8266]  INFO: ^9e5Xg @He )rw
+2025-06-21T08:03:01.179763 [ESP8266]  INFO: +xD5
+2025-06-21T08:03:01.179765 [ESP8266]  INFO: !X7nT RX
+2025-06-21T08:03:01.189847 [ESP8266]  INFO: 15N\9E1m1	1)Ij)P%JAB!I5d޷9LRGP
+2025-06-21T08:03:01.199943 [ESP8266]  INFO: \!ge@)Lʁ5 h%YYvX%T1Lq|!RQ
+2025-06-21T08:03:01.240213 [ESP8266]  INFO: [ESP8266-MCP] ESP8266-MCP starting up...[0m
+2025-06-21T08:03:01.240221 [ESP8266]  INFO: [0;
+2025-06-21T08:03:01.250295 [ESP8266]  INFO: [ESP8266-MCP] [App start] Free heap: 90692 bytes, Min free: 88148 bytes, Stack remaini
+2025-06-21T08:03:01.260388 [ESP8266]  INFO: ng: 7304 bytes[0m
+2025-06-21T08:03:01.260398 [ESP8266]  INFO: [ESP8266-MCP] [After NVS init]
+2025-06-21T08:03:01.270478 [ESP8266]  INFO: Free heap: 90692 bytes, Min free: 88148 bytes, Stack remaining: 7304 bytes[0m
+2025-06-21T08:03:01.270483 [ESP8266]  INFO: [0;32mI (250)
+2025-06-21T08:03:01.280562 [ESP8266]  INFO: ESP8266-MCP: Initializing WiFi...[0m
+2025-06-21T08:03:01.280568 [ESP8266]  INFO: [0;32mI (258) system_api
+2025-06-21T08:03:01.290640 [ESP8266]  INFO: : Base MAC address is not set, read default base MAC address fro
+2025-06-21T08:03:01.300726 [ESP8266]  INFO: m EFUSE[0m
+2025-06-21T08:03:01.300734 [ESP8266]  INFO: [system_api] Base MAC address is not set, read default base MAC addre
+2025-06-21T08:03:01.310811 [ESP8266]  INFO: ss from EFUSE[0m
+2025-06-21T08:03:01.351086 [ESP8266]  INFO: phy_version: 1163.0, 665d56c, Ju
+2025-06-21T08:03:01.361186 [ESP8266]  INFO: n 24 2020, 10:00:08, RTOS new
+2025-06-21T08:03:01.361196 [ESP8266]  INFO: [phy_init] phy ver:
+2025-06-21T08:03:01.371276 [ESP8266]  INFO: 1163_0[0m
+2025-06-21T08:03:01.371281 [ESP8266]  INFO: [ESP8266-MCP] wifi
+2025-06-21T08:03:01.381355 [ESP8266]  INFO: _init_sta finished.[0m
+2025-06-21T08:03:01.492119 [ESP8266]  INFO: [wifi:state] 0 ->
+2025-06-21T08:03:01.502258 [ESP8266]  INFO: 2 (b0)
+2025-06-21T08:03:01.502266 [ESP8266]  INFO: [0m
+2025-06-21T08:03:01.522403 [ESP8266]  INFO: [wifi:state] 2 -> 3 (0)
+2025-06-21T08:03:01.522409 [ESP8266]  INFO: [0m
+2025-06-21T08:03:01.532483 [ESP8266]  INFO: [wifi:state] 3 -> 5 (10)
+2025-06-21T08:03:01.532487 [ESP8266]  INFO: [0m
+2025-06-21T08:03:01.754180 [ESP8266]  INFO: [0;32mI (740) wifi:connected with FBI Surveillance Van, aid = 1
+2025-06-21T08:03:01.764293 [ESP8266]  INFO: , channel 1, HT20, bssid = d8:6c:63:e6:14:02
+2025-06-21T08:03:01.764303 [ESP8266]  INFO: [0m
+2025-06-21T08:03:02.771578 [ESP8266]  INFO: [tcpip_adapter] s
+2025-06-21T08:03:02.781692 [ESP8266]  INFO: ta ip: 192.168.86.37, mask: 255.255.255.0, gw: 192.168.86.1[0m
+2025-06-21T08:03:02.781701 [ESP8266]  INFO: [ESP8266-MCP] go
+2025-06-21T08:03:02.791782 [ESP8266]  INFO: t ip:192.168.86.37[0m
+2025-06-21T08:03:02.791787 [ESP8266]  INFO: [ESP8266-MCP] connected t
+2025-06-21T08:03:02.801864 [ESP8266]  INFO: o ap SSID:FBI Surveillance Van[0m
+2025-06-21T08:03:02.801868 [ESP8266]  INFO: [ESP8266-MCP] [After WiFi init] Free heap: 63
+2025-06-21T08:03:02.811941 [ESP8266]  INFO: 596 bytes, Min free: 60956 bytes, Stack remaining: 6744 bytes[0
+2025-06-21T08:03:02.822017 [ESP8266]  INFO: m
+2025-06-21T08:03:02.822022 [ESP8266]  INFO: [0;32mI (1790) wifi:pm stop
+2025-06-21T08:03:02.822024 [ESP8266]  INFO: [0m[0;32mI (1795) ESP8266-MCP
+2025-06-21T08:03:02.832098 [ESP8266]  INFO: : WiFi connected, starting MCP server...[0m
+2025-06-21T08:03:02.832102 [ESP8266]  INFO: [ESP8266-MCP] [MCP task start] Free
+2025-06-21T08:03:02.842176 [ESP8266]  INFO: heap: 55276 bytes, Min free: 53820 bytes, Stack remaining: 8040
+2025-06-21T08:03:02.852251 [ESP8266]  INFO: bytes[0m
+2025-06-21T08:03:02.852255 [ESP8266]  INFO: [ESP8266-MCP] TinyMCP server listenin
+2025-06-21T08:03:02.862328 [ESP8266]  INFO: g on port 8080[0m
+2025-06-21T08:03:02.862332 [ESP8266]  INFO: [ESP8266-MCP] ESP8266-MCP ini
+2025-06-21T08:03:02.872406 [ESP8266]  INFO: tialization complete[0m
+2025-06-21T08:03:05.587648 [ CLIENT] ERROR: ❌ Ping #2 failed: timed out
+2025-06-21T08:03:06.587778 [ CLIENT]  TEST: 🔄 Sending ping request #3
+2025-06-21T08:03:06.612159 [ESP8266]  INFO: [ESP8266-MCP] Client connected from 192.168.86.32
+2025-06-21T08:03:06.622351 [ESP8266]  INFO: :42340[0m
+2025-06-21T08:03:06.622376 [ESP8266]  INFO: [ESP8266-MCP] [Before MCP server crea
+2025-06-21T08:03:06.632532 [ESP8266]  INFO: tion] Free heap: 62536 bytes, Min free: 53244 bytes, Stack remai
+2025-06-21T08:03:06.642680 [ESP8266]  INFO: ning: 7320 bytes[0m
+2025-06-21T08:03:06.642696 [ESP8266]  INFO: [ESP8266-MCP] Stack remaining before MCP server: 7320 bytes
+2025-06-21T08:03:06.652853 [ESP8266]  INFO: [0m
+2025-06-21T08:03:06.652880 [ESP8266]  INFO: [EspSocketTransport] EspSocketTransport cre
+2025-06-21T08:03:06.663029 [ESP8266]  INFO: ated with socket 55[0m
+2025-06-21T08:03:06.663056 [ESP8266]  INFO: [ESP8266-MCP] Stack remaining after transport creation:
+2025-06-21T08:03:06.673212 [ESP8266]  INFO: 7320 bytes[0m
+2025-06-21T08:03:06.673233 [ESP8266]  INFO: [MCPServer] MCPServer created[0m
+2025-06-21T08:03:06.683411 [ESP8266]  INFO: [MCPServer] MCPServer: Testing basic JSON creat
+2025-06-21T08:03:06.693592 [ESP8266]  INFO: ion...[0m
+2025-06-21T08:03:06.693617 [ESP8266]  INFO: [MCPServer] MCPServer: Basic JSON null value created successfully[0m
+2025-06-21T08:03:06.703782 [ESP8266]  INFO: [MCPServer] MCPServer: JSON object created succ
+2025-06-21T08:03:06.713951 [ESP8266]  INFO: essfully[0m
+2025-06-21T08:03:06.713975 [ESP8266]  INFO: [MCPServer] MCPServer: JSON test passed during initialization[0m
+2025-06-21T08:03:06.724175 [ESP8266]  INFO: [ESP8266-MCP] Stack remaining after server creati
+2025-06-21T08:03:06.734383 [ESP8266]  INFO: on: 7320 bytes[0m
+2025-06-21T08:03:06.734409 [ESP8266]  INFO: [ESP8266-MCP] Starting C++ MC
+2025-06-21T08:03:06.744510 [ESP8266]  INFO: P server for client[0m
+2025-06-21T08:03:06.744524 [ESP8266]  INFO: [MCPServer] MCP Server starting...[0m
+2025-06-21T08:03:06.744528 [ESP8266]  INFO: [0;32mI (5720)
+2025-06-21T08:03:06.754694 [ESP8266]  INFO: MCPServer: Debug: About to create std::string buffer[0m
+2025-06-21T08:03:06.754723 [ESP8266]  INFO: [0;32
+2025-06-21T08:03:06.764901 [ESP8266]  INFO: [MCPServer] Debug: Buffer created successfully[0m
+2025-06-21T08:03:06.764937 [ESP8266]  INFO: [0
+2025-06-21T08:03:06.775097 [ESP8266]  INFO: [MCPServer] Debug: About to enter main loop[0m
+2025-06-21T08:03:06.775137 [ESP8266]  INFO: [MCPServer] Debug: L
+2025-06-21T08:03:06.785308 [ESP8266]  INFO: oop iteration start[0m
+2025-06-21T08:03:06.785335 [ESP8266]  INFO: [MCPServer] Debug: About
+2025-06-21T08:03:06.795469 [ESP8266]  INFO: to call isConnected()[0m
+2025-06-21T08:03:06.795488 [ESP8266]  INFO: [MCPServer] Debug: isConnected() returned: true[0m
+2025-06-21T08:03:06.805656 [ESP8266]  INFO: [MCPServer] Debug: About to call transport->read(
+2025-06-21T08:03:06.815853 [ESP8266]  INFO: )[0m
+2025-06-21T08:03:06.815881 [ESP8266]  INFO: [MCPServer] Debug: transport->read() retur
+2025-06-21T08:03:06.826034 [ESP8266]  INFO: ned: true[0m
+2025-06-21T08:03:06.826062 [ESP8266]  INFO: [MCPServer] Debug: Read successful, buffer size: 46[0m
+2025-06-21T08:03:06.826067 [ESP8266]  INFO: [0;32mI
+2025-06-21T08:03:06.836237 [ESP8266]  INFO: [MCPServer] Debug: About to process message[0m
+2025-06-21T08:03:06.836268 [ESP8266]  INFO: [0;32mI
+2025-06-21T08:03:06.846400 [ESP8266]  INFO: [MCPServer] Debug: processMessage() entered[0m
+2025-06-21T08:03:06.846424 [ESP8266]  INFO: [MCPServer] Debug: Message
+2025-06-21T08:03:06.856593 [ESP8266]  INFO: length: 46[0m
+2025-06-21T08:03:06.856622 [ESP8266]  INFO: [MCPServer] Debug: About to crea
+2025-06-21T08:03:06.866804 [ESP8266]  INFO: te method/id/params strings[0m
+2025-06-21T08:03:06.866835 [ESP8266]  INFO: [MCPServer] Debu
+2025-06-21T08:03:06.876969 [ESP8266]  INFO: g: Calling parseRequest[0m
+2025-06-21T08:03:06.876992 [ESP8266]  INFO: [MCPServer] Debug: parseRequest succeeded[0m
+2025-06-21T08:03:06.876998 [ESP8266]  INFO: abort
+2025-06-21T08:03:06.887170 [ESP8266]  INFO: () was called at PC 0x40285cf9 on core 0
+2025-06-21T08:03:06.887199 [ESP8266]  INFO: Guru Meditation Error
+2025-06-21T08:03:06.897321 [ESP8266]  INFO: : Core  0 panic'ed (StoreProhibited). Exception was unhandled.
+2025-06-21T08:03:06.907497 [ESP8266]  INFO: Core 0 register dump:
+2025-06-21T08:03:06.907532 [ESP8266]  INFO: PC      : 0x40215a8a  PS      : 0x00000030  A0      : 0x40215a88  A1
+2025-06-21T08:03:06.917716 [ESP8266]  INFO: : 0x3fff6a50
+2025-06-21T08:03:06.917748 [ESP8266]  INFO: A2      : 0x00000000  A3      : 0xffffffdb  A
+2025-06-21T08:03:06.927875 [ESP8266]  INFO: 4      : 0x00000001  A5      : 0x00000001
+2025-06-21T08:03:06.927896 [ESP8266]  INFO: A6      : 0x00000000  A7      : 0x00000000  A8
+2025-06-21T08:03:06.938071 [ESP8266]  INFO: : 0x0000006e  A9      : 0x000000e0
+2025-06-21T08:03:06.938101 [ESP8266]  INFO: A10     : 0x40297248  A
+2025-06-21T08:03:06.958404 [ESP8266]  INFO: A14     : 0x4026564e  A15     : 0x3fff6d10  SAR     : 0x0000001e  EXCCAUSE: 0x0000001d
+2025-06-21T08:03:06.968565 [ESP8266]  INFO: Backtrace: 0x40215a8a:0x3fff6a50 0x40285cfc:0x3fff6a60 0x40286
+2025-06-21T08:03:06.978700 [ESP8266]  INFO: 25d:0x3fff6b40 Guru Meditation Error: Core  0 panic'ed (LoadStoreAlignment). Exception was unhan
+2025-06-21T08:03:06.988870 [ESP8266]  INFO: dled.
+2025-06-21T08:03:06.988896 [ESP8266]  INFO: Core 0 register dump:
+2025-06-21T08:03:06.988899 [ESP8266]  INFO: PC      : 0x4021eb51  PS      : 0
+2025-06-21T08:03:06.999045 [ESP8266]  INFO: x00000033  A0      : 0x4021eac4  A1      : 0x3ffe8d40
+2025-06-21T08:03:06.999069 [ESP8266]  INFO: A2
+2025-06-21T08:03:07.009197 [ESP8266]  INFO: : 0x0007624d  A3      : 0x00000031  A4      : 0x3fff6c11  A5      : 0x3fff6c0d
+2025-06-21T08:03:07.009211 [ESP8266]  INFO: A6      : 0
+2025-06-21T08:03:07.019381 [ESP8266]  INFO: x000007fe  A7      : 0x000000a1  A8      : 0x000000c0  A9      :
+2025-06-21T08:03:07.029528 [ESP8266]  INFO: 0x000000e0
+2025-06-21T08:03:07.029548 [ESP8266]  INFO: A10     : 0x40297248  A11     : 0x00000002  A12
+2025-06-21T08:03:07.039707 [ESP8266]  INFO: : 0x4028625d  A13     : 0x3ffe8d84
+2025-06-21T08:03:07.039729 [ESP8266]  INFO: A14     : 0x40215a88  A15     : 0x40215a88  SAR     :
+2025-06-21T08:03:07.049891 [ESP8266]  INFO: 0x0000001f  EXCCAUSE: 0x00000009
+2025-06-21T08:03:07.049920 [ESP8266]  INFO: Backtrace: 0x4021eb51:0
+2025-06-21T08:03:07.060051 [ESP8266]  INFO: x3ffe8d40 0x40215593:0x3ffe8d70 0x40100eec:0x3ffe8dc0 0x4021eac4:0x3ffe8de0
+2025-06-21T08:03:07.070234 [ESP8266]  INFO: B
+2025-06-21T08:03:07.070264 [ESP8266]  INFO: n 5M\'X% qS
+2025-06-21T08:03:07.070266 [ESP8266]  INFO: E
+2025-06-21T08:03:07.080388 [ESP8266]  INFO: 5LP9E	)DP]	5
+2025-06-21T08:03:07.080406 [ESP8266]  INFO: 
+2025-06-21T08:03:07.090558 [ESP8266]  INFO: LA
+2025-06-21T08:03:07.090580 [ESP8266]  INFO: I~\-[P9e@|)5S 
+2025-06-21T08:03:07.090582 [ESP8266]  INFO: LPA
+2025-06-21T08:03:07.090585 [ESP8266]  INFO: I
+2025-06-21T08:03:07.090587 [ESP8266]  INFO: V-YP9g1@5By 
+2025-06-21T08:03:07.100710 [ESP8266]  INFO: LPA
+2025-06-21T08:03:07.100725 [ESP8266]  INFO: i
+2025-06-21T08:03:07.100727 [ESP8266]  INFO: 1-C^xD5
+2025-06-21T08:03:07.100730 [ESP8266]  INFO: =%[ PW5ҏ tK)PG5) rG@[
+2025-06-21T08:03:07.110815 [ESP8266]  INFO: Rv1EVuFUG5 poZ#.JQV-I@A@)%+*
+2025-06-21T08:03:07.110824 [ESP8266]  INFO: PXEVX7@7
+2025-06-21T08:03:07.120904 [ESP8266]  INFO:  +kE5 xFVu@LA[P+
+2025-06-21T08:03:07.120912 [ESP8266]  INFO: +x5
+2025-06-21T08:03:07.120914 [ESP8266]  INFO: %Y
+2025-06-21T08:03:07.120916 [ESP8266]  INFO: @R qy	e
+2025-06-21T08:03:07.131015 [ESP8266]  INFO: B	E %~w QV[%EB	U %~w@%).A(ҍ 5[IP
+2025-06-21T08:03:07.141110 [ESP8266]  INFO: S\eJ	%s{
+2025-06-21T08:03:07.141118 [ESP8266]  INFO: !PR1E/G؛ hFVX
+2025-06-21T08:03:07.151186 [ESP8266]  INFO: 
+2025-06-21T08:03:07.151198 [ESP8266]  INFO: 1iC5HP
+2025-06-21T08:03:07.151202 [ESP8266]  INFO: %1-E%~w %.a~
+2025-06-21T08:03:07.161286 [ESP8266]  INFO: @XP!E)PG) %s#t-lpNy1,}
+2025-06-21T08:03:07.161295 [ESP8266]  INFO: (JAh%Ru@
+2025-06-21T08:03:07.171381 [ESP8266]  INFO: ֵLP\\9E	E1+ʉ/G؛HD	)u@ԭ1L1RT7)u
+2025-06-21T08:03:07.181471 [ESP8266]  INFO: )ʉ
+2025-06-21T08:03:07.181480 [ESP8266]  INFO: (%JABRI5d޷5LeRR7P=)AJ+
+2025-06-21T08:03:07.191561 [ESP8266]  INFO: (JAB#OQvvs@1LT15N9Em	! )rw
+2025-06-21T08:03:07.191569 [ESP8266]  INFO: +xD5
+2025-06-21T08:03:07.201647 [ESP8266]  INFO: !X7lԵlt9%P\\9G)AJ)P%JAB!
+2025-06-21T08:03:07.211735 [ESP8266]  INFO: yNLPPALP!t׊P9y
+2025-06-21T08:03:07.241952 [ESP8266]  INFO: [ESP8266-MCP] ESP8
+2025-06-21T08:03:07.252048 [ESP8266]  INFO: 266-MCP starting up...[0m
+2025-06-21T08:03:07.252058 [ESP8266]  INFO: [ESP8266-MCP] [App sta
+2025-06-21T08:03:07.262163 [ESP8266]  INFO: rt] Free heap: 90828 bytes, Min free: 88148 bytes, Stack remaining: 7304 bytes[0m
+2025-06-21T08:03:07.262171 [ESP8266]  INFO: [0;32mI (23
+2025-06-21T08:03:07.272251 [ESP8266]  INFO: [ESP8266-MCP] [After NVS init] Free heap: 90828 bytes, Min fre
+2025-06-21T08:03:07.282339 [ESP8266]  INFO: e: 88148 bytes, Stack remaining: 7304 bytes[0m
+2025-06-21T08:03:07.282346 [ESP8266]  INFO: [0;32mI (250)
+2025-06-21T08:03:07.292498 [ESP8266]  INFO: ESP8266-MCP: Initializing WiFi...[0m
+2025-06-21T08:03:07.292522 [ESP8266]  INFO: [system_api] Base MAC address is not set, r
+2025-06-21T08:03:07.302609 [ESP8266]  INFO: ead default base MAC address from EFUSE[0m
+2025-06-21T08:03:07.302618 [ESP8266]  INFO: [0;32mI (272) syst
+2025-06-21T08:03:07.312712 [ESP8266]  INFO: em_api: Base MAC address is not set, read default base MAC address from EFUSE[0m
+2025-06-21T08:03:07.363094 [ESP8266]  INFO: phy_version: 1163.0, 665d56c, Jun 24 2020, 10:00:08, RTOS new
+2025-06-21T08:03:07.363105 [ESP8266]  INFO: 
+2025-06-21T08:03:07.373168 [ESP8266]  INFO: [phy_init] phy ver: 1163_0[0m
+2025-06-21T08:03:07.383288 [ESP8266]  INFO: [ESP8266-MCP] wifi_init_sta finished.[0m
+2025-06-21T08:03:07.504157 [ESP8266]  INFO: [wifi:state] 0 -> 2 (b0)
+2025-06-21T08:03:07.504171 [ESP8266]  INFO: [0m
+2025-06-21T08:03:07.524335 [ESP8266]  INFO: [wifi:state] 2 -> 3 (0)
+2025-06-21T08:03:07.524349 [ESP8266]  INFO: [0m
+2025-06-21T08:03:07.534445 [ESP8266]  INFO: [wifi:state] 3 -> 5 (10)
+2025-06-21T08:03:07.534459 [ESP8266]  INFO: [0m
+2025-06-21T08:03:07.594886 [ESP8266]  INFO: [0;32mI (576) wifi:connected with FBI Surveillance Van, aid = 1
+2025-06-21T08:03:07.604981 [ESP8266]  INFO: , channel 1, HT20, bssid = d8:6c:63:e6:14:02
+2025-06-21T08:03:07.604991 [ESP8266]  INFO: [0m
+2025-06-21T08:03:08.279533 [ESP8266]  INFO: [tcpip_adapter] s
+2025-06-21T08:03:08.289684 [ESP8266]  INFO: ta ip: 192.168.86.37, mask: 255.255.255.0, gw: 192.168.86.1[0m
+2025-06-21T08:03:08.289709 [ESP8266]  INFO: [ESP8266-MCP] go
+2025-06-21T08:03:08.299826 [ESP8266]  INFO: t ip:192.168.86.37[0m
+2025-06-21T08:03:08.299845 [ESP8266]  INFO: [ESP8266-MCP] connected t
+2025-06-21T08:03:08.309951 [ESP8266]  INFO: o ap SSID:FBI Surveillance Van[0m
+2025-06-21T08:03:08.309968 [ESP8266]  INFO: [0;32mI (1275) ESP8266-MCP:
+2025-06-21T08:03:08.320062 [ESP8266]  INFO: [After WiFi init] Free heap: 63732 bytes, Min free: 61332 bytes, Stack remaining: 6744 bytes[0
+2025-06-21T08:03:08.330156 [ESP8266]  INFO: m
+2025-06-21T08:03:08.330164 [ESP8266]  INFO: [0;32mI (1292) wifi:pm stop
+2025-06-21T08:03:08.330167 [ESP8266]  INFO: [0m[0;32mI (1296) ESP8266-MCP
+2025-06-21T08:03:08.340264 [ESP8266]  INFO: : WiFi connected, starting MCP server...[0m
+2025-06-21T08:03:08.340277 [ESP8266]  INFO: [ESP8266-MCP] [MCP task start] Free
+2025-06-21T08:03:08.350372 [ESP8266]  INFO: heap: 55412 bytes, Min free: 53820 bytes, Stack remaining: 8040
+2025-06-21T08:03:08.360469 [ESP8266]  INFO: bytes[0m
+2025-06-21T08:03:08.360479 [ESP8266]  INFO: [ESP8266-MCP] TinyMCP server listenin
+2025-06-21T08:03:08.370569 [ESP8266]  INFO: g on port 8080[0m
+2025-06-21T08:03:08.370580 [ESP8266]  INFO: [ESP8266-MCP] ESP8266-MCP ini
+2025-06-21T08:03:08.380732 [ESP8266]  INFO: tialization complete[0m
+2025-06-21T08:03:11.600474 [ CLIENT] ERROR: ❌ Ping #3 failed: timed out
+2025-06-21T08:03:12.665636 [ CLIENT]  TEST: 📤 Sending invalid tool request (should fail)
+2025-06-21T08:03:12.678853 [ESP8266]  INFO: [ESP8266-MCP] Cli
+2025-06-21T08:03:12.688970 [ESP8266]  INFO: ent connected from 192.168.86.32:49178[0m
+2025-06-21T08:03:12.688980 [ESP8266]  INFO: [ESP8266-MCP] [Before MCP server crea
+2025-06-21T08:03:12.699064 [ESP8266]  INFO: tion] Free heap: 62832 bytes, Min free: 53244 bytes, Stack remai
+2025-06-21T08:03:12.709148 [ESP8266]  INFO: ning: 7320 bytes[0m
+2025-06-21T08:03:12.709156 [ESP8266]  INFO: [ESP8266-MCP] Stack remaini
+2025-06-21T08:03:12.719236 [ESP8266]  INFO: ng before MCP server: 7320 bytes[0m
+2025-06-21T08:03:12.719244 [ESP8266]  INFO: [EspSocketTransport] EspSocketTransport cre
+2025-06-21T08:03:12.729321 [ESP8266]  INFO: ated with socket 55[0m
+2025-06-21T08:03:12.729328 [ESP8266]  INFO: [ESP8266-MCP] Stack rema
+2025-06-21T08:03:12.739404 [ESP8266]  INFO: ining after transport creation: 7320 bytes[0m
+2025-06-21T08:03:12.739411 [ESP8266]  INFO: [0;32mI (5705)
+2025-06-21T08:03:12.749499 [ESP8266]  INFO: MCPServer: MCPServer created[0m
+2025-06-21T08:03:12.749509 [ESP8266]  INFO: [MCPServer] MCPServer: Testing basic JSON creat
+2025-06-21T08:03:12.759599 [ESP8266]  INFO: ion...[0m
+2025-06-21T08:03:12.759609 [ESP8266]  INFO: [MCPServer] MCPServer: Basic JSON nul
+2025-06-21T08:03:12.769705 [ESP8266]  INFO: l value created successfully[0m
+2025-06-21T08:03:12.769718 [ESP8266]  INFO: [MCPServer] MCP
+2025-06-21T08:03:12.779809 [ESP8266]  INFO: Server: JSON object created successfully[0m
+2025-06-21T08:03:12.779820 [ESP8266]  INFO: [MCPServer] MCPServer: JSON test pa
+2025-06-21T08:03:12.789924 [ESP8266]  INFO: [ESP8266-MCP] Sta
+2025-06-21T08:03:12.800027 [ESP8266]  INFO: ck remaining after server creation: 7320 bytes[0m
+2025-06-21T08:03:12.800040 [ESP8266]  INFO: [ESP8266-MCP] Starting C++ MC
+2025-06-21T08:03:12.810154 [ESP8266]  INFO: P server for client[0m
+2025-06-21T08:03:12.810166 [ESP8266]  INFO: [MCPServer] MCP Server s
+2025-06-21T08:03:12.820278 [ESP8266]  INFO: tarting...[0m
+2025-06-21T08:03:12.820296 [ESP8266]  INFO: [MCPServer] Debug: About to creat
+2025-06-21T08:03:12.830386 [ESP8266]  INFO: e std::string buffer[0m
+2025-06-21T08:03:12.830396 [ESP8266]  INFO: [MCPServer] Debug: Buffer created successfully[0m
+2025-06-21T08:03:12.830401 [ESP8266]  INFO: [0
+2025-06-21T08:03:12.840497 [ESP8266]  INFO: [MCPServer] Debug: About to enter main loop[0m
+2025-06-21T08:03:12.840512 [ESP8266]  INFO: [0
+2025-06-21T08:03:12.850598 [ESP8266]  INFO: [MCPServer] Debug: Loop iteration start[0m
+2025-06-21T08:03:12.850610 [ESP8266]  INFO: [0;32m
+2025-06-21T08:03:12.860692 [ESP8266]  INFO: [MCPServer] Debug: About to call isConnected()[0m
+2025-06-21T08:03:12.860701 [ESP8266]  INFO: [MCPServer] Debug: is
+2025-06-21T08:03:12.870796 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:03:12.870810 [ESP8266]  INFO: [MCPServer] Debug
+2025-06-21T08:03:12.880900 [ESP8266]  INFO: : About to call transport->read()[0m
+2025-06-21T08:03:12.880910 [ESP8266]  INFO: [0;32mI (5846) MCPServer
+2025-06-21T08:03:12.891005 [ESP8266]  INFO: [returned] true[0m
+2025-06-21T08:03:12.891019 [ESP8266]  INFO: [MCPServer] Debug: Read successful
+2025-06-21T08:03:12.901115 [ESP8266]  INFO: , buffer size: 110[0m
+2025-06-21T08:03:12.901162 [ESP8266]  INFO: [MCPServer] Debug: About
+2025-06-21T08:03:12.911247 [ESP8266]  INFO: to process message[0m
+2025-06-21T08:03:12.911255 [ESP8266]  INFO: [MCPServer] Debug: processMessage() entered[0m
+2025-06-21T08:03:12.911259 [ESP8266]  INFO: [0;32mI
+2025-06-21T08:03:12.921352 [ESP8266]  INFO: [MCPServer] Debug: Message length: 110[0m
+2025-06-21T08:03:12.921367 [ESP8266]  INFO: [0;32mI (589
+2025-06-21T08:03:12.931448 [ESP8266]  INFO: [MCPServer] Debug: About to create method/id/params strings[0
+2025-06-21T08:03:12.941548 [ESP8266]  INFO: m
+2025-06-21T08:03:12.941560 [ESP8266]  INFO: [MCPServer] Debug: Calling parseRequest[0m
+2025-06-21T08:03:12.941565 [ESP8266]  INFO: [MCPServer] Debug:
+2025-06-21T08:03:12.951653 [ESP8266]  INFO: parseRequest succeeded[0m
+2025-06-21T08:03:12.951663 [ESP8266]  INFO: [MCPServer] createEr
+2025-06-21T08:03:12.961753 [ESP8266]  INFO: rorResponse: Creating error response - id: 999, code: -32002, me
+2025-06-21T08:03:12.971854 [ESP8266]  INFO: ssage: Server not initialized[0m
+2025-06-21T08:03:12.971867 [ESP8266]  INFO: abort() was called at PC 0x40285cf9 on core 0
+2025-06-21T08:03:12.971870 [ESP8266]  INFO: Guru Meditati
+2025-06-21T08:03:12.981957 [ESP8266]  INFO: on Error: Core  0 panic'ed (StoreProhibited). Exception was unha
+2025-06-21T08:03:12.992056 [ESP8266]  INFO: ndled.
+2025-06-21T08:03:12.992068 [ESP8266]  INFO: Core 0 register dump:
+2025-06-21T08:03:12.992071 [ESP8266]  INFO: PC      : 0x40215a8a  PS      :
+2025-06-21T08:03:13.002157 [ESP8266]  INFO: 0x00000030  A0      : 0x40215a88  A1      : 0x3fff6aa0
+2025-06-21T08:03:13.002164 [ESP8266]  INFO: A2      : 0x00000000  A3      : 0xfff
+2025-06-21T08:03:13.012244 [ESP8266]  INFO: fffdb  A4      : 0x00000001  A5      : 0x00000001
+2025-06-21T08:03:13.012252 [ESP8266]  INFO: A6      :
+2025-06-21T08:03:13.022346 [ESP8266]  INFO: 0x00000000  A7      : 0x00000000  A8      : 0x0000006e  A9      : 0x000000e0
+2025-06-21T08:03:13.022358 [ESP8266]  INFO: A10     : 0x401
+2025-06-21T08:03:13.032451 [ESP8266]  INFO: 0755a  A11     : 0x00000002  A12     : 0x3fff6cc4  A13     : 0x4
+2025-06-21T08:03:13.042546 [ESP8266]  INFO: 028625d
+2025-06-21T08:03:13.042557 [ESP8266]  INFO: A14     : 0x4026564e  A15     : 0x3fff6d60  SAR
+2025-06-21T08:03:13.052645 [ESP8266]  INFO: : 0x0000001e  EXCCAUSE: 0x0000001d
+2025-06-21T08:03:13.052656 [ESP8266]  INFO: Backtrace: 0x40215a8a:0x3fff6aa0 0x40285cfc:0x3fff6ab0
+2025-06-21T08:03:13.062747 [ESP8266]  INFO: 0x4028625d:0x3fff6b90 Guru Meditation Error: Core  0 panic'ed (
+2025-06-21T08:03:13.072844 [ESP8266]  INFO: LoadStoreAlignment). Exception was unhandled.
+2025-06-21T08:03:13.072855 [ESP8266]  INFO: Core 0 register
+2025-06-21T08:03:13.082937 [ESP8266]  INFO: dump:
+2025-06-21T08:03:13.082945 [ESP8266]  INFO: PC      : 0x4021eb51  PS      : 0x00000033  A0      : 0x4021eac4  A1      : 0x3ffe8d40
+2025-06-21T08:03:13.093013 [ESP8266]  INFO: A2      : 0x0007624d  A3      : 0x00000031  A4      : 0x3fff6c
+2025-06-21T08:03:13.103108 [ESP8266]  INFO: 61  A5      : 0x3fff6c5d
+2025-06-21T08:03:13.103119 [ESP8266]  INFO: A6      : 0x000007fe  A7      : 0x0
+2025-06-21T08:03:13.113237 [ESP8266]  INFO: 00000a1  A8      : 0x000000c0  A9      : 0x000000e0
+2025-06-21T08:03:13.113246 [ESP8266]  INFO: A10     : 0x4010755a  A11     : 0x000000
+2025-06-21T08:03:13.123356 [ESP8266]  INFO: 02  A12     : 0x4028625d  A13     : 0x3ffe8d84
+2025-06-21T08:03:13.123370 [ESP8266]  INFO: A14     : 0x4
+2025-06-21T08:03:13.133478 [ESP8266]  INFO: 0215a88  A15     : 0x40215a88  SAR     : 0x0000001f  EXCCAUSE: 0x00000009
+2025-06-21T08:03:13.133492 [ESP8266]  INFO: Backtrace: 0x40
+2025-06-21T08:03:13.143574 [ESP8266]  INFO: 21eb51:0x3ffe8d40 0x40215593:0x3ffe8d70 0x40100eec:0x3ffe8dc0 0x
+2025-06-21T08:03:13.153672 [ESP8266]  INFO: 4021eac4:0x3ffe8de0
+2025-06-21T08:03:13.153683 [ESP8266]  INFO: @r-DPM\'X% QTG
+2025-06-21T08:03:13.153686 [ESP8266]  INFO: \
+2025-06-21T08:03:13.163777 [ESP8266]  INFO: 5NrT	)DP])5A)
+2025-06-21T08:03:13.173868 [ESP8266]  INFO: NZ 	TpN 1	)DP5 ! LA
+2025-06-21T08:03:13.173876 [ESP8266]  INFO: IV-YP9g1@5By 
+2025-06-21T08:03:13.183961 [ESP8266]  INFO: LPA
+2025-06-21T08:03:13.183971 [ESP8266]  INFO: i
+2025-06-21T08:03:13.183973 [ESP8266]  INFO: 1-Cڭ 1]
+2025-06-21T08:03:13.183975 [ESP8266]  INFO: 5 pEVu
+2025-06-21T08:03:13.194056 [ESP8266]  INFO: M	=QHP~KG!
+2025-06-21T08:03:13.194065 [ESP8266]  INFO: %[
+2025-06-21T08:03:13.194067 [ESP8266]  INFO: Rv1EVuFUG!j	=3my	r
+2025-06-21T08:03:13.204155 [ESP8266]  INFO: Yl\A-P++*5 xEVu@LALT+iE/E	%~w@
+2025-06-21T08:03:13.204166 [ESP8266]  INFO: +Q
+2025-06-21T08:03:13.204168 [ESP8266]  INFO: 
+2025-06-21T08:03:13.214371 [ESP8266]  INFO: !1eʉ
+2025-06-21T08:03:13.214384 [ESP8266]  INFO: (%JA%!	j%I@PPq)PG5 zL@[P.E+*JA%~WH)$VP!!3P!1V7Գ
+2025-06-21T08:03:13.224480 [ESP8266]  INFO: !)ny	eJ	%Zy
+2025-06-21T08:03:13.224490 [ESP8266]  INFO: !IAjL 1
+2025-06-21T08:03:13.224493 [ESP8266]  INFO: 1)PG5 bL@
+2025-06-21T08:03:13.234572 [ESP8266]  INFO: [1iC5J !
+2025-06-21T08:03:13.234580 [ESP8266]  INFO: -C
+2025-06-21T08:03:13.234583 [ESP8266]  INFO: PHD	%~w %,!
+2025-06-21T08:03:13.244671 [ESP8266]  INFO: VP1E,)xD5
+2025-06-21T08:03:13.244684 [ESP8266]  INFO: %YdT/LXLY+1,}
+2025-06-21T08:03:13.244686 [ESP8266]  INFO: (%JAB!#OY
+2025-06-21T08:03:13.254773 [ESP8266]  INFO: l\LTՋ9gXEXD1+ʉ/EE #OY
+2025-06-21T08:03:13.264873 [ESP8266]  INFO: qh1DTX'5LT5eHZ1P#!U)ʉ
+2025-06-21T08:03:13.264883 [ESP8266]  INFO: (%JAB!#OYnq(
+2025-06-21T08:03:13.274964 [ESP8266]  INFO: 1DTX15N
+2025-06-21T08:03:13.274970 [ESP8266]  INFO: ^9e5P!@@)AJ)P%JAB!#OYnqh1DT
+2025-06-21T08:03:13.285057 [ESP8266]  INFO: X5LT1!gP	)Ij)PG5) bL#X7nԵlt9%
+2025-06-21T08:03:13.295157 [ESP8266]  INFO: *\1^9Brw
+2025-06-21T08:03:13.295167 [ESP8266]  INFO: +*5
+2025-06-21T08:03:13.295170 [ESP8266]  INFO: PH	%yYNLPy Qo! 1+
+2025-06-21T08:03:13.335459 [ESP8266]  INFO: [ESP8266-MCP] ESP8266-MCP starting up...[0m
+2025-06-21T08:03:13.335469 [ESP8266]  INFO: [0;
+2025-06-21T08:03:13.345560 [ESP8266]  INFO: [ESP8266-MCP] [App start] Free heap: 90828 bytes, Min free: 88148 bytes, Stack remaini
+2025-06-21T08:03:13.355707 [ESP8266]  INFO: ng: 7304 bytes[0m
+2025-06-21T08:03:13.355731 [ESP8266]  INFO: [ESP8266-MCP] [After NVS init]
+2025-06-21T08:03:13.365865 [ESP8266]  INFO: Free heap: 90828 bytes, Min free: 88148 bytes, Stack remaining: 7304 bytes[0m
+2025-06-21T08:03:13.365886 [ESP8266]  INFO: [0;32mI (250)
+2025-06-21T08:03:13.375972 [ESP8266]  INFO: ESP8266-MCP: Initializing WiFi...[0m
+2025-06-21T08:03:13.375980 [ESP8266]  INFO: [0;32mI (259) system_api
+2025-06-21T08:03:13.386056 [ESP8266]  INFO: : Base MAC address is not set, read default base MAC address fro
+2025-06-21T08:03:13.396183 [ESP8266]  INFO: m EFUSE[0m
+2025-06-21T08:03:13.396193 [ESP8266]  INFO: [system_api] Base MAC address is not set, read default base MAC addre
+2025-06-21T08:03:13.406276 [ESP8266]  INFO: ss from EFUSE[0m
+2025-06-21T08:03:13.446533 [ESP8266]  INFO: phy_version: 1163.0, 665d56c, Ju
+2025-06-21T08:03:13.456621 [ESP8266]  INFO: n 24 2020, 10:00:08, RTOS new
+2025-06-21T08:03:13.456629 [ESP8266]  INFO: [phy_init] phy ver: 1163_0[0m
+2025-06-21T08:03:13.466709 [ESP8266]  INFO: [ESP8266-MCP] wifi
+2025-06-21T08:03:13.587553 [ESP8266]  INFO: [wifi:state] 0 ->
+2025-06-21T08:03:13.597657 [ESP8266]  INFO: 2 (b0)
+2025-06-21T08:03:13.597666 [ESP8266]  INFO: [0m
+2025-06-21T08:03:13.688256 [ESP8266]  INFO: [wifi:state] 2 -> 3 (0)
+2025-06-21T08:03:13.688270 [ESP8266]  INFO: [0m
+2025-06-21T08:03:13.738642 [ESP8266]  INFO: [wifi:state] 3 ->
+2025-06-21T08:03:13.748750 [ESP8266]  INFO: 5 (10)
+2025-06-21T08:03:13.748760 [ESP8266]  INFO: [0m
+2025-06-21T08:03:13.839547 [ESP8266]  INFO: [0;32mI (729) wifi:connected with FBI Surveillance Van, aid = 1, channel 1, HT20, bssid = d8:6c
+2025-06-21T08:03:13.849661 [ESP8266]  INFO: :63:e6:14:02
+2025-06-21T08:03:13.849669 [ESP8266]  INFO: [0m
+2025-06-21T08:03:14.869868 [ESP8266]  INFO: [tcpip_adapter] sta ip: 192.168.86.37, mask: 255.
+2025-06-21T08:03:14.880081 [ESP8266]  INFO: 255.255.0, gw: 192.168.86.1[0m
+2025-06-21T08:03:14.880114 [ESP8266]  INFO: [ESP8266-MCP] got ip:192.168.86.37[0m
+2025-06-21T08:03:14.880128 [ESP8266]  INFO: [0;32mI
+2025-06-21T08:03:14.890262 [ESP8266]  INFO: [ESP8266-MCP] connected to ap SSID:FBI Surveillance Van[
+2025-06-21T08:03:14.900465 [ESP8266]  INFO: 0m
+2025-06-21T08:03:14.900493 [ESP8266]  INFO: [ESP8266-MCP] [After WiFi init] Free heap: 63
+2025-06-21T08:03:14.910671 [ESP8266]  INFO: 732 bytes, Min free: 61332 bytes, Stack remaining: 6744 bytes[0m
+2025-06-21T08:03:14.910703 [ESP8266]  INFO: [0;32mI (1790) wifi:pm stop
+2025-06-21T08:03:14.920849 [ESP8266]  INFO: [ESP8266-MCP] WiFi connected, starting MCP s
+2025-06-21T08:03:14.931049 [ESP8266]  INFO: erver...[0m
+2025-06-21T08:03:14.931080 [ESP8266]  INFO: [ESP8266-MCP] [MCP task start] Free heap: 55412 bytes, Min free: 53
+2025-06-21T08:03:14.941230 [ESP8266]  INFO: 820 bytes, Stack remaining: 8040 bytes[0m
+2025-06-21T08:03:14.941255 [ESP8266]  INFO: [0;32mI (1823) ESP8
+2025-06-21T08:03:14.951429 [ESP8266]  INFO: 266-MCP: TinyMCP server listening on port 8080[0m
+2025-06-21T08:03:14.951458 [ESP8266]  INFO: [0;32mI (18
+2025-06-21T08:03:14.961632 [ESP8266]  INFO: [ESP8266-MCP] ESP8266-MCP initialization complete[0m
+2025-06-21T08:03:17.666858 [ CLIENT] ERROR: ❌ Error test failed: timed out
+2025-06-21T08:03:19.666988 [ CLIENT]  TEST: 🎉 Integrated Testing Demo Complete!
+2025-06-21T08:03:19.667025 [ CLIENT]  INFO: 
+2025-06-21T08:03:19.667028 [ CLIENT]  TEST: 📊 Demo Summary:
+2025-06-21T08:03:19.667030 [ CLIENT]  TEST: ✅ Basic connectivity test
+2025-06-21T08:03:19.667033 [ CLIENT]  TEST: ✅ Single tool test
+2025-06-21T08:03:19.667035 [ CLIENT]  TEST: ✅ Real-time correlation demo
+2025-06-21T08:03:19.667037 [ CLIENT]  TEST: ✅ Error handling demo
+2025-06-21T08:03:19.667039 [ CLIENT]  INFO: 
+2025-06-21T08:03:19.667042 [ CLIENT]  INFO: 📝 Full log saved to: demo_integrated_test_1750507346.log

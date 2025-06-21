@@ -1,0 +1,58 @@
+{
+  "tests": {
+    "initialization": {
+      "raw_response": "{\"jsonrpc\":true,\"id\":\"diagnostic_init\",\"result\":{\"protocolVersion\":true,\"serverInfo\":{\"name\":true,\"version\":true},\"capabilities\":{\"tools\":{\"listChanged\":false}}}}",
+      "is_valid_json": true,
+      "parsed_json": {
+        "jsonrpc": true,
+        "id": "diagnostic_init",
+        "result": {
+          "protocolVersion": true,
+          "serverInfo": {
+            "name": true,
+            "version": true
+          },
+          "capabilities": {
+            "tools": {
+              "listChanged": false
+            }
+          }
+        }
+      },
+      "corruption_found": true,
+      "corruption_details": [
+        "Boolean 'true' found at jsonrpc (likely corrupted string)",
+        "Boolean 'true' found at result.protocolVersion (likely corrupted string)",
+        "Boolean 'true' found at result.serverInfo.name (likely corrupted string)",
+        "Boolean 'true' found at result.serverInfo.version (likely corrupted string)",
+        "Expected 'ESP8266-MCP' possibly replaced with 'true'",
+        "Expected '2024-11-05' possibly replaced with 'true'",
+        "Expected '1.0.0' possibly replaced with 'true'",
+        "Expected '2.0' possibly replaced with 'true'"
+      ],
+      "expected_strings_found": [
+        "jsonrpc"
+      ],
+      "unexpected_values": [],
+      "test_name": "initialization",
+      "request": {
+        "jsonrpc": "2.0",
+        "id": "diagnostic_init",
+        "method": "initialize",
+        "params": {
+          "protocolVersion": "2024-11-05",
+          "clientInfo": {
+            "name": "JSON-Corruption-Diagnostic",
+            "version": "1.0.0"
+          },
+          "capabilities": {
+            "roots": {
+              "listChanged": false
+            },
+            "sampling": {}
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,911 @@
+{
+  "target": "192.168.86.37:8080",
+  "timestamp": "2025-06-20 22:43:33",
+  "tests": {
+    "initialization": {
+      "raw_response": "{\"jsonrpc\":\"2.0\",\"id\":\"diagnostic_init\",\"result\":{\"protocolVersion\":\"2024-11-05\",\"serverInfo\":{\"name\":\"ESP8266-MCP\",\"version\":\"1.0.0\"},\"capabilities\":{\"tools\":{\"listChanged\":false}}}}",
+      "is_valid_json": true,
+      "parsed_json": {
+        "jsonrpc": "2.0",
+        "id": "diagnostic_init",
+        "result": {
+          "protocolVersion": "2024-11-05",
+          "serverInfo": {
+            "name": "ESP8266-MCP",
+            "version": "1.0.0"
+          },
+          "capabilities": {
+            "tools": {
+              "listChanged": false
+            }
+          }
+        }
+      },
+      "corruption_found": false,
+      "corruption_details": [],
+      "expected_strings_found": [
+        "ESP8266-MCP",
+        "2024-11-05",
+        "1.0.0",
+        "jsonrpc",
+        "2.0"
+      ],
+      "unexpected_values": [],
+      "test_name": "initialization",
+      "request": {
+        "jsonrpc": "2.0",
+        "id": "diagnostic_init",
+        "method": "initialize",
+        "params": {
+          "protocolVersion": "2024-11-05",
+          "clientInfo": {
+            "name": "JSON-Corruption-Diagnostic",
+            "version": "1.0.0"
+          },
+          "capabilities": {
+            "roots": {
+              "listChanged": false
+            },
+            "sampling": {}
+          }
+        }
+      }
+    },
+    "tools_list": {
+      "raw_response": "{\"jsonrpc\":true,\"id\":\"diagnostic_tools\",\"result\":{\"tools\":[{\"name\":true,\"description\":true,\"inputSchema\":{\"type\":true,\"properties\":{\"text\":{\"type\":true,\"description\":true}},\"required\":[\"text\"]}},{\"name\":true,\"description\":true,\"inputSchema\":{\"type\":true,\"properties\":{\"pin\":{\"type\":true,\"description\":true},\"state\":{\"type\":true,\"enum\":[\"high\",\"low\"],\"description\":true}},\"required\":[\"pin\",\"state\"]}}]}}",
+      "is_valid_json": true,
+      "parsed_json": {
+        "jsonrpc": true,
+        "id": "diagnostic_tools",
+        "result": {
+          "tools": [
+            {
+              "name": true,
+              "description": true,
+              "inputSchema": {
+                "type": true,
+                "properties": {
+                  "text": {
+                    "type": true,
+                    "description": true
+                  }
+                },
+                "required": [
+                  "text"
+                ]
+              }
+            },
+            {
+              "name": true,
+              "description": true,
+              "inputSchema": {
+                "type": true,
+                "properties": {
+                  "pin": {
+                    "type": true,
+                    "description": true
+                  },
+                  "state": {
+                    "type": true,
+                    "enum": [
+                      "high",
+                      "low"
+                    ],
+                    "description": true
+                  }
+                },
+                "required": [
+                  "pin",
+                  "state"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "corruption_found": true,
+      "corruption_details": [
+        "Boolean 'true' found at jsonrpc (likely corrupted string)",
+        "Boolean 'true' found at result.tools[0].name (likely corrupted string)",
+        "Boolean 'true' found at result.tools[0].description (likely corrupted string)",
+        "Boolean 'true' found at result.tools[0].inputSchema.properties.text.description (likely corrupted string)",
+        "Boolean 'true' found at result.tools[1].name (likely corrupted string)",
+        "Boolean 'true' found at result.tools[1].description (likely corrupted string)",
+        "Boolean 'true' found at result.tools[1].inputSchema.properties.pin.description (likely corrupted string)",
+        "Boolean 'true' found at result.tools[1].inputSchema.properties.state.description (likely corrupted string)",
+        "Expected 'echo' possibly replaced with 'true'",
+        "Expected 'gpio_control' possibly replaced with 'true'"
+      ],
+      "expected_strings_found": [
+        "description",
+        "inputSchema"
+      ],
+      "unexpected_values": [],
+      "test_name": "tools_list",
+      "request": {
+        "jsonrpc": "2.0",
+        "id": "diagnostic_tools",
+        "method": "tools/list"
+      }
+    },
+    "string_corruption": [
+      {
+        "raw_response": "{\"jsonrpc\":true,\"id\":\"diagnostic_echo\",\"result\":{\"content\":[{\"type\":true,\"text\":\"Echo: hello\"}]}}",
+        "is_valid_json": true,
+        "parsed_json": {
+          "jsonrpc": true,
+          "id": "diagnostic_echo",
+          "result": {
+            "content": [
+              {
+                "type": true,
+                "text": "Echo: hello"
+              }
+            ]
+          }
+        },
+        "corruption_found": true,
+        "corruption_details": [
+          "Boolean 'true' found at jsonrpc (likely corrupted string)"
+        ],
+        "expected_strings_found": [
+          "hello",
+          "Echo:",
+          "content"
+        ],
+        "unexpected_values": [],
+        "test_name": "echo_tool_hello",
+        "request": {
+          "jsonrpc": "2.0",
+          "id": "diagnostic_echo",
+          "method": "tools/call",
+          "params": {
+            "name": "echo",
+            "arguments": {
+              "text": "hello"
+            }
+          }
+        },
+        "test_string": "hello"
+      },
+      {
+        "raw_response": "{\"jsonrpc\":true,\"id\":\"diagnostic_echo\",\"result\":{\"content\":[{\"type\":true,\"text\":\"Echo: world\"}]}}",
+        "is_valid_json": true,
+        "parsed_json": {
+          "jsonrpc": true,
+          "id": "diagnostic_echo",
+          "result": {
+            "content": [
+              {
+                "type": true,
+                "text": "Echo: world"
+              }
+            ]
+          }
+        },
+        "corruption_found": true,
+        "corruption_details": [
+          "Boolean 'true' found at jsonrpc (likely corrupted string)"
+        ],
+        "expected_strings_found": [
+          "world",
+          "Echo:",
+          "content"
+        ],
+        "unexpected_values": [],
+        "test_name": "echo_tool_world",
+        "request": {
+          "jsonrpc": "2.0",
+          "id": "diagnostic_echo",
+          "method": "tools/call",
+          "params": {
+            "name": "echo",
+            "arguments": {
+              "text": "world"
+            }
+          }
+        },
+        "test_string": "world"
+      },
+      {
+        "raw_response": "{\"jsonrpc\":true,\"id\":\"diagnostic_echo\",\"result\":{\"content\":[{\"type\":true,\"text\":\"Echo: ESP8266-MCP\"}]}}",
+        "is_valid_json": true,
+        "parsed_json": {
+          "jsonrpc": true,
+          "id": "diagnostic_echo",
+          "result": {
+            "content": [
+              {
+                "type": true,
+                "text": "Echo: ESP8266-MCP"
+              }
+            ]
+          }
+        },
+        "corruption_found": true,
+        "corruption_details": [
+          "Boolean 'true' found at jsonrpc (likely corrupted string)"
+        ],
+        "expected_strings_found": [
+          "ESP8266-MCP",
+          "Echo:",
+          "content"
+        ],
+        "unexpected_values": [],
+        "test_name": "echo_tool_ESP8266-MCP",
+        "request": {
+          "jsonrpc": "2.0",
+          "id": "diagnostic_echo",
+          "method": "tools/call",
+          "params": {
+            "name": "echo",
+            "arguments": {
+              "text": "ESP8266-MCP"
+            }
+          }
+        },
+        "test_string": "ESP8266-MCP"
+      },
+      {
+        "raw_response": "{\"jsonrpc\":true,\"id\":\"diagnostic_echo\",\"result\":{\"content\":[{\"type\":true,\"text\":\"Echo: 2024-11-05\"}]}}",
+        "is_valid_json": true,
+        "parsed_json": {
+          "jsonrpc": true,
+          "id": "diagnostic_echo",
+          "result": {
+            "content": [
+              {
+                "type": true,
+                "text": "Echo: 2024-11-05"
+              }
+            ]
+          }
+        },
+        "corruption_found": true,
+        "corruption_details": [
+          "Boolean 'true' found at jsonrpc (likely corrupted string)"
+        ],
+        "expected_strings_found": [
+          "2024-11-05",
+          "Echo:",
+          "content"
+        ],
+        "unexpected_values": [],
+        "test_name": "echo_tool_2024-11-05",
+        "request": {
+          "jsonrpc": "2.0",
+          "id": "diagnostic_echo",
+          "method": "tools/call",
+          "params": {
+            "name": "echo",
+            "arguments": {
+              "text": "2024-11-05"
+            }
+          }
+        },
+        "test_string": "2024-11-05"
+      },
+      {
+        "raw_response": "{\"jsonrpc\":true,\"id\":\"diagnostic_echo\",\"result\":{\"content\":[{\"type\":true,\"text\":\"Echo: Simple string\"}]}}",
+        "is_valid_json": true,
+        "parsed_json": {
+          "jsonrpc": true,
+          "id": "diagnostic_echo",
+          "result": {
+            "content": [
+              {
+                "type": true,
+                "text": "Echo: Simple string"
+              }
+            ]
+          }
+        },
+        "corruption_found": true,
+        "corruption_details": [
+          "Boolean 'true' found at jsonrpc (likely corrupted string)"
+        ],
+        "expected_strings_found": [
+          "Simple string",
+          "Echo:",
+          "content"
+        ],
+        "unexpected_values": [],
+        "test_name": "echo_tool_Simple_string",
+        "request": {
+          "jsonrpc": "2.0",
+          "id": "diagnostic_echo",
+          "method": "tools/call",
+          "params": {
+            "name": "echo",
+            "arguments": {
+              "text": "Simple string"
+            }
+          }
+        },
+        "test_string": "Simple string"
+      },
+      {
+        "raw_response": "{\"jsonrpc\":true,\"id\":\"diagnostic_echo\",\"result\":{\"content\":[{\"type\":true,\"text\":\"Echo: String with spaces\"}]}}",
+        "is_valid_json": true,
+        "parsed_json": {
+          "jsonrpc": true,
+          "id": "diagnostic_echo",
+          "result": {
+            "content": [
+              {
+                "type": true,
+                "text": "Echo: String with spaces"
+              }
+            ]
+          }
+        },
+        "corruption_found": true,
+        "corruption_details": [
+          "Boolean 'true' found at jsonrpc (likely corrupted string)"
+        ],
+        "expected_strings_found": [
+          "String with spaces",
+          "Echo:",
+          "content"
+        ],
+        "unexpected_values": [],
+        "test_name": "echo_tool_String_with_spaces",
+        "request": {
+          "jsonrpc": "2.0",
+          "id": "diagnostic_echo",
+          "method": "tools/call",
+          "params": {
+            "name": "echo",
+            "arguments": {
+              "text": "String with spaces"
+            }
+          }
+        },
+        "test_string": "String with spaces"
+      },
+      {
+        "raw_response": "{\"jsonrpc\":true,\"id\":\"diagnostic_echo\",\"result\":{\"content\":[{\"type\":true,\"text\":\"Echo: String_with_underscores\"}]}}",
+        "is_valid_json": true,
+        "parsed_json": {
+          "jsonrpc": true,
+          "id": "diagnostic_echo",
+          "result": {
+            "content": [
+              {
+                "type": true,
+                "text": "Echo: String_with_underscores"
+              }
+            ]
+          }
+        },
+        "corruption_found": true,
+        "corruption_details": [
+          "Boolean 'true' found at jsonrpc (likely corrupted string)"
+        ],
+        "expected_strings_found": [
+          "String_with_underscores",
+          "Echo:",
+          "content"
+        ],
+        "unexpected_values": [],
+        "test_name": "echo_tool_String_with_underscores",
+        "request": {
+          "jsonrpc": "2.0",
+          "id": "diagnostic_echo",
+          "method": "tools/call",
+          "params": {
+            "name": "echo",
+            "arguments": {
+              "text": "String_with_underscores"
+            }
+          }
+        },
+        "test_string": "String_with_underscores"
+      },
+      {
+        "raw_response": "{\"jsonrpc\":true,\"id\":\"diagnostic_echo\",\"result\":{\"content\":[{\"type\":true,\"text\":\"Echo: String-with-dashes\"}]}}",
+        "is_valid_json": true,
+        "parsed_json": {
+          "jsonrpc": true,
+          "id": "diagnostic_echo",
+          "result": {
+            "content": [
+              {
+                "type": true,
+                "text": "Echo: String-with-dashes"
+              }
+            ]
+          }
+        },
+        "corruption_found": true,
+        "corruption_details": [
+          "Boolean 'true' found at jsonrpc (likely corrupted string)"
+        ],
+        "expected_strings_found": [
+          "String-with-dashes",
+          "Echo:",
+          "content"
+        ],
+        "unexpected_values": [],
+        "test_name": "echo_tool_String-with-dashes",
+        "request": {
+          "jsonrpc": "2.0",
+          "id": "diagnostic_echo",
+          "method": "tools/call",
+          "params": {
+            "name": "echo",
+            "arguments": {
+              "text": "String-with-dashes"
+            }
+          }
+        },
+        "test_string": "String-with-dashes"
+      },
+      {
+        "raw_response": "{\"jsonrpc\":true,\"id\":\"diagnostic_echo\",\"result\":{\"content\":[{\"type\":true,\"text\":\"Echo: String123WithNumbers\"}]}}",
+        "is_valid_json": true,
+        "parsed_json": {
+          "jsonrpc": true,
+          "id": "diagnostic_echo",
+          "result": {
+            "content": [
+              {
+                "type": true,
+                "text": "Echo: String123WithNumbers"
+              }
+            ]
+          }
+        },
+        "corruption_found": true,
+        "corruption_details": [
+          "Boolean 'true' found at jsonrpc (likely corrupted string)"
+        ],
+        "expected_strings_found": [
+          "String123WithNumbers",
+          "Echo:",
+          "content"
+        ],
+        "unexpected_values": [],
+        "test_name": "echo_tool_String123WithNumbers",
+        "request": {
+          "jsonrpc": "2.0",
+          "id": "diagnostic_echo",
+          "method": "tools/call",
+          "params": {
+            "name": "echo",
+            "arguments": {
+              "text": "String123WithNumbers"
+            }
+          }
+        },
+        "test_string": "String123WithNumbers"
+      },
+      {
+        "raw_response": "{\"jsonrpc\":true,\"id\":\"diagnostic_echo\",\"result\":{\"content\":[{\"type\":true,\"text\":\"Echo: SpecialChars!@#$%\"}]}}",
+        "is_valid_json": true,
+        "parsed_json": {
+          "jsonrpc": true,
+          "id": "diagnostic_echo",
+          "result": {
+            "content": [
+              {
+                "type": true,
+                "text": "Echo: SpecialChars!@#$%"
+              }
+            ]
+          }
+        },
+        "corruption_found": true,
+        "corruption_details": [
+          "Boolean 'true' found at jsonrpc (likely corrupted string)"
+        ],
+        "expected_strings_found": [
+          "SpecialChars!@#$%",
+          "Echo:",
+          "content"
+        ],
+        "unexpected_values": [],
+        "test_name": "echo_tool_SpecialChars!@#$%",
+        "request": {
+          "jsonrpc": "2.0",
+          "id": "diagnostic_echo",
+          "method": "tools/call",
+          "params": {
+            "name": "echo",
+            "arguments": {
+              "text": "SpecialChars!@#$%"
+            }
+          }
+        },
+        "test_string": "SpecialChars!@#$%"
+      },
+      {
+        "raw_response": "{\"jsonrpc\":true,\"id\":\"diagnostic_echo\",\"result\":{\"content\":[{\"type\":true,\"text\":\"Echo: Unicode: \ud83d\ude80\"}]}}",
+        "is_valid_json": true,
+        "parsed_json": {
+          "jsonrpc": true,
+          "id": "diagnostic_echo",
+          "result": {
+            "content": [
+              {
+                "type": true,
+                "text": "Echo: Unicode: \ud83d\ude80"
+              }
+            ]
+          }
+        },
+        "corruption_found": true,
+        "corruption_details": [
+          "Boolean 'true' found at jsonrpc (likely corrupted string)"
+        ],
+        "expected_strings_found": [
+          "Unicode: \ud83d\ude80",
+          "Echo:",
+          "content"
+        ],
+        "unexpected_values": [],
+        "test_name": "echo_tool_Unicode:_\ud83d\ude80",
+        "request": {
+          "jsonrpc": "2.0",
+          "id": "diagnostic_echo",
+          "method": "tools/call",
+          "params": {
+            "name": "echo",
+            "arguments": {
+              "text": "Unicode: \ud83d\ude80"
+            }
+          }
+        },
+        "test_string": "Unicode: \ud83d\ude80"
+      },
+      {
+        "raw_response": "{\"jsonrpc\":true,\"id\":\"diagnostic_echo\",\"result\":{\"content\":[{\"type\":true,\"text\":\"Echo: Long string that is quite a bit longer than the others to test if length matters\"}]}}",
+        "is_valid_json": true,
+        "parsed_json": {
+          "jsonrpc": true,
+          "id": "diagnostic_echo",
+          "result": {
+            "content": [
+              {
+                "type": true,
+                "text": "Echo: Long string that is quite a bit longer than the others to test if length matters"
+              }
+            ]
+          }
+        },
+        "corruption_found": true,
+        "corruption_details": [
+          "Boolean 'true' found at jsonrpc (likely corrupted string)"
+        ],
+        "expected_strings_found": [
+          "Long string that is quite a bit longer than the others to test if length matters",
+          "Echo:",
+          "content"
+        ],
+        "unexpected_values": [],
+        "test_name": "echo_tool_Long_string_that_is_quite_a_bit_longer_than_the_others_to_test_if_length_matters",
+        "request": {
+          "jsonrpc": "2.0",
+          "id": "diagnostic_echo",
+          "method": "tools/call",
+          "params": {
+            "name": "echo",
+            "arguments": {
+              "text": "Long string that is quite a bit longer than the others to test if length matters"
+            }
+          }
+        },
+        "test_string": "Long string that is quite a bit longer than the others to test if length matters"
+      },
+      {
+        "raw_response": "{\"jsonrpc\":true,\"id\":\"diagnostic_echo\",\"result\":{\"content\":[{\"type\":true,\"text\":\"Echo: \"}]}}",
+        "is_valid_json": true,
+        "parsed_json": {
+          "jsonrpc": true,
+          "id": "diagnostic_echo",
+          "result": {
+            "content": [
+              {
+                "type": true,
+                "text": "Echo: "
+              }
+            ]
+          }
+        },
+        "corruption_found": true,
+        "corruption_details": [
+          "Boolean 'true' found at jsonrpc (likely corrupted string)"
+        ],
+        "expected_strings_found": [
+          "",
+          "Echo:",
+          "content"
+        ],
+        "unexpected_values": [],
+        "test_name": "echo_tool_",
+        "request": {
+          "jsonrpc": "2.0",
+          "id": "diagnostic_echo",
+          "method": "tools/call",
+          "params": {
+            "name": "echo",
+            "arguments": {
+              "text": ""
+            }
+          }
+        },
+        "test_string": ""
+      },
+      {
+        "raw_response": "{\"jsonrpc\":true,\"id\":\"diagnostic_echo\",\"result\":{\"content\":[{\"type\":true,\"text\":\"Echo: true\"}]}}",
+        "is_valid_json": true,
+        "parsed_json": {
+          "jsonrpc": true,
+          "id": "diagnostic_echo",
+          "result": {
+            "content": [
+              {
+                "type": true,
+                "text": "Echo: true"
+              }
+            ]
+          }
+        },
+        "corruption_found": true,
+        "corruption_details": [
+          "Boolean 'true' found at jsonrpc (likely corrupted string)"
+        ],
+        "expected_strings_found": [
+          "true",
+          "Echo:",
+          "content"
+        ],
+        "unexpected_values": [],
+        "test_name": "echo_tool_true",
+        "request": {
+          "jsonrpc": "2.0",
+          "id": "diagnostic_echo",
+          "method": "tools/call",
+          "params": {
+            "name": "echo",
+            "arguments": {
+              "text": "true"
+            }
+          }
+        },
+        "test_string": "true"
+      },
+      {
+        "raw_response": "{\"jsonrpc\":true,\"id\":\"diagnostic_echo\",\"result\":{\"content\":[{\"type\":true,\"text\":\"Echo: false\"}]}}",
+        "is_valid_json": true,
+        "parsed_json": {
+          "jsonrpc": true,
+          "id": "diagnostic_echo",
+          "result": {
+            "content": [
+              {
+                "type": true,
+                "text": "Echo: false"
+              }
+            ]
+          }
+        },
+        "corruption_found": true,
+        "corruption_details": [
+          "Boolean 'true' found at jsonrpc (likely corrupted string)"
+        ],
+        "expected_strings_found": [
+          "false",
+          "Echo:",
+          "content"
+        ],
+        "unexpected_values": [],
+        "test_name": "echo_tool_false",
+        "request": {
+          "jsonrpc": "2.0",
+          "id": "diagnostic_echo",
+          "method": "tools/call",
+          "params": {
+            "name": "echo",
+            "arguments": {
+              "text": "false"
+            }
+          }
+        },
+        "test_string": "false"
+      },
+      {
+        "raw_response": "{\"jsonrpc\":true,\"id\":\"diagnostic_echo\",\"result\":{\"content\":[{\"type\":true,\"text\":\"Echo: null\"}]}}",
+        "is_valid_json": true,
+        "parsed_json": {
+          "jsonrpc": true,
+          "id": "diagnostic_echo",
+          "result": {
+            "content": [
+              {
+                "type": true,
+                "text": "Echo: null"
+              }
+            ]
+          }
+        },
+        "corruption_found": true,
+        "corruption_details": [
+          "Boolean 'true' found at jsonrpc (likely corrupted string)"
+        ],
+        "expected_strings_found": [
+          "null",
+          "Echo:",
+          "content"
+        ],
+        "unexpected_values": [],
+        "test_name": "echo_tool_null",
+        "request": {
+          "jsonrpc": "2.0",
+          "id": "diagnostic_echo",
+          "method": "tools/call",
+          "params": {
+            "name": "echo",
+            "arguments": {
+              "text": "null"
+            }
+          }
+        },
+        "test_string": "null"
+      }
+    ],
+    "concurrent": {
+      "test_name": "concurrent_connections",
+      "connection_count": 3,
+      "results": [
+        {
+          "raw_response": "{\"jsonrpc\":\"2.0\",\"id\":\"diagnostic_init\",\"result\":{\"protocolVersion\":\"2024-11-05\",\"serverInfo\":{\"name\":\"ESP8266-MCP\",\"version\":\"1.0.0\"},\"capabilities\":{\"tools\":{\"listChanged\":false}}}}",
+          "is_valid_json": true,
+          "parsed_json": {
+            "jsonrpc": "2.0",
+            "id": "diagnostic_init",
+            "result": {
+              "protocolVersion": "2024-11-05",
+              "serverInfo": {
+                "name": "ESP8266-MCP",
+                "version": "1.0.0"
+              },
+              "capabilities": {
+                "tools": {
+                  "listChanged": false
+                }
+              }
+            }
+          },
+          "corruption_found": false,
+          "corruption_details": [],
+          "expected_strings_found": [
+            "ESP8266-MCP",
+            "2024-11-05",
+            "1.0.0",
+            "jsonrpc",
+            "2.0"
+          ],
+          "unexpected_values": [],
+          "test_name": "initialization",
+          "request": {
+            "jsonrpc": "2.0",
+            "id": "diagnostic_init",
+            "method": "initialize",
+            "params": {
+              "protocolVersion": "2024-11-05",
+              "clientInfo": {
+                "name": "JSON-Corruption-Diagnostic",
+                "version": "1.0.0"
+              },
+              "capabilities": {
+                "roots": {
+                  "listChanged": false
+                },
+                "sampling": {}
+              }
+            }
+          }
+        },
+        {
+          "raw_response": "{\"jsonrpc\":\"2.0\",\"id\":\"diagnostic_init\",\"result\":{\"protocolVersion\":\"2024-11-05\",\"serverInfo\":{\"name\":\"ESP8266-MCP\",\"version\":\"1.0.0\"},\"capabilities\":{\"tools\":{\"listChanged\":false}}}}",
+          "is_valid_json": true,
+          "parsed_json": {
+            "jsonrpc": "2.0",
+            "id": "diagnostic_init",
+            "result": {
+              "protocolVersion": "2024-11-05",
+              "serverInfo": {
+                "name": "ESP8266-MCP",
+                "version": "1.0.0"
+              },
+              "capabilities": {
+                "tools": {
+                  "listChanged": false
+                }
+              }
+            }
+          },
+          "corruption_found": false,
+          "corruption_details": [],
+          "expected_strings_found": [
+            "ESP8266-MCP",
+            "2024-11-05",
+            "1.0.0",
+            "jsonrpc",
+            "2.0"
+          ],
+          "unexpected_values": [],
+          "test_name": "initialization",
+          "request": {
+            "jsonrpc": "2.0",
+            "id": "diagnostic_init",
+            "method": "initialize",
+            "params": {
+              "protocolVersion": "2024-11-05",
+              "clientInfo": {
+                "name": "JSON-Corruption-Diagnostic",
+                "version": "1.0.0"
+              },
+              "capabilities": {
+                "roots": {
+                  "listChanged": false
+                },
+                "sampling": {}
+              }
+            }
+          }
+        },
+        {
+          "raw_response": "{\"jsonrpc\":\"2.0\",\"id\":\"diagnostic_init\",\"result\":{\"protocolVersion\":\"2024-11-05\",\"serverInfo\":{\"name\":\"ESP8266-MCP\",\"version\":\"1.0.0\"},\"capabilities\":{\"tools\":{\"listChanged\":false}}}}",
+          "is_valid_json": true,
+          "parsed_json": {
+            "jsonrpc": "2.0",
+            "id": "diagnostic_init",
+            "result": {
+              "protocolVersion": "2024-11-05",
+              "serverInfo": {
+                "name": "ESP8266-MCP",
+                "version": "1.0.0"
+              },
+              "capabilities": {
+                "tools": {
+                  "listChanged": false
+                }
+              }
+            }
+          },
+          "corruption_found": false,
+          "corruption_details": [],
+          "expected_strings_found": [
+            "ESP8266-MCP",
+            "2024-11-05",
+            "1.0.0",
+            "jsonrpc",
+            "2.0"
+          ],
+          "unexpected_values": [],
+          "test_name": "initialization",
+          "request": {
+            "jsonrpc": "2.0",
+            "id": "diagnostic_init",
+            "method": "initialize",
+            "params": {
+              "protocolVersion": "2024-11-05",
+              "clientInfo": {
+                "name": "JSON-Corruption-Diagnostic",
+                "version": "1.0.0"
+              },
+              "capabilities": {
+                "roots": {
+                  "listChanged": false
+                },
+                "sampling": {}
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

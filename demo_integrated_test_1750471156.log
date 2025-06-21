@@ -1,0 +1,226 @@
+
+# ESP8266 MCP Integrated Test Log
+# Generated: 2025-06-20T21:59:16.460632
+# ESP8266 IP: 192.168.86.37
+# Serial Port: /dev/ttyUSB1
+# Baud Rate: 74880
+================================================================================
+2025-06-20T21:59:16.461074 [ESP8266] ERROR: Serial connection failed: [Errno 13] could not open port /dev/ttyUSB1: [Errno 13] Permission denied: '/dev/ttyUSB1'
+2025-06-20T21:59:19.461520 [ CLIENT]  TEST: 🚀 Starting test: test_mcp_client.py
+2025-06-20T21:59:23.349405 [ CLIENT]  INFO: 🤖 ESP8266 MCP Client Test Script
+2025-06-20T21:59:23.349433 [ CLIENT]  INFO: ============================================================
+2025-06-20T21:59:23.349437 [ CLIENT]  INFO: Target: 192.168.86.37:8080
+2025-06-20T21:59:23.349440 [ CLIENT]  INFO: ============================================================
+2025-06-20T21:59:23.349443 [ CLIENT]  INFO: 🧪 Starting comprehensive MCP test suite...
+2025-06-20T21:59:23.349445 [ CLIENT]  INFO: ============================================================
+2025-06-20T21:59:23.349448 [ CLIENT]  INFO: 📡 TEST 1: Connection
+2025-06-20T21:59:23.349450 [ CLIENT]  INFO: 🔗 Connecting to MCP server at 192.168.86.37:8080...
+2025-06-20T21:59:23.349453 [ CLIENT]  INFO: ✅ Connected successfully!
+2025-06-20T21:59:23.349455 [ CLIENT]  INFO: 🚀 TEST 2: Initialization
+2025-06-20T21:59:23.349457 [ CLIENT]  INFO: 🚀 Initializing MCP session...
+2025-06-20T21:59:23.349460 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "1", "method": "initialize", "params": {"protocolVersion": "2024-11-05", "clientInfo": {"name": "ESP8266-MCP-Test-Client", "version": "1.0.0"}, "capabilities": {"roots": {"listChanged": false}, "sampling": {}}}}
+2025-06-20T21:59:23.349462 [ CLIENT]  INFO: 📤 Sent 237 bytes successfully
+2025-06-20T21:59:23.349464 [ CLIENT]  INFO: 📥 Waiting for response...
+2025-06-20T21:59:23.349467 [ CLIENT]  INFO: 📥 Received chunk: '{"jsonrpc":true,"id":"1","result":{"protocolVersion":true,"serverInfo":{"name":true,"version":true},"capabilities":{"tools":{"listChanged":false}}}}\n'
+2025-06-20T21:59:23.349470 [ CLIENT]  INFO: 📥 Complete response received: {"jsonrpc":true,"id":"1","result":{"protocolVersion":true,"serverInfo":{"name":true,"version":true},"capabilities":{"tools":{"listChanged":false}}}}
+2025-06-20T21:59:23.349473 [ CLIENT]  INFO: 📥 Parsing response: {"jsonrpc":true,"id":"1","result":{"protocolVersion":true,"serverInfo":{"name":true,"version":true},"capabilities":{"tools":{"listChanged":false}}}}
+2025-06-20T21:59:23.349475 [ CLIENT]  INFO: ✅ Server initialized!
+2025-06-20T21:59:23.349477 [ CLIENT]  INFO: 📋 Server: True vTrue
+2025-06-20T21:59:23.349479 [ CLIENT]  INFO: 🔧 Protocol: True
+2025-06-20T21:59:23.349481 [ CLIENT]  INFO: 🛠️  Tools supported: False
+2025-06-20T21:59:23.349483 [ CLIENT]  INFO: 🏓 TEST 3: Ping
+2025-06-20T21:59:23.349485 [ CLIENT]  INFO: 🏓 Sending ping...
+2025-06-20T21:59:23.349488 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "2", "method": "ping"}
+2025-06-20T21:59:23.349490 [ CLIENT]  INFO: 📤 Sent 48 bytes successfully
+2025-06-20T21:59:23.349496 [ CLIENT]  INFO: 📥 Waiting for response...
+2025-06-20T21:59:23.349498 [ CLIENT]  INFO: 📥 Received chunk: '{"jsonrpc":true,"id":"2","result":{}}\n'
+2025-06-20T21:59:23.349501 [ CLIENT]  INFO: 📥 Complete response received: {"jsonrpc":true,"id":"2","result":{}}
+2025-06-20T21:59:23.349503 [ CLIENT]  INFO: 📥 Parsing response: {"jsonrpc":true,"id":"2","result":{}}
+2025-06-20T21:59:23.349505 [ CLIENT]  INFO: ✅ Ping successful!
+2025-06-20T21:59:23.349507 [ CLIENT]  INFO: 🔍 TEST 4: Tool Discovery
+2025-06-20T21:59:23.349510 [ CLIENT]  INFO: 🔍 Discovering available tools...
+2025-06-20T21:59:23.349512 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "3", "method": "tools/list"}
+2025-06-20T21:59:23.349514 [ CLIENT]  INFO: 📤 Sent 54 bytes successfully
+2025-06-20T21:59:23.349516 [ CLIENT]  INFO: 📥 Waiting for response...
+2025-06-20T21:59:23.349524 [ CLIENT]  INFO: 📥 Received chunk: '{"jsonrpc":true,"id":"3","result":{"tools":[{"name":true,"description":true,"inputSchema":{"type":true,"properties":{"text":{"type":true,"description":true}},"required":["text"]}},{"name":true,"description":true,"inputSchema":{"type":true,"properties":{"pin":{"type":true,"description":true},"state":{"type":true,"enum":["high","low"],"description":true}},"required":["pin","state"]}}]}}\n'
+2025-06-20T21:59:23.349527 [ CLIENT]  INFO: 📥 Complete response received: {"jsonrpc":true,"id":"3","result":{"tools":[{"name":true,"description":true,"inputSchema":{"type":true,"properties":{"text":{"type":true,"description":true}},"required":["text"]}},{"name":true,"description":true,"inputSchema":{"type":true,"properties":{"pin":{"type":true,"description":true},"state":{"type":true,"enum":["high","low"],"description":true}},"required":["pin","state"]}}]}}
+2025-06-20T21:59:23.349529 [ CLIENT]  INFO: 📥 Parsing response: {"jsonrpc":true,"id":"3","result":{"tools":[{"name":true,"description":true,"inputSchema":{"type":true,"properties":{"text":{"type":true,"description":true}},"required":["text"]}},{"name":true,"description":true,"inputSchema":{"type":true,"properties":{"pin":{"type":true,"description":true},"state":{"type":true,"enum":["high","low"],"description":true}},"required":["pin","state"]}}]}}
+2025-06-20T21:59:23.349531 [ CLIENT]  INFO: ✅ Found 2 tools:
+2025-06-20T21:59:23.349533 [ CLIENT]  INFO: 1. 🛠️  True: True
+2025-06-20T21:59:23.349538 [ CLIENT]  INFO: 📝 Parameters:
+2025-06-20T21:59:23.349540 [ CLIENT]  INFO: • text (True) (required): True
+2025-06-20T21:59:23.349542 [ CLIENT]  INFO: 2. 🛠️  True: True
+2025-06-20T21:59:23.349544 [ CLIENT]  INFO: 📝 Parameters:
+2025-06-20T21:59:23.349546 [ CLIENT]  INFO: • pin (True) (required): True
+2025-06-20T21:59:23.349548 [ CLIENT]  INFO: • state (True) (required): True
+2025-06-20T21:59:23.349550 [ CLIENT]  INFO: 🔊 TEST 5: Echo Tool
+2025-06-20T21:59:23.349552 [ CLIENT]  INFO: 🔊 Echo Test 1/4
+2025-06-20T21:59:23.349554 [ CLIENT]  INFO: 🔧 Calling tool 'echo' with arguments: {'text': 'Hello ESP8266!'}
+2025-06-20T21:59:23.349556 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "4", "method": "tools/call", "params": {"name": "echo", "arguments": {"text": "Hello ESP8266!"}}}
+2025-06-20T21:59:23.349558 [ CLIENT]  INFO: 📤 Sent 123 bytes successfully
+2025-06-20T21:59:23.349560 [ CLIENT]  INFO: 📥 Waiting for response...
+2025-06-20T21:59:23.349563 [ CLIENT]  INFO: 📥 Received chunk: '{"jsonrpc":true,"id":"4","result":{"content":[{"type":true,"text":"Echo: Hello ESP8266!"}]}}\n'
+2025-06-20T21:59:23.349565 [ CLIENT]  INFO: 📥 Complete response received: {"jsonrpc":true,"id":"4","result":{"content":[{"type":true,"text":"Echo: Hello ESP8266!"}]}}
+2025-06-20T21:59:23.349570 [ CLIENT]  INFO: 📥 Parsing response: {"jsonrpc":true,"id":"4","result":{"content":[{"type":true,"text":"Echo: Hello ESP8266!"}]}}
+2025-06-20T21:59:23.349572 [ CLIENT]  INFO: ✅ Tool 'echo' executed successfully!
+2025-06-20T21:59:23.349574 [ CLIENT]  INFO: 📄 Response content:
+2025-06-20T21:59:23.349576 [ CLIENT]  INFO: 🔍 True: {'type': True, 'text': 'Echo: Hello ESP8266!'}
+2025-06-20T21:59:23.349578 [ CLIENT]  INFO: 🔊 Echo Test 2/4
+2025-06-20T21:59:23.349580 [ CLIENT]  INFO: 🔧 Calling tool 'echo' with arguments: {'text': 'Testing MCP protocol 🚀'}
+2025-06-20T21:59:23.349583 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "5", "method": "tools/call", "params": {"name": "echo", "arguments": {"text": "Testing MCP protocol \ud83d\ude80"}}}
+2025-06-20T21:59:23.349584 [ CLIENT]  INFO: 📤 Sent 142 bytes successfully
+2025-06-20T21:59:23.349589 [ CLIENT]  INFO: 📥 Waiting for response...
+2025-06-20T21:59:23.349591 [ CLIENT]  INFO: 📥 Received chunk: '{"jsonrpc":true,"id":"5","result":{"content":[{"type":true,"text":"Echo: Testing MCP protocol 🚀"}]}}\n'
+2025-06-20T21:59:23.349593 [ CLIENT]  INFO: 📥 Complete response received: {"jsonrpc":true,"id":"5","result":{"content":[{"type":true,"text":"Echo: Testing MCP protocol 🚀"}]}}
+2025-06-20T21:59:23.349595 [ CLIENT]  INFO: 📥 Parsing response: {"jsonrpc":true,"id":"5","result":{"content":[{"type":true,"text":"Echo: Testing MCP protocol 🚀"}]}}
+2025-06-20T21:59:23.349597 [ CLIENT]  INFO: ✅ Tool 'echo' executed successfully!
+2025-06-20T21:59:23.349599 [ CLIENT]  INFO: 📄 Response content:
+2025-06-20T21:59:23.349601 [ CLIENT]  INFO: 🔍 True: {'type': True, 'text': 'Echo: Testing MCP protocol 🚀'}
+2025-06-20T21:59:23.349603 [ CLIENT]  INFO: 🔊 Echo Test 3/4
+2025-06-20T21:59:23.349605 [ CLIENT]  INFO: 🔧 Calling tool 'echo' with arguments: {'text': 'Special characters: !@#$%^&*()'}
+2025-06-20T21:59:23.349607 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "6", "method": "tools/call", "params": {"name": "echo", "arguments": {"text": "Special characters: !@#$%^&*()"}}}
+2025-06-20T21:59:23.349609 [ CLIENT]  INFO: 📤 Sent 139 bytes successfully
+2025-06-20T21:59:23.349611 [ CLIENT]  INFO: 📥 Waiting for response...
+2025-06-20T21:59:23.349613 [ CLIENT]  INFO: 📥 Received chunk: '{"jsonrpc":true,"id":"6","result":{"content":[{"type":true,"text":"Echo: Special characters: !@#$%^&*()"}]}}\n'
+2025-06-20T21:59:23.349615 [ CLIENT]  INFO: 📥 Complete response received: {"jsonrpc":true,"id":"6","result":{"content":[{"type":true,"text":"Echo: Special characters: !@#$%^&*()"}]}}
+2025-06-20T21:59:23.349617 [ CLIENT]  INFO: 📥 Parsing response: {"jsonrpc":true,"id":"6","result":{"content":[{"type":true,"text":"Echo: Special characters: !@#$%^&*()"}]}}
+2025-06-20T21:59:23.349621 [ CLIENT]  INFO: ✅ Tool 'echo' executed successfully!
+2025-06-20T21:59:23.349623 [ CLIENT]  INFO: 📄 Response content:
+2025-06-20T21:59:23.349626 [ CLIENT]  INFO: 🔍 True: {'type': True, 'text': 'Echo: Special characters: !@#$%^&*()'}
+2025-06-20T21:59:23.349630 [ CLIENT]  INFO: 🔊 Echo Test 4/4
+2025-06-20T21:59:23.349632 [ CLIENT]  INFO: 🔧 Calling tool 'echo' with arguments: {'text': 'Multiple\nlines\ntest'}
+2025-06-20T21:59:23.349634 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "7", "method": "tools/call", "params": {"name": "echo", "arguments": {"text": "Multiple\nlines\ntest"}}}
+2025-06-20T21:59:23.349636 [ CLIENT]  INFO: 📤 Sent 130 bytes successfully
+2025-06-20T21:59:23.349638 [ CLIENT]  INFO: 📥 Waiting for response...
+2025-06-20T21:59:23.349640 [ CLIENT]  INFO: 📥 Received chunk: '{"jsonrpc":true,"id":"7","result":{"content":[{"type":true,"text":"Echo: Multiple\\nlines\\ntest"}]}}\n'
+2025-06-20T21:59:23.349645 [ CLIENT]  INFO: 📥 Complete response received: {"jsonrpc":true,"id":"7","result":{"content":[{"type":true,"text":"Echo: Multiple\nlines\ntest"}]}}
+2025-06-20T21:59:23.349647 [ CLIENT]  INFO: 📥 Parsing response: {"jsonrpc":true,"id":"7","result":{"content":[{"type":true,"text":"Echo: Multiple\nlines\ntest"}]}}
+2025-06-20T21:59:23.349649 [ CLIENT]  INFO: ✅ Tool 'echo' executed successfully!
+2025-06-20T21:59:23.349650 [ CLIENT]  INFO: 📄 Response content:
+2025-06-20T21:59:23.349652 [ CLIENT]  INFO: 🔍 True: {'type': True, 'text': 'Echo: Multiple\nlines\ntest'}
+2025-06-20T21:59:23.349654 [ CLIENT]  INFO: 📊 Echo test results: 4/4 passed
+2025-06-20T21:59:23.349656 [ CLIENT]  INFO: 🔌 TEST 6: GPIO Tool
+2025-06-20T21:59:23.349658 [ CLIENT]  INFO: 🔌 GPIO Test 1/6
+2025-06-20T21:59:23.349660 [ CLIENT]  INFO: 🔧 Calling tool 'gpio_control' with arguments: {'pin': 2, 'state': 'high'}
+2025-06-20T21:59:23.349662 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "8", "method": "tools/call", "params": {"name": "gpio_control", "arguments": {"pin": 2, "state": "high"}}}
+2025-06-20T21:59:23.349664 [ CLIENT]  INFO: 📤 Sent 132 bytes successfully
+2025-06-20T21:59:23.349666 [ CLIENT]  INFO: 📥 Waiting for response...
+2025-06-20T21:59:23.349668 [ CLIENT]  INFO: 📥 Received chunk: '{"jsonrpc":true,"id":"8","result":{"content":[{"type":true,"text":"GPIO pin 2 set to high"}]}}\n'
+2025-06-20T21:59:23.349670 [ CLIENT]  INFO: 📥 Complete response received: {"jsonrpc":true,"id":"8","result":{"content":[{"type":true,"text":"GPIO pin 2 set to high"}]}}
+2025-06-20T21:59:23.349672 [ CLIENT]  INFO: 📥 Parsing response: {"jsonrpc":true,"id":"8","result":{"content":[{"type":true,"text":"GPIO pin 2 set to high"}]}}
+2025-06-20T21:59:23.349674 [ CLIENT]  INFO: ✅ Tool 'gpio_control' executed successfully!
+2025-06-20T21:59:23.349676 [ CLIENT]  INFO: 📄 Response content:
+2025-06-20T21:59:23.349678 [ CLIENT]  INFO: 🔍 True: {'type': True, 'text': 'GPIO pin 2 set to high'}
+2025-06-20T21:59:23.349680 [ CLIENT]  INFO: 🔌 GPIO Test 2/6
+2025-06-20T21:59:23.349682 [ CLIENT]  INFO: 🔧 Calling tool 'gpio_control' with arguments: {'pin': 2, 'state': 'low'}
+2025-06-20T21:59:23.349684 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "9", "method": "tools/call", "params": {"name": "gpio_control", "arguments": {"pin": 2, "state": "low"}}}
+2025-06-20T21:59:23.349686 [ CLIENT]  INFO: 📤 Sent 131 bytes successfully
+2025-06-20T21:59:23.349688 [ CLIENT]  INFO: 📥 Waiting for response...
+2025-06-20T21:59:23.349690 [ CLIENT]  INFO: 📥 Received chunk: '{"jsonrpc":true,"id":"9","result":{"content":[{"type":true,"text":"GPIO pin 2 set to low"}]}}\n'
+2025-06-20T21:59:29.146457 [ CLIENT]  INFO: 📥 Complete response received: {"jsonrpc":true,"id":"9","result":{"content":[{"type":true,"text":"GPIO pin 2 set to low"}]}}
+2025-06-20T21:59:29.146486 [ CLIENT]  INFO: 📥 Parsing response: {"jsonrpc":true,"id":"9","result":{"content":[{"type":true,"text":"GPIO pin 2 set to low"}]}}
+2025-06-20T21:59:29.146490 [ CLIENT]  INFO: ✅ Tool 'gpio_control' executed successfully!
+2025-06-20T21:59:29.146493 [ CLIENT]  INFO: 📄 Response content:
+2025-06-20T21:59:29.146496 [ CLIENT]  INFO: 🔍 True: {'type': True, 'text': 'GPIO pin 2 set to low'}
+2025-06-20T21:59:29.146499 [ CLIENT]  INFO: 🔌 GPIO Test 3/6
+2025-06-20T21:59:29.146505 [ CLIENT]  INFO: 🔧 Calling tool 'gpio_control' with arguments: {'pin': 16, 'state': 'high'}
+2025-06-20T21:59:29.146508 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "10", "method": "tools/call", "params": {"name": "gpio_control", "arguments": {"pin": 16, "state": "high"}}}
+2025-06-20T21:59:29.146510 [ CLIENT]  INFO: 📤 Sent 134 bytes successfully
+2025-06-20T21:59:29.146513 [ CLIENT]  INFO: 📥 Waiting for response...
+2025-06-20T21:59:29.146516 [ CLIENT]  INFO: 📥 Received chunk: '{"jsonrpc":true,"id":"10","result":{"content":[{"type":true,"text":"GPIO pin 16 set to high"}]}}\n'
+2025-06-20T21:59:29.146519 [ CLIENT]  INFO: 📥 Complete response received: {"jsonrpc":true,"id":"10","result":{"content":[{"type":true,"text":"GPIO pin 16 set to high"}]}}
+2025-06-20T21:59:29.146521 [ CLIENT]  INFO: 📥 Parsing response: {"jsonrpc":true,"id":"10","result":{"content":[{"type":true,"text":"GPIO pin 16 set to high"}]}}
+2025-06-20T21:59:29.146523 [ CLIENT]  INFO: ✅ Tool 'gpio_control' executed successfully!
+2025-06-20T21:59:29.146525 [ CLIENT]  INFO: 📄 Response content:
+2025-06-20T21:59:29.146528 [ CLIENT]  INFO: 🔍 True: {'type': True, 'text': 'GPIO pin 16 set to high'}
+2025-06-20T21:59:29.146530 [ CLIENT]  INFO: 🔌 GPIO Test 4/6
+2025-06-20T21:59:29.146533 [ CLIENT]  INFO: 🔧 Calling tool 'gpio_control' with arguments: {'pin': 16, 'state': 'low'}
+2025-06-20T21:59:29.146535 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "11", "method": "tools/call", "params": {"name": "gpio_control", "arguments": {"pin": 16, "state": "low"}}}
+2025-06-20T21:59:29.146537 [ CLIENT]  INFO: 📤 Sent 133 bytes successfully
+2025-06-20T21:59:29.146539 [ CLIENT]  INFO: 📥 Waiting for response...
+2025-06-20T21:59:29.146541 [ CLIENT]  INFO: 📥 Received chunk: '{"jsonrpc":true,"id":"11","result":{"content":[{"type":true,"text":"GPIO pin 16 set to low"}]}}\n'
+2025-06-20T21:59:29.146543 [ CLIENT]  INFO: 📥 Complete response received: {"jsonrpc":true,"id":"11","result":{"content":[{"type":true,"text":"GPIO pin 16 set to low"}]}}
+2025-06-20T21:59:29.146545 [ CLIENT]  INFO: 📥 Parsing response: {"jsonrpc":true,"id":"11","result":{"content":[{"type":true,"text":"GPIO pin 16 set to low"}]}}
+2025-06-20T21:59:29.146547 [ CLIENT]  INFO: ✅ Tool 'gpio_control' executed successfully!
+2025-06-20T21:59:29.146549 [ CLIENT]  INFO: 📄 Response content:
+2025-06-20T21:59:29.146551 [ CLIENT]  INFO: 🔍 True: {'type': True, 'text': 'GPIO pin 16 set to low'}
+2025-06-20T21:59:29.146554 [ CLIENT]  INFO: 🔌 GPIO Test 5/6
+2025-06-20T21:59:29.146556 [ CLIENT]  INFO: 🔧 Calling tool 'gpio_control' with arguments: {'pin': 0, 'state': 'high'}
+2025-06-20T21:59:29.146558 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "12", "method": "tools/call", "params": {"name": "gpio_control", "arguments": {"pin": 0, "state": "high"}}}
+2025-06-20T21:59:29.146560 [ CLIENT]  INFO: 📤 Sent 133 bytes successfully
+2025-06-20T21:59:29.146562 [ CLIENT]  INFO: 📥 Waiting for response...
+2025-06-20T21:59:29.146564 [ CLIENT]  INFO: 📥 Received chunk: '{"jsonrpc":true,"id":"12","result":{"content":[{"type":true,"text":"GPIO pin 0 set to high"}]}}\n'
+2025-06-20T21:59:29.146566 [ CLIENT]  INFO: 📥 Complete response received: {"jsonrpc":true,"id":"12","result":{"content":[{"type":true,"text":"GPIO pin 0 set to high"}]}}
+2025-06-20T21:59:29.146568 [ CLIENT]  INFO: 📥 Parsing response: {"jsonrpc":true,"id":"12","result":{"content":[{"type":true,"text":"GPIO pin 0 set to high"}]}}
+2025-06-20T21:59:29.146571 [ CLIENT]  INFO: ✅ Tool 'gpio_control' executed successfully!
+2025-06-20T21:59:29.146573 [ CLIENT]  INFO: 📄 Response content:
+2025-06-20T21:59:29.146575 [ CLIENT]  INFO: 🔍 True: {'type': True, 'text': 'GPIO pin 0 set to high'}
+2025-06-20T21:59:29.146577 [ CLIENT]  INFO: 🔌 GPIO Test 6/6
+2025-06-20T21:59:29.146579 [ CLIENT]  INFO: 🔧 Calling tool 'gpio_control' with arguments: {'pin': 0, 'state': 'low'}
+2025-06-20T21:59:29.146581 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "13", "method": "tools/call", "params": {"name": "gpio_control", "arguments": {"pin": 0, "state": "low"}}}
+2025-06-20T21:59:29.146583 [ CLIENT]  INFO: 📤 Sent 132 bytes successfully
+2025-06-20T21:59:29.146585 [ CLIENT]  INFO: 📥 Waiting for response...
+2025-06-20T21:59:29.146587 [ CLIENT]  INFO: 📥 Received chunk: '{"jsonrpc":true,"id":"13","result":{"content":[{"type":true,"text":"GPIO pin 0 set to low"}]}}\n'
+2025-06-20T21:59:29.146589 [ CLIENT]  INFO: 📥 Complete response received: {"jsonrpc":true,"id":"13","result":{"content":[{"type":true,"text":"GPIO pin 0 set to low"}]}}
+2025-06-20T21:59:29.146591 [ CLIENT]  INFO: 📥 Parsing response: {"jsonrpc":true,"id":"13","result":{"content":[{"type":true,"text":"GPIO pin 0 set to low"}]}}
+2025-06-20T21:59:29.146594 [ CLIENT]  INFO: ✅ Tool 'gpio_control' executed successfully!
+2025-06-20T21:59:29.146595 [ CLIENT]  INFO: 📄 Response content:
+2025-06-20T21:59:29.146597 [ CLIENT]  INFO: 🔍 True: {'type': True, 'text': 'GPIO pin 0 set to low'}
+2025-06-20T21:59:29.146600 [ CLIENT]  INFO: 📊 GPIO test results: 6/6 passed
+2025-06-20T21:59:29.146603 [ CLIENT]  INFO: ❌ TEST 7: Error Handling
+2025-06-20T21:59:29.146605 [ CLIENT]  INFO: Testing invalid tool call...
+2025-06-20T21:59:29.146607 [ CLIENT]  INFO: 🔧 Testing error case: tool 'nonexistent_tool' with arguments: {}
+2025-06-20T21:59:29.146609 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "14", "method": "tools/call", "params": {"name": "nonexistent_tool", "arguments": {}}}
+2025-06-20T21:59:29.146611 [ CLIENT]  INFO: 📤 Sent 112 bytes successfully
+2025-06-20T21:59:29.146613 [ CLIENT]  INFO: 📥 Waiting for response...
+2025-06-20T21:59:29.146615 [ CLIENT]  INFO: 📥 Received chunk: '{"jsonrpc":"2.0","id":"14","error":{"code":-32601,"message":"Unknown tool: nonexistent_tool"}}\n'
+2025-06-20T21:59:29.146617 [ CLIENT]  INFO: 📥 Complete response received: {"jsonrpc":"2.0","id":"14","error":{"code":-32601,"message":"Unknown tool: nonexistent_tool"}}
+2025-06-20T21:59:29.146619 [ CLIENT]  INFO: 📥 Parsing response: {"jsonrpc":"2.0","id":"14","error":{"code":-32601,"message":"Unknown tool: nonexistent_tool"}}
+2025-06-20T21:59:29.146621 [ CLIENT]  INFO: ✅ Received expected error -32601: Unknown tool: nonexistent_tool
+2025-06-20T21:59:29.146624 [ CLIENT]  INFO: ❌ TEST 8: Invalid Parameters
+2025-06-20T21:59:29.146626 [ CLIENT]  INFO: Testing invalid parameters...
+2025-06-20T21:59:29.146628 [ CLIENT]  INFO: 🔧 Testing error case: tool 'echo' with arguments: {'wrong_param': 'test'}
+2025-06-20T21:59:29.146630 [ CLIENT]  INFO: 📤 Sending: {"jsonrpc": "2.0", "id": "15", "method": "tools/call", "params": {"name": "echo", "arguments": {"wrong_param": "test"}}}
+2025-06-20T21:59:29.146632 [ CLIENT]  INFO: 📤 Sent 121 bytes successfully
+2025-06-20T21:59:29.146634 [ CLIENT]  INFO: 📥 Waiting for response...
+2025-06-20T21:59:29.146636 [ CLIENT]  INFO: 📥 Received chunk: '{"jsonrpc":"2.0","id":"15","error":{"code":-32602,"message":"Missing required parameter: text"}}\n'
+2025-06-20T21:59:29.146638 [ CLIENT]  INFO: 📥 Complete response received: {"jsonrpc":"2.0","id":"15","error":{"code":-32602,"message":"Missing required parameter: text"}}
+2025-06-20T21:59:29.146640 [ CLIENT]  INFO: 📥 Parsing response: {"jsonrpc":"2.0","id":"15","error":{"code":-32602,"message":"Missing required parameter: text"}}
+2025-06-20T21:59:29.146642 [ CLIENT]  INFO: ✅ Received expected error -32602: Missing required parameter: text
+2025-06-20T21:59:29.146644 [ CLIENT]  INFO: ============================================================
+2025-06-20T21:59:29.146646 [ CLIENT]  INFO: 🏁 COMPREHENSIVE TEST RESULTS
+2025-06-20T21:59:29.146648 [ CLIENT]  INFO: ============================================================
+2025-06-20T21:59:29.146651 [ CLIENT]  INFO: ✅ PASS - Connection
+2025-06-20T21:59:29.146653 [ CLIENT]  INFO: ✅ PASS - Initialization
+2025-06-20T21:59:29.146655 [ CLIENT]  INFO: ✅ PASS - Ping
+2025-06-20T21:59:29.146657 [ CLIENT]  INFO: ✅ PASS - Tool Discovery
+2025-06-20T21:59:29.146659 [ CLIENT]  INFO: ✅ PASS - Echo Tool
+2025-06-20T21:59:29.146661 [ CLIENT]  INFO: ✅ PASS - GPIO Tool
+2025-06-20T21:59:29.146662 [ CLIENT]  INFO: ✅ PASS - Error Handling
+2025-06-20T21:59:29.146664 [ CLIENT]  INFO: ✅ PASS - Invalid Parameters
+2025-06-20T21:59:29.146667 [ CLIENT]  INFO: 📊 Overall Results: 8/8 tests passed
+2025-06-20T21:59:29.146669 [ CLIENT]  INFO: 🎯 Success Rate: 100.0%
+2025-06-20T21:59:29.146671 [ CLIENT]  INFO: 🎉 All tests passed! ESP8266 MCP server is working perfectly!
+2025-06-20T21:59:29.146673 [ CLIENT]  INFO: 🔌 Disconnected from server
+2025-06-20T21:59:29.151476 [ CLIENT]  TEST: ✅ Test completed successfully: test_mcp_client.py
+2025-06-20T21:59:31.151678 [ CLIENT]  TEST: 🔧 Testing echo tool with custom message
+2025-06-20T21:59:31.161263 [ CLIENT]  INFO: 📤 Sending echo request: Hello from integrated test demo!
+2025-06-20T21:59:31.458270 [ CLIENT]  INFO: 📥 Received response: 84 bytes
+2025-06-20T21:59:31.458403 [ CLIENT]  TEST: ✅ Echo test completed successfully
+2025-06-20T21:59:33.458553 [ CLIENT]  TEST: 🔄 Sending ping request #1
+2025-06-20T21:59:33.565795 [ CLIENT]  INFO: ✅ Ping #1 successful
+2025-06-20T21:59:34.565902 [ CLIENT]  TEST: 🔄 Sending ping request #2
+2025-06-20T21:59:34.679824 [ CLIENT]  INFO: ✅ Ping #2 successful
+2025-06-20T21:59:35.679955 [ CLIENT]  TEST: 🔄 Sending ping request #3
+2025-06-20T21:59:35.870265 [ CLIENT]  INFO: ✅ Ping #3 successful
+2025-06-20T21:59:36.879693 [ CLIENT]  TEST: 📤 Sending invalid tool request (should fail)
+2025-06-20T21:59:37.162387 [ CLIENT]  INFO: 📥 Error response received (expected): 84 bytes
+2025-06-20T21:59:39.162628 [ CLIENT]  TEST: 🎉 Integrated Testing Demo Complete!
+2025-06-20T21:59:39.162659 [ CLIENT]  INFO: 
+2025-06-20T21:59:39.162662 [ CLIENT]  TEST: 📊 Demo Summary:
+2025-06-20T21:59:39.162664 [ CLIENT]  TEST: ✅ Basic connectivity test
+2025-06-20T21:59:39.162667 [ CLIENT]  TEST: ✅ Single tool test
+2025-06-20T21:59:39.162669 [ CLIENT]  TEST: ✅ Real-time correlation demo
+2025-06-20T21:59:39.162671 [ CLIENT]  TEST: ✅ Error handling demo
+2025-06-20T21:59:39.162673 [ CLIENT]  INFO: 
+2025-06-20T21:59:39.162676 [ CLIENT]  INFO: 📝 Full log saved to: demo_integrated_test_1750471156.log

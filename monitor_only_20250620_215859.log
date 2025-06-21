@@ -1,0 +1,8 @@
+
+# ESP8266 MCP Integrated Test Log
+# Generated: 2025-06-20T21:58:59.465930
+# ESP8266 IP: 192.168.86.37
+# Serial Port: /dev/ttyUSB1
+# Baud Rate: 74880
+================================================================================
+2025-06-20T21:58:59.466414 [ESP8266] ERROR: Serial connection failed: [Errno 13] could not open port /dev/ttyUSB1: [Errno 13] Permission denied: '/dev/ttyUSB1'
