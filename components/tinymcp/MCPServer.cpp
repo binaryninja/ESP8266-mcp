@@ -369,6 +369,7 @@ static void json_processing_task(void* pvParameters) {
                         std::string errorMsg = "Unknown tool: " + toolName;
                         cJSON_AddStringToObject(error, "message", errorMsg.c_str());
                         cJSON_AddItemToObject(response, "error", error);
+                        ESP_LOGI(TAG, "JSON Task: Error response created for unknown tool");
                         break;
                     }
                     
@@ -409,6 +410,7 @@ static void json_processing_task(void* pvParameters) {
                                 cJSON_AddNumberToObject(error, "code", -32602);
                                 cJSON_AddStringToObject(error, "message", "Missing required parameter: text");
                                 cJSON_AddItemToObject(response, "error", error);
+                                ESP_LOGI(TAG, "JSON Task: Error response created for invalid echo params");
                                 break;
                             }
                             cJSON_Delete(args);
@@ -427,6 +429,7 @@ static void json_processing_task(void* pvParameters) {
                             cJSON_AddNumberToObject(error, "code", -32602);
                             cJSON_AddStringToObject(error, "message", "Invalid arguments format");
                             cJSON_AddItemToObject(response, "error", error);
+                            ESP_LOGI(TAG, "JSON Task: Error response created for invalid echo args");
                             break;
                         }
                     } else if (toolName == "gpio_control") {
@@ -446,42 +449,10 @@ static void json_processing_task(void* pvParameters) {
                                 cJSON_AddStringToObject(textContent, "text", gpioText.c_str());
                                 cJSON_AddItemToArray(content, textContent);
                                 ESP_LOGI(TAG, "JSON Task: GPIO successful: pin %d, state %s", pin, state.c_str());
-                            } else {
-                                // Missing or invalid parameters
-                                ESP_LOGE(TAG, "JSON Task: GPIO missing required parameters");
-                                cJSON_Delete(args);
-                                cJSON_Delete(content);
-                                cJSON_Delete(result);
-                                cJSON_Delete(response);
-                                
-                                response = cJSON_CreateObject();
-                                cJSON_AddStringToObject(response, "jsonrpc", "2.0");
-                                cJSON_AddStringToObject(response, "id", id.c_str());
-                                
-                                cJSON* error = cJSON_CreateObject();
-                                cJSON_AddNumberToObject(error, "code", -32602);
-                                cJSON_AddStringToObject(error, "message", "Missing required parameters: pin and state");
-                                cJSON_AddItemToObject(response, "error", error);
-                                break;
                             }
                             cJSON_Delete(args);
-                        } else {
-                            // Failed to parse arguments
-                            ESP_LOGE(TAG, "JSON Task: Failed to parse GPIO arguments");
-                            cJSON_Delete(content);
-                            cJSON_Delete(result);
-                            cJSON_Delete(response);
-                            
-                            response = cJSON_CreateObject();
-                            cJSON_AddStringToObject(response, "jsonrpc", "2.0");
-                            cJSON_AddStringToObject(response, "id", id.c_str());
-                            
-                            cJSON* error = cJSON_CreateObject();
-                            cJSON_AddNumberToObject(error, "code", -32602);
-                            cJSON_AddStringToObject(error, "message", "Invalid arguments format");
-                            cJSON_AddItemToObject(response, "error", error);
-                            break;
                         }
+                        ESP_LOGI(TAG, "JSON Task: GPIO processing completed");
                     }
                     
                     // Add content to result (content array should always be present)
