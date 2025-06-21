@@ -15,7 +15,7 @@ NC='\033[0m' # No Color
 
 # Configuration
 DEFAULT_ESP_IP="192.168.86.30"
-DEFAULT_SERIAL_PORT="/dev/ttyUSB0"
+DEFAULT_SERIAL_PORT="/dev/ttyUSB1"
 DEFAULT_BAUD_RATE="74880"
 
 echo -e "${BLUE}🚀 ESP8266 MCP Integrated Test Runner${NC}"
@@ -99,16 +99,18 @@ show_usage() {
     echo -e "  $0 [ESP8266_IP] [OPTIONS]"
     echo
     echo -e "${PURPLE}📋 Examples:${NC}"
-    echo -e "  $0                           # Use default IP ($DEFAULT_ESP_IP)"
-    echo -e "  $0 192.168.1.100             # Use custom IP"
-    echo -e "  $0 192.168.1.100 --demo      # Run demo mode"
-    echo -e "  $0 192.168.1.100 --monitor   # Monitor only (no tests)"
-    echo -e "  $0 192.168.1.100 --test-only # Test only (no serial monitor)"
+    echo -e "  $0                                    # Use default IP ($DEFAULT_ESP_IP)"
+    echo -e "  $0 192.168.1.100                     # Use custom IP"
+    echo -e "  $0 192.168.1.100 --demo              # Run demo mode"
+    echo -e "  $0 192.168.1.100 --monitor           # Monitor only (no tests)"
+    echo -e "  $0 192.168.1.100 --test-only         # Test only (no serial monitor)"
+    echo -e "  $0 192.168.1.100 --device /dev/ttyUSB0  # Use custom serial device"
     echo
     echo -e "${PURPLE}📋 Options:${NC}"
     echo -e "  --demo          Run interactive demo"
     echo -e "  --monitor       Monitor ESP8266 serial output only"
     echo -e "  --test-only     Run tests without serial monitoring"
+    echo -e "  --device PATH   Specify serial device path (default: $DEFAULT_SERIAL_PORT)"
     echo -e "  --help, -h      Show this help message"
     echo -e "  --check         Check setup and connectivity only"
     echo
@@ -116,6 +118,7 @@ show_usage() {
 
 # Parse command line arguments
 ESP_IP="$DEFAULT_ESP_IP"
+SERIAL_PORT="$DEFAULT_SERIAL_PORT"
 MODE="full"
 
 if [ "$1" = "--help" ] || [ "$1" = "-h" ]; then
@@ -144,6 +147,14 @@ while [[ $# -gt 0 ]]; do
             MODE="test-only"
             shift
             ;;
+        --device)
+            if [ -z "$2" ]; then
+                echo -e "${RED}❌ --device requires a path argument${NC}"
+                exit 1
+            fi
+            SERIAL_PORT="$2"
+            shift 2
+            ;;
         --check)
             MODE="check"
             shift
@@ -161,14 +172,14 @@ while [[ $# -gt 0 ]]; do
 done
 
 echo -e "${BLUE}🎯 Target ESP8266: $ESP_IP${NC}"
-echo -e "${BLUE}📡 Serial Port: $DEFAULT_SERIAL_PORT${NC}"
+echo -e "${BLUE}📡 Serial Port: $SERIAL_PORT${NC}"
 echo -e "${BLUE}⚡ Baud Rate: $DEFAULT_BAUD_RATE${NC}"
 echo -e "${BLUE}🔧 Mode: $MODE${NC}"
 echo
 
 # Run checks
 check_python_deps
-check_hardware "$DEFAULT_SERIAL_PORT"
+check_hardware "$SERIAL_PORT"
 test_esp_connectivity "$ESP_IP"
 
 if [ "$MODE" = "check" ]; then
@@ -199,7 +210,7 @@ case $MODE in
         echo -e "${PURPLE}🎭 Running interactive demo...${NC}"
         echo -e "${YELLOW}💡 This will show real-time correlation between ESP8266 logs and client tests${NC}"
         echo
-        python3 demo_integrated_testing.py "$ESP_IP"
+        python3 demo_integrated_testing.py "$ESP_IP" --device "$SERIAL_PORT"
         ;;
 
     "monitor")
@@ -208,6 +219,7 @@ case $MODE in
         echo
         python3 integrated_test_runner.py "$ESP_IP" \
             --monitor-only \
+            --serial-port "$SERIAL_PORT" \
             --log-file "monitor_only_${TIMESTAMP}.log"
         ;;
 
@@ -216,6 +228,7 @@ case $MODE in
         echo
         python3 integrated_test_runner.py "$ESP_IP" \
             --test-only \
+            --serial-port "$SERIAL_PORT" \
             --config integrated_test_config.json \
             --log-file "test_only_${TIMESTAMP}.log"
         ;;
@@ -226,6 +239,7 @@ case $MODE in
         echo -e "${YELLOW}💡 Press Ctrl+C to stop${NC}"
         echo
         python3 integrated_test_runner.py "$ESP_IP" \
+            --serial-port "$SERIAL_PORT" \
             --config integrated_test_config.json \
             --log-file "integrated_test_${TIMESTAMP}.log"
         ;;

@@ -7,30 +7,24 @@ ESP8266 server logs with client test execution in real-time.
 
 import sys
 import time
+import argparse
 from integrated_test_runner import IntegratedTestRunner, load_test_config
 
-def demo_basic_usage():
+def demo_basic_usage(esp_ip, serial_port):
     """Demonstrate basic integrated testing usage"""
 
     print("🚀 ESP8266 MCP Integrated Testing Demo")
     print("=" * 60)
 
-    # Check if ESP8266 IP was provided
-    if len(sys.argv) < 2:
-        print("❌ Usage: python3 demo_integrated_testing.py <ESP8266_IP>")
-        print("📝 Example: python3 demo_integrated_testing.py 192.168.86.30")
-        sys.exit(1)
-
-    esp_ip = sys.argv[1]
     print(f"🎯 Target ESP8266 IP: {esp_ip}")
-    print(f"📡 Serial Port: /dev/ttyUSB0")
+    print(f"📡 Serial Port: {serial_port}")
     print(f"⚡ Baud Rate: 74880")
     print()
 
     # Create integrated test runner
     runner = IntegratedTestRunner(
         esp_ip=esp_ip,
-        serial_port='/dev/ttyUSB0',
+        serial_port=serial_port,
         baud_rate=74880
     )
 
@@ -190,17 +184,11 @@ def demo_basic_usage():
         runner.stop_logging()
         print("\n🏁 Demo completed")
 
-def demo_advanced_usage():
+def demo_advanced_usage(esp_ip, serial_port):
     """Demonstrate advanced integrated testing features"""
 
     print("🚀 Advanced Integrated Testing Demo")
     print("=" * 60)
-
-    if len(sys.argv) < 2:
-        print("❌ Usage: python3 demo_integrated_testing.py <ESP8266_IP>")
-        sys.exit(1)
-
-    esp_ip = sys.argv[1]
 
     # Load test configuration
     try:
@@ -216,7 +204,7 @@ def demo_advanced_usage():
         }
 
     # Create runner
-    runner = IntegratedTestRunner(esp_ip)
+    runner = IntegratedTestRunner(esp_ip, serial_port=serial_port)
 
     try:
         # Start integrated logging
@@ -270,6 +258,8 @@ def show_usage_examples():
 
     print("📊 Demo Scripts:")
     print("   python3 demo_integrated_testing.py 192.168.86.30")
+    print("   python3 demo_integrated_testing.py 192.168.86.30 --device /dev/ttyUSB0")
+    print("   python3 demo_integrated_testing.py 192.168.86.30 --advanced --device /dev/ttyUSB1")
     print()
 
     print("🔧 Key Features:")
@@ -291,18 +281,21 @@ def show_usage_examples():
 def main():
     """Main demo function"""
 
-    if len(sys.argv) == 1:
+    parser = argparse.ArgumentParser(description='ESP8266 MCP Integrated Testing Demo')
+    parser.add_argument('esp_ip', nargs='?', help='ESP8266 IP address')
+    parser.add_argument('--device', default='/dev/ttyUSB1', help='Serial device path (default: /dev/ttyUSB1)')
+    parser.add_argument('--advanced', action='store_true', help='Run advanced demo')
+
+    args = parser.parse_args()
+
+    if not args.esp_ip:
         show_usage_examples()
         return
 
-    if '--help' in sys.argv or '-h' in sys.argv:
-        show_usage_examples()
-        return
-
-    if '--advanced' in sys.argv:
-        demo_advanced_usage()
+    if args.advanced:
+        demo_advanced_usage(args.esp_ip, args.device)
     else:
-        demo_basic_usage()
+        demo_basic_usage(args.esp_ip, args.device)
 
 if __name__ == "__main__":
     main()
