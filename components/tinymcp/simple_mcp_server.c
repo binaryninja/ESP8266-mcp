@@ -324,9 +324,12 @@ void simple_mcp_server_run(int client_socket) {
         if (response) {
             int response_len = strlen(response);
 
-            // Send response
+            // Send response in full and append newline terminator
+            const char *newline = "\n";
             int bytes_sent = send(client_socket, response, response_len, 0);
-            if (bytes_sent < 0) {
+            if (bytes_sent == response_len) {
+                send(client_socket, newline, 1, 0);
+            } else if (bytes_sent < 0) {
                 ESP_LOGE(TAG, "Error sending response");
                 free(response);
                 break;
