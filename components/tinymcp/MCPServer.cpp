@@ -382,7 +382,6 @@ static void json_processing_task(void* pvParameters) {
                     
                     // Tool-specific processing with validation
                     if (toolName == "echo") {
-                        bool success = false;
                         ESP_LOGI(TAG, "JSON Task: Processing echo tool");
                         cJSON* args = cJSON_Parse(argumentsJson.c_str());
                         if (args != NULL) {
@@ -394,13 +393,28 @@ static void json_processing_task(void* pvParameters) {
                                 cJSON_AddStringToObject(textContent, "text", echoText.c_str());
                                 cJSON_AddItemToArray(content, textContent);
                                 ESP_LOGI(TAG, "JSON Task: Echo successful with text: %s", cJSON_GetStringValue(textItem));
-                                success = true;
+                            } else {
+                                // Missing or invalid text parameter
+                                ESP_LOGE(TAG, "JSON Task: Echo missing text parameter");
+                                cJSON_Delete(args);
+                                cJSON_Delete(content);
+                                cJSON_Delete(result);
+                                cJSON_Delete(response);
+                                
+                                response = cJSON_CreateObject();
+                                cJSON_AddStringToObject(response, "jsonrpc", "2.0");
+                                cJSON_AddStringToObject(response, "id", id.c_str());
+                                
+                                cJSON* error = cJSON_CreateObject();
+                                cJSON_AddNumberToObject(error, "code", -32602);
+                                cJSON_AddStringToObject(error, "message", "Missing required parameter: text");
+                                cJSON_AddItemToObject(response, "error", error);
+                                break;
                             }
                             cJSON_Delete(args);
-                        }
-                        
-                        if (!success) {
-                            // Clean up and create error response
+                        } else {
+                            // Failed to parse arguments
+                            ESP_LOGE(TAG, "JSON Task: Failed to parse echo arguments");
                             cJSON_Delete(content);
                             cJSON_Delete(result);
                             cJSON_Delete(response);
@@ -411,12 +425,11 @@ static void json_processing_task(void* pvParameters) {
                             
                             cJSON* error = cJSON_CreateObject();
                             cJSON_AddNumberToObject(error, "code", -32602);
-                            cJSON_AddStringToObject(error, "message", "Missing required parameter: text");
+                            cJSON_AddStringToObject(error, "message", "Invalid arguments format");
                             cJSON_AddItemToObject(response, "error", error);
                             break;
                         }
                     } else if (toolName == "gpio_control") {
-                        bool success = false;
                         ESP_LOGI(TAG, "JSON Task: Processing GPIO control tool");
                         cJSON* args = cJSON_Parse(argumentsJson.c_str());
                         if (args != NULL) {
@@ -433,13 +446,28 @@ static void json_processing_task(void* pvParameters) {
                                 cJSON_AddStringToObject(textContent, "text", gpioText.c_str());
                                 cJSON_AddItemToArray(content, textContent);
                                 ESP_LOGI(TAG, "JSON Task: GPIO successful: pin %d, state %s", pin, state.c_str());
-                                success = true;
+                            } else {
+                                // Missing or invalid parameters
+                                ESP_LOGE(TAG, "JSON Task: GPIO missing required parameters");
+                                cJSON_Delete(args);
+                                cJSON_Delete(content);
+                                cJSON_Delete(result);
+                                cJSON_Delete(response);
+                                
+                                response = cJSON_CreateObject();
+                                cJSON_AddStringToObject(response, "jsonrpc", "2.0");
+                                cJSON_AddStringToObject(response, "id", id.c_str());
+                                
+                                cJSON* error = cJSON_CreateObject();
+                                cJSON_AddNumberToObject(error, "code", -32602);
+                                cJSON_AddStringToObject(error, "message", "Missing required parameters: pin and state");
+                                cJSON_AddItemToObject(response, "error", error);
+                                break;
                             }
                             cJSON_Delete(args);
-                        }
-                        
-                        if (!success) {
-                            // Clean up and create error response
+                        } else {
+                            // Failed to parse arguments
+                            ESP_LOGE(TAG, "JSON Task: Failed to parse GPIO arguments");
                             cJSON_Delete(content);
                             cJSON_Delete(result);
                             cJSON_Delete(response);
@@ -450,7 +478,7 @@ static void json_processing_task(void* pvParameters) {
                             
                             cJSON* error = cJSON_CreateObject();
                             cJSON_AddNumberToObject(error, "code", -32602);
-                            cJSON_AddStringToObject(error, "message", "Missing required parameters: pin and state");
+                            cJSON_AddStringToObject(error, "message", "Invalid arguments format");
                             cJSON_AddItemToObject(response, "error", error);
                             break;
                         }
